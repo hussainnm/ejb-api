@@ -2054,7 +2054,7 @@ Application Assembler.</p>
 </div>
 <div class="paragraph">
 <p>The following sections define the six EJB
-roles<sup class="footnote" id="_footnote_a10218">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+roles.<sup class="footnote" id="_footnote_a10218">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 <div class="sect3">
 <h4 id="enterprise-bean-provider"><a class="anchor" href="#enterprise-bean-provider"></a>2.2.1. Enterprise Bean Provider</h4>
@@ -5594,7 +5594,7 @@ required to serialize such concurrent requests. Note that the container
 never permits multi-threaded access to the actual stateful session bean
 instance. For this reason, Read/Write method locking metadata, as well
 as the bean-managed concurrency mode, are not applicable to stateful
-session beans and must not be used<sup class="footnote" id="_footnote_a10237">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup>. See
+session beans and must not be used.<sup class="footnote" id="_footnote_a10237">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup> See
 <a href="Ejb.html#a1257">See Singleton Session Bean Concurrency</a> for
 a description of how these concurrency modes and locking types apply to
 singleton session beans.</p>
@@ -5609,10 +5609,10 @@ another client-invoked call, from the same or different client, arrives
 at the same stateful session bean istance, if the second client is a
 client of the bean’s business interface or no-interface view, the
 concurrent invocation must result in the second client receiving the
-<em>javax.ejb.ConcurrentAccessException_<sup class="footnote" id="_footnote_a10238">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> . If the
+<em>javax.ejb.ConcurrentAccessException</em>.<sup class="footnote" id="_footnote_a10238">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> If the
 EJB 2.1 client view is used, the container must throw the
 java.rmi.RemoteException if the second client is a remote client, or the
-_javax.ejb.EJBException</em> if the second client is a local client.</p>
+<em>javax.ejb.EJBException</em> if the second client is a local client.</p>
 </div>
 <div class="paragraph">
 <p>There is no need for any restrictions against
@@ -6169,7 +6169,7 @@ the instance is in the method ready state.</p>
 causes the instance to be included in a transaction. When the session
 bean instance is included in a transaction, the container issues the
 <em>afterBegin</em> method on it if the session bean has an <em>afterBegin</em>
-callback method<sup class="footnote" id="_footnote_a10241">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup>. The <em>afterBegin</em> method is
+callback method.<sup class="footnote" id="_footnote_a10241">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> The <em>afterBegin</em> method is
 invoked on the instance before any business method or business method
 interceptor method is executed as part of the transaction. The instance
 becomes associated with the transaction and will remain associated with
@@ -6189,9 +6189,9 @@ associated or in an unspecified transaction context.</p>
 the transaction service notifies the container of the commit request
 before actually committing the transaction, and the container issues the
 <em>befor</em> <em>eCompletion</em> callback on the instance if the session bean has a
-<em>beforeCompletion</em> callback method<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup>. When <em>beforeCompletion</em>
+<em>beforeCompletion</em> callback method.<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> When <em>beforeCompletion</em>
 is invoked, the instance should write
-any cached updates to the database<sup class="footnote" id="_footnote_a10242">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup>. If a
+any cached updates to the database.<sup class="footnote" id="_footnote_a10242">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup> If a
 transaction rollback had been requested instead, the rollback status is
 reached without the container issuing a <em>beforeCompletion</em> . The
 container may not call the <em>beforeCompletion</em> method if the transaction
@@ -6205,7 +6205,7 @@ commit the transaction, resulting in either a commit or rollback.</p>
 <div class="paragraph">
 <p>When the transaction completes, the container
 issues <em>afterCompletion</em> on the instance if the session bean has an
-<em>afterCompletion</em> callback method<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup>, specifying the status of the completion (either commit or
+<em>afterCompletion</em> callback method,<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> specifying the status of the completion (either commit or
 rollback). If a rollback occurred, the bean instance may need to reset
 its conversational state back to the value it had at the beginning of
 the transaction.</p>
@@ -6228,11 +6228,11 @@ timeout specified by the Deployer. All
 object references and handles for the session object become invalid. If
 a client attempts to invoke a method on the bean’s business interface,
 the container will throw the
-<em>javax.ejb.NoSuchEJBException_<sup class="footnote" id="_footnote_a10243">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>.
+<em>javax.ejb.NoSuchEJBException</em>.<sup class="footnote" id="_footnote_a10243">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>
 If the EJB 2.1
 client view is used, the container will throw the
 java.rmi.NoSuchObjectException if the client is a remote client, or the
-_javax.ejb.NoSuchObjectLocalException</em> if the client is a local client.</p>
+<em>javax.ejb.NoSuchObjectLocalException</em> if the client is a local client.</p>
 </div>
 <div class="paragraph">
 <p>If a client invokes a session object whose
@@ -6256,10 +6256,10 @@ This ends the life of the session bean
 instance and the associated session object. If a client subsequently
 attempts to invoke a method on the bean’s business interface, the
 container will throw the
-<em>javax.ejb.NoSuchEJBException_<sup class="footnote" id="_footnote_a10245">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>.
+<em>javax.ejb.NoSuchEJBException</em>.<sup class="footnote" id="_footnote_a10245">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>
 If the EJB 2.1
 client view is used, any subsequent attempt causes the
-_java.rmi.NoSuchObjectException</em> to be thrown if the client is a remote
+<em>java.rmi.NoSuchObjectException</em> to be thrown if the client is a remote
 client, or the <em>javax.ejb.NoSuchObjectLocalException</em> if the client is a
 local client. (The <em>java.rmi.NoSuchObjectException</em> is a subclass of the
 <em>java.rmi.RemoteException</em> ; the <em>javax.ejb.NoSuchObjectLocalException</em>
@@ -6661,11 +6661,11 @@ than one such method applies to the bean class.</p>
 corresponding session object does not exist any more. If a client
 subsequently attempts to invoke a method on the bean’s business
 interface or the no-interface view, the container will throw the
-<em>javax.ejb.NoSuchEJBException_<sup class="footnote" id="_footnote_a10247">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>.
+<em>javax.ejb.NoSuchEJBException</em>.<sup class="footnote" id="_footnote_a10247">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>
 If the EJB 2.1
 client view is used, the container will throw the
 java.rmi.NoSuchObjectException if the client is a remote client, or the
-_javax.ejb.NoSuchObjectLocalException</em> if the client is a local client.</p>
+<em>javax.ejb.NoSuchObjectLocalException</em> if the client is a local client.</p>
 </div>
 </div>
 <div class="sect3">
@@ -6774,7 +6774,7 @@ specified in the bean’s metadata annotations and/or the deployment
 descriptor would cause the container to execute the method in a
 different transaction context or in an unspecified transaction context.
 In such a case, the <em>javax.ejb.EJBException</em> will be thrown to a client
-of the bean’s business interface<sup class="footnote" id="_footnote_a10248">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>.
+of the bean’s business interface.<sup class="footnote" id="_footnote_a10248">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>
 If the EJB 2.1
 client view is used, the container throws the <em>java.rmi.RemoteException</em>
 to the client if the client is a remote client, or the
@@ -6895,7 +6895,7 @@ of a stateless session bean instance:</p>
 <div class="paragraph">
 <p>A stateless session bean instance’s life
 starts when the container invokes the session bean class constructor to
-create a new session bean instance<sup class="footnote" id="_footnote_a10249">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>.
+create a new session bean instance.<sup class="footnote" id="_footnote_a10249">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>
 Next, the
 container performs any dependency injection as specified by metadata
 annotations on the bean class or by the deployment descriptor. The
@@ -7328,7 +7328,7 @@ of a singleton session bean instance:</p>
 <div class="paragraph">
 <p>A singleton session bean instance’s life
 starts when the container invokes the session bean class constructor to
-create the singleton bean instance<sup class="footnote" id="_footnote_a10251">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>.
+create the singleton bean instance.<sup class="footnote" id="_footnote_a10251">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>
 Next, the
 container performs any dependency injection as specified by the metadata
 annotations on the bean class or by the deployment descriptor. The
@@ -8374,7 +8374,7 @@ and singleton session beans.</p>
 <div class="paragraph">
 <p>The session Bean
 Provider is responsible for providing the following class
-files<sup class="footnote" id="_footnote_a10253">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup>:</p>
+files:<sup class="footnote" id="_footnote_a10253">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Session bean class.</p>
@@ -9797,7 +9797,7 @@ supported for message-driven beans.</p>
 <div class="paragraph">
 <p>The PostConstruct and PreDestroy callback
 methods may be defined directly on the bean class or on a separate
-interceptor class<sup class="footnote" id="_footnote_a10258">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup>. The AroundConstruct lifecycle
+interceptor class.<sup class="footnote" id="_footnote_a10258">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup> The AroundConstruct lifecycle
 callback interceptor method, if used, must be defined on an interceptor
 class (see <a href="Ejb.html#a9887">See Interceptors</a>). See
 <a href="Ejb.html#a1979">See Lifecycle Callback Interceptor Methods</a>.</p>
@@ -10395,7 +10395,7 @@ of a message-driven bean instance:</p>
 <div class="paragraph">
 <p>A message-driven bean instance’s life starts
 when the container invokes the message-driven bean class constructor to
-create a new instance<sup class="footnote" id="_footnote_a10259">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup>.
+create a new instance.<sup class="footnote" id="_footnote_a10259">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup>
 Next, the container
 injects the bean’s <em>MessageDrivenContext</em> object, if applicable, and
 performs any other dependency injection as specified by metadata
@@ -11125,7 +11125,7 @@ _InvocationContext.proceed()_ is called.</pre>
 <p>If a system exception escapes the interceptor
 chain, the bean instance and any associated interceptor instances are
 discarded (unless the bean is a singleton session
-bean<sup class="footnote" id="_footnote_a10262">[<a id="_footnoteref_43" class="footnote" href="#_footnotedef_43" title="View footnote.">43</a>]</sup>). The <em>PreDestroy</em> callbacks are not invoked
+bean.<sup class="footnote" id="_footnote_a10262">[<a id="_footnoteref_43" class="footnote" href="#_footnotedef_43" title="View footnote.">43</a>]</sup>) The <em>PreDestroy</em> callbacks are not invoked
 in this case: the interceptor methods in the chain should perform any
 necessary clean-up operations as the interceptor chain unwinds.</p>
 </div>
@@ -12100,7 +12100,7 @@ the enterprise bean method in the client transaction.</p>
 <div class="paragraph">
 <p>The following figure illustrates such a
 scenario. A non-transactional client invokes the enterprise bean X, and
-the invoked method has the _REQUIRED_<sup class="footnote" id="_footnote_a10264">[<a id="_footnoteref_45" class="footnote" href="#_footnotedef_45" title="View footnote.">45</a>]</sup> transaction
+the invoked method has the <em>REQUIRED</em><sup class="footnote" id="_footnote_a10264">[<a id="_footnoteref_45" class="footnote" href="#_footnotedef_45" title="View footnote.">45</a>]</sup> transaction
 attribute. Because the invocation from the client does not include a
 transaction context, the container starts a new transaction before
 dispatching the method on X. Bean X’s work is performed in the context
@@ -12143,7 +12143,7 @@ transaction.</p>
 <div class="paragraph">
 <p>It is illegal to associate JTA transactional
 interceptors (see <a href="Ejb.html#a9857">See Java™ Transaction API</a>) with
-Enterprise JavaBeans<sup class="footnote" id="_footnote_a10266">[<a id="_footnoteref_47" class="footnote" href="#_footnotedef_47" title="View footnote.">47</a>]</sup>.</p>
+Enterprise JavaBeans.<sup class="footnote" id="_footnote_a10266">[<a id="_footnoteref_47" class="footnote" href="#_footnotedef_47" title="View footnote.">47</a>]</sup></p>
 </div>
 </div>
 </div>
@@ -12795,7 +12795,7 @@ with the</pre>
 <p>The following code segments illustrate
 a stateful session bean that retains a transaction across three client
 calls, invoked in the following order: <em>method1</em> , <em>method2</em> , and
-<em>method3.</em> <sup class="footnote" id="_footnote_a10268">[<a id="_footnoteref_49" class="footnote" href="#_footnotedef_49" title="View footnote.">49</a>]</sup></p>
+<em>method3</em>.<sup class="footnote" id="_footnote_a10268">[<a id="_footnoteref_49" class="footnote" href="#_footnotedef_49" title="View footnote.">49</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>@Stateful</p>
@@ -14368,7 +14368,7 @@ between the begin and commit—or rollback—methods with the
 transaction.<sup class="footnote" id="_footnote_a10271">[<a id="_footnoteref_52" class="footnote" href="#_footnotedef_52" title="View footnote.">52</a>]</sup>
 When the instance attempts to commit
 the transaction, the container is responsible for the global
-coordination of the transaction commit<sup class="footnote" id="_footnote_a10272">[<a id="_footnoteref_53" class="footnote" href="#_footnotedef_53" title="View footnote.">53</a>]</sup>.</p>
+coordination of the transaction commit.<sup class="footnote" id="_footnote_a10272">[<a id="_footnoteref_53" class="footnote" href="#_footnotedef_53" title="View footnote.">53</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>In the case of a
@@ -14404,10 +14404,10 @@ discard the bean instance.<sup class="footnote" id="_footnote_a10273">[<a id="_f
 </div>
 <div class="paragraph">
 <p>Throw the
-<em>javax.ejb.EJBException_<sup class="footnote" id="_footnote_a10274">[<a id="_footnoteref_55" class="footnote" href="#_footnotedef_55" title="View footnote.">55</a>]</sup>.
+<em>javax.ejb.EJBException</em>.<sup class="footnote" id="_footnote_a10274">[<a id="_footnoteref_55" class="footnote" href="#_footnotedef_55" title="View footnote.">55</a>]</sup>
 If the EJB 2.1 client
 view is used, the container should throw thejava.rmi.RemoteException if
-the client is a remote client, and the _javax.ejb.EJBException</em> if the
+the client is a remote client, and the <em>javax.ejb.EJBException</em> if the
 client is a local client.</p>
 </div>
 <div class="paragraph">
@@ -14750,11 +14750,11 @@ context, the container performs the same steps as described in the
 <div class="paragraph">
 <p>If the client calls without a transaction
 context, the container throws the
-<em>javax.ejb.EJBTransactionRequiredException_<sup class="footnote" id="_footnote_a10275">[<a id="_footnoteref_56" class="footnote" href="#_footnotedef_56" title="View footnote.">56</a>]</sup>. If
+<em>javax.ejb.EJBTransactionRequiredException</em>.<sup class="footnote" id="_footnote_a10275">[<a id="_footnoteref_56" class="footnote" href="#_footnotedef_56" title="View footnote.">56</a>]</sup> If
 the EJB 2.1 client view is used, the container throws the
 javax.transaction.TransactionRequiredException exception if the client
 is a remote client, and the
-_javax.ejb.TransactionRequiredLocalException</em> if the client is a local
+<em>javax.ejb.TransactionRequiredLocalException</em> if the client is a local
 client.</p>
 </div>
 </div>
@@ -14769,11 +14769,11 @@ The client is required to call without a transaction context.</p>
 <div class="paragraph">
 <p>If the client calls with a transaction
 context, the container throws the
-<em>javax.ejb.EJBException_<sup class="footnote" id="_footnote_a10276">[<a id="_footnoteref_57" class="footnote" href="#_footnotedef_57" title="View footnote.">57</a>]</sup>.
+<em>javax.ejb.EJBException</em>.<sup class="footnote" id="_footnote_a10276">[<a id="_footnoteref_57" class="footnote" href="#_footnotedef_57" title="View footnote.">57</a>]</sup>
 If the EJB 2.1 client
 view is used, the container throws the java.rmi.RemoteException
 exception if the client is a remote client, and the
-_javax.ejb.EJBException</em> if the client is a local client.</p>
+<em>javax.ejb.EJBException</em> if the client is a local client.</p>
 </div>
 <div class="paragraph">
 <p>If the client calls without a transaction
@@ -14850,7 +14850,7 @@ Summary</p>
 <p>T1</p>
 </div>
 <div class="paragraph">
-<p>T1 <sup class="footnote" id="_footnote_a10277">[<a id="_footnoteref_58" class="footnote" href="#_footnotedef_58" title="View footnote.">58</a>]</sup></p>
+<p>T1<sup class="footnote" id="_footnote_a10277">[<a id="_footnoteref_58" class="footnote" href="#_footnotedef_58" title="View footnote.">58</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>T1</p>
@@ -15296,7 +15296,7 @@ typically connected to a single process. If clients B and C connect to
 different EJB container processes, and both B and C need to access the
 same entity object in the same transaction, the issue is how the
 container can make it possible for B and C to see a consistent state of
-the entity object within the same transaction<sup class="footnote" id="_footnote_a10281">[<a id="_footnoteref_62" class="footnote" href="#_footnotedef_62" title="View footnote.">62</a>]</sup>.</p>
+the entity object within the same transaction.<sup class="footnote" id="_footnote_a10281">[<a id="_footnoteref_62" class="footnote" href="#_footnotedef_62" title="View footnote.">62</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The above example illustrates a simple
@@ -15328,7 +15328,7 @@ topologies that may lead to a diamond involving an entity object.</p>
 <div class="paragraph">
 <p>This subsection specifies the EJB container’s
 responsibilities with respect to the diamond case involving an entity
-object<sup class="footnote" id="_footnote_a10280">[<a id="_footnoteref_63" class="footnote" href="#_footnotedef_63" title="View footnote.">63</a>]</sup>.</p>
+object.<sup class="footnote" id="_footnote_a10280">[<a id="_footnoteref_63" class="footnote" href="#_footnotedef_63" title="View footnote.">63</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The EJB specification requires that the
@@ -15357,7 +15357,7 @@ remote client view is used).</p>
 <div class="paragraph">
 <p>This subsection specifies the Bean Provider’s
 responsibilities with respect to the diamond case involving an entity
-object<sup class="footnote" id="_footnote_a10280">[<a id="_footnoteref_64" class="footnote" href="#_footnotedef_64" title="View footnote.">64</a>]</sup>.</p>
+object.<sup class="footnote" id="_footnote_a10280">[<a id="_footnoteref_64" class="footnote" href="#_footnotedef_64" title="View footnote.">64</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The diamond case is transparent to the Bean
@@ -15372,7 +15372,7 @@ bean and does not change the semantics of the bean.</p>
 <div class="paragraph">
 <p>This subsection specifies the Application
 Assembler and Deployer’s responsibilities with respect to the diamond
-case involving an entity object<sup class="footnote" id="_footnote_a10280">[<a id="_footnoteref_65" class="footnote" href="#_footnotedef_65" title="View footnote.">65</a>]</sup>.</p>
+case involving an entity object.<sup class="footnote" id="_footnote_a10280">[<a id="_footnoteref_65" class="footnote" href="#_footnotedef_65" title="View footnote.">65</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The Application Assembler and Deployer should
@@ -15497,7 +15497,7 @@ is designed to meet these high-level goals:</p>
 <div class="paragraph">
 <p>An application exception thrown by an
 enterprise bean instance should be reported to the client precisely
-(i.e., the client gets the same exception)<sup class="footnote" id="_footnote_a10282">[<a id="_footnoteref_66" class="footnote" href="#_footnotedef_66" title="View footnote.">66</a>]</sup>.</p>
+(i.e., the client gets the same exception).<sup class="footnote" id="_footnote_a10282">[<a id="_footnoteref_66" class="footnote" href="#_footnotedef_66" title="View footnote.">66</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>An application exception thrown by an
@@ -15556,8 +15556,8 @@ automatically result in marking the transaction for rollback unless the
 <em>ApplicationException</em> annotation is applied to the exception class and
 is specified with the <em>rollback</em> element value <em>true</em> or the
 <em>application-exception</em> deployment descriptor element for the exception
-specifies the <em>rollback</em> element as <em>true_<sup class="footnote" id="_footnote_a10283">[<a id="_footnoteref_67" class="footnote" href="#_footnotedef_67" title="View footnote.">67</a>]</sup>. The
-_rollback</em> subelement of the <em>application-exception</em> deployment
+specifies the <em>rollback</em> element as <em>true</em>.<sup class="footnote" id="_footnote_a10283">[<a id="_footnoteref_67" class="footnote" href="#_footnotedef_67" title="View footnote.">67</a>]</sup> The
+<em>rollback</em> subelement of the <em>application-exception</em> deployment
 descriptor element may be explicitly specified to override the
 <em>rollback</em> value specified or defaulted by the <em>ApplicationException</em>
 annotation.</p>
@@ -15676,7 +15676,7 @@ or error is unexpected, or the exception is expected but the EJB Bean
 Provider does not know how to recover from it. Examples of such
 exceptions and errors are: failure to obtain a database connection, JNDI
 exceptions, unexpected RemoteException from invocation of other
-enterprise beans<sup class="footnote" id="_footnote_a10284">[<a id="_footnoteref_68" class="footnote" href="#_footnotedef_68" title="View footnote.">68</a>]</sup>, unexpected RuntimeException,
+enterprise beans,<sup class="footnote" id="_footnote_a10284">[<a id="_footnoteref_68" class="footnote" href="#_footnotedef_68" title="View footnote.">68</a>]</sup> unexpected RuntimeException,
 JVM errors, and so on.</p>
 </div>
 <div class="paragraph">
@@ -15713,8 +15713,8 @@ have to be listed in the <em>throws</em> clauses of the business methods.</p>
 <p>The container catches a non-application
 exception; logs it (which can result in alerting the System
 Administrator); and, unless the bean is a message-driven bean, throws
-the <em>javax.ejb.EJBException_<sup class="footnote" id="_footnote_a10286">[<a id="_footnoteref_70" class="footnote" href="#_footnotedef_70" title="View footnote.">70</a>]</sup> or, if the web
-service client view is used, the _java.rmi.RemoteException</em> . If the EJB
+the <em>javax.ejb.EJBException</em><sup class="footnote" id="_footnote_a10286">[<a id="_footnoteref_70" class="footnote" href="#_footnotedef_70" title="View footnote.">70</a>]</sup> or, if the web
+service client view is used, the <em>java.rmi.RemoteException</em> . If the EJB
 2.1 client view is used, the container throws the
 java.rmi.RemoteException (or subclass thereof) to the client if the
 client is a remote client, or throws the <em>javax.ejb.EJBException</em> (or
@@ -15820,7 +15820,7 @@ Transaction Demarcation</p>
 </div>
 <div class="paragraph">
 <p>Bean method runs in the context of the
-caller’s transaction <sup class="footnote" id="_footnote_a10287">[<a id="_footnoteref_71" class="footnote" href="#_footnotedef_71" title="View footnote.">71</a>]</sup>.</p>
+caller’s transaction.<sup class="footnote" id="_footnote_a10287">[<a id="_footnoteref_71" class="footnote" href="#_footnotedef_71" title="View footnote.">71</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>This case may happen with Required,
@@ -15849,19 +15849,17 @@ also fail if the instance called setRollbackOnly).</p>
 <p>all other exceptions and errors</p>
 </div>
 <div class="paragraph">
-<p>Log the exception or error
-<sup class="footnote" id="_footnote_a10288">[<a id="_footnoteref_72" class="footnote" href="#_footnotedef_72" title="View footnote.">72</a>]</sup>.</p>
+<p>Log the exception or error.<sup class="footnote" id="_footnote_a10288">[<a id="_footnoteref_72" class="footnote" href="#_footnotedef_72" title="View footnote.">72</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Mark the transaction for rollback.</p>
 </div>
 <div class="paragraph">
-<p>Discard instance <sup class="footnote" id="_footnote_a10289">[<a id="_footnoteref_73" class="footnote" href="#_footnotedef_73" title="View footnote.">73</a>]</sup>.</p>
+<p>Discard instance.<sup class="footnote" id="_footnote_a10289">[<a id="_footnoteref_73" class="footnote" href="#_footnotedef_73" title="View footnote.">73</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Throw
-<em>javax.ejb.EJBTransactionRolledbackException</em> to client.
-<sup class="footnote" id="_footnote_a10290">[<a id="_footnoteref_74" class="footnote" href="#_footnotedef_74" title="View footnote.">74</a>]</sup></p>
+<em>javax.ejb.EJBTransactionRolledbackException</em> to client.<sup class="footnote" id="_footnote_a10290">[<a id="_footnoteref_74" class="footnote" href="#_footnotedef_74" title="View footnote.">74</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Receives
@@ -15958,8 +15956,7 @@ its work.</p>
 <p>Discard instance.</p>
 </div>
 <div class="paragraph">
-<p>Throw <em>EJBException</em> to
-<sup class="footnote" id="_footnote_a10292">[<a id="_footnoteref_76" class="footnote" href="#_footnotedef_76" title="View footnote.">76</a>]</sup></p>
+<p>Throw <em>EJBException</em> to client.<sup class="footnote" id="_footnote_a10292">[<a id="_footnoteref_76" class="footnote" href="#_footnotedef_76" title="View footnote.">76</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Receives EJBException.</p>
@@ -16031,8 +16028,7 @@ but not yet completed, by the instance.</p>
 instance.<sup class="footnote" id="_footnote_a10293">[<a id="_footnoteref_77" class="footnote" href="#_footnotedef_77" title="View footnote.">77</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>Throw <em>EJBException</em> to client.
-<sup class="footnote" id="_footnote_a10294">[<a id="_footnoteref_78" class="footnote" href="#_footnotedef_78" title="View footnote.">78</a>]</sup></p>
+<p>Throw <em>EJBException</em> to client.<sup class="footnote" id="_footnote_a10294">[<a id="_footnoteref_78" class="footnote" href="#_footnotedef_78" title="View footnote.">78</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Receives EJBException.</p>
@@ -16087,7 +16083,7 @@ Container-Managed Transaction Demarcation</p>
 </div>
 <div class="paragraph">
 <p>Bean method runs in the context of the
-caller’s transaction <sup class="footnote" id="_footnote_a10296">[<a id="_footnoteref_79" class="footnote" href="#_footnotedef_79" title="View footnote.">79</a>]</sup>.</p>
+caller’s transaction.<sup class="footnote" id="_footnote_a10296">[<a id="_footnoteref_79" class="footnote" href="#_footnotedef_79" title="View footnote.">79</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>This case may happen with Required,
@@ -16116,14 +16112,13 @@ also fail if the instance called setRollbackOnly).</p>
 <p>all other exceptions and errors</p>
 </div>
 <div class="paragraph">
-<p>Log the exception or error
-<sup class="footnote" id="_footnote_a10297">[<a id="_footnoteref_80" class="footnote" href="#_footnotedef_80" title="View footnote.">80</a>]</sup>.</p>
+<p>Log the exception or error.<sup class="footnote" id="_footnote_a10297">[<a id="_footnoteref_80" class="footnote" href="#_footnotedef_80" title="View footnote.">80</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Mark the transaction for rollback.</p>
 </div>
 <div class="paragraph">
-<p>Discard instance <sup class="footnote" id="_footnote_a10298">[<a id="_footnoteref_81" class="footnote" href="#_footnotedef_81" title="View footnote.">81</a>]</sup>.</p>
+<p>Discard instance.<sup class="footnote" id="_footnote_a10298">[<a id="_footnoteref_81" class="footnote" href="#_footnotedef_81" title="View footnote.">81</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Throw
@@ -16185,7 +16180,7 @@ its work.</p>
 </div>
 <div class="paragraph">
 <p>Throw RemoteException to remote or web
-service client <sup class="footnote" id="_footnote_a10299">[<a id="_footnoteref_82" class="footnote" href="#_footnotedef_82" title="View footnote.">82</a>]</sup>; throw <em>EJBException</em> to local
+service client;<sup class="footnote" id="_footnote_a10299">[<a id="_footnoteref_82" class="footnote" href="#_footnotedef_82" title="View footnote.">82</a>]</sup> throw <em>EJBException</em> to local
 client.</p>
 </div>
 <div class="paragraph">
@@ -16300,7 +16295,7 @@ instance.<sup class="footnote" id="_footnote_a10300">[<a id="_footnoteref_83" cl
 </div>
 <div class="paragraph">
 <p>Throw RemoteException to remote or web
-service client <sup class="footnote" id="_footnote_a10301">[<a id="_footnoteref_84" class="footnote" href="#_footnotedef_84" title="View footnote.">84</a>]</sup>; throw <em>EJBException</em> to local
+service client;<sup class="footnote" id="_footnote_a10301">[<a id="_footnoteref_84" class="footnote" href="#_footnotedef_84" title="View footnote.">84</a>]</sup> throw <em>EJBException</em> to local
 client.</p>
 </div>
 <div class="paragraph">
@@ -16419,13 +16414,13 @@ re-throw AppException to resource adapter.</p>
 </div>
 <div class="paragraph">
 <p>Log the exception or
-error<sup class="footnote" id="_footnote_a10302">[<a id="_footnoteref_85" class="footnote" href="#_footnotedef_85" title="View footnote.">85</a>]</sup>.</p>
+error.<sup class="footnote" id="_footnote_a10302">[<a id="_footnoteref_85" class="footnote" href="#_footnotedef_85" title="View footnote.">85</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Rollback the container-started transaction.</p>
 </div>
 <div class="paragraph">
-<p>Discard instance<sup class="footnote" id="_footnote_a10303">[<a id="_footnoteref_86" class="footnote" href="#_footnotedef_86" title="View footnote.">86</a>]</sup>.</p>
+<p>Discard instance.<sup class="footnote" id="_footnote_a10303">[<a id="_footnoteref_86" class="footnote" href="#_footnotedef_86" title="View footnote.">86</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Throw EJBException that wraps the original
@@ -16559,13 +16554,13 @@ dispatching the method.</p>
 </div>
 <div class="paragraph">
 <p>Log the exception or
-error<sup class="footnote" id="_footnote_a10304">[<a id="_footnoteref_87" class="footnote" href="#_footnotedef_87" title="View footnote.">87</a>]</sup>.</p>
+error.<sup class="footnote" id="_footnote_a10304">[<a id="_footnoteref_87" class="footnote" href="#_footnotedef_87" title="View footnote.">87</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Rollback the container-started transaction.</p>
 </div>
 <div class="paragraph">
-<p>Discard instance<sup class="footnote" id="_footnote_a10305">[<a id="_footnoteref_88" class="footnote" href="#_footnotedef_88" title="View footnote.">88</a>]</sup>.</p>
+<p>Discard instance.<sup class="footnote" id="_footnote_a10305">[<a id="_footnoteref_88" class="footnote" href="#_footnotedef_88" title="View footnote.">88</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>===</p>
@@ -16594,14 +16589,14 @@ of UserTransaction.</p>
 </div>
 <div class="paragraph">
 <p>Log the exception or
-error<sup class="footnote" id="_footnote_a10306">[<a id="_footnoteref_89" class="footnote" href="#_footnotedef_89" title="View footnote.">89</a>]</sup>.</p>
+error.<sup class="footnote" id="_footnote_a10306">[<a id="_footnoteref_89" class="footnote" href="#_footnotedef_89" title="View footnote.">89</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Rollback a transaction that has been started,
 but not yet completed, by the instance.</p>
 </div>
 <div class="paragraph">
-<p>Discard instance<sup class="footnote" id="_footnote_a10307">[<a id="_footnoteref_90" class="footnote" href="#_footnotedef_90" title="View footnote.">90</a>]</sup>.</p>
+<p>Discard instance.<sup class="footnote" id="_footnote_a10307">[<a id="_footnoteref_90" class="footnote" href="#_footnotedef_90" title="View footnote.">90</a>]</sup></p>
 </div>
 </div>
 <div class="sect3">
@@ -16648,18 +16643,18 @@ instance).</p>
 <div class="paragraph">
 <p>If the exception or error happened during the
 processing of a client invoked method, throw the
-<em>javax.ejb.EJBException_<sup class="footnote" id="_footnote_a10308">[<a id="_footnoteref_91" class="footnote" href="#_footnotedef_91" title="View footnote.">91</a>]</sup>.
+<em>javax.ejb.EJBException</em>.<sup class="footnote" id="_footnote_a10308">[<a id="_footnoteref_91" class="footnote" href="#_footnotedef_91" title="View footnote.">91</a>]</sup>
 If the EJB 2.1 client
 view or web service client view is used, throw the
 java.rmi.RemoteException to the client if the client is a remote client
-or throw the _javax.ejb.EJBException</em> to the client if the client is a
+or throw the <em>javax.ejb.EJBException</em> to the client if the client is a
 local client. If the instance executed in the client’s transaction, the
 container should throw the
-<em>javax.ejb.EJBTransactionRolledbackException_<sup class="footnote" id="_footnote_a10309">[<a id="_footnoteref_92" class="footnote" href="#_footnotedef_92" title="View footnote.">92</a>]</sup>.
+<em>javax.ejb.EJBTransactionRolledbackException</em>.<sup class="footnote" id="_footnote_a10309">[<a id="_footnoteref_92" class="footnote" href="#_footnotedef_92" title="View footnote.">92</a>]</sup>
 If the EJB 2.1 client view or web service client view is used, the
 container should throw the
 javax.transaction.TransactionRolledbackException to a remote client or
-the _javax.ejb.TransactionRolledbackLocalException</em> to a local client,
+the <em>javax.ejb.TransactionRolledbackLocalException</em> to a local client,
 because it provides more information to the client. (The client knows
 that it is fruitless to continue the transaction.)</p>
 </div>
@@ -16669,12 +16664,12 @@ that it is fruitless to continue the transaction.)</p>
 <div class="paragraph">
 <p>If a client makes a call to a stateful
 session object that has been removed, the container should throw the
-<em>javax.ejb.NoSuchEJBException_<sup class="footnote" id="_footnote_a10310">[<a id="_footnoteref_93" class="footnote" href="#_footnotedef_93" title="View footnote.">93</a>]</sup>.
+<em>javax.ejb.NoSuchEJBException</em>.<sup class="footnote" id="_footnote_a10310">[<a id="_footnoteref_93" class="footnote" href="#_footnotedef_93" title="View footnote.">93</a>]</sup>
 If the EJB 2.1
 client view is used, the container should throw the
 java.rmi.NoSuchObjectException (which is a
 subclass of java.rmi.RemoteException) to a remote client, or the
-_javax.ejb.NoSuchObjectLocalException</em> to a local client.</p>
+<em>javax.ejb.NoSuchObjectLocalException</em> to a local client.</p>
 </div>
 </div>
 <div class="sect3">
@@ -16690,11 +16685,11 @@ that may be thrown by the transaction start and commit operations.</p>
 <div class="paragraph">
 <p>If the container fails to start or commit a
 container-managed transaction, the container must throw the
-<em>javax.ejb.EJBException_<sup class="footnote" id="_footnote_a10311">[<a id="_footnoteref_94" class="footnote" href="#_footnotedef_94" title="View footnote.">94</a>]</sup>.
+<em>javax.ejb.EJBException</em>.<sup class="footnote" id="_footnote_a10311">[<a id="_footnoteref_94" class="footnote" href="#_footnotedef_94" title="View footnote.">94</a>]</sup>
 If the web service
 client view or EJB 2.1 client view is used, the container must throw the
 java.rmi.RemoteException to a remote or web
-service client and the _javax.ejb.EJBException</em> to a local client. In
+service client and the <em>javax.ejb.EJBException</em> to a local client. In
 the case where the container fails to start or commit a
 container-managed transaction on behalf of a message-driven bean or a
 timeout callback method, the container must throw and log the
@@ -17507,7 +17502,7 @@ remote invocations on EJBObject and EJBHome references. EJB containers
 must be capable of servicing IIOP 1.2 based invocations on EJBObject and
 EJBHome objects. IIOP 1.2 is part of the CORBA 2.3.1 specification
 <a href="Ejb.html#a9865">See CORBA 2.3.1 Specification.</a> from the
-OMG<sup class="footnote" id="_footnote_a10314">[<a id="_footnoteref_97" class="footnote" href="#_footnotedef_97" title="View footnote.">97</a>]</sup>. Containers may additionally support
+OMG.<sup class="footnote" id="_footnote_a10314">[<a id="_footnoteref_97" class="footnote" href="#_footnotedef_97" title="View footnote.">97</a>]</sup> Containers may additionally support
 vendor-specific protocols.</p>
 </div>
 <div class="paragraph">
@@ -17871,7 +17866,7 @@ the propagated transaction context (step 3), and may also register an
 OTS Synchronization object (step 2). If the server container does not
 register an OTS Synchronization object, it must still ensure that the
 beforeCompletion method of session beans and ejbStore method of entity
-beansfootnote:a10316[Component contract and client view of entity beans
+beans{empty}footnote:a10316[Component contract and client view of entity beans
 are described in the EJB Optional Features document &lt;&lt;a9890&gt;&gt;.]
 are called with the proper transaction
 context. Containers must participate in the two-phase commit and
@@ -17907,7 +17902,7 @@ enterprise bean method.</p>
 <div class="paragraph">
 <p>EJBObject and EJBHome references may have the
 InvocationPolicy value as either <em>CosTransactions::SHARED</em> or
-_CosTransactions::EITHER_<sup class="footnote" id="_footnote_a10318">[<a id="_footnoteref_100" class="footnote" href="#_footnotedef_100" title="View footnote.">100</a>]</sup>.</p>
+<em>CosTransactions::EITHER</em>.<sup class="footnote" id="_footnote_a10318">[<a id="_footnoteref_100" class="footnote" href="#_footnotedef_100" title="View footnote.">100</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>All EJBObject and EJBHome references must
@@ -18314,7 +18309,7 @@ key mechanisms.</p>
 <p>The
 authentication identity (i.e. principal) associated with a Java EE
 component is usually that of the user on whose behalf the component is
-executing<sup class="footnote" id="_footnote_a10319">[<a id="_footnoteref_101" class="footnote" href="#_footnotedef_101" title="View footnote.">101</a>]</sup>.
+executing.<sup class="footnote" id="_footnote_a10319">[<a id="_footnoteref_101" class="footnote" href="#_footnotedef_101" title="View footnote.">101</a>]</sup>
 The principal under which an
 enterprise bean invocation is performed is either that of the bean’s
 caller or the run-as principal which was configured by the Deployer.
@@ -18361,7 +18356,7 @@ a chain.</p>
 <p>EJB containers are required to provide the
 Deployer or Administrator with the tools to configure
 trust relationships for interactions with
-intermediate web or EJB containers<sup class="footnote" id="_footnote_a10320">[<a id="_footnoteref_102" class="footnote" href="#_footnotedef_102" title="View footnote.">102</a>]</sup>. If a trust
+intermediate web or EJB containers.<sup class="footnote" id="_footnote_a10320">[<a id="_footnoteref_102" class="footnote" href="#_footnotedef_102" title="View footnote.">102</a>]</sup> If a trust
 relationship is set up, the containers are usually configured to perform
 mutual authentication, unless the security of the network can be ensured
 by some physical means. If the network is physically secure, the target
@@ -23621,7 +23616,7 @@ application or its deployment descriptor refers to a role named “**”.</p>
 <div class="paragraph">
 <p>Defining the security roles in the metadata
 annotations and/or deployment descriptor is
-optional<sup class="footnote" id="_footnote_a10327">[<a id="_footnoteref_108" class="footnote" href="#_footnotedef_108" title="View footnote.">108</a>]</sup>. Their omission means that the Bean
+optional.<sup class="footnote" id="_footnote_a10327">[<a id="_footnoteref_108" class="footnote" href="#_footnotedef_108" title="View footnote.">108</a>]</sup> Their omission means that the Bean
 Provider and Application Assembler chose not to pass any security
 deployment related instructions to the Deployer.</p>
 </div>
@@ -25152,11 +25147,11 @@ security roles that includes the method in its method permissions
 definition. (That is, it is not meant that the caller must be assigned
 <em>all</em> the roles associated with the method.) If the container denies a
 client access to a business method, the container should throw the
-<em>javax.ejb.EJBAccessException_<sup class="footnote" id="_footnote_a10330">[<a id="_footnoteref_111" class="footnote" href="#_footnotedef_111" title="View footnote.">111</a>]</sup>.
+<em>javax.ejb.EJBAccessException</em>.<sup class="footnote" id="_footnote_a10330">[<a id="_footnoteref_111" class="footnote" href="#_footnotedef_111" title="View footnote.">111</a>]</sup>
 If the EJB 2.1
 client view is used, the container must throw the
 java.rmi.RemoteException (or its subclass,
-the _java.rmi.AccessException</em> ) to the client if the client is a remote
+the <em>java.rmi.AccessException</em> ) to the client if the client is a remote
 client, or the <em>javax.ejb.EJBException</em>  (or
 its subclass, the <em>javax.ejb.AccessLocalException</em> ) if the client is a
 local client.</p>
@@ -25194,7 +25189,7 @@ managers according to the security policy defined by the Deployer.</p>
 <div class="paragraph">
 <p>The container must allow the same enterprise
 bean to be deployed independently multiple times, each time with a
-different security policy<sup class="footnote" id="_footnote_a10331">[<a id="_footnoteref_112" class="footnote" href="#_footnotedef_112" title="View footnote.">112</a>]</sup>. The container must
+different security policy.<sup class="footnote" id="_footnote_a10331">[<a id="_footnoteref_112" class="footnote" href="#_footnotedef_112" title="View footnote.">112</a>]</sup> The container must
 allow multiple-deployed enterprise beans to co-exist at runtime.</p>
 </div>
 </div>
@@ -25344,8 +25339,8 @@ Schedule annotation denotes its the timeout method.</p>
 <div class="paragraph">
 <p>Timers can be created for stateless session
 beans, singleton session beans, message-driven
-beans<sup class="footnote" id="_footnote_a10332">[<a id="_footnoteref_113" class="footnote" href="#_footnotedef_113" title="View footnote.">113</a>]</sup>. Timers cannot be
-created for stateful session beans<sup class="footnote" id="_footnote_a10333">[<a id="_footnoteref_114" class="footnote" href="#_footnotedef_114" title="View footnote.">114</a>]</sup>.</p>
+beans.<sup class="footnote" id="_footnote_a10332">[<a id="_footnoteref_113" class="footnote" href="#_footnotedef_113" title="View footnote.">113</a>]</sup> Timers cannot be
+created for stateful session beans.<sup class="footnote" id="_footnote_a10333">[<a id="_footnoteref_114" class="footnote" href="#_footnotedef_114" title="View footnote.">114</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The timeout callback method invocation for a
@@ -25384,7 +25379,7 @@ automatically created persistent timers.</p>
 elapses, the container invokes the associated timeout callback method of
 the bean. A timer may be cancelled before its expiration. If a timer is
 cancelled, its associated timeout callback method is not
-called<sup class="footnote" id="_footnote_a10334">[<a id="_footnoteref_115" class="footnote" href="#_footnotedef_115" title="View footnote.">115</a>]</sup>. A timer is cancelled by calling
+called.<sup class="footnote" id="_footnote_a10334">[<a id="_footnoteref_115" class="footnote" href="#_footnotedef_115" title="View footnote.">115</a>]</sup> A timer is cancelled by calling
 its <em>cancel</em> method.</p>
 </div>
 <div class="paragraph">
@@ -25747,7 +25742,7 @@ executing.</p>
 </div>
 <div class="paragraph">
 <p>Time zones are specified as an ID
-String<sup class="footnote" id="_footnote_a10335">[<a id="_footnoteref_116" class="footnote" href="#_footnotedef_116" title="View footnote.">116</a>]</sup>.
+String.<sup class="footnote" id="_footnote_a10335">[<a id="_footnoteref_116" class="footnote" href="#_footnotedef_116" title="View footnote.">116</a>]</sup>
 The set of required time zone IDs is
 defined by the Zone Name(TZ) column of the public domain zoneinfo
 database <a href="Ejb.html#a9885">See List of zoneinfo time zones:</a>.</p>
@@ -26347,7 +26342,7 @@ timers can also be associated with the automatically-created timers.</p>
 <div class="paragraph">
 <p>A timeout callback method must have one of
 the two signatures below, where &lt;METHOD&gt; designates the method
-name<sup class="footnote" id="_footnote_a10339">[<a id="_footnoteref_120" class="footnote" href="#_footnotedef_120" title="View footnote.">120</a>]</sup>.</p>
+name.<sup class="footnote" id="_footnote_a10339">[<a id="_footnoteref_120" class="footnote" href="#_footnotedef_120" title="View footnote.">120</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>void &lt;METHOD&gt;()</p>
@@ -26943,7 +26938,7 @@ transaction demarcation.</p>
 If the enterprise bean is a singleton session bean, the Bean Provider
 may use the <code>concurrency-management-type</code> element to declare whether
 concurrency management is handled by the container or is performed by
-the Bean Provider<sup class="footnote" id="_footnote_a10341">[<a id="_footnoteref_122" class="footnote" href="#_footnotedef_122" title="View footnote.">122</a>]</sup>. If neither the
+the Bean Provider.<sup class="footnote" id="_footnote_a10341">[<a id="_footnoteref_122" class="footnote" href="#_footnotedef_122" title="View footnote.">122</a>]</sup> If neither the
 <code>ConcurrencyManagement</code> annotation is used nor the
 <code>concurrency-management-type</code> deployment descriptor element, the singleton
 session bean will have container-managed concurrency.</p>
@@ -35046,7 +35041,7 @@ beans with a no-methods listener interface</p>
 <div id="footer">
 <div id="footer-text">
  4.0-SNAPSHOT<br>
-Last updated 2020-03-03 17:49:09 +0530
+Last updated 2020-02-28 22:39:54 +0530
 </div>
 </div>
 </body>
