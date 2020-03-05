@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Enterprise Beans Team, https://projects.eclipse.org/projects/ee4j.ejb</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/ejb-api-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/ejb-api-dev</a></span><br>
 <span id="revnumber"> 4.0-SNAPSHOT,</span>
-<span id="revdate">March 03, 2020</span>
+<span id="revdate">March 05, 2020</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
@@ -1551,7 +1551,7 @@ Version: 4.0-SNAPSHOT
 
 Status: DRAFT
 
-Release: March 03, 2020</pre>
+Release: March 05, 2020</pre>
 </div>
 </div>
 </div>
@@ -5214,75 +5214,81 @@ determined by the lifecycle callback method&#8217;s transaction attribute.</p>
 <h4 id="a722"><a class="anchor" href="#a722"></a>4.3.5. The SessionBean Interface</h4>
 <div class="paragraph">
 <p>The session bean class is not required to
-implement the <em>SessionBean</em> interface or the <em>Serializable</em> interface.
+implement the <code>SessionBean</code> interface or the <code>Serializable</code> interface.
 Interceptor classes for the bean are likewise not required to implement
-the <em>Serializable</em> interface.</p>
+the <code>Serializable</code> interface.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _The SessionBean interface was required to
+<div class="paragraph">
+<p><em>Compatibility Note: The SessionBean interface was required to
 be implemented by the session bean class in earlier versions of the
 Enterprise JavaBeans specification. Under the EJB 3.x API, the
 functionality previously provided by the SessionBean interface is
 available to the bean class through selective use of dependency
 injection (of the SessionContext) and optional lifecycle callback
-interceptor methods._</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <em>SessionBean</em> interface defines four
-methods: <em>setSessionContext</em> , <em>ejbRemove</em> , <em>ejbPassivate</em> , and
-<em>ejbActivate</em> .</p>
+interceptor methods.</em></p>
 </div>
 <div class="paragraph">
-<p>The <em>setSessionContext</em>
- method is called by the bean’s container to
+<p>The <code>SessionBean</code> interface defines four
+methods: <code>setSessionContext</code>, <code>ejbRemove</code>, <code>ejbPassivate</code>, and
+<code>ejbActivate</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>setSessionContext</code> method is called by the bean’s container to
 associate a session bean instance with its context maintained by the
 container. Typically a session bean instance retains its session context
 as part of its state.</p>
 </div>
 <div class="paragraph">
-<p>The <em>ejbRemove</em> notification signals that the
+<p>The <code>ejbRemove</code> notification signals that the
 instance is in the process of being removed by the container. In the
-<em>ejbRemove</em>  method, the instance typically
-releases the same resources that it releases in the <em>ejbPassivate</em>
- method.</p>
+<code>ejbRemove</code>  method, the instance typically releases the same resources
+that it releases in the <code>ejbPassivate</code> method.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>Under the EJB 3.x API, the bean class may
+optionally define a <code>PreDestroy</code> lifecycle callback interceptor method
+for notification of the container’s removal of the bean instance.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>Under the EJB 3.x API, the bean class may
-optionally define a <em>PreDestroy</em> lifecycle callback interceptor method
-for notification of the container’s removal of the bean instance.</p>
-</div>
-<div class="paragraph">
-<p>The <em>ejbPassivate</em> notification signals the
-intent of the container to passivate the instance. The <em>ejbActivate</em>
+<p>The <code>ejbPassivate</code> notification signals the
+intent of the container to passivate the instance. The <code>ejbActivate</code>
 notification signals the instance it has just been reactivated. Their
 purpose is to allow stateful session beans to maintain those open
 resources that need to be closed prior to an instance’s passivation and
-then reopened during an instance’s activation. The <em>ejbPassivate</em> and
-<em>ejbActivate</em> methods are only called on stateful session bean
+then reopened during an instance’s activation. The <code>ejbPassivate</code> and
+<code>ejbActivate</code> methods are only called on stateful session bean
 instances.</p>
 </div>
-<div class="paragraph">
-<p>Under the EJB 3.x API, the bean class may
-optionally define <em>PrePassivate</em> and/or <em>PostActivate</em> lifecycle
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>Under the EJB 3.x API, the bean class may
+optionally define <code>PrePassivate</code> and/or <code>PostActivate</code> lifecycle
 callback interceptor methods for notification of the
-passivation/activation of the bean instance.</p>
+passivation/activation of the bean instance.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>This specification requires that the
-<em>ejbRemove</em> , <em>ejbActivate</em> , and <em>ejbPassivate</em> methods of the
-<em>SessionBean</em> interface, and the <em>ejbCreate</em> method of a stateless
-session bean be treated as <em>PreDestroy</em> , <em>PostActivate</em> ,
-<em>PrePassivate</em> and <em>PostConstruct</em> life cycle callback interceptor
+<code>ejbRemove</code>, <code>ejbActivate</code>, and <code>ejbPassivate</code> methods of the
+<code>SessionBean</code> interface, and the <code>ejbCreate</code> method of a stateless
+session bean be treated as <code>PreDestroy</code>, <code>PostActivate</code>,
+<code>PrePassivate</code> and <code>PostConstruct</code> life cycle callback interceptor
 methods, respectively.</p>
 </div>
 <div class="paragraph">
 <p>If the session bean implements the
-<em>SessionBean</em> interface, the <em>PreDestroy</em> annotation on the bean class
-can only be applied to the <em>ejbRemove</em> method; the <em>PostActivate</em>
-annotation can only be applied to the <em>ejbActivate</em> method; the
-<em>PrePassivate</em> annotation can only be applied to the <em>ejbPassivate</em>
+<code>SessionBean</code> interface, the <code>PreDestroy</code> annotation on the bean class
+can only be applied to the <code>ejbRemove</code> method; the <code>PostActivate</code>
+annotation can only be applied to the <code>ejbActivate</code> method; the
+<code>PrePassivate</code> annotation can only be applied to the <code>ejbPassivate</code>
 method. Similar requirements apply to use of deployment descriptor
 metadata as an alternative to the use of annotations.</p>
 </div>
@@ -5291,9 +5297,9 @@ metadata as an alternative to the use of annotations.</p>
 <h4 id="a736"><a class="anchor" href="#a736"></a>4.3.6. The Session Synchronization Notifications for Stateful Session Beans</h4>
 <div class="paragraph">
 <p>A stateful
-session bean class can optionally implement the javax.ejb.
-<em>SessionSynchronization</em> interface or annotate methods using the
-individual AfterBegin, BeforeCompletion, and AfterCompletion
+session bean class can optionally implement the
+<code>javax.ejb.SessionSynchronization</code> interface or annotate methods using the
+individual <code>AfterBegin</code>, <code>BeforeCompletion</code>, and <code>AfterCompletion</code>
 annotations. The deployment descriptor may also be used to declare the
 individual session synchronization methods. These provide the session
 bean instances with transaction
@@ -5301,73 +5307,71 @@ synchronization notifications. The instances can use these
 notifications, for example, to manage database data they may cache
 within transactions—e.g., if the Java Persistence API is not used. A
 stateful session bean class may use either the
-javax.ejb.SessionSynchronization interface or the session
+<code>javax.ejb.SessionSynchronization</code> interface or the session
 synchronization annotations, but not both. If annotation are used, there
-must be at most one <em>AfterBegin</em> method, one <em>BeforeCompletion</em> method,
-and one <em>AfterCompletion</em> method for the bean.</p>
+must be at most one <code>AfterBegin</code> method, one <code>BeforeCompletion</code> method,
+and one <code>AfterCompletion</code> method for the bean.</p>
 </div>
 <div class="paragraph">
-<p>The <em>afterBegin</em>
+<p>The <code>afterBegin</code>
 notification signals a session bean instance that a new transaction has
 begun. The container invokes this method before the first business
 method within a transaction (which is not necessarily at the beginning
-of the transaction). The <em>afterBegin</em> notification is invoked with the
+of the transaction). The <code>afterBegin</code> notification is invoked with the
 transaction context. The instance may do any database work it requires
 within the scope of the transaction.</p>
 </div>
 <div class="paragraph">
-<p>The <em>beforeCompletion</em>
- notification is issued when a session bean
+<p>The <code>beforeCompletion</code> notification is issued when a session bean
 instance’s client has completed work on its current transaction but
 prior to committing the resource managers used by the instance. At this
 time, the instance should write out any database updates it has cached.
 The instance can cause the transaction to roll back by invoking the
-setRollbackOnly method on its
-<em>SessionContext</em> object.</p>
+<code>setRollbackOnly</code> method on its
+<code>SessionContext</code> object.</p>
 </div>
 <div class="paragraph">
-<p>The <em>afterCompletion</em>
- notification signals that the current
-transaction has completed. A completion status of <em>true</em> indicates that
-the transaction has committed. A status of <em>false</em> indicates that a
+<p>The <code>afterCompletion</code> notification signals that the current
+transaction has completed. A completion status of <code>true</code> indicates that
+the transaction has committed. A status of <code>false</code> indicates that a
 rollback has occurred. Since a session bean instance’s conversational
 state is not transactional, it may need to manually reset its state if a
 rollback occurred.</p>
 </div>
 <div class="paragraph">
-<p>All Container Providers must support the <em>_
+<p>All Container Providers must support the
 session synchronization notifications. If a
-bean class implements the _SessionSynchronization</em> interface, the
-container must invoke the <em>afterBegin</em> , <em>beforeCompletion</em> , and
-<em>afterCompletion</em> notifications as required by the specification. If the
+bean class implements the <code>SessionSynchronization</code> interface, the
+container must invoke the <code>afterBegin</code>, <code>beforeCompletion</code>, and
+<code>afterCompletion</code> notifications as required by the specification. If the
 bean implementor uses the session synchronization annotations, the
 container must invoke only the notifications corresponding to the
 annotations that have been used.</p>
 </div>
 <div class="paragraph">
-<p>If a stateful session bean&#8217;s PostConstruct,
-PreDestroy, PrePassivate or PostActivate lifecycle callback interceptor
+<p>If a stateful session bean&#8217;s <code>PostConstruct</code>,
+<code>PreDestroy</code>, <code>PrePassivate</code> or <code>PostActivate</code> lifecycle callback interceptor
 method is invoked in the scope of a transaction, session synchronization
 callbacks for the transaction are not called on the bean instance.</p>
 </div>
 <div class="paragraph">
 <p>A session synchronization method can have
-public, private, protected, or package level access. A session
-synchronization method must not be declared as <em>final</em> or <em>static</em> .</p>
+<code>public</code>, <code>private</code>, <code>protected</code>, or <code>package</code> level access. A session
+synchronization method must not be declared as <code>final</code> or <code>static</code>.</p>
 </div>
 <div class="paragraph">
 <p>Only a stateful session bean with
 container-managed transaction demarcation can receive session
 synchronization notifications. Stateless session beans and singleton
-session beans must not implement the <em>SessionSynchronization</em> interface
+session beans must not implement the <code>SessionSynchronization</code> interface
 or use the session synchronization annotations.</p>
 </div>
 <div class="paragraph">
-<p>There is no need for a session bean with
+<p><em>There is no need for a session bean with
 bean-managed transaction demarcation to rely on the synchronization call
 backs because the bean is in control of the commit—the bean knows when
 the transaction is about to be committed and it knows the outcome of the
-transaction commit.</p>
+transaction commit.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -5377,7 +5381,7 @@ transaction commit.</p>
 bean can be registered with the EJB Timer Service for time-based event
 notifications. The container invokes the appropriate bean instance
 timeout callback method when a timer for the bean has expired. See
-<a href="Ejb.html#a5456">See Timer Service</a>. Stateful session beans
+<a href="#a5456">Timer Service</a>. Stateful session beans
 cannot be registered with the EJB Timer Service, and therefore should
 not implement timeout callback methods.</p>
 </div>
@@ -5389,8 +5393,11 @@ not implement timeout callback methods.</p>
 no-interface view, component interface, or web service endpoint defines
 the business methods callable by a client.</p>
 </div>
-<div class="paragraph">
-<p>The container classes that implement these
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>The container classes that implement these
 are generated by the container tools. The class that implements the
 session bean’s business interface and the class that implements the
 session bean’s no-interface view and the class that implements a session
@@ -5398,7 +5405,9 @@ bean’s component interface delegate an invocation of a business method
 to the matching business method that is implemented in the session bean
 class. The class that handles requests to the web service endpoint
 invokes the session bean method that matches the web service method
-corresponding to the SOAP request.</p>
+corresponding to the SOAP request.</em></p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect3">
@@ -5409,36 +5418,34 @@ an instance of a session bean as follows. First, the container calls the
 bean class constructor to create a new session bean instance. Second,
 the container performs any dependency injection as specified by metadata
 annotations on the bean class or by the deployment descriptor. This
-includes the bean’s SessionContext, if applicable. Third, the container
-calls the <em>PostConstruct</em> lifecycle callback interceptor methods for the
-bean, if any. The additional steps described below in sections
-<a href="Ejb.html#a759">See Stateful Session Beans</a> and
-<a href="Ejb.html#a762">See Stateless Session Beans</a> apply if the
-session bean is invoked through the EJB 2.1 client view APIs.</p>
+includes the bean’s <code>SessionContext</code>, if applicable. Third, the container
+calls the <code>PostConstruct</code> lifecycle callback interceptor methods for the
+bean, if any. The additional steps described below in <a href="#a759">Stateful Session Beans</a>
+and <a href="#a762">Stateless Session Beans</a> apply if the session bean is invoked through the EJB 2.1
+client view APIs.</p>
 </div>
 <div class="paragraph">
 <p>If an interceptor associated with the session
-bean declares an <em>AroundConstruct</em> lifecycle callback interceptor
-method, the container follows the rules for the <em>AroundConstruct
-interceptors</em> defined in the Interceptors specification
-<a href="Ejb.html#a9887">See Interceptors</a>.</p>
+bean declares an <code>AroundConstruct</code> lifecycle callback interceptor
+method, the container follows the rules for the <code>AroundConstruct</code>
+interceptors defined in the <em>Interceptors</em> specification <a href="#a9887">[37]</a>.</p>
 </div>
 <div class="sect4">
 <h5 id="a759"><a class="anchor" href="#a759"></a>4.3.9.1. Stateful Session Beans</h5>
 <div class="paragraph">
 <p>If the bean is a stateful session bean and
-the client has used one of the create&lt;METHOD&gt; methods defined in the
+the client has used one of the <code>create&lt;METHOD&gt;</code> methods defined in the
 session bean’s home or local home interface to create the bean, the
 container then calls the instance’s initialization method whose
-signature matches the signature of the <em>create&lt;METHOD&gt;</em> invoked by the
+signature matches the signature of the <code>create&lt;METHOD&gt;</code> invoked by the
 client, passing to the method the input parameters sent from the client.
 If the bean class is written to the EJB 3.x API, and has been adapted
 for use with an earlier client view, this initialization method is a
-matching <em>Init</em> method, as designated by use of the <em>Init</em> annotation,
-or <em>init-method</em> deployment descriptor element. <sup class="footnote" id="_footnote_a10235">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>
+matching <code>Init</code> method, as designated by use of the <code>Init</code> annotation,
+or <code>init-method</code> deployment descriptor element. <sup class="footnote" id="_footnote_a10235">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>
 If the bean class was written to the EJB 2.1 or earlier API, this
-initialization method is a matching <em>ejbCreate&lt;METHOD&gt;</em> method, as
-described in <a href="Ejb.html#a1498">See ejbCreate&lt;METHOD&gt; Methods</a>.</p>
+initialization method is a matching <code>ejbCreate&lt;METHOD&gt;</code> method, as
+described in <a href="#a1498">ejbCreate&lt;METHOD&gt; Methods</a>.</p>
 </div>
 <div class="paragraph">
 <p>Each stateful session bean class that has a
@@ -5454,34 +5461,37 @@ the client uses to customize the bean instance for its use.</p>
 <h5 id="a762"><a class="anchor" href="#a762"></a>4.3.9.2. Stateless Session Beans</h5>
 <div class="paragraph">
 <p>A stateless session bean that has an EJB 2.1
-local or remote client view has a single <em>create</em> method on its home
+local or remote client view has a single <code>create</code> method on its home
 interface. In this case, EJB 2.1 required the stateless session bean
-class to have a single no-arg <em>ejbCreate</em> method. Under the EJB 3.x API,
-it is not required that a stateless session bean have an <em>ejbCreate</em>
+class to have a single no-arg <code>ejbCreate</code> method. Under the EJB 3.x API,
+it is not required that a stateless session bean have an <code>ejbCreate</code>
 method, even when it has a home interface. An EJB 3.x stateless session
-bean class may have a <em>PostConstruct</em> method, as described in Section
-<a href="Ejb.html#a705">See Session Bean Lifecycle Callback
-Interceptor Methods</a>.</p>
+bean class may have a <code>PostConstruct</code> method, as described in <a href="#a705">Session Bean Lifecycle Callback Interceptor Methods</a>.</p>
 </div>
 <div class="paragraph">
 <p>If the stateless session bean instance has an
-<em>ejbCreate</em> method, the container treats the <em>ejbCreate</em> method as the
-instance’s <em>PostConstruct</em> method, and, in this case, the
-<em>PostConstruct</em> annotation (or deployment descriptor metadata) can only
-be applied to the bean’s <em>ejbCreate</em> method.</p>
+<code>ejbCreate</code> method, the container treats the <code>ejbCreate</code> method as the
+instance’s <code>PostConstruct</code> method, and, in this case, the
+<code>PostConstruct</code> annotation (or deployment descriptor metadata) can only
+be applied to the bean’s <code>ejbCreate</code> method.</p>
 </div>
-<div class="paragraph">
-<p>Since stateless session bean instances are
-typically pooled, the time of the client’s invocation of the <em>create</em>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>Since stateless session bean instances are
+typically pooled, the time of the client’s invocation of the <code>create</code>
 method need not have any direct relationship to the container’s
-invocation of the <em>PostConstruct</em> / <em>ejbCreate</em> method on the stateless
-session bean instance.</p>
+invocation of the <code>PostConstruct/ejbCreate</code> method on the stateless
+session bean instance.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>A stateless session bean that provides only a
-web service client view has no <em>create</em> method. If the <em>ejbCreate</em>
+web service client view has no <code>create</code> method. If the <code>ejbCreate</code>
 method required by EJB 2.1 is present, it is treated by the container as
-the instance’s <em>PostConstruct</em> method, and is invoked when the container
+the instance’s <code>PostConstruct</code> method, and is invoked when the container
 needs to create a new session bean instance in order to service a client
 request.</p>
 </div>
@@ -5492,19 +5502,19 @@ request.</p>
 <div class="paragraph">
 <p>A stateful session bean written to the EJB
 3.x API typically has one or more remove methods designated by means of
-the <em>Remove</em> annotation or <em>remove-method</em> deployment descriptor
+the <code>Remove</code> annotation or <code>remove-method</code> deployment descriptor
 element. <sup class="footnote" id="_footnote_a10236">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup>
 Invocation of the remove method causes
 the removal of the stateful session bean after the remove method
-successfully completes. If the <em>Remove</em> annotation specifies the value
-of <em>retainIfException</em> as <em>true</em> and the invocation of the <em>Remove</em>
+successfully completes. If the <code>Remove</code> annotation specifies the value
+of <code>retainIfException</code> as <code>true</code> and the invocation of the <code>Remove</code>
 method throws an application exception, the instance is not removed. The
-<em>retain-if-exception</em> subelement of the <em>remove-method</em> deployment
+<code>retain-if-exception</code> subelement of the <code>remove-method</code> deployment
 descriptor element may be explicitly specified to override the
-<em>retainIfException</em> value specified or defaulted by the <em>Remove</em>
-annotation. The default value of the <em>retainIfException</em> element is
-<em>false</em> . If there are multiple remove methods, their
-<em>retainIfException</em> values can differ.</p>
+<code>retainIfException</code> value specified or defaulted by the <code>Remove</code>
+annotation. The default value of the <code>retainIfException</code> element is
+<code>false</code>. If there are multiple remove methods, their
+<code>retainIfException</code> values can differ.</p>
 </div>
 </div>
 <div class="sect3">
@@ -5512,8 +5522,8 @@ annotation. The default value of the <em>retainIfException</em> element is
 <div class="paragraph">
 <p>A Bean Provider or Deployer may optionally
 assign a timeout value to a stateful session bean. The stateful session
-bean timeout is specified using the StatefulTimeout annotation on the
-bean class. It may also be specified using the stateful-timeout
+bean timeout is specified using the <code>StatefulTimeout</code> annotation on the
+bean class. It may also be specified using the <code>stateful-timeout</code>
 deployment descriptor element. If both are specified, the deployment
 descriptor value overrides that of the annotation.</p>
 </div>
@@ -5537,14 +5547,13 @@ the specification.</p>
 <p>A stateful session bean instance must not be
 removed due to timeout while it is associated with a transaction or
 while it is processing a business method or callback. The full stateful
-session bean life cycle is covered in <a href="Ejb.html#a921">See
-Stateful Session Beans</a>.</p>
+session bean life cycle is covered in <a href="#a921">Stateful Session Beans</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="business-method-interceptor-methods-for-session-beans"><a class="anchor" href="#business-method-interceptor-methods-for-session-beans"></a>4.3.12. Business Method Interceptor Methods for Session Beans</h4>
 <div class="paragraph">
-<p>The <em>AroundInvoke</em> interceptor methods are
+<p>The <code>AroundInvoke</code> interceptor methods are
 supported for session beans. These interceptor methods may be defined on
 the bean class and/or on interceptor classes, and apply to the handling
 of the invocation of the business methods of the bean’s business
@@ -5553,22 +5562,20 @@ endpoint.</p>
 </div>
 <div class="paragraph">
 <p>For stateful session beans that use the
-session synchronization notifications, the <em>afterBegin</em> notification
-occurs before any <em>AroundInvoke</em> method invocations, and the
-<em>beforeCompletion</em> notification occurs after all <em>AroundInvoke</em>
+session synchronization notifications, the <code>afterBegin</code> notification
+occurs before any <code>AroundInvoke</code> method invocations, and the
+<code>beforeCompletion</code> notification occurs after all <code>AroundInvoke</code>
 invocations have finished.</p>
 </div>
 <div class="paragraph">
-<p>Interceptors are described in
-<a href="Ejb.html#a2004">See Interceptors</a>.</p>
+<p>Interceptors are described in <a href="#a2004">Interceptors</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a778"><a class="anchor" href="#a778"></a>4.3.13. Serializing Session Bean Methods</h4>
 <div class="paragraph">
 <p>The following requirements apply to stateless
-and stateful session beans. See section <a href="Ejb.html#a1257">See
-Singleton Session Bean Concurrency</a> for singleton session bean
+and stateful session beans. See <a href="#a1257">Singleton Session Bean Concurrency</a> for singleton session bean
 concurrency requirements.</p>
 </div>
 <div class="paragraph">
@@ -5583,7 +5590,7 @@ coded as reentrant.</p>
 <p>The container must serialize all the
 container-invoked callbacks (that is, the
 business method interceptor methods, lifecycle callback interceptor
-methods, timeout callback methods, beforeCompletion methods, and so on),
+methods, timeout callback methods, <code>beforeCompletion</code> methods, and so on),
 and it must serialize these callbacks with the client-invoked business
 method calls.</p>
 </div>
@@ -5594,25 +5601,24 @@ required to serialize such concurrent requests. Note that the container
 never permits multi-threaded access to the actual stateful session bean
 instance. For this reason, Read/Write method locking metadata, as well
 as the bean-managed concurrency mode, are not applicable to stateful
-session beans and must not be used. <sup class="footnote" id="_footnote_a10237">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup> See
-<a href="Ejb.html#a1257">See Singleton Session Bean Concurrency</a> for
+session beans and must not be used. <sup class="footnote" id="_footnote_a10237">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup> See <a href="#a1257">Singleton Session Bean Concurrency</a> for
 a description of how these concurrency modes and locking types apply to
 singleton session beans.</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider may optionally specify that
 concurrent client requests to a stateful session bean are prohibited.
-This is done using the AccessTimeout annotation or the <em>access-timeout</em>
-deployment descriptor element with a value of 0. In this case, if a
+This is done using the <code>AccessTimeout</code> annotation or the <code>access-timeout</code>
+deployment descriptor element with a value of <code>0</code>. In this case, if a
 client-invoked business method is in progress on an instance when
 another client-invoked call, from the same or different client, arrives
 at the same stateful session bean istance, if the second client is a
 client of the bean’s business interface or no-interface view, the
 concurrent invocation must result in the second client receiving the
-<em>javax.ejb.ConcurrentAccessException</em>. <sup class="footnote" id="_footnote_a10238">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> If the
+<code>javax.ejb.ConcurrentAccessException</code>. <sup class="footnote" id="_footnote_a10238">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> If the
 EJB 2.1 client view is used, the container must throw the
-java.rmi.RemoteException if the second client is a remote client, or the
-<em>javax.ejb.EJBException</em> if the second client is a local client.</p>
+<code>java.rmi.RemoteException</code> if the second client is a remote client, or the
+<code>javax.ejb.EJBException</code> if the second client is a local client.</p>
 </div>
 <div class="paragraph">
 <p>There is no need for any restrictions against
@@ -5623,23 +5629,23 @@ session bean class.</p>
 <div class="sect4">
 <h5 id="stateful-session-bean-concurrent-access-timeouts"><a class="anchor" href="#stateful-session-bean-concurrent-access-timeouts"></a>4.3.13.1. Stateful Session Bean Concurrent Access Timeouts</h5>
 <div class="paragraph">
-<p>The AccessTimeout annotation is used to
+<p>The <code>AccessTimeout</code> annotation is used to
 specify the amount of time a stateful session bean request should block
 in the case that it cannot immediately access a bean instance that is
 already processing a different request. If an access attempt times out,
-the container throws the javax.ejb.ConcurrentAccessTimeoutException to
+the container throws the <code>javax.ejb.ConcurrentAccessTimeoutException</code> to
 the client.</p>
 </div>
 <div class="paragraph">
-<p>The AccessTimeout annotation can be specified
+<p>The <code>AccessTimeout</code> annotation can be specified
 on a business method or on the bean class (or superclass). The
-AccessTimeout annotation specified on a class applies the access timeout
-to all business methods of that class. If the AccessTimeout annotation
+<code>AccessTimeout</code> annotation specified on a class applies the access timeout
+to all business methods of that class. If the <code>AccessTimeout</code> annotation
 is specified on both the class and on a business method of that class,
 the method-level annotation takes precedence.</p>
 </div>
 <div class="paragraph">
-<p>An AccessTimeout value of -1 indicates that a
+<p>An <code>AccessTimeout</code> value of <code>-1</code> indicates that a
 concurrent client request will block indefinitely until it can proceed.</p>
 </div>
 </div>
@@ -5652,51 +5658,52 @@ session bean methods are invoked in the scope of a transaction
 determined by the transaction attribute specified in the bean’s metadata
 annotations or deployment descriptor.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>An implementation of a method defined in a
 session bean’s business interface or component interface or no-interface
 view.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A web service method.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A timeout callback method</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>A singleton session bean’s PostConstruct or
-PreDestroy lifecycle callback interceptor method.</p>
+<p>*A singleton session bean’s <code>PostConstruct</code> or
+<code>PreDestroy</code> lifecycle callback interceptor method.</p>
 </div>
 <div class="paragraph">
-<p>A stateful session bean&#8217;s PostConstruct,
-PreDestroy, PrePassivate or PostActivate lifecycle callback interceptor
+<p>A stateful session bean&#8217;s <code>PostConstruct</code>,
+<code>PreDestroy</code>, <code>PrePassivate</code> or <code>PostActivate</code> lifecycle callback interceptor
 method is invoked in the scope of a transaction determined by the
 transaction attribute specified in the lifecycle callback method&#8217;s
 metadata annotations or deployment descriptor.</p>
 </div>
 <div class="paragraph">
-<p>A stateful session bean’s <em>afterBegin</em> and
-<em>beforeCompletion</em> methods are always called with the same transaction
-context as the business methods executed between the <em>afterBegin</em> and
-<em>beforeCompletion</em> methods.</p>
+<p>A stateful session bean’s <code>afterBegin</code> and
+<code>beforeCompletion</code> methods are always called with the same transaction
+context as the business methods executed between the <code>afterBegin</code> and
+<code>beforeCompletion</code> methods.</p>
 </div>
 <div class="paragraph">
-<p>A session bean’s <em>constructor</em> ,
-<em>setSessionContext</em> , other dependency injection methods, other life
-cycle callback interceptor methods, and <em>afterCompletion</em> methods are
-called with an unspecified transaction context. Refer to section
-<a href="Ejb.html#a2889">See Handling of Methods that Run with “an
-unspecified transaction context”</a> for how the container executes methods
-with an unspecified transaction context.</p>
+<p>A session bean’s constructor, <code>setSessionContext</code>, other dependency
+injection methods, other life cycle callback interceptor methods, and
+<code>afterCompletion</code> methods are called with an unspecified transaction context.
+Refer to <a href="#a2889">Handling of Methods that Run with “an unspecified transaction context”</a> for how the container executes methods with an unspecified
+transaction context.</p>
 </div>
 <div class="paragraph">
-<p>If database operations are performed within a
-stateful session bean’s <em>PostConstruct</em> , <em>PreDestroy</em> , <em>PrePassivate</em>
-or <em>PostActivate</em> lifecycle callback interceptor methods these
+<p><em>If database operations are performed within a
+stateful session bean’s <code>PostConstruct</code>, <code>PreDestroy</code>, <code>PrePassivate</code>
+or <code>PostActivate</code> lifecycle callback interceptor methods these
 operations will not be part of the client’s transaction. If such a
-transaction is rolled back, the instance is discarded. See section
-<a href="Ejb.html#a1041">See Dealing with Exceptions</a> for rules on
-dealing with exceptions in stateful session beans.</p>
+transaction is rolled back, the instance is discarded. See <a href="#a1041">Dealing with Exceptions</a> for
+rules on dealing with exceptions in stateful session beans.</em></p>
 </div>
 </div>
 </div>
@@ -5718,31 +5725,35 @@ namespaces.</p>
 has the following syntax:</p>
 </div>
 <div class="paragraph">
-<p>java:global[/&lt;app-name&gt;]/&lt;module-name&gt;/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]</p>
+<p><code>java:global[/&lt;app-name&gt;]/&lt;module-name&gt;/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]</code></p>
 </div>
-<div class="paragraph">
-<p>&lt;app-name&gt; only applies if the session bean
-is packaged within an .ear file. It defaults to the base name of the
-<em>.ear</em> file with no filename extension, unless specified by the
-application.xml deployment descriptor.</p>
-</div>
-<div class="paragraph">
-<p>&lt;module-name&gt; is the name of the module in
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;app-name&gt;</code> only applies if the session bean
+is packaged within an <code>.ear</code> file. It defaults to the base name of the
+<code>.ear</code> file with no filename extension, unless specified by the
+<code>application.xml</code> deployment descriptor.</p>
+</li>
+<li>
+<p><code>&lt;module-name&gt;</code> is the name of the module in
 which the session bean is packaged. In a stand-alone ejb-jar file or
-.war file, &lt;module-name&gt; defaults to the base name of the module with
-any filename extension removed. In an ear file, the &lt;module-name&gt;
+<code>.war</code> file, <code>&lt;module-name&gt;</code> defaults to the base name of the module with
+any filename extension removed. In an ear file, the <code>&lt;module-name&gt;</code>
 defaults to the pathname of the module with any filename extension
 removed, but with any directory names included. The default module name
-can be overridden using the module-name element of ejb-jar.xml file (for
-<em>ejb-jar</em> files) or web.xml file (for <em>.war</em> files).</p>
-</div>
-<div class="paragraph">
-<p>&lt;bean-name&gt; is the ejb-name of the enterprise
+can be overridden using the module-name element of <code>ejb-jar.xml</code> file (for
+<code>ejb-jar</code> files) or <code>web.xml</code> file (for <code>.war</code> files).</p>
+</li>
+<li>
+<p><code>&lt;bean-name&gt;</code> is the ejb-name of the enterprise
 bean. For enterprise beans defined via annotations, it defaults to the
-unqualified name of the session bean class, unless otherwise specified
-by the <em>name</em> element of the Stateless, Stateful, or Singleton
-annotation. For enterprise beans defined via the <em>ejb-jar.xml</em> file, it
-is specified in the ejb-name deployment descriptor element.</p>
+<em>unqualified</em> name of the session bean class, unless otherwise specified
+by the <code>name</code> element of the <code>Stateless</code>, <code>Stateful</code>, or <code>Singleton</code>
+annotation. For enterprise beans defined via the <code>ejb-jar.xml</code> file, it
+is specified in the <code>ejb-name</code> deployment descriptor element.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The container registers a separate JNDI name
@@ -5758,25 +5769,25 @@ alternatively has only a no-interface view), the container registers an
 entry for that view with the following syntax:</p>
 </div>
 <div class="paragraph">
-<p>java:global[/&lt;app-name&gt;]/&lt;module-name&gt;/&lt;bean-name&gt;</p>
+<p><code>java:global[/&lt;app-name&gt;]/&lt;module-name&gt;/&lt;bean-name&gt;</code></p>
 </div>
 <div class="paragraph">
 <p>The container is also required to make
-session bean JNDI names available through the java:app and java:module
+session bean JNDI names available through the <code>java:app</code> and <code>java:module</code>
 namespaces. <sup class="footnote" id="_footnote_a10239">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
 </div>
 <div class="sect4">
 <h5 id="javaapp"><a class="anchor" href="#javaapp"></a>4.4.1.1. java:app</h5>
 <div class="paragraph">
-<p>The java:app prefix allows a component
+<p>The <code>java:app</code> prefix allows a component
 executing within a Java EE application to access an application-specific
 namespace. The resulting syntax is:</p>
 </div>
 <div class="paragraph">
-<p>java:app/&lt;module-name&gt;/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]</p>
+<p><code>java:app/&lt;module-name&gt;/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]</code></p>
 </div>
 <div class="paragraph">
-<p>Note that &lt;module-name&gt; is a required part of
+<p>Note that <code>&lt;module-name&gt;</code> is a required part of
 the syntax, even for names based on session bean components packaged
 within a stand-alone module.</p>
 </div>
@@ -5784,12 +5795,12 @@ within a stand-alone module.</p>
 <div class="sect4">
 <h5 id="a816"><a class="anchor" href="#a816"></a>4.4.1.2. java:module</h5>
 <div class="paragraph">
-<p>The <em>java:</em> module prefix allows a component
+<p>The <code>java:module</code> prefix allows a component
 executing within a Java EE application to access a module-specific
 namespace. The resulting syntax is:</p>
 </div>
 <div class="paragraph">
-<p>java:module/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]</p>
+<p><code>java:module/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]</code></p>
 </div>
 </div>
 </div>
@@ -5801,147 +5812,111 @@ global JNDI names for various session beans.</p>
 </div>
 <div class="sect4">
 <h5 id="session-bean-exposing-a-single-local-business-interface"><a class="anchor" href="#session-bean-exposing-a-single-local-business-interface"></a>4.4.2.1. Session bean exposing a single local business interface</h5>
-<div class="paragraph">
-<p>package com.acme;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme</span>;
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">FooBean</span> <span class="directive">implements</span> Foo { ... }</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class FooBean implements Foo \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>If FooBean is packaged in fooejb.jar without
+<p>If <code>FooBean</code> is packaged in <code>fooejb.jar</code> without
 a deployment descriptor and deployed as a stand-alone module, the
 resulting JNDI name entries are:</p>
 </div>
-<div class="paragraph">
-<p>java:global/fooejb/FooBean</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>java:global/fooejb/FooBean
+java:global/fooejb/FooBean!com.acme.Foo
+
+java:app/fooejb/FooBean
+java:app/fooejb/FooBean!com.acme.Foo
+
+java:module/FooBean
+java:module/FooBean!com.acme.Foo</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>java:global/fooejb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooejb/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooejb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>If FooBean is packaged in fooejb.jar within
-fooapp.ear, without the use of any deployment descriptors, the resulting
+<p>If <code>FooBean</code> is packaged in <code>fooejb.jar</code> within
+<code>fooapp.ear</code>, without the use of any deployment descriptors, the resulting
 global JNDI name entries are:</p>
 </div>
-<div class="paragraph">
-<p>java:global/fooapp/fooejb/FooBean</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>java:global/fooapp/fooejb/FooBean
+java:global/fooapp/fooejb/FooBean!com.acme.Foo
+
+java:app/fooejb/FooBean
+java:app/fooejb/FooBean!com.acme.Foo
+
+java:module/FooBean
+java:module/FooBean!com.acme.Foo</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>java:global/fooapp/fooejb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooejb/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooejb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>If FooBean is packaged in a stand-alone
-fooweb.war file, without the use of any deployment descriptors, the
+<p>If <code>FooBean</code> is packaged in a stand-alone
+<code>fooweb.war</code> file, without the use of any deployment descriptors, the
 resulting global JNDI name entries are:</p>
 </div>
-<div class="paragraph">
-<p>java:global/fooweb/FooBean</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>java:global/fooweb/FooBean
+java:global/fooweb/FooBean!com.acme.Foo
+
+java:app/fooweb/FooBean
+java:app/fooweb/FooBean!com.acme.Foo
+
+java:module/FooBean
+java:module/FooBean!com.acme.Foo</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>java:global/fooweb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooweb/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooweb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>If FooBean is packaged in fooweb.war within
-fooapp.ear, without the use of any deployment descriptors, the resulting
+<p>If <code>FooBean</code> is packaged in <code>fooweb.war</code> within
+<code>fooapp.ear</code>, without the use of any deployment descriptors, the resulting
 global JNDI name entries are:</p>
 </div>
-<div class="paragraph">
-<p>java:global/fooapp/fooweb/FooBean</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>java:global/fooapp/fooweb/FooBean
+java:global/fooapp/fooweb/FooBean!com.acme.Foo
+
+java:app/fooweb/FooBean
+java:app/fooweb/FooBean!com.acme.Foo
+
+java:module/FooBean
+java:module/FooBean!com.acme.Foo</code></pre>
 </div>
-<div class="paragraph">
-<p>java:global/fooapp/fooweb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooweb/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:app/fooweb/FooBean!com.acme.Foo</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean</p>
-</div>
-<div class="paragraph">
-<p>java:module/FooBean!com.acme.Foo</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="session-bean-exposing-multiple-client-views"><a class="anchor" href="#session-bean-exposing-multiple-client-views"></a>4.4.2.2. Session bean exposing multiple client views</h5>
-<div class="paragraph">
-<p>package com.acme;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme</span>;
+
+<span class="annotation">@Singleton</span>(name=<span class="string"><span class="delimiter">&quot;</span><span class="content">Shared</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@LocalBean</span>
+<span class="annotation">@Remote</span>(com.acme.SharedRemote.class)
+<span class="directive">public</span> <span class="type">class</span> <span class="class">SharedBean</span> { ... }</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>@Singleton(name="Shared")</p>
-</div>
-<div class="paragraph">
-<p>@LocalBean</p>
-</div>
-<div class="paragraph">
-<p>@Remote(com.acme.SharedRemote.class)</p>
-</div>
-<div class="paragraph">
-<p>public class SharedBean \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>If SharedBean is packaged in shared.jar
+<p>If <code>SharedBean</code> is packaged in <code>shared.jar</code>
 without a deployment descriptor and deployed as a stand-alone module,
 the resulting global JNDI name entries are:</p>
 </div>
-<div class="paragraph">
-<p>java:global/shared/Shared!com.acme.SharedBean</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>java:global/shared/Shared!com.acme.SharedBean
+java:global/shared/Shared!com.acme.SharedRemote
+
+java:app/shared/Shared!com.acme.SharedBean
+java:app/shared/Shared!com.acme.SharedRemote
+
+java:module/Shared!com.acme.SharedBean
+java:module/Shared!com.acme.SharedRemote</code></pre>
 </div>
-<div class="paragraph">
-<p>java:global/shared/Shared!com.acme.SharedRemote</p>
-</div>
-<div class="paragraph">
-<p>java:app/shared/Shared!com.acme.SharedBean</p>
-</div>
-<div class="paragraph">
-<p>java:app/shared/Shared!com.acme.SharedRemote</p>
-</div>
-<div class="paragraph">
-<p>java:module/Shared!com.acme.SharedBean</p>
-</div>
-<div class="paragraph">
-<p>java:module/Shared!com.acme.SharedRemote</p>
 </div>
 </div>
 </div>
@@ -5957,29 +5932,29 @@ method exposed through one or more of the remote business, local
 business, or no-interface session bean views.</p>
 </div>
 <div class="paragraph">
-<p>Asynchronous methods can return a Future&lt;V&gt;
+<p>Asynchronous methods can return a <code>Future&lt;V&gt;</code>
 object that allows the client to retrieve a result value, check for
 exceptions, or attempt to cancel an in-progress invocation.</p>
 </div>
 <div class="sect3">
 <h4 id="metadata"><a class="anchor" href="#metadata"></a>4.5.1. Metadata</h4>
 <div class="paragraph">
-<p>The Asynchronous annotation is used to
+<p>The <code>Asynchronous</code> annotation is used to
 designate which business methods are asynchronous.</p>
 </div>
 <div class="paragraph">
-<p>The Asynchronous annotation can be applied to
+<p>The <code>Asynchronous</code> annotation can be applied to
 a particular business method of a bean class (or superclass), or to the
-bean class (or superclass). If the Asynchronous annotation is applied at
+bean class (or superclass). If the <code>Asynchronous</code> annotation is applied at
 the class level, all business methods declared on that specific class
 are asynchronous.</p>
 </div>
 <div class="paragraph">
-<p>Asynchronous methods can also be designated
+<p><code>Asynchronous</code> methods can also be designated
 via the deployment descriptor.</p>
 </div>
 <div class="paragraph">
-<p>Asynchronous method invocation semantics only
+<p><code>Asynchronous</code> method invocation semantics only
 apply to the no-interface, local business, and remote business client
 views. Support for asynchronous business methods exposed through the
 local component, remote component, and web service client views is not
@@ -5991,58 +5966,46 @@ with asynchronous methods will not be portable.</p>
 <h4 id="method-requirements"><a class="anchor" href="#method-requirements"></a>4.5.2. Method Requirements</h4>
 <div class="paragraph">
 <p>The valid return type of an asynchronous
-method is either void or java.util.concurrent.Future&lt;V&gt;, where V is the
+method is either void or <code>java.util.concurrent.Future&lt;<em>V</em>&gt;</code>, where <code><em>V</em></code> is the
 result value type.</p>
 </div>
 <div class="paragraph">
-<p>An asynchronous method with return type void
+<p>An asynchronous method with return type <code>void</code>
 must not declare any application exceptions. An asynchronous method with
-return type Future&lt;V&gt; is permitted to declare application exceptions.</p>
+return type <code>Future&lt;V&gt;</code> is permitted to declare application exceptions.</p>
 </div>
 <div class="sect4">
 <h5 id="return-values-2"><a class="anchor" href="#return-values-2"></a>4.5.2.1. Return Values</h5>
 <div class="paragraph">
 <p>The Bean Provider makes the result value of
 an asynchronous invocation available to the client by returning a
-Future&lt;V&gt; object for which both get() methods return the result value. A
-concrete Future&lt;V&gt; implemention called javax.ejb.AsyncResult&lt;V&gt; is
-provided by the container as a convenience. The AsyncResult&lt;V&gt; class has
+<code>Future&lt;V&gt;</code> object for which both <code>get()</code> methods return the result value. A
+concrete <code>Future&lt;V&gt;</code> implemention called <code>javax.ejb.AsyncResult&lt;V&gt;</code> is
+provided by the container as a convenience. The <code>AsyncResult&lt;V&gt;</code> class has
 a constructor that takes the result value as a parameter.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
 </div>
-<div class="paragraph">
-<p>@Asynchronous</p>
-</div>
-<div class="paragraph">
-<p>public Future&lt;Integer&gt;
-performCalculation(&#8230;&#8203;) \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>// ... do calculation</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Integer result = ...;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>return new AsyncResult&lt;Integer&gt;(result);</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Asynchronous</span>
+<span class="directive">public</span> <span class="predefined-type">Future</span>&lt;<span class="predefined-type">Integer</span>&gt;
+performCalculation(...) {
+ <span class="comment">// ... do calculation</span>
+
+ <span class="predefined-type">Integer</span> result = ...;
+
+ <span class="keyword">return</span> <span class="keyword">new</span> AsyncResult&lt;<span class="predefined-type">Integer</span>&gt;(result);
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>Note that the Future&lt;V&gt; object returned from
-the bean class method (including any instance of AsyncResult&lt;V&gt;) is only
+<p>Note that the <code>Future&lt;V&gt;</code> object returned from
+the bean class method (including any instance of <code>AsyncResult&lt;V&gt;</code>) is <em>only</em>
 used as a way to pass the result value to the container. This object is
 not given directly to the caller, since by definition the caller already
-has a container-generated Future&lt;V&gt; object that was returned from the
+has a container-generated <code>Future&lt;V&gt;</code> object that was returned from the
 original invocation.</p>
 </div>
 </div>
@@ -6050,12 +6013,12 @@ original invocation.</p>
 <h5 id="method-cancellation"><a class="anchor" href="#method-cancellation"></a>4.5.2.2. Method cancellation</h5>
 <div class="paragraph">
 <p>A client can request that an asynchronous
-invocation be cancelled by calling the Future&lt;V&gt;.cancel(boolean
-mayInterruptIfRunning) method. The Bean Provider can check whether the
+invocation be cancelled by calling the
+<code>Future&lt;V&gt;.cancel(boolean mayInterruptIfRunning)</code> method.
+The Bean Provider can check whether the
 client has requested cancellation by calling the
-SessionContext.wasCancelCalled() method within the context of the
-asynchronous method. See <a href="Ejb.html#a387">See Asynchronous
-Invocations</a> for the description of the client Future contract.</p>
+<code>SessionContext.wasCancelCalled()</code> method within the context of the
+asynchronous method. See <a href="#a387">Asynchronous Invocations</a> for the description of the client Future contract.</p>
 </div>
 </div>
 </div>
@@ -6066,8 +6029,8 @@ Invocations</a> for the description of the client Future contract.</p>
 propagate with an asynchronous method invocation. From the Bean
 Provider’s point of view, there is never a transaction context flowing
 in from the client. This means, for example, that the semantics of the
-REQUIRED transaction attribute on an asynchronous method are exactly the
-same as REQUIRES_NEW.</p>
+<code>REQUIRED</code> transaction attribute on an asynchronous method are exactly the
+same as <code>REQUIRES_NEW</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -6083,21 +6046,21 @@ for synchronous session bean invocations.</p>
 <h4 id="client-exception-behavior"><a class="anchor" href="#client-exception-behavior"></a>4.5.5. Client Exception Behavior</h4>
 <div class="paragraph">
 <p>Client exception behavior depends on whether
-the asynchronous method has return type void or Future&lt;V&gt;.</p>
+the asynchronous method has return type void or <code>Future&lt;V&gt;</code>.</p>
 </div>
 <div class="paragraph">
 <p>If the asynchronous method has return type
-void, then once control has returned from the client’s method call no
+<code>void</code>, then once control has returned from the client’s method call no
 exceptions occurring during the processing of the invocation will be
 delivered to the client. For this reason, asynchronous methods with
-return type void must not declare application exceptions.</p>
+return type <code>void</code> must not declare application exceptions.</p>
 </div>
 <div class="paragraph">
 <p>If the asynchronous method has return type
-Future&lt;V&gt;, an exception thrown from the processing of the asynchronous
-method invocation is accessible to the client via the getCause() method
-of a java.util.concurrent.ExecutionException thrown from either
-Future.get() method.</p>
+<code>Future&lt;V&gt;</code>, an exception thrown from the processing of the asynchronous
+method invocation is accessible to the client via the <code>getCause()</code> method
+of a <code>java.util.concurrent.ExecutionException</code> thrown from either
+<code>Future.get()</code> method.</p>
 </div>
 </div>
 </div>
@@ -6109,73 +6072,65 @@ Future.get() method.</p>
 <p>The following figure illustrates the life
 cycle of a stateful session bean instance.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,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" alt="EBCore 10">
 </div>
-<div class="paragraph">
-<p>Life Cycle of a Stateful Session Bean Instance</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="data:image/png;base64,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" alt="image"></span></p>
+<div class="title">Figure 1. Life Cycle of a Stateful Session Bean Instance</div>
 </div>
 <div class="paragraph">
 <p>The following
 steps describe the life cycle of a stateful session bean instance:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A session bean instance’s life starts when a
 client obtains a reference to a stateful session bean instance through
 dependency injection or JNDI lookup, or when the client invokes a
-<em>create&lt;METHOD&gt;</em> method on the session bean’s home interface. This
+<code>create&lt;METHOD&gt;</code> method on the session bean’s home interface. This
 causes the container to invoke the session bean class constructor to
 create a new session bean instance. <sup class="footnote" id="_footnote_a10240">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup> Next, the
 container performs any dependency injection as specified by metadata
 annotations on the bean class or by the deployment descriptor. The
-container then calls the <em>PostConstruct</em> lifecycle callback interceptor
+container then calls the <code>PostConstruct</code> lifecycle callback interceptor
 method(s) for the bean, if any. Finally, if the session bean was written
 to the EJB 2.1 client view, the container invokes the matching
-<em>ejbCreate&lt;METHOD&gt;</em> or <em>Init</em> method on the instance. The container then
+<code>ejbCreate&lt;METHOD&gt;</code> or <code>Init</code> method on the instance. The container then
 returns the session object reference to the client. The instance is now
-in the method ready state.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _NOTE: When a stateful session bean is
+in the method ready state.<br>
+<em>NOTE: When a stateful session bean is
 looked up or otherwise obtained through the explicit JNDI lookup
 mechanisms, the container must provide a new stateful session bean
-instance, as required by the Java EE specification (Section “Java Naming
-and Directory Interface (JNDI) Naming Context”
-link:Ejb.html#a9854[See Java™ Naming and Directory Interface 1.2
-Specification (JNDI).
-http://docs.oracle.com/javase/7/docs/technotes/guides/jndi/index.html.])._</pre>
-</div>
-</div>
-<div class="paragraph">
+instance, as required by the Java EE specification (Section "Java Naming
+and Directory Interface (JNDI) Naming Context" <a href="#a9854">[5]</a>).</em></p>
+</li>
+<li>
 <p>The session bean instance is now ready for
 client’s business methods. Based on the transaction attributes in the
 session bean’s metadata annotations and/or deployment descriptor and the
 transaction context associated with the client’s invocation, a business
 method is executed either in a transaction context or with an
-unspecified transaction context (shown as “tx method” and “non-tx
-method” in the diagram). See <a href="Ejb.html#a2172">See Support for
-Transactions</a> for how the container deals with transactions.</p>
-</div>
-<div class="paragraph">
+unspecified transaction context (shown as "tx method" and "non-tx
+method" in the diagram). See <a href="#a2172">Support for Transactions</a> for how the container deals with
+transactions.</p>
+</li>
+<li>
 <p>A non-transactional method is executed while
 the instance is in the method ready state.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>An invocation of a transactional method
 causes the instance to be included in a transaction. When the session
 bean instance is included in a transaction, the container issues the
-<em>afterBegin</em> method on it if the session bean has an <em>afterBegin</em>
-callback method. <sup class="footnote" id="_footnote_a10241">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> The <em>afterBegin</em> method is
+<code>afterBegin</code> method on it if the session bean has an <code>afterBegin</code>
+callback method. <sup class="footnote" id="_footnote_a10241">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> The <code>afterBegin</code> method is
 invoked on the instance before any business method or business method
 interceptor method is executed as part of the transaction. The instance
 becomes associated with the transaction and will remain associated with
 the transaction until the transaction completes.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Session bean methods invoked by the client in
 this transaction can now be delegated to the bean instance. An error
 occurs if a client attempts to invoke a method on the session object and
@@ -6183,44 +6138,44 @@ the bean’s metadata annotations and/or deployment descriptor for the
 method requires that the container invoke the method in a different
 transaction context than the one with which the instance is currently
 associated or in an unspecified transaction context.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If a transaction commit has been requested,
 the transaction service notifies the container of the commit request
 before actually committing the transaction, and the container issues the
-<em>befor</em> <em>eCompletion</em> callback on the instance if the session bean has a
-<em>beforeCompletion</em> callback method. <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> When <em>beforeCompletion</em>
+<code>beforeCompletion</code> callback on the instance if the session bean has a
+<code>beforeCompletion</code> callback method. <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> When <code>beforeCompletion</code>
 is invoked, the instance should write
 any cached updates to the database. <sup class="footnote" id="_footnote_a10242">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup> If a
 transaction rollback had been requested instead, the rollback status is
-reached without the container issuing a <em>beforeCompletion</em> . The
-container may not call the <em>beforeCompletion</em> method if the transaction
+reached without the container issuing a <code>beforeCompletion</code> . The
+container may not call the <code>beforeCompletion</code> method if the transaction
 has been marked for rollback (nor does the instance write any cached
 updates to the database).</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The transaction service then attempts to
 commit the transaction, resulting in either a commit or rollback.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>When the transaction completes, the container
-issues <em>afterCompletion</em> on the instance if the session bean has an
-<em>afterCompletion</em> callback method, <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> specifying the status of the completion (either commit or
+issues <code>afterCompletion</code> on the instance if the session bean has an
+<code>afterCompletion</code> callback method, <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> specifying the status of the completion (either commit or
 rollback). If a rollback occurred, the bean instance may need to reset
 its conversational state back to the value it had at the beginning of
 the transaction.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The container’s caching algorithm may decide
 that the bean instance should be evicted from memory. (This could be
 done at the end of each method, or by using an LRU policy). The
-container invokes the <em>PrePassivate</em> lifecycle callback interceptor
+container invokes the <code>PrePassivate</code> lifecycle callback interceptor
 method(s) for the bean instance, if any. After this completes, the
 container saves the instance’s state to secondary storage. A session
 bean can be passivated only between transactions, and not within a
 transaction.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>While the instance is in the
 passivated state, the container may remove
 the session object after the expiration of a
@@ -6228,158 +6183,166 @@ timeout specified by the Deployer. All
 object references and handles for the session object become invalid. If
 a client attempts to invoke a method on the bean’s business interface,
 the container will throw the
-<em>javax.ejb.NoSuchEJBException</em>. <sup class="footnote" id="_footnote_a10243">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>
+<code>javax.ejb.NoSuchEJBException</code>. <sup class="footnote" id="_footnote_a10243">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>
 If the EJB 2.1
 client view is used, the container will throw the
-java.rmi.NoSuchObjectException if the client is a remote client, or the
-<em>javax.ejb.NoSuchObjectLocalException</em> if the client is a local client.</p>
-</div>
-<div class="paragraph">
+<code>java.rmi.NoSuchObjectException</code> if the client is a remote client, or the
+<code>javax.ejb.NoSuchObjectLocalException</code> if the client is a local client.</p>
+</li>
+<li>
 <p>If a client invokes a session object whose
 session bean instance has been passivated, the container will activate
 the instance. To activate the session bean instance, the container
 restores the instance’s state from secondary storage and invokes the
-<em>PostActivate</em> method for the instance, if any.</p>
-</div>
-<div class="paragraph">
+<code>PostActivate</code> method for the instance, if any.</p>
+</li>
+<li>
 <p>The session bean instance is again ready for
 client methods.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>When the client calls a business method of
-the bean that has been designated as a <em>Remove</em> method on the bean class
-or a <em>remove</em> method on the home or component interface, the container
-invokes <em>PreDestroy</em> lifecycle callback interceptor methods, if any, for
-the bean instance after the <em>Remove</em> method
+the bean that has been designated as a <code>Remove</code> method on the bean class
+or a <code>remove</code> method on the home or component interface, the container
+invokes <code>PreDestroy</code> lifecycle callback interceptor methods, if any, for
+the bean instance after the <code>Remove</code> method
 completes. <sup class="footnote" id="_footnote_a10244">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup>
 This ends the life of the session bean
 instance and the associated session object. If a client subsequently
 attempts to invoke a method on the bean’s business interface, the
 container will throw the
-<em>javax.ejb.NoSuchEJBException</em>. <sup class="footnote" id="_footnote_a10245">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>
+<code>javax.ejb.NoSuchEJBException</code>. <sup class="footnote" id="_footnote_a10245">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>
 If the EJB 2.1
 client view is used, any subsequent attempt causes the
-<em>java.rmi.NoSuchObjectException</em> to be thrown if the client is a remote
-client, or the <em>javax.ejb.NoSuchObjectLocalException</em> if the client is a
-local client. (The <em>java.rmi.NoSuchObjectException</em> is a subclass of the
-<em>java.rmi.RemoteException</em> ; the <em>javax.ejb.NoSuchObjectLocalException</em>
-is a subclass of the <em>javax.ejb.EJBException</em> ). If the <em>Remove</em> method
-completes successfully or if the <em>Remove</em> method throws an application
-exception for which <em>retainIfException</em> is not <em>true</em> or if a system
+<code>java.rmi.NoSuchObjectException</code> to be thrown if the client is a remote
+client, or the <code>javax.ejb.NoSuchObjectLocalException</code> if the client is a
+local client. (The <code>java.rmi.NoSuchObjectException</code> is a subclass of the
+<code>java.rmi.RemoteException</code>; the <code>javax.ejb.NoSuchObjectLocalException</code>
+is a subclass of the <code>javax.ejb.EJBException</code>). If the <code>Remove</code> method
+completes successfully or if the <code>Remove</code> method throws an application
+exception for which <code>retainIfException</code> is not <code>true</code> or if a system
 exception is thrown, session synchronization methods are not called on
 the bean instance. If an application exception is thrown for which
-<em>retainIfException</em> is <em>true</em> , the bean is neither destroyed nor
+<code>retainIfException</code> is <code>true</code> , the bean is neither destroyed nor
 discarded, and session synchronization methods, if any, are called on
-the instance at the end of transaction <em>.</em> A container can also invoke
-the <em>PreDestroy</em> method on the instance without a client call to remove
+the instance at the end of transaction. A container can also invoke
+the <code>PreDestroy</code> method on the instance without a client call to remove
 the session object:</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>After the lifetime of the EJB object has
 expired</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>When the CDI context, to which the EJB object
 belongs to, is destroyed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The container must call the afterBegin,
-beforeCompletion, and afterCompletion methods if the session bean class
-implements, directly or indirectly, the SessionSynchronization
+<p><em>The container must call the <code>afterBegin</code>,
+<code>beforeCompletion</code>, and <code>afterCompletion</code> methods if the session bean class
+implements, directly or indirectly, the <code>SessionSynchronization</code>
 interface, or if the bean class uses the session synchronization
-annotations.</p>
+annotations.</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a947"><a class="anchor" href="#a947"></a>4.6.2. Operations Allowed in the Methods of a Stateful Session Bean Class</h4>
 <div class="paragraph">
-<p>Table <a href="Ejb.html#a953">See
-Operations Allowed in the Methods of a Stateful Session Bean</a> defines
+<p><a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a> defines
 the methods of a stateful session bean class from which the session bean
-instances can access the methods of the javax.ejb.SessionContext
-interface, the java:comp/env environment naming context, resource
-managers, <em>Timer</em> methods, the <em>EntityManager</em> and
-<em>EntityManagerFactory</em> methods, and other enterprise beans.</p>
+instances can access the methods of the <code>javax.ejb.SessionContext</code>
+interface, the <code>java:comp/env</code> environment naming context, resource
+managers, <code>Timer</code> methods, the <code>EntityManager</code> and
+<code>EntityManagerFactory</code> methods, and other enterprise beans.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean
-instance attempts to invoke a method of the SessionContext interface,
-and that access is not allowed in Table <a href="Ejb.html#a953">See
-Operations Allowed in the Methods of a Stateful Session Bean</a>, the
-container must throw the java.lang.IllegalStateException.</p>
+instance attempts to invoke a method of the <code>SessionContext</code> interface,
+and that access is not allowed in <a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a>, the
+container must throw the <code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to access
 a resource manager, an enterprise bean, an entity manager or entity
-manager factory, and that access is not allowed in Table
-<a href="Ejb.html#a953">See Operations Allowed in the Methods of a
-Stateful Session Bean</a>, the behavior is undefined by the EJB
-architecture.</p>
+manager factory, and that access is not allowed in <a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a>, the behavior
+is undefined by the EJB architecture.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to invoke
-a method of the <em>Timer</em> interface and the access is not allowed in Table
-<a href="Ejb.html#a953">See Operations Allowed in the Methods of a
-Stateful Session Bean</a>, the container must throw the
-<em>java.lang.IllegalStateException</em> .</p>
+a method of the <code>Timer</code> interface and the access is not allowed in <a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a>,
+the container must throw the <code>java.lang.IllegalStateException</code>.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a953"></a>Operations Allowed in the Methods of a Stateful
-Session Bean</p>
-</div>
-<div class="paragraph">
-<p>Bean method</p>
-</div>
-<div class="paragraph">
-<p>Bean method can perform the following
-operations</p>
-</div>
-<div class="paragraph">
-<p>Container-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>Bean-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>constructor</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>dependency injection methods (e.g.,
-setSessionContext)</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: getEJBHome,
-getEJBLocalHome, lookup</p>
+<table id="a953" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Operations Allowed in the Methods of a Stateful Session Bean</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Bean method</th>
+<th class="tableblock halign-center valign-top" colspan="2">Bean method can perform the following
+operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constructor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dependency injection methods (e.g.,
+setSessionContext)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getEJBHome, getEJBLocalHome, lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: getEJBHome,
-getEJBLocalHome, lookup</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getEJBHome, getEJBLocalHome, lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>PostConstruct, PreDestroy,
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PostConstruct, PreDestroy,
 PrePassivate, PostActivate lifecycle callback interceptor
-methods <sup class="footnote" id="_footnote_a10246">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup></p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
-getEJBHome, <em>getEJBLocalHome</em> , getRollbackOnly, setRollbackOnly,
+methods <sup class="footnote" id="_footnote_a10246">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
+getEJBHome, getEJBLocalHome, getRollbackOnly, setRollbackOnly,
 getCallerPrincipal, isCallerInRole, getEJBObject, getEJBLocalObject,
-lookup, getContextData</p>
+lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
@@ -6395,12 +6358,17 @@ lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
-getEJBHome, <em>getEJBLocalHome</em> , getCallerPrincipal, isCallerInRole,
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
+getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, getUserTransaction, lookup,
-getContextData</p>
+getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>UserTransaction methods</p>
@@ -6419,22 +6387,23 @@ getContextData</p>
 </div>
 <div class="paragraph">
 <p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>business method</p>
-</div>
-<div class="paragraph">
-<p>from business interface or from no-interface
-view or from component interface;</p>
-</div>
-<div class="paragraph">
-<p>business method interceptor method</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
-getEJBHome, <em>getEJBLocalHome</em> , getCallerPrincipal, getRollbackOnly,
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">business method
+from business interface or from no-interface
+view or from component interface;
+business method interceptor method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
+getEJBHome, getEJBLocalHome, getCallerPrincipal, getRollbackOnly,
 isCallerInRole, setRollbackOnly, getEJBObject, getEJBLocalObject,
-getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</p>
+getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
@@ -6453,12 +6422,17 @@ getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
-getEJBHome, <em>getEJBLocalHome</em> , getCallerPrincipal, isCallerInRole,
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
+getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, getInvokedBusinessInterface,
-wasCancelCalled, getUserTransaction, lookup, getContextData</p>
+wasCancelCalled, getUserTransaction, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>UserTransaction methods</p>
@@ -6480,18 +6454,21 @@ wasCancelCalled, getUserTransaction, lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>Timer methods</p>
-</div>
-<div class="paragraph">
-<p>afterBegin</p>
-</div>
-<div class="paragraph">
-<p>beforeCompletion</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
-getEJBHome, <em>getEJBLocalHome,</em> getCallerPrincipal, getRollbackOnly,
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">afterBegin</p>
+<p class="tableblock">beforeCompletion</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
+getEJBHome, getEJBLocalHome, getCallerPrincipal, getRollbackOnly,
 isCallerInRole, setRollbackOnly, getEJBObject, getEJBLocalObject,
-lookup, getContextData</p>
+lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
@@ -6510,135 +6487,133 @@ lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>Timer methods</p>
-</div>
-<div class="paragraph">
+</div></div></td>
+<td class="tableblock halign-left valign-middle" rowspan="2"><div class="content"><div class="paragraph">
 <p>N/A</p>
 </div>
 <div class="paragraph">
 <p>(a bean with bean-managed transaction
 demarcation cannot implement the SessionSynchronization interface or use
 the session synchronization annotations)</p>
-</div>
-<div class="paragraph">
-<p>afterCompletion</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">afterCompletion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SessionContext methods: <em>getBusinessObject</em> ,
 getEJBHome, <em>getEJBLocalHome,</em> getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, lookup, getContextData</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
+<p class="tableblock">JNDI access to java:comp/env</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Notes:</p>
 </div>
-<div class="paragraph">
-<p>The <em>PostConstruct</em> , <em>PreDestroy</em> ,
-<em>PrePassivate</em> , <em>PostActivate</em> , and/or ejbCreate <em>&lt;METHOD&gt;</em> ,
-ejbRemove, ejbPassivate, and ejbActivate methods of a stateful session
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>PostConstruct</code>, <code>PreDestroy</code>,
+<code>PrePassivate</code>, <code>PostActivate</code>, and/or <code>ejbCreate&lt;METHOD&gt;</code>,
+<code>ejbRemove</code>, <code>ejbPassivate</code>, and <code>ejbActivate</code> methods of a stateful session
 bean with container-managed transaction demarcation are invoked in the
 scope of a transaction determined by the
 transaction attribute specified in the
 bean’s metadata annotations or deployment descriptor.</p>
-</div>
-<div class="paragraph">
-<p>The <em>Init methods of a session bean with
+</li>
+<li>
+<p>The <code>Init</code> methods of a session bean with
 container-managed transaction demarcation execute with an unspecified
-transaction context.</em> Refer to Subsection
-<a href="Ejb.html#a2889">See Handling of Methods that Run with “an
-unspecified transaction context”</a> for how the container executes methods
-with an unspecified transaction context <em>.</em></p>
-</div>
-<div class="paragraph">
+transaction context. Refer to <a href="#a2889">Handling of Methods that Run with “an unspecified transaction context”</a> for how the container executes methods
+with an unspecified transaction context.</p>
+</li>
+<li>
 <p>In some cases, lifecycle callback interceptor
 methods initiated solely by the container without an associated client
-invocation run in an unspecified security context, e.g., a PostConstruct
+invocation run in an unspecified security context, e.g., a <code>PostConstruct</code>
 method callback invoked as a side-effect of the injection of a remote or
 local business interface reference. However, the container is still
 required to permit client calls to these methods according to the rules
-in this table (see note on <a href="Ejb.html#a1516">See Note:
-Callback methods are permitted to have public access type. This raises
-the question of whether a callback method can also be exposed as a
-business method through one or more client views. Doing so is not
-prohibited, but should be done with caution. The runtime context (e.g.
-transaction context, caller principal, operations allowed, etc.) for a
-method invoked as a callback can differ significantly from the context
-for the same method when invoked via a client invocation. As a general
-rule, callback methods should not be exposed as business methods.
-Therefore, it is recommended that all non-business methods be assigned
-an access type other than public.</a>).</p>
+in this table (<a href="#a1516">see note</a>).</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Additional restrictions:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The getRollbackOnly and setRollbackOnly
 methods of the SessionContext interface should be used only in the
 session bean methods that execute in the context of a transaction. The
-container must throw the java.lang.IllegalStateException if the methods
+container must throw the <code>java.lang.IllegalStateException</code> if the methods
 are invoked while the instance is not associated with a transaction.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The reasons for disallowing the operations in
-Table <a href="Ejb.html#a953">See Operations Allowed in the Methods
-of a Stateful Session Bean</a> follow:</p>
+<a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a> follow:</p>
 </div>
-<div class="paragraph">
-<p>Invoking the <em>getBusinessObject</em> method is
+<div class="ulist">
+<ul>
+<li>
+<p>Invoking the <code>getBusinessObject</code> method is
 disallowed if the session bean does not define a business interface or a
 no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getInvokedBusinessInterface</em>
+</li>
+<li>
+<p>Invoking the <code>getInvokedBusinessInterface</code>
 method is disallowed if the session bean does not define a business
 interface or a no-interface view. It is also disallowed if the current
 business method was not invoked through a business interface or the
 no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getEJBObject</em> and <em>getEJBHome</em>
+</li>
+<li>
+<p>Invoking the <code>getEJBObject</code> and <code>getEJBHome</code>
 methods is disallowed if the session bean does not define a remote
 component client view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getEJBLocalObject</em> and
-<em>getEJBLocalHome</em> methods is disallowed if the session bean does not
+</li>
+<li>
+<p>Invoking the <code>getEJBLocalObject</code> and
+<code>getEJBLocalHome</code> methods is disallowed if the session bean does not
 define a local component client view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the getRollbackOnly and
-setRollbackOnly methods is disallowed in the session bean methods for
+</li>
+<li>
+<p>Invoking the <code>getRollbackOnly</code> and
+<code>setRollbackOnly</code> methods is disallowed in the session bean methods for
 which the container does not have a meaningful transaction context, and
 to all session beans with bean-managed transaction demarcation.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Accessing resource managers and enterprise
 beans is disallowed in the session bean methods for which the container
 does not have a meaningful transaction context and/or client security
 context.</p>
-</div>
-<div class="paragraph">
-<p>The UserTransaction interface is unavailable
+</li>
+<li>
+<p>The <code>UserTransaction</code> interface is unavailable
 to enterprise beans with container-managed transaction demarcation.</p>
-</div>
-<div class="paragraph">
-<p>The <em>TimerService</em> interface is unavailable
+</li>
+<li>
+<p>The <code>TimerService</code> interface is unavailable
 to stateful session beans.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getMessageContext</em> method is
+</li>
+<li>
+<p>Invoking the <code>getMessageContext</code> method is
 disallowed for stateful session beans.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the getEJBObject and
-<em>getEJBLocalObject</em> methods is disallowed in the session bean methods in
+</li>
+<li>
+<p>Invoking the <code>getEJBObject</code> and
+<code>getEJBLocalObject</code> methods is disallowed in the session bean methods in
 which there is no session object identity established for the instance.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>wasCancelCalled</em> method is
+</li>
+<li>
+<p>Invoking the <code>wasCancelCalled</code> method is
 disallowed except when inside the context of the asynchronous methods
-that declare Future&lt;V&gt; object as the returning type.</p>
+that declare <code>Future&lt;V&gt;</code> object as the returning type.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -6648,11 +6623,10 @@ that declare Future&lt;V&gt; object as the returning type.</p>
 RuntimeException that is not an application
 exception thrown from any method of the stateful session bean class
 (including the business methods and the lifecycle callback interceptor
-methods invoked by the container) results in the transition to the “does
-not exist” state. Exception handling is described in detail in Chapter
-<a href="Ejb.html#a2940">See Exception Handling</a>. See the
-<em>Interceptors</em> specification <a href="Ejb.html#a9887">See
-Interceptors</a> for the
+methods invoked by the container) results in the transition to the "does
+not exist" state. Exception handling is described in detail in
+<a href="#a2940">Exception Handling</a>. See the
+<em>Interceptors</em> specification <a href="#a9887">[37]</a> for the
 rules pertaining to lifecycle callback interceptor methods when more
 than one such method applies to the bean class.</p>
 </div>
@@ -6661,52 +6635,53 @@ than one such method applies to the bean class.</p>
 corresponding session object does not exist any more. If a client
 subsequently attempts to invoke a method on the bean’s business
 interface or the no-interface view, the container will throw the
-<em>javax.ejb.NoSuchEJBException</em>. <sup class="footnote" id="_footnote_a10247">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>
+<code>javax.ejb.NoSuchEJBException</code>. <sup class="footnote" id="_footnote_a10247">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>
 If the EJB 2.1
 client view is used, the container will throw the
-java.rmi.NoSuchObjectException if the client is a remote client, or the
-<em>javax.ejb.NoSuchObjectLocalException</em> if the client is a local client.</p>
+<code>java.rmi.NoSuchObjectException</code> if the client is a remote client, or the
+<code>javax.ejb.NoSuchObjectLocalException</code> if the client is a local client.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="missed-predestroy-calls"><a class="anchor" href="#missed-predestroy-calls"></a>4.6.4. Missed <code>PreDestroy</code> Calls</h4>
 <div class="paragraph">
 <p>The Bean Provider
-cannot assume that the container will always invoke the PreDestroy
-lifecycle callback interceptor method(s) (or <em>ejbRemove</em> method) for a
+cannot assume that the container will always invoke the <code>PreDestroy</code>
+lifecycle callback interceptor method(s) (or <code>ejbRemove</code> method) for a
 stateful session bean instance. The following scenarios result in the
 PreDestroy lifecycle callback interceptor method(s) not being called for
 an instance:</p>
 </div>
-<div class="paragraph">
-<p>A crash of the
-EJB container.</p>
-</div>
-<div class="paragraph">
-<p>A system
-exception thrown from the instance’s method to the container.</p>
-</div>
-<div class="paragraph">
-<p>A timeout of
-client inactivity while the instance is in the passive state. The
-timeout is specified by the Deployer in an EJB container
+<div class="ulist">
+<ul>
+<li>
+<p>A crash of the EJB container.</p>
+</li>
+<li>
+<p>A system exception thrown from the instance’s method to the container.</p>
+</li>
+<li>
+<p>A timeout of client inactivity while the instance is in the passive
+state. The timeout is specified by the Deployer in an EJB container
 implementation-specific way.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>If resources are allocated in a
-<em>PostConstruct</em> lifecycle callback interceptor method (or
-ejbCreate&lt;METHOD&gt; method) and/or in the business methods, and normally
-released in a PreDestroy lifecycle callback interceptor method, these
+<code>PostConstruct</code> lifecycle callback interceptor method (or
+<code>ejbCreate&lt;METHOD&gt;</code> method) and/or in the business methods, and normally
+released in a <code>PreDestroy</code> lifecycle callback interceptor method, these
 resources will not be automatically released in the above scenarios. The
 application using the stateful session bean should provide some clean up
 mechanism to periodically clean up the unreleased resources.</p>
 </div>
 <div class="paragraph">
-<p>For example, if a shopping cart component is
+<p><em>For example, if a shopping cart component is
 implemented as a session bean, and the session bean stores the shopping
 cart content in a database, the application should provide a program
 that runs periodically and removes “abandoned” shopping carts from the
-database.</p>
+database.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -6718,19 +6693,19 @@ However, the Bean Provider can optionally configure the stateful session
 bean to prevent passivation of its instances.</p>
 </div>
 <div class="paragraph">
-<p>For example, a stateful session bean instance
+<p><em>For example, a stateful session bean instance
 may contain non-serializable attributes which would lead to runtime
 exceptions during passivation, or passivation and activation of such
-instances may cause degradation of application performance.</p>
+instances may cause degradation of application performance.</em></p>
 </div>
 <div class="paragraph">
-<p>If the passivationCapable element of the
-Stateful annotation is set to false or the passivation-capable element
-of the session deployment descriptor element is set to false, the
+<p>If the <code>passivationCapable</code> element of the
+<code>Stateful</code> annotation is set to false or the <code>passivation-capable</code> element
+of the session deployment descriptor element is set to <code>false</code>, the
 container must not attempt to passivate instances of the bean.</p>
 </div>
 <div class="paragraph">
-<p>Note: application server vendors may use
+<p><em>Note: application server vendors may use
 passivation as a technique to provide high availability of stateful
 session beans by replicating their state from one JVM instance to
 another across which the container is distributed. In a failure
@@ -6738,19 +6713,19 @@ situation, a stateful session bean is made available on a new JVM
 instance by what is commonly called stateful session bean failover. If a
 container implementation supports failover of stateful session beans
 using bean passivation, the failover capability for not passivation
-capable stateful session beans is not defined.</p>
+capable stateful session beans is not defined.</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="transaction-semantics-of-initialization-destruction-activation-and-passivation"><a class="anchor" href="#transaction-semantics-of-initialization-destruction-activation-and-passivation"></a>4.6.6. Transaction Semantics of Initialization, Destruction, Activation and Passivation</h4>
 <div class="paragraph">
 <p>By default a stateful session bean’s
-<em>PostConstruct</em> , <em>PreDestroy</em> , <em>PrePassivate</em> and <em>PostActivate</em>
+<code>PostConstruct</code>, <code>PreDestroy</code>, <code>PrePassivate</code> and <code>PostActivate</code>
 methods are executed in an unspecified transactional context. A
-<em>PostConstruct</em> , <em>PreDestroy</em> , <em>PrePassivate</em> and <em>PostActivate</em>
+<code>PostConstruct</code>, <code>PreDestroy</code>, <code>PrePassivate</code> and <code>PostActivate</code>
 method of a stateful session bean with container-managed transaction
-demarcation is permitted to have transaction attribute REQUIRES_NEW or
-NOT_SUPPORTED (RequiresNew or NotSupported if the deployment descriptor
+demarcation is permitted to have transaction attribute <code>REQUIRES_NEW</code> or
+<code>NOT_SUPPORTED</code> (<code>RequiresNew</code> or <code>NotSupported</code> if the deployment descriptor
 is used to specify the transaction attribute).</p>
 </div>
 </div>
@@ -6762,30 +6737,34 @@ implies the following restrictions on transaction scoping of the client
 invoked business methods. The restrictions are enforced by the container
 and must be observed by the client programmer.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A stateful session bean instance can
 participate in at most a single transaction at a time.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If a stateful session bean instance is
 participating in a transaction, it is an error for a client to invoke a
 method on the session object such that the transaction attribute
 specified in the bean’s metadata annotations and/or the deployment
 descriptor would cause the container to execute the method in a
 different transaction context or in an unspecified transaction context.
-In such a case, the <em>javax.ejb.EJBException</em> will be thrown to a client
+In such a case, the <code>javax.ejb.EJBException</code> will be thrown to a client
 of the bean’s business interface. <sup class="footnote" id="_footnote_a10248">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>
 If the EJB 2.1
-client view is used, the container throws the <em>java.rmi.RemoteException</em>
+client view is used, the container throws the <code>java.rmi.RemoteException</code>
 to the client if the client is a remote client, or the
-<em>javax.ejb.EJBException</em> if the client is a local client.</p>
+<code>javax.ejb.EJBException</code> if the client is a local client.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>If a stateful session bean instance is
 participating in a transaction, it is an error for a client to invoke
-the <em>remove</em> method on the session object’s home or component interface
+the <code>remove</code> method on the session object’s home or component interface
 object. The container must detect such an attempt and throw the
-<em>javax.ejb.RemoveException</em> to the client. The container should not mark
+<code>javax.ejb.RemoveException</code> to the client. The container should not mark
 the client’s transaction for rollback, thus allowing the client to
 recover. Note that this restriction only applies to the remove method on
 the session object’s home or component interface, not to the invocation
@@ -6802,17 +6781,22 @@ This means that all bean instances are equivalent when they are not
 involved in servicing a client-invoked method.</p>
 </div>
 <div class="paragraph">
-<p>The term “stateless” signifies that an
+<p><em>The term "stateless" signifies that an
 instance has no state for a specific client. However, the instance
 variables of the instance can contain the state across client-invoked
 method calls. Examples of such state include an open database connection
-and an object reference to an enterprise bean object.</p>
+and an object reference to an enterprise bean object.</em></p>
 </div>
-<div class="paragraph">
-<p>The Bean Provider must exercise caution if
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>The Bean Provider must exercise caution if
 retaining any application state across method calls. In particular,
 references to bean instance variables should not be returned through
-multiple local interface method calls.</p>
+multiple local interface method calls.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>Because all instances of a stateless session
@@ -6826,7 +6810,7 @@ instance.</p>
 <div class="paragraph">
 <p>A container only
 needs to retain the number of instances required to service the current
-client load. Due to client “think time,” this number is typically much
+client load. Due to client "think time", this number is typically much
 smaller than the number of active clients. Passivation is not needed or
 used for stateless session beans. The container creates another
 stateless session bean instance if one is needed to handle an increase
@@ -6847,24 +6831,23 @@ stateless instances. The container simply delegates a client’s work to
 any available instance that is method-ready.</p>
 </div>
 <div class="paragraph">
-<p>Local and remote
-clients using the EJB 2.1 client view interfaces use the create and
-remove methods on the home interface of a stateless session bean in the
+<p><em>Compatability Note: Local and remote
+clients using the EJB 2.1 client view interfaces use the <code>create</code> and
+<code>remove</code> methods on the home interface of a stateless session bean in the
 same way as on a stateful session bean. To the EJB 2.1 client, it
 appears as if the client controls the life cycle of the session object.
-However, the container handles the create and remove calls without
+However, the container handles the <code>create</code> and <code>remove</code> calls without
 necessarily creating and removing an EJB instance.
 The home interface of a stateless session
-bean must have one create method that takes no arguments. The <em>create</em>
+bean must have one create method that takes no arguments. The <code>create</code>
 method of the remote home interface must return the session bean’s
-remote interface. The <em>create</em> method of the local home interface must
+remote interface. The <code>create</code> method of the local home interface must
 return the session bean’s local interface.
-There can be no other <em>create</em> methods in
-the home interface.</p>
+There can be no other <code>create</code> methods in the home interface.</em></p>
 </div>
 <div class="paragraph">
 <p>A stateless session bean must not implement
-the javax.ejb.SessionSynchronization interface or use the session
+the <code>javax.ejb.SessionSynchronization</code> interface or use the session
 synchronization annotations.</p>
 </div>
 <div class="sect3">
@@ -6879,163 +6862,177 @@ method-ready __ instances and delegates the method invocation to it.</p>
 <p>The following figure illustrates the life
 cycle of a stateless session bean instance.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaQAAAFACAMAAADER/iTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/FBMVEX///8AAAC3ZwBnt///t2ffl5e3///flz///9+XP2eXPwAAZ7cAP5ff////35c/AAAAZma3t/8/P5eXZwAAAD+X3/9nZ2c/l9///7dmAGa3t2ff37dnP5dnZwAAAGc/Pz9nAADft2dnAD8AP2dnPwC3Z2e3lz/f35eXt/+XZ2e3/7f/t5eX39+XPz9nl9+3l5eX37cAPz+Xl98/Z7dnt9+3/98/l5dnt7eXlz+3Zz8/PwA/AGdnZ7ffl2c/l7dnl5ff/7f/399nZz+Xl2eXZ5e337eXZz//37c/Z5e3t98AZ5eXl7e3l7eXt9+z2f+3t5c/P2fft7fft5c/AD/dRE3eAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MEGgc7LnMLJsUAABCzSURBVHja7Z0Lm5s2FoYRMOAMYzudS2EyU8fTpEk3rdN2J2nSpE13091t2m67t///X1bnSICwAQM22Bp/75NnYm4y6LOEOEec4zgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBOEM3Y9WkeLi1qHzrthrbVDpkGp0uVQ6ZB6VrdkGk4NqhqqDQQSxXtehscDHqiWM++WCPSUVB9MOiJ5WoO60Ua3QtqDwd9UKjl0bGgluQKEck/J+PJ9P5HcvXk9IxXyD++OL+oPh70QrGOw4juSX4k1frYc8I49HyPpfOSywe01rtaakkQaQCKdSwVkt2dG0u5yAARjY653STX49G9T2htvNzdQaUBWGlJ4fmFPwsc9yHdm44C2aq0SA9orQeRhmephpO5EDHfk2L+czPlwZ4r4lBEvFa3reoiwNbZQg1DpL7ZRg1DpX7ZSv1CpH5pUr/JpxebFwK606Z+j4ItFAI60LyCV8fe7csAnaiuYFc8eiyikGwNAVmHVuxB64sA26Gyhn2yCrnRZ/IBdhaQdeiqqiVBpN6pqmIyC0WOG3E/R0+wI4i0MypFYsOqF56MpTpkHYJIu6Oyil3ZlGaBK06eiIisQ6v2oDUFgO2xaSVDpAHYsJKh0SBsVM3QaBggkg1g3p0NYAarFWAuuBW0e+0ILyntjIavkEEgAJqCtmIBonIB7A0QyQJMXTBQ2FMgkgVAJAswZMGD0b4CkSwAIllArgoMQXsLRLIAiGIBsDhYAESyAIhkARDJAiCSBUAkC4BIFgCRLAAiWQBEsgCIZAEQyQIgkgVAJAuASBYAkSwAIlkARLIAiGQBEMkCIJIFQKRuhBSxO8WNq3d0PUpccPL089ZfkVwG8h/Fazd0Sa4hUnP8XJjkT6fjyt0oolbsTKar6VtWwqgurXBngTt7Ni+INDo+gUjNMUT64stFdYjh0PNPpIST58sbVkLWLa+g+IP30JI2wRDpq3EYU/WdnZwJESXzSDYflT+Hk+uEkd6Psumo9TqM6tfXZ99MaW+5aRbouKrqo/yjRbo/nwle5i1SJIp9xzl6wDpykZI/O5PTMWXM4Sw63uTWCV9w/pyAk+u4WiRfi0brOYzqS7mTQ3t7UmQ3VnFV+aNsRosLLdIsCAUv8xYpkvxNcI4esJZcJPkzpzaQXI85i07M1c6pWQJOrsPdnaOGF+G3vF6HUZU7KZE4dZ/q7lQWv8n0/CLr7nzBy7wlmQvPqYobCZbIRfpqzL9/WeOcRYdb0uwZi8HJdb6ex7w7b311bYRRTUWavabGpkTizjE8GX+XixQKXg5VXh7x6YXO0QPWENLdh1ISyB4s5kG2zuEWc0YdT+XPUcl16C9VKm1V63UY1TdyNe9N3WCs2gd/pOjFs9cUCDyaTEUkePnlMR/PC7I5+WhNe0X5w+yk/aMX6I9SkSbVD2dgB8As1Am+HVFa0UG+DSJ1xo83L6MZEKkz4WAPlBCpE2Q14HE1G2zY1iPH0nIUPQs2L3wFiNQJV4qhW9Jo8aWyAU3eBs4XvTy7QKROkHUgzAw4ygbk+FHyfS/fBpE6kYnEBhstkuP2ZARYEYnMEpy8Xp8NLzYfaubuxMLa60IBww5g+yAUkc+1xAabT9jWI6+rn4ZU1pLkL8RIlDlaXDjJ3KzPo7p7Y+5ONBgdr+ox3AB2OH7oyZpWLhJZdTUkklQpH25WJ2bUW7U70WSpJaXfcrdwRV+/u4qWNH91fXYyph6JRSJfCC3kHkXaKO5no84Sd2LgmP7EselPHHYAaz9lIsnqfEdOQ87JmIrEC4ZHkf2MP+pRZ5k7kV0kmT9xbPoThx3A9oIrBvQUVHR33EFxTsa0u1MLuUdReSH1qLPMnRg5lf7EYQewfUA/2bpxz7qZQO2oFYmdunrgwAuGR1F5IfWos8ydGDumP/Evpj9x2AFsT8jWX7lt7UygdpQOwSNqzvyH+j2R+xUNj6LyQupRZ5k7UQ9PtT8xVv5E5U4cdgDbE9npuurOu3YmEO3Cc4paP3ls+jDbdtRZ407sawDbE2kHxjfdBjOBeBeaRdT+qzYTqfWos9qd2N8Ath+y5zy+6TaYCaRu4iUPI+uBWagbsl3oToFvug1mAqmbOEQaDr6ZPmO7DN+Pm8wEctV+HSZjQSQLgEgWAJEsACJZAETqRmja7tzKZ5/qLZk3aFR8ucnwEmUI0/8GkZoyee7k7hi/8gHVb/voWm7iI12y5zKI1JS/js1GUu0ba+k1qzDxCbMkiNQYX6S+LzYHKW/b6Rl1SfLj0/w9v2wLmztnz1K/GXlneG0o+03aR5v4vr5UhkBHH0MI0/8m4H9rTuqq4Lf5yHXxLfljlONN5O/50eI7/d4fWfFSv5lLpmdaK+9JfIg28bmz3MqXGtqF6X8TVvrfdkTaNfHbfOxtI8Okz+b++/l7frwle+/PcVK/mbIcka1vcRGmc3+Uoyez8qVfIUz/m7DR/7YrJrfqf36b7z1VIYnkelSbSf6e33vtnVPLhPKbFUTytAkw82srK9+KSOR/E5b634YnpGluarSs3uYjw9xkql1xQhjv+eVWPWXl044ouazXLi5Sxx2Z+N6nLwwqHxwLIUz/m7DU/7YnNHyta8lvVu+0ZVN7+cOsZf63/YDfnl3Lkt+MRmk1eyvdy0Syzf9254FZyAIgUle0xWFp7ryTruwQl6t0Hj25ciFSR3KzXHHuPNnfKuJyNQ/LlcPT6CFSN5LvXUMkY+48T2cojcvVIiyX+UVoSZ35LDBFSuYeT7yb3v9INrHz97qeO4flCpam0Z88nWZxuSBSU3wvt4LTE6aaePeQLHVkf1MidQ/LFRWn0QvHiMsFkRqiRgu6iwuziXfvaLZ72t1tEpYrKk6jF2ZcLojUgsI9SU28O2UDttRCxeXqHpYrLk6jF44RlwsitcD10ihdhany/KPXcbk6h+VankZ/8mCazqOHSHuK1kVNmYVI+4nSRdtvIdJ+guckC4BInUAoNUtAKDULQCi1PQeh1CwAodQsAKHULGDHodRAE3YeSg10ZcBQaqAbg4ZSA/sGRLIAiGQBEMkCIJJtQKQ9RCjy5V2fEFgFItlAUSOItJdAJAuASDZQ0Agi7ScQyQIgkg3A4mABEGnvEK3Z9RkfGN2qHDoNyAZ1DZmGYcN6hkz9s4U6hkw9s536hUr9UXXjL8ZmqwhfXVgNlXpBjefKKvfoZSHza0X46uJqiLRt8mecsrrVEQVyKl61Ka6GSluk1P0wOX1CUQJU7lgV5UYF+0zDVzuOyjentlOkG7n6VeGdG6i0HVaeWPUShZ5M5vFo8ROli72ioB1ecvmAFPI4fLXaR+eWVZFtaHXhnRvR9YkYGJRUYLomDW/8ntPF6nDHn3AAag5fLRtPnOWWTSPbhF7xnRvdgcJe1J3SilsRSUce4uUHHIA6VKH4jdyyaWQbjtBvvHNTcGtAqmpGx8X30t10CFZaYSLfLeZ3aiJXBbV5w8scgFqFr3by3LIq0s2zuRHFuuorIFQJ8v4wKb5gkSUOrhepM+Y7N+WlQaYio7+Nl4fLaYitigrc8AuX3rmpKO7AZUrms78/jpPH8egf4tb5eU6R6+hBdPSdeCRb0M00chv1dltCrF9flkmr6uKqoveW0shGshsmH365+fW3m18XL/RtffLhn0/fvjyOOQP86fiLt0FN9bUVqS7pem156Yaj2uObRu8tO7SRjWRHhLdjV/57ePvzwlPvPN+O/YjiR4Yxp4LZam/nzjYTqT7vQuPovaWHNrKR7AT5UCn7j+TTN+LR72Nq8fLhUzZ1N6anUNnkk8d1vV1rleorubY43qQyaRWsG2zVSOYUwrdF9N5xbiJxamwk+4GUhQKn/nr2nJ8s31EEz+TyjzAePZF14P3802W9yUasK/6M61KPvaM1Iq3TiCP5UlRKw7rBIX09jg7bOHrv2DCRcJquChvJnkDnLZvOh39Nz1/IevzwB0n16PPksbgdOzfi9um//6itwHqREk5w9pAvXOUo6ypS3t0ZyZvYuqHSarFIjaP38rmZabrKbCS7lqYLnZoS39WEunCOmdxRpHTDkkhZmF9uSbOXTaP3avNHnqarykZiHV2aEic4+5gvnCuzW0vKH5NUJq2CdcPJrBpei+i949xE4tTYSOyjw5OSSnDGF67tQVHN3sWJlLm1ddcXbhW1FtZSGiY4WylKG1chUBeyWstrr64amyU4Wy4pm9wKhbqi5DF6oW1VZSY/ZiBvAf6R109y6FSs+QVQaXMKv/Z+5t1BpI0pdEqYwbqfLL+xjLngNtD5HoKbz7C0f4UMAgEAAAAAAAAAAAAAAAAAAAAAAAAAAGAJnaYHWcyu67ubSLs+AVzuXT3rA7tcO8/6wC7XzrM+sMu186wP7HLtPOsDu1w7z/rALrf+rEtjUP7nv1YGsWhwuftK3VmXx6D8Khj91u27VuPcZWv0h7JIeKMFrSuNVMCBr1r9Yu6cSOUxKH+Qaz4LnNb8sL4yzV3yzxyGN5mXxbhzVwPTrPka+0VqEoNycit3/K5Df9fgGHOX/HNNS1Kb2nyN/SI1iUFJYbJK6qaCZE4x6kIVvc6jrinkwD+XDwS3DOqv+DNtkru8kst8CO3OMe3kh3Ml0hnFxJPbJlMKi0hl6lB/HO1Ol+mviXJ3B0RaH4OSg3uui/BpFMjR6CLHja8WHD9cljKZvjiW9c33Evf8S/WZOi65i/yPD6HPPoW2m7wNJv9jkaYexcSbeqpH4zJJJHkE7zhS5Vwt7npLahCDknsdP2pcPOVNUAkUZO2poIIUVfAyUK2RvpE/6838H6VaSIPYhbHR3VFzlo2OopCriHjqCBXxPy+n6eXag3nWDWJQqltS42h/vmwpRZEial51IvEhThrEblkk+WvhoUFBJBWh8EBEahCDkn7Gk+eNS3epj/Lp169VkH1XJoxTKhIf4qheMvnep9QydA+SInEP6aubGZeZyko7HoxITTgat3lK8sX5m1ng0r1fPgdTJMGQ7uyujm8rb/8nZ/z5iQoy+FCc3PAhtLurAuOqoUAW+FZHVuUy9YF6Rx14964PHBow+f2XnZ4vPbwNeLn7gW1n7W8W/da2y7XxrF3RfGB5By7X7rM+sMu186wP7HLtPOsDu9wBz3rrnopmX7Kry90iQ511H56Ktl8w4OVulzVnvZLs6KiDK4now1PR9gvWX+6essZ9vpzzYF1iniI9eyrM0nxOSzwLqCRdPhWQXL4uOAatFyk1w0RcI85kev8jlZPomymlNtJJjc4vOE0Pp25eV3jPngqztKuFOlQWob0WVMC75dDztovEqYl8nR4quQxCz/eu7r0kxwFnzeHtV5yCZXT84rhRCql+PRVmaemh9L9awwUsu75sF4kvnLPvfKtS3hxz+iLy0bJIrs5/o7IdVSY/NOnZU2GWlh5qiMSplu6YSJyaiLPvvGKRjmSbMUSavY6USCrbUSORevZUmKWlh+YicQF3TSROWsTZd1ReopsppzN6QzcgldpIJSm60CmPGljRevZUOGZprviYDn3NH/Ua+u7indN2kaxgQ0+FbZdr51lv6Kmw7XJtPOuNPRV2Xa7lZ31gl2vnWR/Y5dp51gd2uXae9YFdrp1nfWCXa+dZH9jl2nnWB3a5dp71gV3urmP9ILYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA3fwfhIRjU3K3DN4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDQtMjZUMTQ6NTk6NDYtMDc6MDDGNwXCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA0LTI2VDE0OjU5OjQ2LTA3OjAwt2q9fgAAAABJRU5ErkJggg==" alt="EBCore 11">
 </div>
-<div class="paragraph">
-<p>Life Cycle of a Stateless Session Bean</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="data:image/png;base64,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" alt="image"></span></p>
+<div class="title">Figure 2. Life Cycle of a Stateless Session Bean</div>
 </div>
 <div class="paragraph">
 <p>The following steps describe the life cycle
 of a stateless session bean instance:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A stateless session bean instance’s life
 starts when the container invokes the session bean class constructor to
 create a new session bean instance. <sup class="footnote" id="_footnote_a10249">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>
 Next, the
 container performs any dependency injection as specified by metadata
 annotations on the bean class or by the deployment descriptor. The
-container then calls the <em>PostConstruct</em> lifecycle callback interceptor
+container then calls the <code>PostConstruct</code> lifecycle callback interceptor
 methods for the bean, if any. The container can perform the instance
 creation at any time—there is no direct relationship to a client’s
-invocation of a business method or the <em>create</em> method.</p>
-</div>
-<div class="paragraph">
+invocation of a business method or the <code>create</code> method.</p>
+</li>
+<li>
 <p>The session bean instance is now ready to be
 delegated a business method call from any client or a call from the
 container to a timeout callback method.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>When the container no longer needs the
 instance (usually when the container wants to reduce the number of
 instances in the method-ready pool), the container invokes the
-<em>PreDestroy</em> lifecycle callback interceptor methods for it, if any. This
+<code>PreDestroy</code> lifecycle callback interceptor methods for it, if any. This
 ends the life of the stateless session bean instance.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a1085"><a class="anchor" href="#a1085"></a>4.7.2. Operations Allowed in the Methods of a Stateless Session Bean Class</h4>
 <div class="paragraph">
-<p>Table <a href="Ejb.html#a1091">See
-Operations Allowed in the Methods of a Stateless Session Bean</a> defines
+<p><a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a> defines
 the methods of a stateless session bean class in which the session bean
-instances can access the methods of the javax.ejb.SessionContext
-interface, the java:comp/env environment naming context, resource
-managers, <em>TimerService</em> and <em>Timer</em> methods, the <em>EntityManager</em> and
-<em>EntityManagerFactory</em> methods, and other enterprise beans.</p>
+instances can access the methods of the <code>javax.ejb.SessionContext</code>
+interface, the <code>java:comp/env</code> environment naming context, resource
+managers, <code>TimerService</code> and <code>Timer</code> methods, the <code>EntityManager</code> and
+<code>EntityManagerFactory</code> methods, and other enterprise beans.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to invoke
-a method of the SessionContext interface, and the access is not allowed
-in Table <a href="Ejb.html#a1091">See Operations Allowed in the
-Methods of a Stateless Session Bean</a>, the container must throw the
-java.lang.IllegalStateException.</p>
+a method of the <code>SessionContext</code> interface, and the access is not allowed
+in <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>, the container must throw the
+<code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to invoke
-a method of the <em>TimerService</em> or <em>Timer</em> interface and the access is
-not allowed in Table <a href="Ejb.html#a1091">See Operations Allowed
-in the Methods of a Stateless Session Bean</a>, the container must throw
-the <em>java.lang.IllegalStateException</em> .</p>
+a method of the <code>TimerService</code> or <code>Timer</code> interface and the access is
+not allowed in <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>, the container must throw
+the <code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to access
 a resource manager, an enterprise bean, an entity manager or entity
-manager factory, and the access is not allowed in Table
-<a href="Ejb.html#a1091">See Operations Allowed in the Methods of a
-Stateless Session Bean</a>, the behavior is undefined by the EJB
-architecture.</p>
+manager factory, and the access is not allowed in <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>,
+the behavior is undefined by the EJB architecture.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a1091"></a>Operations Allowed in the Methods of a Stateless
-Session Bean</p>
-</div>
-<div class="paragraph">
-<p>Bean method</p>
-</div>
-<div class="paragraph">
-<p>Bean method can perform the following
-operations</p>
-</div>
-<div class="paragraph">
-<p>Container-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>Bean-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>constructor</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>dependency injectionmethods (e.g.,
-setSessionContext)</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: getEJBHome,
-getEJBLocalHome, lookup</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: getEJBHome,
-getEJBLocalHome, lookup</p>
+<table id="a1091" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Operations Allowed in the Methods of a Stateless Session Bean</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bean method</th>
+<th class="tableblock halign-left valign-top" colspan="2">Bean method can perform the following
+operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">constructor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dependency injectionmethods (e.g.,
+setSessionContext)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getEJBHome,
+getEJBLocalHome, lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getEJBHome,
+getEJBLocalHome, lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>PostConstruct, PreDestroy lifecycle
-callback interceptor methods <sup class="footnote" id="_footnote_a10250">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+<p>JNDI access to java:comp/env</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PostConstruct, PreDestroy lifecycle
+callback interceptor methods <sup class="footnote" id="_footnote_a10250">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getEJBObject, getEJBLocalObject,
-getTimerService, lookup, getContextData</p>
+getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
 </div>
 <div class="paragraph">
 <p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getEJBObject, getEJBLocalObject,
-getUserTransaction, getTimerService, lookup, getContextData</p>
+getUserTransaction, getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
 </div>
 <div class="paragraph">
 <p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>business method</p>
-</div>
-<div class="paragraph">
-<p>from business interface or from no-interface
-view or from component interface; business method interceptor method</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">business method
+from business interface or from no-interface
+view or from component interface; business method interceptor method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getRollbackOnly, setRollbackOnly, getEJBObject, getEJBLocalObject,
 getTimerService, getInvokedBusinessInterface, wasCancelCalled, lookup,
-getContextData</p>
+getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
@@ -7054,12 +7051,17 @@ getContextData</p>
 </div>
 <div class="paragraph">
 <p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, getUserTransaction, getTimerService,
-getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</p>
+getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>UserTransaction methods</p>
@@ -7081,18 +7083,21 @@ getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>business method</p>
-</div>
-<div class="paragraph">
-<p>from web service endpoint</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">business method
+from web service endpoint</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getRollbackOnly, setRollbackOnly, getEJBObject, getEJBLocalObject,
-getTimerService, getMessageContext, lookup, getContextData</p>
+getTimerService, getMessageContext, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>Message context methods</p>
@@ -7114,12 +7119,17 @@ getTimerService, getMessageContext, lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, getUserTransaction, getTimerService,
-getMessageContext, lookup, getContextData</p>
+getMessageContext, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>UserTransaction methods</p>
@@ -7144,15 +7154,20 @@ getMessageContext, lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>timeout callback method</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timeout callback method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getRollbackOnly, setRollbackOnly, getEJBObject, getEJBLocalObject,
-getTimerService, lookup, getContextData</p>
+getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
@@ -7171,12 +7186,17 @@ getTimerService, lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getEJBHome, getEJBLocalHome, getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, getUserTransaction, getTimerService,
-lookup, getContextData</p>
+lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>UserTransaction methods</p>
@@ -7198,86 +7218,92 @@ lookup, getContextData</p>
 </div>
 <div class="paragraph">
 <p>TimerService and Timer methods</p>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Additional restrictions:</p>
 </div>
-<div class="paragraph">
-<p>The getRollbackOnly and setRollbackOnly
-methods of the SessionContext interface should be used only in the
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>getRollbackOnly</code> and <code>setRollbackOnly</code>
+methods of the <code>SessionContext</code> interface should be used only in the
 session bean methods that execute in the context of a transaction. The
-container must throw the java.lang.IllegalStateException if the methods
+container must throw the <code>java.lang.IllegalStateException</code> if the methods
 are invoked while the instance is not associated with a transaction.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The reasons for disallowing operations in
-Table <a href="Ejb.html#a1091">See Operations Allowed in the Methods
-of a Stateless Session Bean</a>:</p>
+<p>The reasons for disallowing operations in <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>:</p>
 </div>
-<div class="paragraph">
-<p>Invoking the <em>getBusinessObject</em> method is
+<div class="ulist">
+<ul>
+<li>
+<p>Invoking the <code>getBusinessObject</code> method is
 disallowed if the session bean does not define a business interface or a
 no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getInvokedBusinessInterface</em>
+</li>
+<li>
+<p>Invoking the <code>getInvokedBusinessInterface</code>
 method is disallowed if the session bean does not define a business
 interface or a no-interface view. It is also disallowed if the current
 business method was not invoked through a business interface or the
 no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getEJBObject</em> and <em>getEJBHome</em>
+</li>
+<li>
+<p>Invoking the <code>getEJBObject</code> and <code>getEJBHome</code>
 methods is disallowed if the session bean does not define a
 remote component client view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getEJBLocalObject</em> and
-<em>getEJBLocalHome</em> methods is disallowed if the session bean does not
+</li>
+<li>
+<p>Invoking the <code>getEJBLocalObject</code> and
+<code>getEJBLocalHome</code> methods is disallowed if the session bean does not
 define a local component client view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the getRollbackOnly and
-setRollbackOnly methods is disallowed in the session bean methods for
+</li>
+<li>
+<p>Invoking the <code>getRollbackOnly</code> and
+<code>setRollbackOnly</code> methods is disallowed in the session bean methods for
 which the container does not have a meaningful
 transaction context, and for all session
 beans with bean-managed transaction
 demarcation.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getMessageContext</em> method is
+</li>
+<li>
+<p>Invoking the <code>getMessageContext</code> method is
 disallowed in session bean methods that were not invoked by the
 container through the session bean’s web service endpoint.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Accessing resource managers, enterprise
 beans, and the EntityManager is disallowed in the session bean methods
 for which the container does not have a meaningful transaction context
 and/or client security context.</p>
-</div>
-<div class="paragraph">
-<p>The UserTransaction interface is unavailable
+</li>
+<li>
+<p>The <code>UserTransaction</code> interface is unavailable
 to session beans with container-managed
 transaction demarcation.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>wasCancelCalled</em> method is
+</li>
+<li>
+<p>Invoking the <code>wasCancelCalled</code> method is
 disallowed except when inside the context of the asynchronous methods
 that declare Future&lt;V&gt; object as the returning type.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="dealing-with-exceptions"><a class="anchor" href="#dealing-with-exceptions"></a>4.7.3. Dealing with Exceptions</h4>
 <div class="paragraph">
-<p>A
-RuntimeException that is not an application exception thrown from any
+<p>A <code>RuntimeException</code> that is not an application exception thrown from any
 method of the enterprise bean class (including the business methods and
 the lifecycle callback interceptor methods invoked by the container)
-results in the transition to the “does not exist” state. Exception
-handling is described in detail in Chapter
-<a href="Ejb.html#a2940">See Exception Handling</a>. See the
-<em>Interceptors</em> specification <a href="Ejb.html#a9887">See
-Interceptors</a> for the
+results in the transition to the "does not exist" state. Exception
+handling is described in detail in <a href="#a2940">Exception Handling</a>. See the
+<em>Interceptors</em> specification <a href="#a9887">[37]</a> for the
 rules pertaining to lifecycle callback interceptor methods when more
 than one such method applies to the bean class.</p>
 </div>
@@ -33081,12 +33107,12 @@ or view their home and component interfaces.</p>
 <div class="ulist bibliography">
 <ul class="bibliography">
 <li>
-<p><a id="a9850"></a>[1] Enterprise JavaBeans™, version 3.2. (this
-specification) <em><a href="http://jcp.org/en/jsr/detail?id=3" class="bare">http://jcp.org/en/jsr/detail?id=3</a></em> 45.</p>
+<p><a id="a9850"></a>[1] Jakarta Enterprise Beans, Core Features 3.2. (this specification)
+<a href="https://jakarta.ee/specifications/enterprise-beans/3.2/" class="bare">https://jakarta.ee/specifications/enterprise-beans/3.2/</a>.</p>
 </li>
 <li>
-<p><a id="a9851"></a>[2] Java™ Persistence API,
-version 2.1. <em><a href="http://jcp.org/en/jsr/detail?id=338" class="bare">http://jcp.org/en/jsr/detail?id=338</a></em> .</p>
+<p><a id="a9851"></a>[2] Jakarta Persistence 2.2.
+<a href="https://jakarta.ee/specifications/persistence/2.2/" class="bare">https://jakarta.ee/specifications/persistence/2.2/</a>.</p>
 </li>
 <li>
 <p><a id="a9852"></a>[3] Enterprise JavaBeans™,
@@ -33112,8 +33138,8 @@ Invocation (RMI).
 <a href="http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html" class="bare">http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html</a>.</p>
 </li>
 <li>
-<p><a id="a9857"></a>[8] Java™ Transaction API,
-version 1.2 (JTA). <a href="http://jcp.org/en/jsr/detail?id=907" class="bare">http://jcp.org/en/jsr/detail?id=907</a>.</p>
+<p><a id="a9857"></a>[8] Jakarta Transactions 1.3.
+<a href="https://jakarta.ee/specifications/transactions/1.3/" class="bare">https://jakarta.ee/specifications/transactions/1.3/</a>.</p>
 </li>
 <li>
 <p><a id="a9858"></a>[9] Java™ Transaction Service,
@@ -33129,18 +33155,16 @@ Mapping Specification. <a href="http://www.omg.org/cgi-bin/doc?ptc/2000-01-08" c
 Specification (OTS). <a href="http://www.omg.org/cgi-bin/doc?ptc/2001-11-03" class="bare">http://www.omg.org/cgi-bin/doc?ptc/2001-11-03</a>.</p>
 </li>
 <li>
-<p><a id="a9861"></a>[12] Java™ Platform, Enterprise
-Edition Specification Version 7 (Java EE).
-<em><a href="http://jcp.org/en/jsr/detail?id=342" class="bare">http://jcp.org/en/jsr/detail?id=342</a></em> .</p>
+<p><a id="a9861"></a>[12] Jakarta EE Platform 8.
+<a href="https://jakarta.ee/specifications/platform/8/" class="bare">https://jakarta.ee/specifications/platform/8/</a>.</p>
 </li>
 <li>
-<p><a id="a9862"></a>[13] Java™ Message Service,
-version 2.0 (JMS). <a href="http://jcp.org/en/jsr/detail?id=343" class="bare">http://jcp.org/en/jsr/detail?id=343</a>.</p>
+<p><a id="a9862"></a>[13] Jakarta Messaging 2.0.
+<a href="https://jakarta.ee/specifications/messaging/2.0/" class="bare">https://jakarta.ee/specifications/messaging/2.0/</a>.</p>
 </li>
 <li>
-<p><a id="a9863"></a>[14] Java EE™ Connector
-Architecture, version 1.7 (Connector).
-<em><a href="http://jcp.org/en/jsr/detail?id=322" class="bare">http://jcp.org/en/jsr/detail?id=322</a></em> .</p>
+<p><a id="a9863"></a>[14] Jakarta Connectors 1.7.
+<a href="https://jakarta.ee/specifications/connectors/1.7/" class="bare">https://jakarta.ee/specifications/connectors/1.7/</a>.</p>
 </li>
 <li>
 <p><a id="a9864"></a>[15] Enterprise JavaBeans™ to
@@ -33182,8 +33206,8 @@ Interoperability Version 2 Final Available Specification.
 ANSI X3.135-1992 or ISO/IEC 9075:1992.</p>
 </li>
 <li>
-<p><a id="a9873"></a>[24] Java™ API for XML-based
-RPC, version 1.1 (JAX-RPC). <em><a href="http://jcp.org/en/jsr/detail?id=101" class="bare">http://jcp.org/en/jsr/detail?id=101</a>.</em></p>
+<p><a id="a9873"></a>[24] Jakarta XML RPC 1.1.
+<a href="https://jakarta.ee/specifications/xml-rpc/1.1/" class="bare">https://jakarta.ee/specifications/xml-rpc/1.1/</a>.</p>
 </li>
 <li>
 <p><a id="a9874"></a>[25]Web Services Description
@@ -33202,16 +33226,16 @@ Specification.</p>
 specification). <a href="http://jcp.org/en/jsr/detail?id=221" class="bare">http://jcp.org/en/jsr/detail?id=221</a>.</p>
 </li>
 <li>
-<p><a id="a9878"></a>[29] Web Services Metadata for
-the Java Platform, version 2.1. <em><a href="http://jcp.org/en/jsr/detail?id=181" class="bare">http://jcp.org/en/jsr/detail?id=181</a>.</em></p>
+<p><a id="a9878"></a>[29] Jakarta Web Services Metadata 2.1.
+<a href="https://jakarta.ee/specifications/web-services-metadata/2.1/" class="bare">https://jakarta.ee/specifications/web-services-metadata/2.1/</a>.</p>
 </li>
 <li>
-<p><a id="a9879"></a>[30] Web Services for Java EE,
-version 1.3. <em><a href="http://jcp.org/en/jsr/detail?id=109" class="bare">http://jcp.org/en/jsr/detail?id=109</a>.</em></p>
+<p><a id="a9879"></a>[30] Jakarta Enterprise Web Services 1.4.
+<a href="https://jakarta.ee/specifications/enterprise-ws/1.4/" class="bare">https://jakarta.ee/specifications/enterprise-ws/1.4/</a></p>
 </li>
 <li>
-<p><a id="a9881"></a>[31] <em>Java™ API for XML-based Web Service,
-version 2.2 (JAX-WS). <a href="http://jcp.org/en/jsr/detail?id=224" class="bare">http://jcp.org/en/jsr/detail?id=224</a>.</em></p>
+<p><a id="a9881"></a>[31] Jakarta XML Web Services 2.3.
+<a href="https://jakarta.ee/specifications/xml-web-services/2.3/" class="bare">https://jakarta.ee/specifications/xml-web-services/2.3/</a></p>
 </li>
 <li>
 <p><a id="a9882"></a>[32] JAR File Specification,
@@ -33231,25 +33255,24 @@ Edition, v7 API Specification (Java SE).
 zones: <a href="http://en.wikipedia.org/wiki/List_of_tz_zones" class="bare">http://en.wikipedia.org/wiki/List_of_tz_zones</a>.</p>
 </li>
 <li>
-<p><a id="a9886"></a>[36] Managed Beans, version 1.0
-(Managed Beans). <em><a href="http://jcp.org/en/jsr/detail?id=316" class="bare">http://jcp.org/en/jsr/detail?id=316</a>.</em></p>
+<p><a id="a9886"></a>[36] Jakarta Managed Beans 1.0.
+<a href="https://jakarta.ee/specifications/managedbeans/1.0/" class="bare">https://jakarta.ee/specifications/managedbeans/1.0/</a>.</p>
 </li>
 <li>
-<p><a id="a9887"></a>[37] Interceptors, version 1.2.
-<em><a href="http://jcp.org/en/jsr/detail?id=318" class="bare">http://jcp.org/en/jsr/detail?id=318</a>.</em></p>
+<p><a id="a9887"></a>[37] Jakarta Interceptors 1.2.
+<a href="https://jakarta.ee/specifications/interceptors/1.2/" class="bare">https://jakarta.ee/specifications/interceptors/1.2/</a>.</p>
 </li>
 <li>
-<p><a id="a9888"></a>[38] Contexts and Dependency
-Injection for the Java EE Platform 1.1 (CDI specification)
-<a href="http://jcp.org/en/jsr/detail?id=346" class="bare">http://jcp.org/en/jsr/detail?id=346</a>.</p>
+<p><a id="a9888"></a>[38] Jakarta Context Dependency Injection 2.0
+<a href="https://jakarta.ee/specifications/cdi/2.0/" class="bare">https://jakarta.ee/specifications/cdi/2.0/</a>.</p>
 </li>
 <li>
-<p><a id="a9889"></a>[39] The Java API for RESTful
-Web Services, version 2.0 (JAX-RS) <a href="http://jcp.org/en/jsr/detail?id=339" class="bare">http://jcp.org/en/jsr/detail?id=339</a>.</p>
+<p><a id="a9889"></a>[39] Jakarta RESTful Web Services 2.1
+<a href="https://jakarta.ee/specifications/restful-ws/2.1/" class="bare">https://jakarta.ee/specifications/restful-ws/2.1/</a>.</p>
 </li>
 <li>
-<p><a id="a9890"></a>[40] EJB 3.2 Optional Features
-<em><a href="http://jcp.org/en/jsr/detail?id=345" class="bare">http://jcp.org/en/jsr/detail?id=345</a></em></p>
+<p><a id="a9890"></a>[40] Jakarta Enterprise Beans, Optional Features 3.2
+<a href="https://jakarta.ee/specifications/enterprise-beans/3.2/" class="bare">https://jakarta.ee/specifications/enterprise-beans/3.2/</a>.</p>
 </li>
 <li>
 <p><a id="a9891"></a>[41] Enterprise JavaBeans™,
@@ -34723,7 +34746,7 @@ beans with a no-methods listener interface</p>
 <a href="#_footnoteref_22">22</a>. If a stateful session bean lifecycle callback interceptor method is invoked in the scope of a transaction, session synchronization callbacks for such transactions are not called on the bean instance — see <a href="#a2750">Session Synchronization Callbacks</a>.
 </div>
 <div class="footnote" id="_footnotedef_23">
-<a href="#_footnoteref_23">23</a>. Note that if the Java Persistence API is used, the persistence provider will use the beforeCompletion notification to automatically flush any updates to the container-managed persistence context to the database. See <a href="#a9851">[2]</a>.
+<a href="#_footnoteref_23">23</a>. Note that if the Java Persistence API is used, the persistence provider will use the <code>beforeCompletion</code> notification to automatically flush any updates to the container-managed persistence context to the database. See <a href="#a9851">[2]</a>.
 </div>
 <div class="footnote" id="_footnotedef_24">
 <a href="#_footnoteref_24">24</a>. If the business interface is a remote business interface that extends <code>java.rmi.Remote</code>, the <code>java.rmi.NoSuchObjectException</code> is thrown to the client instead.
@@ -35041,7 +35064,7 @@ beans with a no-methods listener interface</p>
 <div id="footer">
 <div id="footer-text">
  4.0-SNAPSHOT<br>
-Last updated 2020-03-03 22:38:13 +0530
+Last updated 2020-03-05 11:01:01 +0530
 </div>
 </div>
 </body>
