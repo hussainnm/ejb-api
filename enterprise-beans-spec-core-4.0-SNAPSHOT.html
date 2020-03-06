@@ -9310,25 +9310,25 @@ message-driven bean is the consumer. Its lifetime is controlled by the
 container.</p>
 </div>
 <div class="paragraph">
-<p>A message-driven bean instance has no state
+<p><em>A message-driven bean instance has no state
 for a specific client. However, the instance variables of the
 message-driven bean instance can contain state across the handling of
 client messages. Examples of such state include an open database
-connection and a reference to an enterprise bean.</p>
+connection and a reference to an enterprise bean.</em></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="goals"><a class="anchor" href="#goals"></a>5.2. Goals</h3>
 <div class="paragraph">
-<p>The goal of the message-driven bean model is
+<p><em>The goal of the message-driven bean model is
 to make developing an enterprise bean that is asynchronously invoked to
 handle the processing of incoming messages as simple as developing the
-same functionality in any other message listener.</p>
+same functionality in any other message listener.</em></p>
 </div>
 <div class="paragraph">
-<p>A further goal of the message-driven bean
+<p><em>A further goal of the message-driven bean
 model is to allow for the concurrent processing of a stream of messages
-by means of container-provided pooling of message-driven bean instances.</p>
+by means of container-provided pooling of message-driven bean instances.</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -9349,15 +9349,11 @@ message-driven bean is the message listener. The following diagram
 illustrates the view that is provided to a message-driven bean’s
 clients.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,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" alt="EBCore 13">
 </div>
-<div class="paragraph">
-<p>Client view of Message-Driven Beans Deployed
-in a Container</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="data:image/png;base64,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" alt="image"></span></p>
+<div class="title">Figure 4. Client view of Message-Driven Beans Deployed in a Container</div>
 </div>
 <div class="paragraph">
 <p>A client’s JNDI name space may be configured
@@ -9374,27 +9370,28 @@ injected, or they can be looked up in the client’s JNDI namespace.</p>
 <p>For example, the reference to the queue for a
 JMS message-driven bean might be injected as follows.</p>
 </div>
-<div class="paragraph">
-<p>@Resource Queue stockInfoQueue;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Resource</span>
+<span class="predefined-type">Queue</span> stockInfoQueue;</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>Alternatively, the queue for the <em>StockInfo</em>
+<p>Alternatively, the queue for the <code>StockInfo</code>
 JMS message-driven bean might be located using the following code
 segment:</p>
 </div>
-<div class="paragraph">
-<p>Context initialContext = new
-InitialContext();</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Context</span> initialContext = <span class="keyword">new</span> <span class="predefined-type">InitialContext</span>();
+<span class="predefined-type">Queue</span> stockInfoQueue = (javax.jms.Queue)initialContext.lookup
+     (<span class="string"><span class="delimiter">&quot;</span><span class="content">java:comp/env/jms/stockInfoQueue</span><span class="delimiter">&quot;</span></span>);</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>Queue stockInfoQueue =
-(javax.jms.Queue)initialContext.lookup<br>
-(“java:comp/env/jms/stockInfoQueue”);</p>
-</div>
-<div class="paragraph">
-<p>The remainder of this chapter describes the
+<p><em>The remainder of this chapter describes the
 message-driven bean life cycle in detail and the protocol between the
-message-driven bean and its container.</p>
+message-driven bean and its container.</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -9432,8 +9429,8 @@ instance.</p>
 <h4 id="required-messagedrivenbean-metadata"><a class="anchor" href="#required-messagedrivenbean-metadata"></a>5.4.1. Required MessageDrivenBean Metadata</h4>
 <div class="paragraph">
 <p>A message-driven bean must be annotated with
-the <em>MessageDriven</em> annotation or denoted in the deployment descriptor
-as a message-driven bean. The <em>MessageDriven</em> annotation is a
+the <code>MessageDriven</code> annotation or denoted in the deployment descriptor
+as a message-driven bean. The <code>MessageDriven</code> annotation is a
 component-defining annotation and is applied to the bean class.</p>
 </div>
 </div>
@@ -9443,37 +9440,46 @@ component-defining annotation and is applied to the bean class.</p>
 <p>The message-driven bean class must implement
 the appropriate message listener interface for the messaging type that
 the message-driven bean supports or specify the message listener
-interface using the <em>MessageDriven</em> metadata annotation or the
-<em>messaging-type</em> deployment descriptor element. The specific message
+interface using the <code>MessageDriven</code> metadata annotation or the
+<code>messaging-type</code> deployment descriptor element. The specific message
 listener interface that is implemented by a message-driven bean class
 distinguishes the messaging type that the message-driven bean supports.</p>
 </div>
-<div class="paragraph">
-<p>The message-driven bean class’s
-implementation of the <em>javax.jms.MessageListener</em> interface
-distinguishes the message-driven bean as a JMS message-driven bean.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>The message-driven bean class’s
+implementation of the <code>javax.jms.MessageListener</code> interface
+distinguishes the message-driven bean as a JMS message-driven bean.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>The bean’s
-message listener method (e.g., <em>onMessage</em> in the case of
-<em>javax.jms.MessageListener</em> ) is called by the container when a message
+message listener method (e.g., <code>onMessage</code> in the case of
+<code>javax.jms.MessageListener</code>) is called by the container when a message
 has arrived for the bean to service. The message listener method
 contains the business logic that handles the processing of the message.</p>
 </div>
-<div class="paragraph">
-<p>A bean’s message listener interface may
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>A bean’s message listener interface may
 define more than one message listener method. If the message listener
 interface contains more than one method, it is the resource adapter that
-determines which method is invoked. See <a href="Ejb.html#a9863">See
-Java EE™ Connector Architecture</a>.</p>
+determines which method is invoked. See <a href="#a9863">[14]</a>.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>If the message-driven bean class implements
-more than one interface other than <em>java.io.Serializable</em> ,
-<em>java.io.Externalizable</em> , or any of the interfaces defined by the
-<em>javax.ejb</em> package, the message listener interface must be specified by
-the <em>messageListenerInterface</em> element of the <em>MessageDriven</em> annotation
-or the <em>messaging-type</em> element of the <em>message-driven</em> deployment
+more than one interface other than <code>java.io.Serializable</code>,
+<code>java.io.Externalizable</code>, or any of the interfaces defined by the
+<code>javax.ejb</code> package, the message listener interface must be specified by
+the <code>messageListenerInterface</code> element of the <code>MessageDriven</code> annotation
+or the <code>messaging-type</code> element of the <code>message-driven</code> deployment
 descriptor element.</p>
 </div>
 </div>
@@ -9482,8 +9488,8 @@ descriptor element.</p>
 <div class="paragraph">
 <p>A message-driven bean is permitted to
 implement a listener interface with no methods. A bean that implements a
-no-methods interface, exposes all non-static public methods of the bean
-class and of any superclasses except java.lang.Object as message
+no-methods interface, exposes all <em>non-static</em> <code>public</code> methods of the bean
+class and of any superclasses except <code>java.lang.Object</code> as message
 listener methods.</p>
 </div>
 <div class="paragraph">
@@ -9498,11 +9504,11 @@ determines which message listener method is invoked according to its
 implementation logic.</p>
 </div>
 <div class="paragraph">
-<p>Only public methods of the bean class and of
-any superclasses except java.lang.Object may be invoked by a resource
+<p>Only <code>public</code> methods of the bean class and of
+any superclasses except <code>java.lang.Object</code> may be invoked by a resource
 adapter. Attempted invocations of methods with any other access
 modifiers on a proxy provided by the container must result in the
-javax.ejb.EJBException.</p>
+<code>javax.ejb.EJBException</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9510,87 +9516,86 @@ javax.ejb.EJBException.</p>
 <div class="paragraph">
 <p>A message-driven bean may use dependency
 injection mechanisms to acquire references to resources or other objects
-in its environment (see <a href="Ejb.html#a3613">See Enterprise Bean
-Environment</a>). If a message-driven bean makes use of dependency
+in its environment (see <a href="#a3613">Enterprise Bean Environment</a>).
+If a message-driven bean makes use of dependency
 injection, the container injects these references after the bean
 instance is created, and before any message-listener methods are invoked
-on the bean instance. If a dependency on the <em>MessageDrivenContext</em> is
+on the bean instance. If a dependency on the <code>MessageDrivenContext</code> is
 declared, or if the bean class implements the optional
-<em>MessageDrivenBean</em> interface (see Section
-<a href="Ejb.html#a1772">See The Optional MessageDrivenBean
-Interface</a>), the <em>MessageDrivenContext</em> is also injected at this time.
+<code>MessageDrivenBean</code> interface (see <a href="#a1772">The Optional MessageDrivenBean Interface</a>), the
+<code>MessageDrivenContext</code> is also injected at this time.
 If dependency injection fails, the bean instance is discarded.</p>
 </div>
 <div class="paragraph">
 <p>Under the EJB 3.x API, the bean class may
-acquire the <em>MessageDrivenContext</em> interface through dependency
-injection without having to implement the <em>MessageDrivenBean</em> interface.
-In this case, the <em>Resource</em> annotation (or <em>resource-env-ref</em>
+acquire the <code>MessageDrivenContext</code> interface through dependency
+injection without having to implement the <code>MessageDrivenBean</code> interface.
+In this case, the <code>Resource</code> annotation (or <code>resource-env-ref</code>
 deployment descriptor element) is used to denote the bean’s dependency
-on the <em>MessageDrivenContext</em> . See <a href="Ejb.html#a3613">See
-Enterprise Bean Environment</a>.</p>
+on the <code>MessageDrivenContext</code>. See <a href="#a3613">Enterprise Bean Environment</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a1751"><a class="anchor" href="#a1751"></a>5.4.5. The MessageDrivenContext Interface</h4>
 <div class="paragraph">
 <p>If the bean specifies a dependency on the
-<em>MessageDrivenContext</em> interface (or if the bean class implements the
-<em>MessageDrivenBean</em> interface), the container must provide the
-message-driven bean instance with a <em>MessageDrivenContext</em> . This gives
+<code>MessageDrivenContext</code> interface (or if the bean class implements the
+<code>MessageDrivenBean</code> interface), the container must provide the
+message-driven bean instance with a <code>MessageDrivenContext</code>. This gives
 the message-driven bean instance access to the instance’s context
-maintained by the container. The <em>MessageDrivenContext</em> interface has
+maintained by the container. The <code>MessageDrivenContext</code> interface has
 the following methods:</p>
 </div>
-<div class="paragraph">
-<p>The
-<em>setRollbackOnly</em> method allows the instance to mark the current
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>setRollbackOnly</code> method allows the instance to mark the current
 transaction such that the only outcome of the transaction is a rollback.
 Only instances of a message-driven bean with container-managed
 transaction demarcation can use this method.</p>
-</div>
-<div class="paragraph">
-<p>The
-<em>getRollbackOnly</em> method allows the instance to test if the current
+</li>
+<li>
+<p>The <code>getRollbackOnly</code> method allows the instance to test if the current
 transaction has been marked for rollback. Only instances of a
 message-driven bean with container-managed transaction demarcation can
 use this method.</p>
-</div>
-<div class="paragraph">
-<p>The
-<em>getUserTransaction</em> method returns the
-<em>javax.transaction.UserTransaction</em> interface that the instance can use
+</li>
+<li>
+<p>The <code>getUserTransaction</code> method returns the
+<code>javax.transaction.UserTransaction</code> interface that the instance can use
 to demarcate transactions, and to obtain transaction status. Only
 instances of a message-driven bean with bean-managed transaction
 demarcation can use this method.</p>
-</div>
-<div class="paragraph">
-<p>The <em>getTimerService</em> method returns the
-<em>javax.ejb.TimerService</em> interface.</p>
-</div>
-<div class="paragraph">
-<p>The <em>getCallerPrincipal</em> method returns the
-<em>java.security.Principal</em> that is associated with the invocation.</p>
-</div>
-<div class="paragraph">
-<p>The
-<em>isCallerInRole</em> method is inherited from the <em>EJBContext</em> interface.</p>
-</div>
-<div class="paragraph">
-<p>The <em>getEJBHome</em>
-and <em>getEJBLocalHome</em> methods are inherited from the <em>EJBContext</em>
+</li>
+<li>
+<p>The <code>getTimerService</code> method returns the
+<code>javax.ejb.TimerService</code> interface.</p>
+</li>
+<li>
+<p>The <code>getCallerPrincipal</code> method returns the
+<code>java.security.Principal</code> that is associated with the invocation.</p>
+</li>
+<li>
+<p>The <code>isCallerInRole</code> method is inherited from the
+<code>EJBContext</code> interface.</p>
+</li>
+<li>
+<p>The <code>getEJBHome</code>
+and <code>getEJBLocalHome</code> methods are inherited from the <code>EJBContext</code>
 interface. Message-driven bean instances must not call these methods.</p>
-</div>
-<div class="paragraph">
-<p>The <em>lookup</em> method enables the
+</li>
+<li>
+<p>The <code>lookup</code> method enables the
 message-driven bean to look up its environment entries in the JNDI
 naming context.</p>
-</div>
-<div class="paragraph">
-<p>The <em>getContextData</em> method enables a message
+</li>
+<li>
+<p>The <code>getContextData</code> method enables a message
 listener method, lifecycle callback method, or timeout method to
 retrieve or update the interceptor context data associated with its
 invocation.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -9599,46 +9604,43 @@ invocation.</p>
 <p>The following lifecycle event callbacks are
 supported for message-driven beans.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>_AroundConstruct_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_PostConstruct_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_PreDestroy_</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AroundConstruct</code></p>
+</li>
+<li>
+<p><code>PostConstruct</code></p>
+</li>
+<li>
+<p><code>PreDestroy</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The PostConstruct and PreDestroy callback
+<p>The <code>PostConstruct</code> and <code>PreDestroy</code> callback
 methods may be defined directly on the bean class or on a separate
 interceptor class. <sup class="footnote" id="_footnote_a10258">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup> The AroundConstruct lifecycle
 callback interceptor method, if used, must be defined on an interceptor
-class (see <a href="Ejb.html#a9887">See Interceptors</a>). See
-<a href="Ejb.html#a1979">See Lifecycle Callback Interceptor Methods</a>.</p>
+class (see <a href="#a9887">[37]</a>). See <a href="#a1979">Lifecycle Callback Interceptor Methods</a>.</p>
 </div>
 <div class="paragraph">
-<p>The <em>PostConstruct</em> callback occurs before
+<p>The <code>PostConstruct</code> callback occurs before
 the first message listener method invocation on the bean. This is at a
 point after which any dependency injection has been performed by the
 container.</p>
 </div>
 <div class="paragraph">
-<p>The <em>PostConstruct</em> lifecycle callback
+<p>The <code>PostConstruct</code> lifecycle callback
 interceptor method executes in an unspecified transaction and security
 context.</p>
 </div>
 <div class="paragraph">
-<p>The <em>PreDestroy</em> callback occurs at the time
+<p>The <code>PreDestroy</code> callback occurs at the time
 the bean is removed from the pool or destroyed.</p>
 </div>
 <div class="paragraph">
-<p>The <em>PreDestroy</em> lifecycle callback
+<p>The <code>PreDestroy</code> lifecycle callback
 interceptor method executes in an unspecified transaction and security
 context.</p>
 </div>
@@ -9647,47 +9649,44 @@ context.</p>
 <h4 id="a1772"><a class="anchor" href="#a1772"></a>5.4.7. The Optional MessageDrivenBean Interface</h4>
 <div class="paragraph">
 <p>The message-driven bean class is not required
-to implement the <em>javax.ejb.MessageDrivenBean</em> interface.</p>
+to implement the <code>javax.ejb.MessageDrivenBean</code> interface.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _The MessageDrivenBean interface was
+<div class="paragraph">
+<p><em>Compatibility Note: The <code>MessageDrivenBean</code> interface was
 required by earlier versions of the Enterprise JavaBeans specification.
 Under the EJB 3.x API, the functionality previously provided by the
-MessageDrivenBean interface is available to the bean class through the
-use of dependency injection (of the MessageDrivenContext) and optional
-lifecycle callback methods._</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <em>MessageDrivenBean</em> interface defines two
-methods, <em>setMessageDrivenContext</em> and <em>ejbRemove</em> .</p>
+<code>MessageDrivenBean</code> interface is available to the bean class through the
+use of dependency injection (of the <code>MessageDrivenContext</code>) and optional
+lifecycle callback methods.</em></p>
 </div>
 <div class="paragraph">
-<p>The <em>setMessageDrivenContext</em>
- method is called by the bean’s container to
+<p>The <code>MessageDrivenBean</code> interface defines two
+methods, <code>setMessageDrivenContext</code> and <code>ejbRemove</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>setMessageDrivenContext</code> method is called by the bean’s container to
 associate a message-driven bean instance with its context maintained by
 the container. Typically a message-driven bean instance retains its
 message-driven context as part of its state.</p>
 </div>
 <div class="paragraph">
-<p>The <em>ejbRemove</em> notification signals that the
+<p>The <code>ejbRemove</code> notification signals that the
 instance is in the process of being removed by the container. In the
-<em>ejbRemove</em> method, the instance releases the resources that it is
+<code>ejbRemove</code> method, the instance releases the resources that it is
 holding.</p>
 </div>
 <div class="paragraph">
 <p>Under the EJB 3.x API, the bean class may
-optionally define a <em>PreDestroy</em> callback method for notification of the
+optionally define a <code>PreDestroy</code> callback method for notification of the
 container’s removal of the bean instance.</p>
 </div>
 <div class="paragraph">
 <p>This specification requires that the
-<em>ejbRemove</em> and the <em>ejbCreate</em> methods of a message-driven bean be
-treated as the <em>PreDestroy</em> and <em>PostConstruct</em> lifecycle callback
+<code>ejbRemove</code> and the <code>ejbCreate</code> methods of a message-driven bean be
+treated as the <code>PreDestroy</code> and <code>PostConstruct</code> lifecycle callback
 methods, respectively. If the message-driven bean implements the
-<em>MessageDrivenBean</em> interface, the <em>PreDestroy</em> annotation can only be
-applied to the <em>ejbRemove</em> method. Similar requirements apply to use of
+<code>MessageDrivenBean</code> interface, the <code>PreDestroy</code> annotation can only be
+applied to the <code>ejbRemove</code> method. Similar requirements apply to use of
 deployment descriptor metadata as an alternative to the use of
 annotations.</p>
 </div>
@@ -9698,8 +9697,7 @@ annotations.</p>
 <p>A message-driven bean can be registered with
 the EJB Timer Service for time-based event notifications. The container
 invokes the appropriate bean instance timeout callback method when a
-timer for the bean has expired. See <a href="Ejb.html#a5456">See
-Timer Service</a>.</p>
+timer for the bean has expired. See <a href="#a5456">Timer Service</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9709,41 +9707,38 @@ Timer Service</a>.</p>
 below, the container creates an instance of a message-driven bean in
 three steps. First, the container calls the bean class constructor to
 create a new message-driven bean instance. Second, the container injects
-the bean’s <em>MessageDrivenContext</em> , if applicable, and performs any
+the bean’s <code>MessageDrivenContext</code>, if applicable, and performs any
 other dependency injection as specified by metadata annotations on the
 bean class or by the deployment descriptor. Third, the container calls
-the instance’s <em>PostConstruct</em> lifecycle callback methods, if any. See
-<a href="Ejb.html#a1979">See Lifecycle Callback Interceptor Methods</a>.</p>
+the instance’s <code>PostConstruct</code> lifecycle callback methods, if any. See
+<a href="#a1979">Lifecycle Callback Interceptor Methods</a>.</p>
 </div>
 <div class="paragraph">
 <p>If an interceptor associated with the
-message-driven bean declares an <em>AroundConstruct</em> lifecycle callback
+message-driven bean declares an <code>AroundConstruct</code> lifecycle callback
 interceptor method, the container follows the rules for the
-<em>AroundConstruct interceptors</em> defined in the Interceptors specification
-<a href="Ejb.html#a9887">See Interceptors</a>.</p>
+<code>AroundConstruct</code> interceptors defined in the <em>Interceptors</em>
+specification <a href="#a9887">[37]</a>.</p>
 </div>
 <div class="paragraph">
-<p>EJB 2.1 required the message-driven bean
-class to implement the <em>ejbCreate</em> method. This requirement has been
+<p><em>Compatibility Note: EJB 2.1 required the message-driven bean
+class to implement the <code>ejbCreate</code> method. This requirement has been
 removed from the EJB 3.x API. If the message-driven bean class
-implements the <em>ejbCreate</em> method, the <em>ejbCreate</em> method is treated as
-the bean’s <em>PostConstruct</em> method, and the <em>PostConstruct</em> annotation
-can only be applied to the <em>ejbCreate</em> method.</p>
+implements the <code>ejbCreate</code> method, the <code>ejbCreate</code> method is treated as
+the bean’s <code>PostConstruct</code> method, and the <code>PostConstruct</code> annotation
+can only be applied to the <code>ejbCreate</code> method.</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="message-listener-interceptor-methods-for-message-driven-beans"><a class="anchor" href="#message-listener-interceptor-methods-for-message-driven-beans"></a>5.4.10. Message Listener Interceptor Methods for Message-Driven Beans</h4>
-<div class="literalblock">
-<div class="content">
-<pre> _AroundInvoke_ interceptor methods are
+<div class="paragraph">
+<p><code>AroundInvoke</code> interceptor methods are
 supported for message-driven beans. These interceptor methods may be
 defined on the bean class or on a interceptor class and apply to the
-handling of the invocation of the bean’s message listener method(s).</pre>
-</div>
+handling of the invocation of the bean’s message listener method(s).</p>
 </div>
 <div class="paragraph">
-<p>Interceptors are described in
-<a href="Ejb.html#a2004">See Interceptors</a>.</p>
+<p>Interceptors are described in <a href="#a2004">Interceptors</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9786,27 +9781,25 @@ listener and timeout callback methods are invoked in the scope of a
 transaction determined by the transaction attribute specified in the
 bean’s metadata annotations or deployment descriptor. If the bean is
 specified as using container-managed transaction demarcation, either the
-<em>REQUIRED</em> or the <em>NOT_SUPPORTED</em> transaction attribute must be used for
-the message listener methods, and either the <em>REQUIRED</em> , <em>REQUIRES_NEW</em>
-, or the <em>NOT_SUPPORTED</em> transaction attribute for timeout callback
-methods. See <a href="Ejb.html#a2172">See Support for Transactions</a>.</p>
+<code>REQUIRED</code> or the <code>NOT_SUPPORTED</code> transaction attribute must be used for
+the message listener methods, and either the <code>REQUIRED</code>, <code>REQUIRES_NEW</code>,
+or the <code>NOT_SUPPORTED</code> transaction attribute for timeout callback
+methods. See <a href="#a2172">Support for Transactions</a>.</p>
 </div>
 <div class="paragraph">
 <p>When a message-driven bean using bean-managed
-transaction demarcation uses the <em>javax.transaction.UserTransaction</em>
+transaction demarcation uses the <code>javax.transaction.UserTransaction</code>
 interface to demarcate transactions, the message receipt that causes the
 bean to be invoked is not part of the transaction. If the message
 receipt is to be part of the transaction, container-managed transaction
-demarcation with the <em>REQUIRED</em> transaction attribute must be used.</p>
+demarcation with the <code>REQUIRED</code> transaction attribute must be used.</p>
 </div>
 <div class="paragraph">
-<p>The <em>bean constructor</em> , the
-<em>setMessageDrivenContext</em> method, the message-driven bean’s dependency
+<p>The bean constructor, the
+<code>setMessageDrivenContext</code> method, the message-driven bean’s dependency
 injection methods, and lifecycle callback methods are called with an
-unspecified transaction context. Refer to Subsection
-<a href="Ejb.html#a2889">See Handling of Methods that Run with “an
-unspecified transaction context”</a> for how the container executes methods
-with an unspecified transaction context.</p>
+unspecified transaction context. Refer to <a href="#a2889">Handling of Methods that Run with “an unspecified transaction context”</a> for how the
+container executes methods with an unspecified transaction context.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9818,12 +9811,11 @@ function of the specific message-listener interface and associated
 messaging provider, but is not governed by this specification.</p>
 </div>
 <div class="paragraph">
-<p>The Bean Provider can use the RunAs metadata
+<p>The Bean Provider can use the <code>RunAs</code> metadata
 annotation (or corresponding deployment descriptor element) to define a
 run-as identity for the enterprise bean. The run-as identity applies to
 the bean’s message listener methods and timeout methods. Run-as identity
-behavior is further defined in section <a href="Ejb.html#a5329">See
-Run-as</a>.</p>
+behavior is further defined in <a href="#a5329">Run-as</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9846,10 +9838,10 @@ endpoint types, etc.</p>
 </div>
 <div class="paragraph">
 <p>Activation configuration properties are
-specified by means of the <em>activationConfig</em> element of the
-<em>MessageDriven</em> annotation or <em>activation-config</em> deployment descriptor
+specified by means of the <code>activationConfig</code> element of the
+<code>MessageDriven</code> annotation or <code>activation-config</code> deployment descriptor
 element. Activation configuration properties specified in the deployment
-descriptor are added to those specified by means of the <em>MessageDriven</em>
+descriptor are added to those specified by means of the <code>MessageDriven</code>
 annotation. If a property of the same name is specified in both, the
 deployment descriptor value overrides the value specified in the
 annotation.</p>
@@ -9886,15 +9878,15 @@ of the transaction commit. If bean-managed transaction demarcation is
 used, the message receipt cannot be part of the bean-managed
 transaction, and, in this case, the receipt is acknowledged by the
 container. If bean-managed transaction demarcation is used, the Bean
-Provider can indicate whether JMS <em>AUTO_ACKNOWLEDGE</em> semantics or
-<em>DUPS_OK_ACKNOWLEDGE</em> semantics should apply by using the
-<em>activationConfig</em> element of the <em>MessageDriven</em> annotation or by using
-the <em>activation-config-property</em> deployment descriptor element. The
+Provider can indicate whether JMS <code>AUTO_ACKNOWLEDGE</code> semantics or
+<code>DUPS_OK_ACKNOWLEDGE</code> semantics should apply by using the
+<code>activationConfig</code> element of the <code>MessageDriven</code> annotation or by using
+the <code>activation-config-property</code> deployment descriptor element. The
 property name used to specify the acknowledgment mode is
-<em>acknowledgeMode</em> . If the <em>acknowledgeMode</em> property is not specified,
-JMS <em>AUTO_ACKNOWLEDGE</em> semantics are assumed. The value of the
-<em>acknowledgeMode</em> property must be either <em>Auto-acknowledge</em> or
-<em>Dups-ok-acknowledge</em> for a JMS message-driven bean.</p>
+<code>acknowledgeMode</code>. If the <code>acknowledgeMode</code> property is not specified,
+JMS <code>AUTO_ACKNOWLEDGE</code> semantics are assumed. The value of the
+<code>acknowledgeMode</code> property must be either <code>Auto-acknowledge</code> or
+<code>Dups-ok-acknowledge</code> for a JMS message-driven bean.</p>
 </div>
 </div>
 <div class="sect4">
@@ -9904,79 +9896,42 @@ JMS <em>AUTO_ACKNOWLEDGE</em> semantics are assumed. The value of the
 selector to be used in determining which messages a JMS message-driven
 bean is to receive. If the Bean Provider wishes to restrict the messages
 that a JMS message-driven bean receives, the Bean Provider can specify
-the value of the message selector by using the <em>activationConfig</em>
-element of the <em>MessageDriven</em> annotation or by using the
-<em>activation-config-property</em> deployment descriptor element. The property
-name used to specify the message selector is <em>messageSelector</em> .</p>
+the value of the message selector by using the <code>activationConfig</code>
+element of the <code>MessageDriven</code> annotation or by using the
+<code>activation-config-property</code> deployment descriptor element. The property
+name used to specify the message selector is <code>messageSelector</code>.</p>
 </div>
 <div class="paragraph">
 <p>For example:</p>
 </div>
-<div class="paragraph">
-<p>@MessageDriven(activationConfig=\{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@ActivationConfigProperty(</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@MessageDriven</span>(activationConfig={
+ <span class="annotation">@ActivationConfigProperty</span>(
+    propertyName=<span class="string"><span class="delimiter">&quot;</span><span class="content">messageSelector</span><span class="delimiter">&quot;</span></span>,
+    propertyValue=<span class="string"><span class="delimiter">&quot;</span><span class="content">JMSType = 'car' AND color = 'blue'
+             AND weight &gt; 2500</span><span class="delimiter">&quot;</span></span>)
+})</code></pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>propertyName="messageSelector",</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;activation-config&gt;</span>
+  <span class="tag">&lt;activation-config-property&gt;</span>
+    <span class="tag">&lt;activation-config-property-name&gt;</span>
+      messageSelector
+    <span class="tag">&lt;/activation-config-property-name&gt;</span>
+    <span class="tag">&lt;activation-config-property-value&gt;</span>
+      JMSType = 'car' AND color = 'blue' AND
+      weight <span class="entity">&amp;gt;</span> 2500
+    <span class="tag">&lt;/activation-config-property-value&gt;</span>
+  <span class="tag">&lt;/activation-config-property&gt;</span>
+<span class="tag">&lt;/activation-config&gt;</span></code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> propertyValue="JMSType = ‘car’ AND color =
-‘blue’</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>AND weight &gt; 2500")</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>})</p>
-</div>
-<div class="paragraph">
-<p>&lt;activation-config&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;activation-config-property&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;activation-config-property-name&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>messageSelector</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;/activation-config-property-name&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;activation-config-property-value&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> JMSType = ‘car’ AND color = ‘blue’ AND
-weight &amp;gt; 2500</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;/activation-config-property-value&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;/activation-config-property&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;/activation-config&gt;</p>
 </div>
 <div class="paragraph">
 <p>The Application Assembler may further
-restrict, but not replace, the value of the <em>messageSelector</em> property
+restrict, but not replace, the value of the <code>messageSelector</code> property
 of a JMS message-driven bean.</p>
 </div>
 </div>
@@ -9991,12 +9946,12 @@ message-driven bean with a Queue or Topic.</p>
 <div class="paragraph">
 <p>The Bean Provider may provide advice to the
 Deployer as to whether a message-driven bean is intended to be
-associated with a Queue or a Topic by using the <em>activationConfig</em>
-element of the <em>MessageDriven</em> annotation or by using the
-<em>activation-config-property</em> deployment descriptor element. The property
+associated with a Queue or a Topic by using the <code>activationConfig</code>
+element of the <code>MessageDriven</code> annotation or by using the
+<code>activation-config-property</code> deployment descriptor element. The property
 name used to specify the destination type associated with the bean is
-<em>destinationType</em> . The value for this property must be either
-<em>javax.jms.Queue</em> or <em>javax.jms.Topic</em> for a JMS message-driven bean.</p>
+<code>destinationType</code>. The value for this property must be either
+<code>javax.jms.Queue</code> or <code>javax.jms.Topic</code> for a JMS message-driven bean.</p>
 </div>
 </div>
 <div class="sect4">
@@ -10007,11 +9962,11 @@ JMS queue or topic from which a JMS message-driven bean is to receive
 messages.</p>
 </div>
 <div class="paragraph">
-<p>The lookup name of an
-administratively-defined Queue or Topic object may be specified by using
-the activationConfig element of the MessageDriven annotation or by using
-the activation-config-property deployment descriptor element. The
-property name used to specify the lookup name is destinationLookup.</p>
+<p>The lookup name of an administratively-defined <code>Queue</code> or <code>Topic</code>
+object may be specified by using the <code>activationConfig</code> element of
+the <code>MessageDriven</code> annotation or by using
+the <code>activation-config-property</code> deployment descriptor element. The
+property name used to specify the lookup name is <code>destinationLookup</code>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -10022,12 +9977,12 @@ JMS connection factory that will be used to connect to the JMS provider
 from which a JMS message-driven bean is to receive messages.</p>
 </div>
 <div class="paragraph">
-<p>The lookup name of an
-administratively-defined ConnectionFactory object may be specified by
-using the activationConfig element of the MessageDriven annotation or by
-using the activation-config-property deployment descriptor element. The
+<p>The lookup name of an administratively-defined <code>ConnectionFactory</code>
+object may be specified by using the <code>activationConfig</code> element of
+the <code>MessageDriven</code> annotation or by using
+the <code>activation-config-property</code> deployment descriptor element. The
 property name used to specify the lookup name is
-connectionFactoryLookup.</p>
+<code>connectionFactoryLookup</code>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -10036,23 +9991,25 @@ connectionFactoryLookup.</p>
 <p>If the
 message-driven bean is intended to be used with a topic, the Bean
 Provider may further indicate whether a durable or non-durable
-subscription should be used by using the <em>activationConfig</em> element of
-the <em>MessageDriven</em> annotation or by using the
-<em>activation-config-property</em> deployment descriptor element. The property
+subscription should be used by using the <code>activationConfig</code> element of
+the <code>MessageDriven</code> annotation or by using the
+<code>activation-config-property</code> deployment descriptor element. The property
 name used to specify whether a durable or non-durable subscription
-should be used is <em>subscriptionDurability</em> . The value for this property
-must be either <em>Durable</em> or <em>NonDurable</em> for a JMS message-driven bean.
-If a topic subscription is specified and <em>subscriptionDurability</em> is not
+should be used is <code>subscriptionDurability</code>. The value for this property
+must be either <code>Durable</code> or <code>NonDurable</code> for a JMS message-driven bean.
+If a topic subscription is specified and <code>subscriptionDurability</code> is not
 specified, a non-durable subscription is assumed.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Durable topic
 subscriptions, as well as queues, ensure that messages are not missed
 even if the EJB server is not running. Reliable applications will
 typically make use of queues or durable topic subscriptions rather than
 non-durable topic subscriptions.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If a non-durable
 topic subscription is used, it is the container’s responsibility to make
 sure that the message-driven bean subscription is active (i.e., that
@@ -10061,6 +10018,8 @@ order to ensure that messages are not missed as long as the EJB server
 is running. Messages may be missed, however, when a bean is not
 available to service them. This will occur, for example, if the EJB
 server goes down for any period of time.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The Deployer
@@ -10074,16 +10033,15 @@ define how messages are distribued between the queue receivers.</p>
 <div class="paragraph">
 <p>If the message-driven bean is intended to be
 used with a topic, and the bean provider has indicated that a durable
-subscription should be used by specifying the subscriptionDurability
-property to Durable, then the bean provider or deployer may specify the
+subscription should be used by specifying the <code>subscriptionDurability</code>
+property to <code>Durable</code>, then the bean provider or deployer may specify the
 name of the durable subscription.</p>
 </div>
 <div class="paragraph">
 <p>The name of the subscription may be specified
-by using the activationConfig element of the MessageDriven annotation or
-by using the activation-config-property deployment descriptor element.
-The property name used to specify the name of the subscription is
-subscriptionName.</p>
+by using the <code>activationConfig</code> element of the <code>MessageDriven</code>
+annotation or by using the <code>activation-config-property</code> deployment
+descriptor element. The property name used to specify the name of the subscription is <code>subscriptionName</code>.</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider or Deployer cannot specify
@@ -10099,9 +10057,10 @@ provider from which a JMS message-driven bean is to receive messages.</p>
 </div>
 <div class="paragraph">
 <p>The client identifier may be specified by
-using the activationConfig element of the MessageDriven annotation or by
-using the activation-config-property deployment descriptor element. The
-property name used to specify the client identifier is clientId.</p>
+using the <code>activationConfig</code> element of the <code>MessageDriven</code> annotation
+or by using the <code>activation-config-property</code> deployment descriptor
+element. The property name used to specify the client identifier is
+<code>clientId</code>.</p>
 </div>
 </div>
 </div>
@@ -10109,23 +10068,21 @@ property name used to specify the client identifier is clientId.</p>
 <h4 id="dealing-with-exceptions-2"><a class="anchor" href="#dealing-with-exceptions-2"></a>5.4.18. Dealing with Exceptions</h4>
 <div class="paragraph">
 <p>A message-driven bean’s message listener
-method must not throw the <em>java.rmi.RemoteException</em> .</p>
+method must not throw the <code>java.rmi.RemoteException</code>.</p>
 </div>
 <div class="paragraph">
 <p>Message-driven beans should not, in general,
-throw <em>RuntimeExceptions</em> .</p>
+throw <code>RuntimeException</code>.</p>
 </div>
 <div class="paragraph">
-<p>A RuntimeException that is not an application
+<p>A <code>RuntimeException</code> that is not an application
 exception thrown from any method of the message-driven bean class
 (including a message listener method and the callbacks invoked by the
-container) results in the transition to the “does not exist” state. If a
+container) results in the transition to the "does not exist" state. If a
 message-driven bean uses bean-managed transaction demarcation and throws
-a <em>RuntimeException</em> , the container should not acknowledge the message.
-Exception handling is described in detail in Chapter
-<a href="Ejb.html#a2940">See Exception Handling</a>. See the
-<em>Interceptors</em> specification <a href="Ejb.html#a9887">See
-Interceptors</a> for the
+a <code>RuntimeException</code>, the container should not acknowledge the message.
+Exception handling is described in detail in <a href="#a2940">Exception Handling</a>. See the
+<em>Interceptors</em> specification <a href="#a9887">[37]</a> for the
 rules pertaining to lifecycle callback interceptor methods when more
 than one such method applies to the bean class.</p>
 </div>
@@ -10146,23 +10103,27 @@ exception is propagated by the container to the resource adapter.</p>
 <div class="paragraph">
 <p>The Bean Provider
 cannot assume that the container will always invoke the PreDestroy
-callback method (or <em>ejbRemove</em> method) for a message-driven bean
+callback method (or <code>ejbRemove</code> method) for a message-driven bean
 instance. The following scenarios result in the PreDestroy callback
 method not being called on an instance:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A crash of the EJB container.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A system exception thrown from the instance’s
 method to the container.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>If the message-driven bean instance allocates
-resources in the PostConstruct lifecycle callback method and/or in the
+resources in the <code>PostConstruct</code> lifecycle callback method and/or in the
 message listener method, and releases normally the resources in the
-PreDestroy method, these resources will not be automatically released in
-the above scenarios. The application using the message-driven bean
+<code>PreDestroy</code> method, these resources will not be automatically released
+in the above scenarios. The application using the message-driven bean
 should provide some clean up mechanism to periodically clean up the
 unreleased resources.</p>
 </div>
@@ -10171,17 +10132,17 @@ unreleased resources.</p>
 <h4 id="replying-to-a-jms-message"><a class="anchor" href="#replying-to-a-jms-message"></a>5.4.20. Replying to a JMS Message</h4>
 <div class="paragraph">
 <p>In standard JMS usage scenarios, the
-messaging mode of a message’s <em>JMSReplyTo</em>
+messaging mode of a message’s <code>JMSReplyTo</code>
 destination (Queue or Topic) is the same as the mode of the destination
 to which the message has been sent. Although a message-driven bean is
 not directly dependent on the mode of the JMS destination from which it
 is consuming messages, it may contain code that depends on the mode of
-its message’s <em>JMSReplyTo</em> destination. In particular, if a
+its message’s <code>JMSReplyTo</code> destination. In particular, if a
 message-driven bean replies to a message,
 the mode of the reply’s message producer and the mode of the
-<em>JMSReplyTo</em> destination must be the same. In order to implement a
-message-driven bean that is independent of <em>JMSReplyTo</em> mode, the Bean
-Provider should use <em>instanceOf</em> to test whether a <em>JMSReplyTo</em>
+<code>JMSReplyTo</code> destination must be the same. In order to implement a
+message-driven bean that is independent of <code>JMSReplyTo</code> mode, the Bean
+Provider should use <code>instanceOf</code> to test whether a <code>JMSReplyTo</code>
 destination is a Queue or Topic, and then use a matching message
 producer for the reply.</p>
 </div>
@@ -10192,21 +10153,18 @@ producer for the reply.</p>
 <div class="paragraph">
 <p>When a client
 sends a message to a Destination for which a message-driven bean is the
-consumer, the container selects one of its method-ready __ instances and
+consumer, the container selects one of its method-ready instances and
 invokes the instance’s message listener method.</p>
 </div>
 <div class="paragraph">
 <p>The following figure illustrates the life
 cycle of a message-driven bean instance.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,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" alt="EBCore 14">
 </div>
-<div class="paragraph">
-<p>Life Cycle of a Message-Driven Bean.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="data:image/png;base64,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" alt="image"></span></p>
+<div class="title">Figure 5. Life Cycle of a Message-Driven Bean</div>
 </div>
 <div class="paragraph">
 <p>The following steps describe the life cycle
@@ -10217,10 +10175,10 @@ of a message-driven bean instance:</p>
 when the container invokes the message-driven bean class constructor to
 create a new instance. <sup class="footnote" id="_footnote_a10259">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup>
 Next, the container
-injects the bean’s <em>MessageDrivenContext</em> object, if applicable, and
+injects the bean’s <code>MessageDrivenContext</code> object, if applicable, and
 performs any other dependency injection as specified by metadata
 annotations on the bean class or by the deployment descriptor. The
-container then calls the bean’s <em>PostConstruct</em> lifecycle callback
+container then calls the bean’s <code>PostConstruct</code> lifecycle callback
 methods, if any.</p>
 </div>
 <div class="paragraph">
@@ -10232,250 +10190,236 @@ by any client or a call from the container to a timeout callback method.</p>
 <p>When the container no longer needs the
 instance (which usually happens when the container wants to reduce the
 number of instances in the method-ready pool), the container invokes the
-<em>PreDestroy</em> lifecycle callback methods for it, if any. This ends the
+<code>PreDestroy</code> lifecycle callback methods for it, if any. This ends the
 life of the message-driven bean instance.</p>
 </div>
 <div class="sect3">
 <h4 id="operations-allowed-in-the-methods-of-a-message-driven-bean-class"><a class="anchor" href="#operations-allowed-in-the-methods-of-a-message-driven-bean-class"></a>5.5.1. Operations Allowed in the Methods of a Message-Driven Bean Class</h4>
 <div class="paragraph">
-<p><a href="Ejb.html#a1886">See Operations
-Allowed in the Methods of a Message-Driven Bean</a> defines the methods of
+<p><a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a> defines the methods of
 a message-driven bean class in which the message-driven bean instances
-can access the methods of the javax.ejb.MessageDrivenContext interface,
-the java:comp/env environment naming context, resource managers,
-<em>TimerService</em> and <em>Timer</em> methods, the <em>EntityManager</em> and
-<em>EntityManagerFactory</em> methods, and other enterprise beans.</p>
+can access the methods of the <code>javax.ejb.MessageDrivenContext</code> interface,
+the <code>java:comp/env</code> environment naming context, resource managers,
+<code>TimerService</code> and <code>Timer</code> methods, the <code>EntityManager</code> and
+<code>EntityManagerFactory</code> methods, and other enterprise beans.</p>
 </div>
 <div class="paragraph">
 <p>If a
 message-driven bean instance attempts to invoke a method of the
-MessageDrivenContext interface, and the access is not allowed in
-<a href="Ejb.html#a1886">See Operations Allowed in the Methods of a
-Message-Driven Bean</a>, the container must throw and log the
-java.lang.IllegalStateException.</p>
+<code>MessageDrivenContext</code> interface, and the access is not allowed in
+<a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>, the container must throw and log the
+<code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a message-driven bean instance attempts to
-invoke a method of the <em>TimerService</em> or <em>Timer</em> interface, and the
-access is not allowed in Table <a href="Ejb.html#a1886">See
-Operations Allowed in the Methods of a Message-Driven Bean</a>, the
-container must throw the <em>java.lang.IllegalStateException</em> .</p>
+invoke a method of the <code>TimerService</code> or <code>Timer</code> interface, and the
+access is not allowed in <a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>, the
+container must throw the <code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a bean instance attempts to access a
 resource manager, an enterprise bean, or an entity manager or entity
-manager factory, and the access is not allowed in
-<a href="Ejb.html#a1886">See Operations Allowed in the Methods of a
-Message-Driven Bean</a>, the behavior is undefined by the EJB
-specification.</p>
+manager factory, and the access is not allowed in <a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>, the
+behavior is undefined by the EJB specification.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a1886"></a>Operations Allowed in the Methods of a
-Message-Driven Bean</p>
-</div>
-<div class="paragraph">
-<p>Bean method</p>
-</div>
-<div class="paragraph">
-<p>Bean method can perform the following
-operations</p>
-</div>
-<div class="paragraph">
-<p>Container-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>Bean-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>constructor</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>dependency injection methods (e.g.,
-setMessageDrivenContext)</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods: lookup</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods: lookup</p>
+<table id="a1886" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Operations Allowed in the Methods of a Message-Driven Bean</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Bean method</th>
+<th class="tableblock halign-left valign-top" colspan="2">Bean method can perform the following
+operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"></td>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">constructor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">dependency injection methods (e.g.,
+setMessageDrivenContext)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>PostConstruct, PreDestroy lifecycle callback
-methods</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods:
-<em>getTimerService</em> , lookup, getContextData</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods:<br>
-<em>getUserTransaction, getTimerService</em> , lookup, getContextData</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">PostConstruct, PreDestroy lifecycle callback
+methods</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>EntityManagerFactory access</p>
+<p>JNDI access to java:comp/env<br>
+EntityManagerFactory access</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>getUserTransaction, getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>message listener method, AroundInvoke
-interceptor method</p>
+<p>JNDI access to java:comp/env<br>
+EntityManagerFactory access</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">message listener method, AroundInvoke
+interceptor method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>getRollbackOnly, setRollbackOnly, getCallerPrincipal, isCallerInRole,
+getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>MessageDrivenContext methods:
-getRollbackOnly, setRollbackOnly, getCallerPrincipal, isCallerInRole,
-getTimerService, lookup, getContextData</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer service or Timer methods</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>getUserTransaction, getCallerPrincipal, isCallerInRole, getTimerService,
+lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer service or Timer methods</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">timeout callback method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>getRollbackOnly, setRollbackOnly, getCallerPrincipal, getTimerService,
+lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>Resource manager access</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer service or Timer methods</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">MessageDrivenContext methods</dt>
+<dd>
+<p><em>getUserTransaction, getCallerPrincipal, getTimerService, lookup,
+getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer service or Timer methods</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods:<br>
-getUserTransaction, getCallerPrincipal, isCallerInRole, getTimerService,
-lookup, getContextData</p>
-</div>
-<div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer service or Timer methods</p>
-</div>
-<div class="paragraph">
-<p>timeout callback method</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods:
-getRollbackOnly, setRollbackOnly, getCallerPrincipal, getTimerService,
-lookup, getContextData</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer service or Timer methods</p>
-</div>
-<div class="paragraph">
-<p>MessageDrivenContext methods:<br>
-getUserTransaction, getCallerPrincipal, getTimerService, lookup,
-getContextData</p>
-</div>
-<div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer service or Timer methods</p>
-</div>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer service or Timer methods</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Additional restrictions:</p>
 </div>
-<div class="paragraph">
-<p>The getRollbackOnly and setRollbackOnly
-methods of the MessageDrivenContext interface should be used only in the
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>getRollbackOnly</code> and <code>setRollbackOnly</code>
+methods of the <code>MessageDrivenContext</code> interface should be used only in the
 message-driven bean methods that execute in the context of a
 transaction. The container must throw the
-java.lang.IllegalStateException if the methods are invoked while the
+<code>java.lang.IllegalStateException</code> if the methods are invoked while the
 instance is not associated with a transaction.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The reasons for disallowing operations in
-<a href="Ejb.html#a1886">See Operations Allowed in the Methods of a
-Message-Driven Bean</a>:</p>
+<a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Invoking the getRollbackOnly and
 setRollbackOnly methods is disallowed in the message-driven bean methods
 for which the container does not have a meaningful transaction context,
 and for all message-driven beans with bean-managed transaction
 demarcation.</p>
-</div>
-<div class="paragraph">
-<p>The UserTransaction interface is unavailable
+</li>
+<li>
+<p>The <code>UserTransaction</code> interface is unavailable
 to message-driven beans with container-managed transaction demarcation.</p>
-</div>
-<div class="paragraph">
-<p>Invoking <em>getEJBHome</em> or <em>getEJBLocalHome</em> is
+</li>
+<li>
+<p>Invoking <code>getEJBHome</code> or <code>getEJBLocalHome</code> is
 disallowed in message-driven bean methods because there are no EJBHome
 or EJBLocalHome objects for message-driven beans. The container must
-throw and log the <em>java.lang.IllegalStateException</em> if these methods are
+throw and log the <code>java.lang.IllegalStateException</code> if these methods are
 invoked.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -10492,11 +10436,15 @@ ensure that a message-driven bean can be deployed in any EJB container.</p>
 <p>The message-driven Bean Provider is
 responsible for providing the following class files:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Message-driven bean class.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Interceptor classes, if any.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -10505,54 +10453,59 @@ responsible for providing the following class files:</p>
 <p>The following are the requirements for the
 message-driven bean class:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The class must implement, directly or
 indirectly, the message listener interface required by the messaging
 type that it supports or the methods of the message listener interface.
-In the case of JMS, this is the javax.jms.MessageListener interface.</p>
-</div>
-<div class="paragraph">
-<p>The class must be defined as public, must not
-be <em>final</em> , and must not be abstract. The class must be a top level
+In the case of JMS, this is the <code>javax.jms.MessageListener</code> interface.</p>
+</li>
+<li>
+<p>The class must be defined as <code>public</code>, must not
+be <code>final</code>, and must not be <code>abstract</code>. The class must be a top level
 class.</p>
-</div>
-<div class="paragraph">
-<p>The class must have a public constructor that
+</li>
+<li>
+<p>The class must have a <code>public</code> constructor that
 takes no arguments. The container uses this constructor to create
 instances of the message-driven bean class.</p>
-</div>
-<div class="paragraph">
-<p>The class must not define the finalize
-method.</p>
+</li>
+<li>
+<p>The class must not define the <code>finalize</code> method.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Optionally:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The class may implement, directly or
-indirectly, the javax.ejb.MessageDrivenBean interface.</p>
-</div>
-<div class="paragraph">
+indirectly, the <code>javax.ejb.MessageDrivenBean</code> interface.</p>
+</li>
+<li>
 <p>The class may implement, directly or
-indirectly, the <em>javax.ejb.TimedObject</em> interface.</p>
-</div>
-<div class="paragraph">
-<p>The class may implement the ejbCreate method.</p>
-</div>
-<div class="paragraph">
+indirectly, the <code>javax.ejb.TimedObject</code> interface.</p>
+</li>
+<li>
+<p>The class may implement the <code>ejbCreate</code> method.</p>
+</li>
+<li>
 <p>The class may have an additional constructor
-annotated with the Inject annotation (see
-<a href="Ejb.html#a195">See Relationship to Contexts and Dependency
-Injection (CDI) Specification</a> and the CDI specification
-<a href="Ejb.html#a9888">See Contexts and Dependency Injection for</a>).</p>
+annotated with the <code>Inject</code> annotation (see <a href="#a195">Relationship to Contexts and Dependency Injection (CDI) Specification</a> and the CDI
+specification <a href="#a9888">[38]</a>).</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The message-driven bean class may have
 superclasses and/or superinterfaces. If the message-driven bean has
 superclasses, the message listener methods, lifecycle callback
-interceptor methods, timeout callback methods, the ejbCreate method, and
-the methods of the MessageDrivenBean interface may be defined in the
-message-driven bean class or in any of its superclasses.</p>
+interceptor methods, timeout callback methods, the <code>ejbCreate</code> method,
+and the methods of the <code>MessageDrivenBean</code> interface may be defined in
+the message-driven bean class or in any of its superclasses.</p>
 </div>
 <div class="paragraph">
 <p>The message-driven bean class is allowed to
@@ -10572,8 +10525,8 @@ of processing a particular message-driven bean class, all superclass
 processing is identical regardless of whether the superclasses are
 themselves message-driven bean classes. In this regard, the use of
 message-driven bean classes as superclasses merely represents a
-convenient use of implementation inheritance, but does not have
-component inheritance semantics.</p>
+convenient use of <em>implementation inheritance</em>, but does not have
+<em>component inheritance</em> semantics.</p>
 </div>
 </div>
 <div class="sect3">
@@ -10584,11 +10537,10 @@ message listener methods. The signature of a message listener method
 must follow these rules:</p>
 </div>
 <div class="paragraph">
-<p>The method must be declared as public.</p>
+<p>The method must be declared as <code>public</code>.</p>
 </div>
 <div class="paragraph">
-<p>The method must not be declared as final or
-static.</p>
+<p>The method must not be declared as <code>final</code> or <code>static</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -10597,13 +10549,13 @@ static.</p>
 <p>The following additional requirements apply
 for a message-driven bean with a no-methods interface:</p>
 </div>
-<div class="paragraph">
-<p>All non-static public methods of the bean
-class and of any superclasses except java.lang.Object are exposed as
-message listener methods.</p>
-</div>
-<div class="paragraph">
-<p>Note: This includes callback methods. The
+<div class="ulist">
+<ul>
+<li>
+<p>All <em>non-static</em> <code>public</code> methods of the bean
+class and of any superclasses except <code>java.lang.Object</code> are exposed as
+message listener methods.<br>
+<em>Note: This includes callback methods. The
 Bean Provider should exercise caution when choosing to expose callback
 methods as message listener methods. The runtime context (e.g.
 transaction context, caller principal, operations allowed, etc.) for a
@@ -10611,36 +10563,37 @@ method invoked as a callback can differ significantly from the context
 for the same method when invoked as a message listener. In general,
 callback methods should not be exposed as message listener methods.
 Therefore, it is recommended that all methods other than message
-listener methods be assigned an access type other than public.</p>
-</div>
-<div class="paragraph">
+listener methods be assigned an access type other than public.</em></p>
+</li>
+<li>
 <p>Only private methods of the bean class and
-any superclasses except java.lang.Object may be declared final.</p>
+any superclasses except <code>java.lang.Object</code> may be declared <code>final</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a1979"><a class="anchor" href="#a1979"></a>5.6.6. Lifecycle Callback Interceptor Methods</h4>
 <div class="paragraph">
-<p> <em>PostConstruct</em> and <em>PreDestroy</em>
+<p><code>PostConstruct</code> and <code>PreDestroy</code>
 lifecycle callback interceptor methods may be defined for message-driven
-beans. If <em>PrePassivate</em> or <em>PostActivate</em> lifecycle callbacks are
+beans. If <code>PrePassivate</code> or <code>PostActivate</code> lifecycle callbacks are
 defined, they are ignored. <sup class="footnote" id="_footnote_a10260">[<a id="_footnoteref_41" class="footnote" href="#_footnotedef_41" title="View footnote.">41</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>If the <em>PostConstruct</em> lifecycle callback
-interceptor method is the <em>ejbCreate</em> method, or if the <em>PreDestroy</em>
-lifecycle callback interceptor method is the <em>ejbRemove</em> method, these
+<p><em>Compatibility Note: If the <code>PostConstruct</code> lifecycle callback
+interceptor method is the <code>ejbCreate</code> method, or if the <code>PreDestroy</code>
+lifecycle callback interceptor method is the <code>ejbRemove</code> method, these
 callback methods must be implemented on the bean class itself (or on its
 superclasses). Except for these cases, the method names can be
-arbitrary, but must not start with “ejb” to avoid conflicts with the
-callback methods defined by the javax.ejb.EnterpriseBean interfaces.</p>
+arbitrary, but must not start with "ejb" to avoid conflicts with the
+callback methods defined by the <code>javax.ejb.EnterpriseBean</code> interfaces.</em></p>
 </div>
 <div class="paragraph">
 <p>Lifecycle callback interceptor methods may be
 defined on the bean class and/or on an interceptor class of the bean.
 Rules applying to the definition of lifecycle callback interceptor
-methods are defined in Section <a href="Ejb.html#a2023">See
-Interceptors for LifeCycle Event Callbacks</a> .</p>
+methods are defined in <a href="#a2023">Interceptors for LifeCycle Event Callbacks</a>.</p>
 </div>
 </div>
 </div>
@@ -10654,11 +10607,11 @@ the deployment tools, and for managing the message-driven bean instances
 at runtime.</p>
 </div>
 <div class="paragraph">
-<p>Because the EJB specification does not define
+<p><em>Because the EJB specification does not define
 the API between deployment tools and the container, we assume that the
 deployment tools are provided by the Container Provider. Alternatively,
 the deployment tools may be provided by a different vendor who uses the
-container vendor’s specific API.</p>
+container vendor’s specific API.</em></p>
 </div>
 <div class="sect3">
 <h4 id="generation-of-implementation-classes-2"><a class="anchor" href="#generation-of-implementation-classes-2"></a>5.7.1. Generation of Implementation Classes</h4>
@@ -10688,8 +10641,8 @@ interface.</p>
 <div class="paragraph">
 <p>The container’s implementation class
 generated by the deployment tools must implement the message listener
-interface and implement all non-static public methods of the bean class
-and of any superclasses except java.lang.Object as message listener
+interface and implement all <em>non-static</em> <code>public</code> methods of the bean class
+and of any superclasses except <code>java.lang.Object</code> as message listener
 methods.</p>
 </div>
 </div>
@@ -10721,10 +10674,8 @@ thread can be executing an instance at any time.</p>
 <div class="paragraph">
 <p>The container
 must follow the rules with respect to transaction scoping, security
-checking, and exception handling, as described in Chapters
-<a href="Ejb.html#a2172">See Support for Transactions</a>,
-<a href="Ejb.html#a4945">See Security Management</a>, and
-<a href="Ejb.html#a2940">See Exception Handling</a>.</p>
+checking, and exception handling, as described in <a href="#a2172">Support for Transactions</a>, <a href="#a4945">Security Management</a>,
+and <a href="#a2940">Exception Handling</a>.</p>
 </div>
 </div>
 </div>
@@ -34858,7 +34809,7 @@ beans with a no-methods listener interface</p>
 <div id="footer">
 <div id="footer-text">
  4.0-SNAPSHOT<br>
-Last updated 2020-03-04 05:35:13 +0530
+Last updated 2020-03-05 11:01:01 +0530
 </div>
 </div>
 </body>
