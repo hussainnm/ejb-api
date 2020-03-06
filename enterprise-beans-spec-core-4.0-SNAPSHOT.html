@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Enterprise Beans Team, https://projects.eclipse.org/projects/ee4j.ejb</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/ejb-api-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/ejb-api-dev</a></span><br>
 <span id="revnumber"> 4.0-SNAPSHOT,</span>
-<span id="revdate">March 05, 2020</span>
+<span id="revdate">March 06, 2020</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
@@ -1551,7 +1551,7 @@ Version: 4.0-SNAPSHOT
 
 Status: DRAFT
 
-Release: March 05, 2020</pre>
+Release: March 06, 2020</pre>
 </div>
 </div>
 </div>
@@ -6287,25 +6287,23 @@ the container must throw the <code>java.lang.IllegalStateException</code>.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-center valign-top">Bean method</th>
-<th class="tableblock halign-center valign-top" colspan="2">Bean method can perform the following
-operations</th>
+<th class="tableblock halign-center valign-middle">Bean method</th>
+<th class="tableblock halign-center valign-top" colspan="2">Bean method can perform the following operations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-middle"></td>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></th>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">constructor</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">constructor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dependency injection methods (e.g.,
-setSessionContext)</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">dependency injection methods (e.g., setSessionContext)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1">SessionContext methods</dt>
@@ -6330,7 +6328,7 @@ setSessionContext)</p></td>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PostConstruct, PreDestroy,
+<td class="tableblock halign-left valign-middle"><p class="tableblock">PostConstruct, PreDestroy,
 PrePassivate, PostActivate lifecycle callback interceptor
 methods <sup class="footnote" id="_footnote_a10246">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
@@ -6345,19 +6343,11 @@ lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -6371,26 +6361,16 @@ getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">business method
+<td class="tableblock halign-left valign-middle"><p class="tableblock">business method
 from business interface or from no-interface
 view or from component interface;
 business method interceptor method</p></td>
@@ -6406,22 +6386,12 @@ getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer methods</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer methods</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -6435,30 +6405,18 @@ wasCancelCalled, getUserTransaction, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer methods</p>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer methods</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">afterBegin</p>
-<p class="tableblock">beforeCompletion</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">afterBegin<br>
+beforeCompletion</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1">SessionContext methods</dt>
@@ -6471,22 +6429,12 @@ lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>Timer methods</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+Timer methods</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle" rowspan="2"><div class="content"><div class="paragraph">
 <p>N/A</p>
@@ -6498,7 +6446,7 @@ the session synchronization annotations)</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">afterCompletion</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">afterCompletion</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SessionContext methods: <em>getBusinessObject</em> ,
 getEJBHome, <em>getEJBLocalHome,</em> getCallerPrincipal, isCallerInRole,
 getEJBObject, getEJBLocalObject, lookup, getContextData</p>
@@ -6938,25 +6886,23 @@ the behavior is undefined by the EJB architecture.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Bean method</th>
-<th class="tableblock halign-left valign-top" colspan="2">Bean method can perform the following
-operations</th>
+<th class="tableblock halign-center valign-middle">Bean method</th>
+<th class="tableblock halign-center valign-top" colspan="2">Bean method can perform the following operations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></th>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">constructor</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">constructor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dependency injectionmethods (e.g.,
-setSessionContext)</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">dependency injectionmethods (e.g., setSessionContext)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1">SessionContext methods</dt>
@@ -6983,7 +6929,7 @@ getEJBLocalHome, lookup</em></p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PostConstruct, PreDestroy lifecycle
+<td class="tableblock halign-left valign-middle"><p class="tableblock">PostConstruct, PreDestroy lifecycle
 callback interceptor methods <sup class="footnote" id="_footnote_a10250">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -6996,10 +6942,8 @@ getTimerService, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
+<p>JNDI access to java:comp/env<br>
+EntityManagerFactory access</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -7012,14 +6956,12 @@ getUserTransaction, getTimerService, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
+<p>JNDI access to java:comp/env<br>
+EntityManagerFactory access</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">business method
+<td class="tableblock halign-left valign-middle"><p class="tableblock">business method
 from business interface or from no-interface
 view or from component interface; business method interceptor method</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
@@ -7035,22 +6977,12 @@ getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -7064,29 +6996,17 @@ getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">business method
+<td class="tableblock halign-left valign-middle"><p class="tableblock">business method
 from web service endpoint</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -7100,25 +7020,13 @@ getTimerService, getMessageContext, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>Message context methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
+<p>Message context methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -7132,32 +7040,18 @@ getMessageContext, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>Message context methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
+<p>UserTransaction methods<br>
+Message context methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access
+EntityManager access<br>
+TimerService and Timer methods</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">timeout callback method</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">timeout callback method</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1">SessionContext methods</dt>
@@ -7170,22 +7064,12 @@ getTimerService, lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -7199,25 +7083,13 @@ lookup, getContextData</em></p>
 </dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -7335,50 +7207,51 @@ shared, and it supports concurrent access.</p>
 </div>
 <div class="paragraph">
 <p>A singleton session bean must not implement
-the javax.ejb.SessionSynchronization interface or use the session
+the <code>javax.ejb.SessionSynchronization</code> interface or use the session
 synchronization annotations.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,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" alt="EBCore 12">
 </div>
-<div class="paragraph">
-<p>Life Cycle of a Singleton Session Bean</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="data:image/png;base64,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" alt="image"></span></p>
+<div class="title">Figure 3. Life Cycle of a Singleton Session Bean</div>
 </div>
 <div class="paragraph">
 <p>The following steps describe the life cycle
 of a singleton session bean instance:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A singleton session bean instance’s life
 starts when the container invokes the session bean class constructor to
 create the singleton bean instance. <sup class="footnote" id="_footnote_a10251">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>
 Next, the
 container performs any dependency injection as specified by the metadata
 annotations on the bean class or by the deployment descriptor. The
-container then calls the <em>PostConstruct</em> lifecycle callback interceptor
+container then calls the <code>PostConstruct</code> lifecycle callback interceptor
 methods for the bean, if any.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The singleton bean instance is now ready to
 be delegated a business method call from any client or a call from the
 container to a timeout callback method.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>When the application is shutting down, the
-container invokes the <em>PreDestroy</em> lifecycle callback interceptor
+container invokes the <code>PreDestroy</code> lifecycle callback interceptor
 methods on the singleton session bean instance, if any. This ends the
 life of the singleton session bean instance.</p>
+</li>
+</ul>
 </div>
 <div class="sect3">
 <h4 id="singleton-session-bean-initialization"><a class="anchor" href="#singleton-session-bean-initialization"></a>4.8.1. Singleton Session Bean Initialization</h4>
 <div class="paragraph">
 <p>By default, the container is responsible for
-deciding when to initialize a singleton session bean instance. However,
+deciding <em>when</em> to initialize a singleton session bean instance. However,
 the Bean Provider can optionally configure the singleton session bean
-for eager initialization. If the Startup annotation appears on the
+for eager initialization. If the <code>Startup</code> annotation appears on the
 singleton session bean class or if the singleton session bean has been
 designated via the deployment descriptor as requiring eager
 initialization, the container must initialize the singleton session bean
@@ -7392,68 +7265,38 @@ the application.</p>
 <p>The following example shows a singleton
 session bean with startup logic that initializes its shared state:</p>
 </div>
-<div class="paragraph">
-<p>@Startup</p>
-</div>
-<div class="paragraph">
-<p>@Singleton</p>
-</div>
-<div class="paragraph">
-<p>public class SharedBean implements Shared \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>private SharedData state;</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Startup</span>
+<span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">SharedBean</span> <span class="directive">implements</span> Shared {
+
+ <span class="directive">private</span> SharedData state;
+
+ <span class="annotation">@PostConstruct</span>
+ <span class="type">void</span> init() {
+ <span class="comment">// initialize shared data</span>
+ ...
+ }
+ ...
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>@PostConstruct</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>void init() \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// initialize shared data</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 <div class="paragraph">
 <p>In some cases, explicit initialization
 ordering dependencies exist between multiple singleton session bean
-components in an application. The DependsOn annotation is used to
-express these dependencies. A DependsOn dependency is used in cases
-where one singleton session bean must initialize before one or more
+components in an application. The <code>DependsOn</code> annotation is used to
+express these dependencies. A <code>DependsOn</code> dependency is used in cases
+where one singleton session bean must <em>initialize</em> before one or more
 other singleton session beans. The container ensures that all singleton
-session beans with which a singleton session bean has a DependsOn
-relationship have been initialized before the PostConstruct method is
+session beans with which a singleton session bean has a <code>DependsOn</code>
+relationship have been initialized before the <code>PostConstruct</code> method is
 called.</p>
 </div>
 <div class="paragraph">
 <p>Note that if one singleton session bean
 merely needs to invoke another singleton session bean from its
-PostConstruct method, no explicit ordering metadata is required. In that
+<code>PostConstruct</code> method, no explicit ordering metadata is required. In that
 case, the first singleton session bean would merely use an EJB reference
 to invoke the target singleton session bean. In this case, the
 acquisition of the EJB reference (either through injection or lookup)
@@ -7462,84 +7305,68 @@ singleton session bean instance.</p>
 </div>
 <div class="paragraph">
 <p>The following examples illustrate the use of
-DependsOn metadata:</p>
+<code>DependsOn</code> metadata:</p>
 </div>
-<div class="paragraph">
-<p>@Singleton</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">B</span> { ... }
+
+<span class="annotation">@DependsOn</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">B</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public class B \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@DependsOn("B")</p>
-</div>
-<div class="paragraph">
-<p>@Singleton</p>
-</div>
-<div class="paragraph">
-<p>public class A \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>In the above example, the container must
-guarantee that singleton <em>B</em> is initialized before singleton <em>A</em> . The
-DependsOn value attribute holds one or more strings, where each
-specifies the ejb-name of the target singleton session bean.</p>
+guarantee that singleton <code>B</code> is initialized before singleton <code>A</code>. The
+<code>DependsOn</code> value attribute holds one or more strings, where each
+specifies the <code>ejb-name</code> of the target singleton session bean.</p>
 </div>
 <div class="paragraph">
 <p>In the following example, the container must
-guarantee that singletons <em>B</em> and <em>C</em> are initialized before singleton
-<em>A</em> . In the case of multiple values, the ordering in which the target
-ejb-name values are listed is not preserved at runtime. For example, if
-singleton <em>B</em> has an ordering dependency on singleton <em>C</em> , it is
-singleton <em>B</em> ’s responsibility to explicitly capture that in its own
+guarantee that singletons <code>B</code> and <code>C</code> are initialized before singleton
+<code>A</code>. In the case of multiple values, the ordering in which the target
+<code>ejb-name</code> values are listed is not preserved at runtime. For example, if
+singleton <code>B</code> has an ordering dependency on singleton <code>C</code>, it is
+singleton <code>B</code>’s responsibility to explicitly capture that in its own
 metadata.</p>
 </div>
-<div class="paragraph">
-<p>@Singleton</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">B</span> { ... }
+
+<span class="annotation">@Singleton</span>(name=<span class="string"><span class="delimiter">&quot;</span><span class="content">Cbean</span><span class="delimiter">&quot;</span></span>)
+<span class="directive">public</span> <span class="type">class</span> <span class="class">C</span> { ... }
+
+<span class="annotation">@DependsOn</span>({<span class="string"><span class="delimiter">&quot;</span><span class="content">B</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">Cbean</span><span class="delimiter">&quot;</span></span>})
+<span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public class B \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Singleton(name="Cbean")</p>
-</div>
-<div class="paragraph">
-<p>public class C \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@DependsOn(\{"B", "Cbean"})</p>
-</div>
-<div class="paragraph">
-<p>@Singleton</p>
-</div>
-<div class="paragraph">
-<p>public class A \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>The following example illustrates the use of
-the fully-qualified ejb-name syntax to refer to a singleton session bean
+the fully-qualified <code>ejb-name</code> syntax to refer to a singleton session bean
 packaged within a different module in the same application.</p>
 </div>
-<div class="paragraph">
-<p>different ejb-jars within</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// two Singleton components packaged in different ejb-jars within</span>
+<span class="comment">// the same .ear</span>
+
+<span class="comment">// packaged in b.jar</span>
+<span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">B</span> { ... }
+
+<span class="comment">// packaged in a.jar</span>
+<span class="annotation">@DependsOn</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">b.jar#B</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> { ... }</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>@Singleton</p>
-</div>
-<div class="paragraph">
-<p>public class B \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@DependsOn("b.jar#B")</p>
-</div>
-<div class="paragraph">
-<p>@Singleton</p>
-</div>
-<div class="paragraph">
-<p>public class A \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>Circular dependencies within the <em>DependsOn</em>
+<p>Circular dependencies within the <code>DependsOn</code>
 metadata are not permitted. Circular dependencies are not required to be
 detected by the container but may result in a deployment error.</p>
 </div>
@@ -7550,43 +7377,41 @@ detected by the container but may result in a deployment error.</p>
 <p>Any singleton session bean instance that
 successfully completes initialization is removed by the container during
 application shutdown. At this time the container must invoke the
-PreDestroy lifecycle callback interceptor methods on the singleton
+<code>PreDestroy</code> lifecycle callback interceptor methods on the singleton
 session bean instance, if any. The container ensures that all singleton
 session beans with which a singleton session bean has a DependsOn
-relationship are still available during the PreDestroy callback. After
-the <em>PreDestroy</em> callback completes, the container ends the life of the
+relationship are still available during the <code>PreDestroy</code> callback. After
+the <code>PreDestroy</code> callback completes, the container ends the life of the
 singleton session bean instance.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="transaction-semantics-of-initialization-and-destruction"><a class="anchor" href="#transaction-semantics-of-initialization-and-destruction"></a>4.8.3. Transaction Semantics of Initialization and Destruction</h4>
 <div class="paragraph">
-<p>The <em>PostConstruct</em> and <em>PreDestroy</em> methods
+<p>The <code>PostConstruct</code> and <code>PreDestroy</code> methods
 of singleton session beans with container-managed transaction
 demarcation can be invoked with or without a transaction. From the Bean
-Provider’s view there is no client of a <em>PostConstruct</em> or <em>PreDestroy</em>
+Provider’s view there is no client of a <code>PostConstruct</code> or <code>PreDestroy</code>
 method.</p>
 </div>
 <div class="paragraph">
-<p>A <em>PostConstruct</em> or <em>PreDestroy</em> method of a
+<p>A <code>PostConstruct</code> or <code>PreDestroy</code> method of a
 singleton session bean with container-managed transaction demarcation is
-permitted to have transaction attribute <em>REQUIRED</em> , <em>REQUIRES_NEW</em> , or
-<em>NOT_SUPPORTED</em> ( <em>Required</em> , <em>RequiresNew</em> , or <em>NotSupported</em> if the
+permitted to have transaction attribute <code>REQUIRED</code>, <code>REQUIRES_NEW</code>, or
+<code>NOT_SUPPORTED</code> (<code>Required</code>, <code>RequiresNew</code>, or <code>NotSupported</code> if the
 deployment descriptor is used to specify the transaction attribute).</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _Note that the container must start a new
-transaction if the_ _REQUIRED_ _(_ _Required_ _)_ _transaction attribute
+<div class="paragraph">
+<p><em>Note that the container must start a new
+transaction if the <code>REQUIRED</code> <em>(<code>Required</code>)</em> transaction attribute
 is used. This guarantees, for example, that the transactional behavior
-of the_ _PostConstruct_ _method is the same regardless of whether the
+of the <code>PostConstruct</code> method is the same regardless of whether the
 singleton session bean instance is initialized eagerly at container
 startup time or as a side effect of a first client invocation on the
-singleton session bean._ The REQUIRED transaction attribute value is
+singleton session bean. The <code>REQUIRED</code> transaction attribute value is
 allowed so that specification of a transaction attribute for the
-_singleton session bean’s_ _PostConstruct_ _and_ _PreDestroy_ _methods_
-can be defaulted.</pre>
-</div>
+singleton session bean’s <code>PostConstruct</code> and <code>PreDestroy</code> methods
+can be defaulted.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -7596,19 +7421,18 @@ can be defaulted.</pre>
 bean initialization are considered fatal and must result in the
 discarding of the singleton session bean instance. Possible
 initialization errors include injection failure, a system exception
-thrown from an AroundConstruct or PostConstruct method, or the failure
-of a PostConstruct method’s container-managed transaction to
+thrown from an <code>AroundConstruct</code> or <code>PostConstruct</code> method, or the failure
+of a <code>PostConstruct</code> method’s container-managed transaction to
 successfully commit. If a singleton session bean fails to initialize,
 attempted invocations on the singleton session bean result in the
-javax.ejb.NoSuchEJBException exception as defined by
-<a href="Ejb.html#a304">See Session Bean’s Business Interface</a> and
-<a href="Ejb.html#a312">See Session Bean’s No-Interface View</a> .</p>
+<code>javax.ejb.NoSuchEJBException</code> exception as defined by <a href="#a304">Session Bean’s Business Interface</a>
+and <a href="#a312">Session Bean’s No-Interface View</a>.</p>
 </div>
 <div class="paragraph">
 <p>The same singleton session bean instance must
 remain active until application shutdown. Unlike instances of other
 component types, system exceptions thrown from business methods or
-callbacks of a singleton session bean do not result in the destruction
+callbacks of a singleton session bean do <em>not</em> result in the destruction
 of the singleton instance.</p>
 </div>
 </div>
@@ -7626,15 +7450,19 @@ time.</p>
 are two approaches for controlling singleton session bean concurrency
 behavior:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>container-managed concurrency: the container
 controls concurrent access to the bean instance based on method-level
 locking metadata</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>bean-managed concurrency: the container
 allows full concurrent bean instance access and defers state
 synchronization responsibility to the Bean Provider</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>When designing a singleton session bean, the
@@ -7667,14 +7495,14 @@ at a time.</p>
 management type, the container must ensure that no concurrent access to
 the singleton session bean instance occurs until after the instance has
 successfully completed its initialization sequence, including any
-PostConstruct lifecycle callback method(s). The container must
+<code>PostConstruct</code> lifecycle callback method(s). The container must
 temporarily block any singleton session bean access attempts that arrive
 while the singleton session bean is still initializing.</p>
 </div>
 <div class="paragraph">
 <p>Independent of the bean’s concurrency
 management type, the container must ensure that concurrent access to the
-SessionContext object is thread-safe.</p>
+<code>SessionContext</code> object is thread-safe.</p>
 </div>
 <div class="paragraph">
 <p>Singleton session beans support reentrant
@@ -7711,7 +7539,7 @@ allowed to proceed due to locking is blocked until it can make forward
 progress. Timeouts can be specified via metadata so that a blocked
 request can be rejected if a lock is not acquired within a certain
 amount of time. If a singleton session bean invocation is rejected due
-to lock timeout the ConcurrentAccessTimeoutException is thrown to the
+to lock timeout the <code>ConcurrentAccessTimeoutException</code> is thrown to the
 client.</p>
 </div>
 <div class="paragraph">
@@ -7720,14 +7548,18 @@ read and write locking semantics outlined above. There are many policy
 decisions that a container could make to affect the performance of the
 locking scheme for a given application. For example:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Determining whether to grant forward progress
 to a read method or write method, when both readers and writers are
 waiting at the time that a write method completes.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Determining whether to allow additional
 readers while one or more readers is active and a writer is waiting.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The exact set of additional read/write
@@ -7745,30 +7577,38 @@ calls on singleton session beans with container-managed concurrency.</p>
 <p>If a loopback call occurs on a singleton
 session bean that already holds a write lock on the same thread:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>If the target of the loopback call is a read
 method, the read lock must always be granted immediately, without
 releasing the original write lock.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If the target of the loopback call is a write
 method, the call must proceed immediately, without releasing the
 original write lock.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>If a loopback call occurs on a singleton
 session bean that holds a read lock on the same thread (but does not
 also hold a write lock on the same thread):</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>If the target of the loopback call is a read
 method, the call must proceed immediately, without releasing the
-original Read lock.</p>
-</div>
-<div class="paragraph">
+original <code>Read</code> lock.</p>
+</li>
+<li>
 <p>If the target of the loopback call is a write
-method, the javax.ejb.IllegalLoopbackException must be thrown to the
+method, the <code>javax.ejb.IllegalLoopbackException</code> must be thrown to the
 caller.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7780,7 +7620,7 @@ allows full concurrent access to the singleton session bean instance. It
 is the responsibility of the Bean Provider to guard its state as
 necessary against synchronization errors due to concurrent access. The
 Bean Provider is permitted to use the Java language level
-synchronization primitives such as synchronized and volatile for this
+synchronization primitives such as <code>synchronized</code> and <code>volatile</code> for this
 purpose.</p>
 </div>
 </div>
@@ -7789,7 +7629,7 @@ purpose.</p>
 <div class="paragraph">
 <p>By default, a singleton session bean has
 container-managed concurrency. The Bean Provider of a singleton session
-bean can use the ConcurrencyManagement annotation on the bean class to
+bean can use the <code>ConcurrencyManagement</code> annotation on the bean class to
 declare the bean’s concurrency management type.</p>
 </div>
 <div class="paragraph">
@@ -7805,8 +7645,7 @@ singleton session bean is determined by the Bean Provider. The
 Application Assembler is not permitted to use the deployment descriptor
 to override a bean’s concurrency management type regardless of whether
 it has been explicitly specified or defaulted by the Bean Provider. (See
-Chapter <a href="Ejb.html#a5804">See Deployment Descriptor</a> for
-information about the deployment descriptor.)</p>
+<a href="#a5804">Deployment Descriptor</a> for information about the deployment descriptor.)</p>
 </div>
 </div>
 <div class="sect4">
@@ -7822,17 +7661,21 @@ lock (exclusive lock).</p>
 <p>A concurrency locking attribute is a value
 associated with each of the following methods:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>a method of a bean’s business interface</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>a method of a bean’s no-interface view</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>a timeout callback method</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>a web service endpoint method</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The concurrency locking attribute specifies
@@ -7843,26 +7686,30 @@ method.</p>
 <p>Concurrency locking attributes are specified
 for the following methods:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>For a bean written to the EJB 3.x client view
 API, the concurrency locking attributes are specified for those methods
 of the bean class that correspond to the bean’s business interface, the
 direct and indirect superinterfaces of the business interface, methods
 exposed through the no-interface view, and for timeout callback methods,
 if any.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>For a bean that provides a web service client
 view, the concurrency locking attributes are specified for those methods
 of the bean class that correspond to the bean’s web service endpoint
 methods, and for timeout callback methods, if any.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The following rules apply to the
 specification of concurrency attributes.</p>
 </div>
 <div class="paragraph">
-<p>The Lock(READ) and Lock(WRITE)annotations are
+<p>The <code>Lock(READ)</code> and <code>Lock(WRITE)</code> annotations are
 used to specify concurrency locking attributes.</p>
 </div>
 <div class="paragraph">
@@ -7871,12 +7718,12 @@ methods of a bean class may be specified on the class, the business
 methods of the class, or both.</p>
 </div>
 <div class="paragraph">
-<p>Specifying the Lock annotation on the bean
+<p>Specifying the <code>Lock</code> annotation on the bean
 class means that it applies to all applicable business methods of the
 class. If the concurrency locking attribute is not specified, it is
-assumed to be Lock(WRITE). The absence of a concurrency attribute
+assumed to be <code>Lock(WRITE)</code>. The absence of a concurrency attribute
 specification on the bean class is equivalent to the specification of
-Lock(WRITE)on the bean class.</p>
+<code>Lock(WRITE)</code> on the bean class.</p>
 </div>
 <div class="paragraph">
 <p>A concurrency locking attribute may be
@@ -7888,22 +7735,26 @@ class.</p>
 <p>If the bean class has superclasses, the
 following additional rules apply:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A concurrency locking attribute specified on
 a superclass S appplies to the business methods defined by S. If a
 class-level concurrency attribute is not specified on S, it is
-equivalent to specification of Lock(WRITE)on S.</p>
-</div>
-<div class="paragraph">
+equivalent to specification of <code>Lock(WRITE)</code> on S.</p>
+</li>
+<li>
 <p>A concurrency locking attribute may be
 specified on a business method M defined by class S to override for
 method M the concurrency locking attribute value explicitly or
 implicitly specified on the class S.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If a method M of class S overrides a business
 method defined by a superclass of S, the concurrency locking attribute
 of M is determined by the above rules as applied to class S.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The Bean Provider may use the deployment
@@ -7914,7 +7765,7 @@ concurrency locking attributes specified in annotations. If a
 concurrency locking attribute value is not specified in the deployment
 descriptor, it is assumed that the concurrency locking attribute
 specified in annotations applies, or — in the case that no annotation
-has been specified —that the value is Write.</p>
+has been specified —that the value is <code>Write</code>.</p>
 </div>
 <div class="paragraph">
 <p>The Application Assembler is permitted to
@@ -7928,62 +7779,31 @@ intrinsic to the semantics of the application.</p>
 <div class="paragraph">
 <p>Example:</p>
 </div>
-<div class="paragraph">
-<p>@Lock(READ)</p>
-</div>
-<div class="paragraph">
-<p>public class SomeClass \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public void aMethod () \{ ... }</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void bMethod () \{ ... }</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>@Singleton public class ABean extends
-SomeClass implements A \{</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void aMethod () \{ ... }</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>@Lock(WRITE)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void cMethod () \{ ... }</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Lock</span>(READ)
+<span class="directive">public</span> <span class="type">class</span> <span class="class">SomeClass</span> {
+ <span class="directive">public</span> <span class="type">void</span> aMethod () { ... }
+ <span class="directive">public</span> <span class="type">void</span> bMethod () { ... }
+ ...
+}
+
+<span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">ABean</span> <span class="directive">extends</span> SomeClass <span class="directive">implements</span> A {
+
+ <span class="directive">public</span> <span class="type">void</span> aMethod () { ... }
+
+ <span class="annotation">@Lock</span>(WRITE)
+ <span class="directive">public</span> <span class="type">void</span> cMethod () { ... }
+ ...
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>Assuming that aMethod, bMethod, cMethod of
-singleton session bean ABean are methods of business interface A, their
-concurrency locking attributes are Lock(WRITE), Lock(READ), and
-Lock(WRITE)respectively.</p>
+<p>Assuming that <code>aMethod</code>, <code>bMethod</code>, <code>cMethod</code> of
+singleton session bean <code>ABean</code> are methods of business interface <code>A</code>, their
+concurrency locking attributes are <code>Lock(WRITE)</code>, <code>Lock(READ)</code>, and
+<code>Lock(WRITE)</code> respectively.</p>
 </div>
 </div>
 <div class="sect4">
@@ -7991,398 +7811,350 @@ Lock(WRITE)respectively.</p>
 <div class="paragraph">
 <p>A concurrent access attempt that cannot
 immediately acquire the appropriate lock is blocked until it can make
-forward progress. The AccessTimeout annotation is used to specify the
+forward progress. The <code>AccessTimeout</code> annotation is used to specify the
 amount of time the access attempt should be blocked before timing out.
 Access timeouts only apply to methods eligible for concurrency locks on
 a singleton session bean with container-managed concurrency. If an
 access attempt times out, the container throws the
-javax.ejb.ConcurrentAccessTimeoutException to the client.</p>
+<code>javax.ejb.ConcurrentAccessTimeoutException</code> to the client.</p>
 </div>
 <div class="paragraph">
-<p>The AccessTimeout annotation can be specified
+<p>The <code>AccessTimeout</code> annotation can be specified
 on a business method or on a bean class (or superclass). An
-AccessTimeout annotation specified on a class applies the access timeout
-to all business methods of that class. If the AccessTimeout annotation
+<code>AccessTimeout</code> annotation specified on a class applies the access timeout
+to all business methods of that class. If the <code>AccessTimeout</code> annotation
 is specified on both a class and on a business method of that class, the
 method-level annotation takes precedence.</p>
 </div>
 <div class="paragraph">
-<p>An <em>AccessTimeout</em> value of -1 indicates that
+<p>An <code>AccessTimeout</code> value of <code>-1</code> indicates that
 the client request will block indefinitely until forward progress can be
 made.</p>
 </div>
 <div class="paragraph">
-<p>An AccessTimeout value of 0 indicates that
+<p>An <code>AccessTimeout</code> value of <code>0</code> indicates that
 concurrent access is not allowed. Access attempts on methods with a
-timeout value of 0 result in the javax.ejb.ConcurrentAccessException.</p>
+timeout value of <code>0</code> result in the <code>javax.ejb.ConcurrentAccessException</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="operations-allowed-in-the-methods-of-a-singleton-session-bean"><a class="anchor" href="#operations-allowed-in-the-methods-of-a-singleton-session-bean"></a>4.8.6. Operations Allowed in the Methods of a Singleton Session Bean</h4>
 <div class="paragraph">
-<p>Table <a href="Ejb.html#a1343">See
-Operations Allowed in the Methods of a Singleton Session Bean</a> defines
+<p><a href="#a1343">Operations Allowed in the Methods of a Singleton Session Bean</a> defines
 the methods of a singleton session bean class in which the session bean
-instances can access the methods of the javax.ejb.SessionContext
-interface, the java:comp/env environment naming context, resource
-managers, <em>TimerService</em> and <em>Timer</em> methods, the <em>EntityManager</em> and
-<em>EntityManagerFactory</em> methods, and other enterprise beans.</p>
+instances can access the methods of the <code>javax.ejb.SessionContext</code>
+interface, the <code>java:comp/env</code> environment naming context, resource
+managers, <code>TimerService</code> and <code>Timer</code> methods, the <code>EntityManager</code> and
+<code>EntityManagerFactory</code> methods, and other enterprise beans.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to invoke
-a method of the SessionContext interface, and the access is not allowed
-in Table <a href="Ejb.html#a1343">See Operations Allowed in the
-Methods of a Singleton Session Bean</a>, the container must throw the
-java.lang.IllegalStateException.</p>
+a method of the <code>SessionContext</code> interface, and the access is not allowed
+in <a href="#a1343">Operations Allowed in the Methods of a Singleton Session Bean</a>, the container must throw the
+<code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to invoke
-a method of the <em>TimerService</em> or <em>Timer</em> interface and the access is
-not allowed in Table <a href="Ejb.html#a1343">See Operations Allowed
-in the Methods of a Singleton Session Bean</a>, the container must throw
-the <em>java.lang.IllegalStateException</em> .</p>
+a method of the <code>TimerService</code> or <code>Timer</code> interface and the access is
+not allowed in <a href="#a1343">Operations Allowed in the Methods of a Singleton Session Bean</a>, the container must throw
+the <code>java.lang.IllegalStateException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a session bean instance attempts to access
 a resource manager, an enterprise bean, an entity manager or entity
-manager factory, and the access is not allowed in Table
-<a href="Ejb.html#a1343">See Operations Allowed in the Methods of a
-Singleton Session Bean</a>, the behavior is undefined by the EJB
-architecture.</p>
+manager factory, and the access is not allowed in <a href="#a1343">Operations Allowed in the Methods of a Singleton Session Bean</a>,
+the behavior is undefined by the EJB architecture.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a1343"></a>Operations Allowed in the Methods of a Singleton
-Session Bean</p>
-</div>
-<div class="paragraph">
-<p>Bean method</p>
-</div>
-<div class="paragraph">
-<p>Bean method can perform the following
-operations</p>
-</div>
-<div class="paragraph">
-<p>Container-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>Bean-managed transaction demarcation</p>
-</div>
-<div class="paragraph">
-<p>constructor</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>-</p>
-</div>
-<div class="paragraph">
-<p>dependency injectionmethods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: lookup</p>
+<table id="a1343" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Operations Allowed in the Methods of a Singleton Session Bean</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-middle">Bean method</th>
+<th class="tableblock halign-center valign-top" colspan="2">Bean method can perform the following operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"></td>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Container-managed transaction demarcation</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Bean-managed transaction demarcation</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">constructor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">dependency injection methods</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: lookup</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>lookup</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>PostConstruct, PreDestroy lifecycle
-callback interceptor methods <sup class="footnote" id="_footnote_a10252">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">PostConstruct, PreDestroy lifecycle
+callback interceptor methods <sup class="footnote" id="_footnote_a10252">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getRollbackOnly, setRollbackOnly, getTimerService, lookup,
-getContextData</p>
+getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
+getUserTransaction, getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
-getUserTransaction, getTimerService, lookup, getContextData</p>
-</div>
-<div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>business method</p>
-</div>
-<div class="paragraph">
-<p>from business interface or from no-interface
-view ; business method interceptor method</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManager access<br>
+EntityManagerFactory access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">business method
+from business interface or from no-interface
+view; business method interceptor method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getCallerPrincipal, isCallerInRole, getRollbackOnly, setRollbackOnly,
 getTimerService, getInvokedBusinessInterface, wasCancelCalled, lookup,
-getContextData</p>
+getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getCallerPrincipal, isCallerInRole, getUserTransaction, getTimerService,
-getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</p>
+getInvokedBusinessInterface, wasCancelCalled, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>business method</p>
-</div>
-<div class="paragraph">
-<p>from web service endpoint</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject,</em>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">business method
+from web service endpoint</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getCallerPrincipal, isCallerInRole, getRollbackOnly, setRollbackOnly,
-getTimerService, getMessageContext, lookup, getContextData</p>
+getTimerService, getMessageContext, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>Message context methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+<p>Message context methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getCallerPrincipal, isCallerInRole, getUserTransaction, getTimerService,
-getMessageContext, lookup, getContextData</p>
+getMessageContext, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>Message context methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>timeout callback method</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+<p>UserTransaction methods<br>
+Message context methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">timeout callback method</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getCallerPrincipal, isCallerInRole, getRollbackOnly, setRollbackOnly,
-getTimerService, lookup, getContextData</p>
+getTimerService, lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
-<div class="paragraph">
-<p>SessionContext methods: <em>getBusinessObject</em> ,
+<p>JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">SessionContext methods</dt>
+<dd>
+<p><em>getBusinessObject,
 getCallerPrincipal, isCallerInRole, getUserTransaction, getTimerService,
-lookup, getContextData</p>
+lookup, getContextData</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>UserTransaction methods</p>
-</div>
-<div class="paragraph">
-<p>JNDI access to java:comp/env</p>
-</div>
-<div class="paragraph">
-<p>Resource manager access</p>
-</div>
-<div class="paragraph">
-<p>Enterprise bean access</p>
-</div>
-<div class="paragraph">
-<p>EntityManagerFactory access</p>
-</div>
-<div class="paragraph">
-<p>EntityManager access</p>
-</div>
-<div class="paragraph">
-<p>TimerService and Timer methods</p>
-</div>
+<p>UserTransaction methods<br>
+JNDI access to java:comp/env<br>
+Resource manager access<br>
+Enterprise bean access<br>
+EntityManagerFactory access<br>
+EntityManager access<br>
+TimerService and Timer methods</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Additional restrictions:</p>
 </div>
-<div class="paragraph">
-<p>The getRollbackOnly and setRollbackOnly
-methods of the SessionContext interface should be used only in the
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>getRollbackOnly</code> and <code>setRollbackOnly</code>
+methods of the <code>SessionContext</code> interface should be used only in the
 session bean methods that execute in the context of a transaction. The
-container must throw the java.lang.IllegalStateException if the methods
+container must throw the <code>java.lang.IllegalStateException</code> if the methods
 are invoked while the current business method is not executing in the
 context of a transaction.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>wasCancelCalled</em> method is
+</li>
+<li>
+<p>Invoking the <code>wasCancelCalled</code> method is
 disallowed except when inside the context of the asynchronous methods
-that declare Future&lt;V&gt; object as the returning type</p>
+that declare <code>Future&lt;V&gt;</code> object as the returning type</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The reasons for disallowing operations in
-Table <a href="Ejb.html#a1343">See Operations Allowed in the Methods
-of a Singleton Session Bean</a>:</p>
+<p>The reasons for disallowing operations in <a href="#a1343">Operations Allowed in the Methods of a Singleton Session Bean</a>:</p>
 </div>
-<div class="paragraph">
-<p>Invoking the <em>getBusinessObject</em> method is
+<div class="ulist">
+<ul>
+<li>
+<p>Invoking the <code>getBusinessObject</code> method is
 disallowed if the session bean does not define a business interface or a
 no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getInvokedBusinessInterface</em>
+</li>
+<li>
+<p>Invoking the <code>getInvokedBusinessInterface</code>
 method is disallowed if the session bean does not define a business
 interface or a no-interface view. It is also disallowed if the current
 business method was not invoked through a business interface or the
 no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getEJBObject</em> and <em>getEJBHome</em>
+</li>
+<li>
+<p>Invoking the <code>getEJBObject</code> and <code>getEJBHome</code>
 methods is disallowed since a singleton session bean does not support
 the EJB 2.x remote client view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getEJBLocalObject</em> and
-<em>getEJBLocalHome</em> methods is disallowed since a singleton session bean
+</li>
+<li>
+<p>Invoking the <code>getEJBLocalObject</code> and
+<code>getEJBLocalHome</code> methods is disallowed since a singleton session bean
 does not support the EJB 2.x local client view.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the getRollbackOnly and
-setRollbackOnly methods is disallowed in the session bean methods for
+</li>
+<li>
+<p>Invoking the <code>getRollbackOnly</code> and
+<code>setRollbackOnly</code> methods is disallowed in the session bean methods for
 which the container does not have a meaningful
 transaction context, and for all session
 beans with bean-managed transaction
 demarcation.</p>
-</div>
-<div class="paragraph">
-<p>Invoking the <em>getMessageContext</em> method is
+</li>
+<li>
+<p>Invoking the <code>getMessageContext</code> method is
 disallowed in session bean methods that were not invoked by the
 container through the session bean’s web service endpoint.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Accessing resource managers, enterprise
-beans, and the EntityManager is disallowed in the session bean methods
+beans, and the <code>EntityManager</code> is disallowed in the session bean methods
 for which the container does not have a meaningful transaction context
 and/or client security context.</p>
-</div>
-<div class="paragraph">
-<p>The UserTransaction interface is unavailable
+</li>
+<li>
+<p>The <code>UserTransaction</code> interface is unavailable
 to session beans with container-managed
 transaction demarcation.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -8402,36 +8174,39 @@ and singleton session beans.</p>
 Provider is responsible for providing the following class
 files: <sup class="footnote" id="_footnote_a10253">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup></p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Session bean class.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Session bean’s business interface(s), if the
 session bean provides an EJB 3.x local or remote client view.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Session bean’s remote interface and remote
 home interface, if the session bean provides an EJB 2.1
 remote client view.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Session bean’s local interface and local home
 interface, if the session bean provides an EJB 2.1
 local client view.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Session bean’s web service endpoint
 interface, if any.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Interceptor classes, if any.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The Bean Provider for a session bean that
 provides a web service client view may also define JAX-WS message
 handlers for the bean. The requirements for such message handlers are
-defined in <a href="Ejb.html#a9879">See Web Services for Java EE</a> and
-<a href="Ejb.html#a9881">See Java™ API for XML-based Web Service</a>.</p>
+defined in <a href="#a9879">[30]</a> and <a href="#a9881">[31]</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8440,76 +8215,80 @@ defined in <a href="Ejb.html#a9879">See Web Services for Java EE</a> and
 <p>The following are
 the requirements for the session bean class:</p>
 </div>
-<div class="paragraph">
-<p>The class must be defined as public, must not
-be <em>final</em> , and must not be abstract. The class must be a top level
+<div class="ulist">
+<ul>
+<li>
+<p>The class must be defined as <code>public</code>, must not
+be <code>final</code>, and must not be <code>abstract</code>. The class must be a top level
 class.</p>
-</div>
-<div class="paragraph">
-<p>The class must have a public constructor that
+</li>
+<li>
+<p>The class must have a <code>public</code> constructor that
 takes no parameters. The EJB container uses this constructor to create
 instances of the session bean class.</p>
-</div>
-<div class="paragraph">
-<p>The class must not define the finalize()
+</li>
+<li>
+<p>The class must not define the <code>finalize()</code>
 method.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The class must implement the bean’s business
 interface(s) or the methods of the bean’s business interface(s), if any.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The class must implement the business
 methods of the bean’s EJB 2.1 client view interfaces, if any.
 <sup class="footnote" id="_footnote_a10254">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Optionally:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The class may have an additional constructor
-annotated with the Inject annotation (see
-<a href="Ejb.html#a195">See Relationship to Contexts and Dependency
-Injection (CDI) Specification</a> and the CDI specification
-<a href="Ejb.html#a9888">See Contexts and Dependency Injection for</a>).</p>
-</div>
-<div class="paragraph">
+annotated with the <code>Inject</code> annotation (see
+<a href="#a195">Relationship to Contexts and Dependency Injection (CDI) Specification</a> and the CDI specification <a href="#a9888">[38]</a>).</p>
+</li>
+<li>
 <p>The class may implement, directly or
-indirectly, the javax.ejb.SessionBean interface. <sup class="footnote" id="_footnote_a10255">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup></p>
-</div>
-<div class="paragraph">
+indirectly, the <code>javax.ejb.SessionBean</code> interface. <sup class="footnote" id="_footnote_a10255">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup></p>
+</li>
+<li>
 <p>If the class is a stateful session bean, it
-may implement the javax.ejb.SessionSynchronization interface or use one
+may implement the <code>javax.ejb.SessionSynchronization</code> interface or use one
 or more of the session synchronization annotations.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The class may implement the session bean’s
 web service endpoint or component interface.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If the class is a stateless session bean, it
-may implement the <em>javax.ejb.TimedObject</em> interface. See
-<a href="Ejb.html#a5456">See Timer Service</a>.</p>
-</div>
-<div class="paragraph">
-<p>The class may implement the ejbCreate
-method(s).</p>
-</div>
-<div class="paragraph">
+may implement the <code>javax.ejb.TimedObject</code> interface. See <a href="#a5456">Timer Service</a>.</p>
+</li>
+<li>
+<p>The class may implement the ejbCreate method(s).</p>
+</li>
+<li>
 <p>The session bean class may have superclasses
 and/or superinterfaces. If the session bean has superclasses, the
 business methods, lifecycle callback interceptor methods, the timeout
 callback methods, the methods implementing the optional session
-synchronization notifications, the <em>Init</em> or ejbCreate <em>&lt;METHOD&gt;</em>
-methods, the <em>Remove</em> methods, and the methods of the SessionBean
+synchronization notifications, the <code>Init</code> or <code>ejbCreate&lt;METHOD&gt;</code>
+methods, the <code>Remove</code> methods, and the methods of the <code>SessionBean</code>
 interface may be defined in the session bean class or in any of its
 superclasses.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The session bean class is allowed to
 implement other methods (for example helper methods invoked internally
 by the business methods) in addition to the methods required by the EJB
 specification.</p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="session-bean-superclasses"><a class="anchor" href="#session-bean-superclasses"></a>4.9.2.1. Session Bean Superclasses</h5>
@@ -8521,83 +8300,74 @@ deployment descriptor for this case. For the purposes of processing a
 particular session bean class, all superclass processing is identical
 regardless of whether the superclasses are themselves session bean
 classes. In this regard, the use of session bean classes as superclasses
-merely represents a convenient use of implementation inheritance, but
-does not have component inheritance semantics.</p>
+merely represents a convenient use of <em>implementation inheritance</em>, but
+does not have <em>component inheritance</em> semantics.</p>
 </div>
 <div class="paragraph">
 <p>For example, the client views exposed by a
 particular session bean are not inherited by a subclass that also
 happens to define a session bean.</p>
 </div>
-<div class="paragraph">
-<p>@Stateless</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo { ... }
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">B</span> <span class="directive">extends</span> A <span class="directive">implements</span> Bar { ... }</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>public class A implements Foo \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class B extends A implements Bar \{
-&#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>Assuming Foo and Bar are local business
+<p>Assuming <code>Foo</code> and <code>Bar</code> are local business
 interfaces and there is no associated deployment descriptor, session
-bean A exposes local business interface Foo and session bean B exposes
-local business interface Bar, but not Foo.</p>
+bean <code>A</code> exposes local business interface <code>Foo</code> and session bean <code>B</code> exposes
+local business interface <code>Bar</code>, but <em>not</em> <code>Foo</code>.</p>
 </div>
 <div class="paragraph">
-<p>Session bean B would need to explicitly
-include Foo in its set of exposed views for that interface to apply. For
+<p>Session bean <code>B</code> would need to explicitly
+include <code>Foo</code> in its set of exposed views for that interface to apply. For
 example:</p>
 </div>
-<div class="paragraph">
-<p>@Stateless</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo { ... }
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">B</span> <span class="directive">extends</span> A <span class="directive">implements</span> Foo, Bar { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public class A implements Foo \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class B extends A implements Foo, Bar
-\{ &#8230;&#8203; }</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a1487"><a class="anchor" href="#a1487"></a>4.9.3. Lifecycle Callback Interceptor Methods</h4>
 <div class="paragraph">
-<p>The AroundConstruct, <em>PostConstruct</em> ,
-<em>PreDestroy</em> , <em>PrePassivate</em> , and <em>PostActivate</em> lifecycle callback
+<p>The <code>AroundConstruct</code>, <code>PostConstruct</code>,
+<code>PreDestroy</code>, <code>PrePassivate</code>, and <code>PostActivate</code> lifecycle callback
 interceptor methods may be defined for session beans. If the
-<em>PrePassivate</em> or <em>PostActivate</em> lifecycle callbacks are defined for
+<code>PrePassivate</code> or <code>PostActivate</code> lifecycle callbacks are defined for
 stateless session beans or singleton session beans, they are
 ignored. <sup class="footnote" id="_footnote_a10256">[<a id="_footnoteref_37" class="footnote" href="#_footnotedef_37" title="View footnote.">37</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>The AroundConstruct lifecycle callback
+<p>The <code>AroundConstruct</code> lifecycle callback
 interceptor method may be defined on an interceptor class only. All
 other lifecycle callback interceptor methods may be defined on the bean
 class and/or on an interceptor class of the bean. Rules applying to the
 definition of lifecycle callback interceptor methods are defined in
-Section <a href="Ejb.html#a2023">See Interceptors for LifeCycle Event
-Callbacks</a> .</p>
+<a href="#a2023">Interceptors for LifeCycle Event Callbacks</a>.</p>
 </div>
 <div class="paragraph">
-<p>If the <em>PostConstruct</em> lifecycle callback
-interceptor method is the <em>ejbCreate</em> method, if the <em>PreDestroy</em>
-lifecycle callback interceptor method is the <em>ejbRemove</em> method, if the
-<em>PostActivate</em> lifecycle callback interceptor method is the
-<em>ejbActivate</em> method, or if the <em>PrePassivate</em> lifecycle callback
-interceptor method is the <em>ejbPassivate</em> method, these callback methods
+<p>If the <code>PostConstruct</code> lifecycle callback
+interceptor method is the <code>ejbCreate</code> method, if the <code>PreDestroy</code>
+lifecycle callback interceptor method is the <code>ejbRemove</code> method, if the
+<code>PostActivate</code> lifecycle callback interceptor method is the
+<code>ejbActivate</code> method, or if the <code>PrePassivate</code> lifecycle callback
+interceptor method is the <code>ejbPassivate</code> method, these callback methods
 must be implemented on the bean class itself (or on its superclasses).
 Except for these cases, the method names can be arbitrary, but must not
-start with “ejb” to avoid conflicts with the callback methods defined by
-the javax.ejb.EnterpriseBean interfaces.</p>
+start with "ejb" to avoid conflicts with the callback methods defined by
+the <code>javax.ejb.EnterpriseBean</code> interfaces.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8605,31 +8375,35 @@ the javax.ejb.EnterpriseBean interfaces.</p>
 <div class="paragraph">
 <p>The bean class (or superclass) of a stateful
 session bean may use one or more of the session synchronization
-annotations AfterBegin, BeforeCompletion, and AfterCompletion. Each bean
+annotations <code>AfterBegin</code>, <code>BeforeCompletion</code>, and <code>AfterCompletion</code>. Each bean
 has at most one session synchronization method for each of the three
 annotation types. In the case of method overriding of session
 synchronization methods declared by annotations, the most derived method
 takes precedence. The signatures of the session synchronization methods
 must follow these rules:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The method must not be declared as final or
 static.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The method may have any access type: public,
 private, protected, or package-level.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The return type must be void.</p>
-</div>
-<div class="paragraph">
-<p>The AfterBegin and BeforeCompletion methods
-must take 0 arguments.</p>
-</div>
-<div class="paragraph">
-<p>The AfterCompletion method must take a single
-argument of type boolean.</p>
+</li>
+<li>
+<p>The <code>AfterBegin</code> and <code>BeforeCompletion</code> methods
+must take <code>0</code> arguments.</p>
+</li>
+<li>
+<p>The <code>AfterCompletion</code> method must take a single
+argument of type <code>boolean</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -8637,48 +8411,51 @@ argument of type boolean.</p>
 <div class="paragraph">
 <p>The session bean
 class of a session bean that has a home interface may define one or more
-ejbCreate&lt;METHOD&gt; methods. These <em>ejbCreate</em> methods are intended for
+<code>ejbCreate&lt;METHOD&gt;</code> methods. These <code>ejbCreate</code> methods are intended for
 use only with components written to the the EJB 2.1 and earlier APIs.
-The signatures of the <em>ejbCreate</em> methods must follow these rules:</p>
+The signatures of the <code>ejbCreate</code> methods must follow these rules:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The method name must have ejbCreate as its
 prefix.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The method must be declared as public.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The method must not be declared as final or
 static.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The return type must be void.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The method arguments must be legal types for
-RMI/IIOP if there is a <em>create&lt;METHOD&gt;</em> corresponding to the
-ejbCreate&lt;METHOD&gt; method on the session bean’s remote home interface.</p>
-</div>
-<div class="paragraph">
+RMI/IIOP if there is a <code>create&lt;METHOD&gt;</code> corresponding to the
+<code>ejbCreate&lt;METHOD&gt;</code> method on the session bean’s remote home interface.</p>
+</li>
+<li>
 <p>A stateless session bean may define only a
-single <em>ejbCreate</em> method, with no arguments.</p>
-</div>
-<div class="paragraph">
-<p>The <em>throws</em> clause may define arbitrary
+single <code>ejbCreate</code> method, with no arguments.</p>
+</li>
+<li>
+<p>The <code>throws</code> clause may define arbitrary
 application exceptions, possibly including the
-javax.ejb.CreateException.</p>
+<code>javax.ejb.CreateException</code>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>EJB 1.0 allowed the <em>ejbCreate</em> method to
-throw the java.rmi.RemoteException to indicate a non-application
+<p><em>Compatibility Note: EJB 1.0 allowed the <code>ejbCreate</code> method to
+throw the <code>java.rmi.RemoteException</code> to indicate a non-application
 exception. This practice was deprecated in EJB 1.1—an EJB 1.1 or EJB 2.0
 or later compliant enterprise bean should throw the
-<em>javax.ejb.EJBException</em> or another <em>RuntimeException</em> to indicate
-non-application exceptions to the container (see Section
-<a href="Ejb.html#a2986">See System Exceptions</a>). An EJB 2.0 and
+<code>javax.ejb.EJBException</code> or another <code>RuntimeException</code> to indicate
+non-application exceptions to the container (see <a href="#a2986">System Exceptions</a>). An EJB 2.0 and
 later compliant enterprise bean should not throw the
-java.rmi.RemoteException from the <em>ejbCreate</em> method .</p>
+<code>java.rmi.RemoteException</code> from the <code>ejbCreate</code> method.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -8688,37 +8465,35 @@ java.rmi.RemoteException from the <em>ejbCreate</em> method .</p>
 class may define zero or more business methods whose signatures must
 follow these rules:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The method names can be arbitrary, but they
-must not start with “ejb” to avoid conflicts with the callback methods
+must not start with "ejb" to avoid conflicts with the callback methods
 used by the EJB architecture.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The method must be declared as public.</p>
-</div>
-<div class="paragraph">
-<p>The method must not be declared as final or
-static.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
+<p>The method must not be declared as final or static.</p>
+</li>
+<li>
 <p>The argument and return value types for the
 method must be legal types for RMI/IIOP if the method corresponds to a
 business method on the session bean’s remote business interface or
 remote component interface.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The argument and return value types for a
 method must be legal types for JAX-WS if the method is a web service
 method or corresponds to a method on the session bean’s web service
 endpoint.</p>
-</div>
-<div class="paragraph">
-<p>The <em>throws</em> clause may define arbitrary
-application exceptions.</p>
-</div>
-<div class="paragraph">
-<p><a id="a1516"></a>Note:
-Callback methods are permitted to have public access type. This raises
+</li>
+<li>
+<p>The <code>throws</code> clause may define arbitrary application exceptions.<br>
+<a id="a1516"></a><em>Note:
+Callback methods are permitted to have <code>public</code> access type. This raises
 the question of whether a callback method can also be exposed as a
 business method through one or more client views. Doing so is not
 prohibited, but should be done with caution. The runtime context (e.g.
@@ -8727,17 +8502,18 @@ method invoked as a callback can differ significantly from the context
 for the same method when invoked via a client invocation. As a general
 rule, callback methods should not be exposed as business methods.
 Therefore, it is recommended that all non-business methods be assigned
-an access type other than public.</p>
+an access type other than <code>public</code>.</em></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>EJB 1.0 allowed the business methods to throw
-the java.rmi.RemoteException to indicate a non-application exception.
+<p><em>EJB 1.0 allowed the business methods to throw
+the <code>java.rmi.RemoteException</code> to indicate a non-application exception.
 This practice was deprecated in EJB 1.1—an EJB 1.1 or EJB 2.0 or later
-compliant enterprise bean should throw the <em>javax.ejb.EJBException</em> or
-another <em>RuntimeException</em> to indicate non-application exceptions to the
-container (see Section <a href="Ejb.html#a2986">See System
-Exceptions</a>). An EJB 2.0 or later compliant enterprise bean should not
-throw the java.rmi.RemoteException from a business method.</p>
+compliant enterprise bean should throw the <code>javax.ejb.EJBException</code> or
+another <code>RuntimeException</code> to indicate non-application exceptions to the
+container (see <a href="#a2986">System Exceptions</a>). An EJB 2.0 or later compliant enterprise bean
+should not throw the <code>java.rmi.RemoteException</code> from a business method.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -8746,92 +8522,112 @@ throw the java.rmi.RemoteException from a business method.</p>
 <p>The following are
 the requirements for the session bean’s business interface:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The interface must not extend the
-javax.ejb.EJBObject or javax.ejb.EJBLocalObject interface.</p>
+<code>javax.ejb.EJBObject</code> or <code>javax.ejb.EJBLocalObject</code> interface.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>If the business interface is a remote
 business interface, the argument and return values must be of valid
 types for RMI/IIOP. The remote business interface is not required or
-expected to be a <em>java.rmi.Remote</em> interface. The <em>throws</em> clause should
-not include the java.rmi.RemoteException. The methods of the business
-interface may only throw the <em>java.rmi.RemoteException</em> if the interface
-extends <em>java.rmi.Remote</em> .</p>
+expected to be a <code>java.rmi.Remote</code> interface. The <code>throws</code> clause should
+not include the <code>java.rmi.RemoteException</code>. The methods of the business
+interface may only throw the <code>java.rmi.RemoteException</code> if the interface
+extends <code>java.rmi.Remote</code>.</p>
 </div>
-<div class="paragraph">
-<p>The interface is allowed to have
-superinterfaces.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The interface is allowed to have superinterfaces.</p>
+</li>
+<li>
 <p>If the interface is a remote business
 interface, its methods must not expose local interface types, timers or
 timer handles as arguments or results.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The same business interface cannot be
 both a local and a remote business interface of the
 bean. <sup class="footnote" id="_footnote_a10257">[<a id="_footnoteref_38" class="footnote" href="#_footnotedef_38" title="View footnote.">38</a>]</sup></p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The bean class must implement the interface
 or the interface must be designated as a local or remote business
-interface of the bean by means of the <em>Local</em> or <em>Remote</em> annotation or
+interface of the bean by means of the <code>Local</code> or <code>Remote</code> annotation or
 in the deployment descriptor. The following rules apply to the
 interfaces implemented by the bean class:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _java.io.Serializable_ ,
-_java.io.Externalizable_ and the interfaces defined by the _javax.ejb_
-package are excluded when determining whether the bean class has
-business interfaces.</pre>
-</div>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p><code>java.io.Serializable</code>, <code>java.io.Externalizable</code> and the interfaces
+defined by the <code>javax.ejb</code> package are excluded when determining whether
+the bean class has business interfaces.</p>
+</li>
+<li>
 <p>All business interfaces must be explicitly
 designated as such if any of the following is true:</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>the bean exposes a no-interface view</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>any interface of the bean class is explicitly
 designated as a business interface of the bean by either of the
 following means:</p>
-</div>
-<div class="paragraph">
-<p>using the Local or Remote annotation with a
+<div class="ulist">
+<ul>
+<li>
+<p>using the <code>Local</code> or <code>Remote</code> annotation with a
 non-empty value on the bean class</p>
-</div>
-<div class="paragraph">
-<p>using the Local or Remote annotation on the
+</li>
+<li>
+<p>using the <code>Local</code> or <code>Remote</code> annotation on the
 interface</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>in the deployment descriptor</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>Otherwise:</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>If the bean class is annotated with the
-Remote annotation, all implemented interfaces (excluding the interfaces
+<code>Remote</code> annotation, all implemented interfaces (excluding the interfaces
 listed above) are assumed to be remote business interfaces of the bean.</p>
-</div>
-<div class="paragraph">
-<p>If the bean class is annotated with the Local
-annotation, or if the bean class is annotated with neither the Local nor
-the Remote annotation, all implemented interfaces (excluding the
+</li>
+<li>
+<p>If the bean class is annotated with the <code>Local</code>
+annotation, or if the bean class is annotated with neither the <code>Local</code> nor
+the <code>Remote</code> annotation, all implemented interfaces (excluding the
 interfaces listed above) are assumed to be local business interfaces of
 the bean.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Note that while it is expected that the bean
+<p><em>Note that while it is expected that the bean
 class will typically implement its business interface(s), if the bean
 class uses annotations or the deployment descriptor to designate its
 business interface(s), it is not required that the bean class also be
-specified as implementing the interface(s).</p>
+specified as implementing the interface(s).</em></p>
 </div>
 <div class="paragraph">
 <p>The following examples assume that there is
@@ -8843,93 +8639,75 @@ unless noted.</p>
 <p>Example 1: session bean A exposes two local
 business interfaces, Foo and Bar:</p>
 </div>
-<div class="paragraph">
-<p>public interface Foo \{ &#8230;&#8203; }</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Foo</span> { ... }
+
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Bar</span> { ... }
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo, Bar { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public interface Bar \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class A implements Foo, Bar \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>Example 2: session bean A exposes two local
 business interfaces, Foo and Bar:</p>
 </div>
-<div class="paragraph">
-<p>public interface Foo \{ &#8230;&#8203; }</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Foo</span> { ... }
+
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Bar</span> { ... }
+
+<span class="annotation">@Local</span>
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo, Bar { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public interface Bar \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Local</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class A implements Foo, Bar \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>Example 3: session bean A exposes two remote
 business interfaces, Foo and Bar</p>
 </div>
-<div class="paragraph">
-<p>public interface Foo \{ &#8230;&#8203; }</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Foo</span> { ... }
+
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Bar</span> { ... }
+
+<span class="annotation">@Remote</span>
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo, Bar { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public interface Bar \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Remote</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class A implements Foo, Bar \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>Example 4: session bean A exposes only one
 remote business interface Foo</p>
 </div>
-<div class="paragraph">
-<p>@Remote</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Remote</span>
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Foo</span> { ... }
+
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Bar</span> { ... }
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo, Bar { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public interface Foo \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>public interface Bar \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class A implements Foo, Bar \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>Example 5: session bean A exposes only one
 remote business interface Foo</p>
 </div>
-<div class="paragraph">
-<p>public interface Foo \{ &#8230;&#8203; }</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">Foo</span> { ... }
+
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">Bar</span> { ... }
+
+<span class="annotation">@Remote</span>(Foo.class)
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">A</span> <span class="directive">implements</span> Foo, Bar { ... }</code></pre>
 </div>
-<div class="paragraph">
-<p>public interface Bar \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>@Remote(Foo.class)</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class A implements Foo, Bar \{ &#8230;&#8203; }</p>
 </div>
 </div>
 <div class="sect3">
@@ -8938,36 +8716,38 @@ remote business interface Foo</p>
 <p>The following are the requirements for a
 session bean that exposes a no-interface view:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The bean class must designate that it exposes
 a no-interface view via its bean class definition or in the deployment
 descriptor. The following rules apply:</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>If the bean does not expose any other client
 views (local, remote, no-interface, 2.x Remote Home, 2.x Local Home, Web
 Service) and its implements clause is empty, the bean defines a
 no-interface view.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If the bean exposes at least one other client
 view, the bean designates that it exposes a no-interface view by means
 of the LocalBean annotation on the bean class or in the deployment
 descriptor.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The following interfaces are excluded when
 determining whether the bean exposes a no-interface view:
-<em>java.io.Serializable</em> ; <em>java.io.Externalizable</em> ; any of the
-interfaces defined by the <em>javax.ejb</em> package.</p>
-</div>
-<div class="paragraph">
+<code>java.io.Serializable</code>; <code>java.io.Externalizable</code>; any of the
+interfaces defined by the <code>javax.ejb</code> package.</p>
+</li>
+<li>
 <p>All non-static public methods of the bean
 class and of any superclasses except java.lang.Object are exposed as
-business methods through the no-interface view.</p>
-</div>
-<div class="paragraph">
-<p>Note: This includes callback methods. The
+business methods through the no-interface view.<br>
+<br>
+<em>Note: This includes callback methods. The
 Bean Provider should exercise caution when choosing to expose callback
 methods as business methods through the no-interface view. The runtime
 context (e.g. transaction context, caller principal, operations allowed,
@@ -8975,16 +8755,21 @@ etc.) for a method invoked as a callback can differ significantly from
 the context for the same method when invoked via a client invocation. In
 general, callback methods should not be exposed as business methods.
 Therefore, it is recommended that all non-business methods be assigned
-an access type other than public.</p>
-</div>
-<div class="paragraph">
-<p>The throws clause of a bean class method
+an access type other than <code>public</code>.</em></p>
+</li>
+<li>
+<p>The <code>throws</code> clause of a bean class method
 exposed through the no-interface view must not include the
 java.rmi.RemoteException.</p>
+</li>
+<li>
+<p>Only <code>private</code> methods of the bean class and
+any superclasses except <code>java.lang.Object</code> may be declared <code>final</code>.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Only private methods of the bean class and
-any superclasses except java.lang.Object may be declared final.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -8993,42 +8778,49 @@ any superclasses except java.lang.Object may be declared final.</p>
 <p>The following are
 the requirements for the session bean’s remote component interface:</p>
 </div>
-<div class="paragraph">
-<p>The interface must extend the
-javax.ejb.EJBObject interface.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The interface must extend the <code>javax.ejb.EJBObject</code> interface.</p>
+</li>
+<li>
 <p>The methods defined in this interface must
 follow the rules for RMI/IIOP. This means that their argument and return
-values must be of valid types for RMI/IIOP, and their <em>throws</em> clauses
-must include the java.rmi.RemoteException.</p>
-</div>
-<div class="paragraph">
+values must be of valid types for RMI/IIOP, and their <code>throws</code> clauses
+must include the <code>java.rmi.RemoteException</code>.</p>
+</li>
+<li>
 <p>The remote component interface is allowed to
 have superinterfaces. Use of interface inheritance is subject to the
 RMI/IIOP rules for the definition of remote interfaces.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>For each method defined in the remote
 component interface, there must be a matching method in the session
 bean’s class. The matching method must have:</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The same name.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The same number and types of arguments, and
 the same return type.</p>
-</div>
-<div class="paragraph">
-<p>All the exceptions defined in the <em>throws</em>
+</li>
+<li>
+<p>All the exceptions defined in the <code>throws</code>
 clause of the matching method of the session bean class must be defined
-in the <em>throws</em> clause of the method of the remote component interface.</p>
+in the <code>throws</code> clause of the method of the remote component interface.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
+</li>
+<li>
 <p>The remote component interface methods must
 not expose local component interface types, local home interface types,
 timers or timer handles as arguments or results.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -9038,49 +8830,51 @@ timers or timer handles as arguments or results.</p>
 the requirements for the session bean’s
 remote home interface:</p>
 </div>
-<div class="paragraph">
-<p>The interface must extend the
-javax.ejb.EJBHome interface.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The interface must extend the <code>javax.ejb.EJBHome</code> interface.</p>
+</li>
+<li>
 <p>The methods defined in this interface must
 follow the rules for RMI/IIOP. This means that their argument and return
-values must be of valid types for RMI/IIOP, and that their <em>throws</em>
-clauses must include the java.rmi.RemoteException.</p>
-</div>
-<div class="paragraph">
+values must be of valid types for RMI/IIOP, and that their <code>throws</code>
+clauses must include the <code>java.rmi.RemoteException</code>.</p>
+</li>
+<li>
 <p>The remote home interface is allowed to have
 superinterfaces. Use of interface inheritance is subject to the RMI/IIOP
 rules for the definition of remote interfaces.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A session bean’s
 remote home interface must define one or
-more create&lt;METHOD&gt; methods. A stateless session bean must define
+more <code>create&lt;METHOD&gt;</code> methods. A stateless session bean must define
 exactly one create method with no arguments.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Each create method of a stateful session bean
-must be named <em>create&lt;METHOD&gt;</em> , and it must match one of the <em>Init</em>
-methods or ejbCreate&lt;METHOD&gt; methods defined in the session bean class.
-The matching <em>Init</em> method or ejbCreate&lt;METHOD&gt; method must have the
+must be named <code>create&lt;METHOD&gt;</code>, and it must match one of the <code>Init</code>
+methods or <code>ejbCreate&lt;METHOD&gt;</code> methods defined in the session bean class.
+The matching <code>Init</code> method or <code>ejbCreate&lt;METHOD&gt;</code> method must have the
 same number and types of arguments. (Note that the return type is
-different.) The <em>create</em> method for a stateless session bean must be
-named “ <em>create</em> ” but need not have a matching “ <em>ejbCreate</em> ” method.</p>
-</div>
-<div class="paragraph">
-<p>The return type for a create <em>&lt;METHOD&gt;</em>
+different.) The <code>create</code> method for a stateless session bean must be
+named  &#8220;create&#8221; but need not have a matching &#8220;ejbCreate&#8221; method.</p>
+</li>
+<li>
+<p>The return type for a <code>create&lt;METHOD&gt;</code>
 method must be the session bean’s remote component interface type.</p>
-</div>
-<div class="paragraph">
-<p>All the exceptions defined in the <em>throws</em>
-clause of an ejbCreate <em>&lt;METHOD&gt;</em> method of the session bean class must
-be defined in the <em>throws</em> clause of the matching create <em>&lt;METHOD&gt;</em>
+</li>
+<li>
+<p>All the exceptions defined in the <code>throws</code>
+clause of an <code>ejbCreate&lt;METHOD&gt;</code> method of the session bean class must
+be defined in the <code>throws</code> clause of the matching <code>create&lt;METHOD&gt;</code>
 method of the remote home interface.</p>
-</div>
-<div class="paragraph">
-<p>The <em>throws</em> clause must include
-javax.ejb.CreateException.</p>
+</li>
+<li>
+<p>The <code>throws</code> clause must include <code>javax.ejb.CreateException</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -9089,34 +8883,41 @@ javax.ejb.CreateException.</p>
 <p>The following are
 the requirements for the session bean’s local component interface:</p>
 </div>
-<div class="paragraph">
-<p>The interface must extend the
-javax.ejb.EJBLocalObject interface.</p>
-</div>
-<div class="paragraph">
-<p>The <em>throws</em> clause of a method defined in
-the local interface must not include the java.rmi.RemoteException.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The interface must extend the <code>javax.ejb.EJBLocalObject</code> interface.</p>
+</li>
+<li>
+<p>The <code>throws</code> clause of a method defined in
+the local interface must not include the <code>java.rmi.RemoteException</code>.</p>
+</li>
+<li>
 <p>The local component interface is allowed to
 have superinterfaces.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>For each method defined in the local
 component interface, there must be a matching method in the session
 bean’s class. The matching method must have:</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The same name.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The same number and types of arguments, and
 the same return type.</p>
-</div>
-<div class="paragraph">
-<p>All the exceptions defined in the <em>throws</em>
+</li>
+<li>
+<p>All the exceptions defined in the <code>throws</code>
 clause of the matching method of the session bean class must be defined
-in the <em>throws</em> clause of the method of the local component interface.</p>
+in the <code>throws</code> clause of the method of the local component interface.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -9125,46 +8926,46 @@ in the <em>throws</em> clause of the method of the local component interface.</p
 <p>The following are
 the requirements for the session bean’s local home interface:</p>
 </div>
-<div class="paragraph">
-<p>The interface must extend the
-javax.ejb.EJBLocalHome interface.</p>
-</div>
-<div class="paragraph">
-<p>The <em>throws</em> clause of a method in the local
-home interface must not include the java.rmi.RemoteException.</p>
-</div>
-<div class="paragraph">
-<p>The local home
-interface is allowed to have superinterfaces.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The interface must extend the javax.ejb.EJBLocalHome interface.</p>
+</li>
+<li>
+<p>The <code>throws</code> clause of a method in the local
+home interface must not include the <code>java.rmi.RemoteException</code>.</p>
+</li>
+<li>
+<p>The local home interface is allowed to have superinterfaces.</p>
+</li>
+<li>
 <p>A session bean’s local home interface must
-define one or more create&lt;METHOD&gt; methods. A stateless session bean must
+define one or more <code>create&lt;METHOD&gt;</code> methods. A stateless session bean must
 define exactly one create method with no arguments.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Each create method of a stateful session bean
-must be named <em>create&lt;METHOD&gt;</em> , and it must match one of the <em>Init</em>
-methods or ejbCreate&lt;METHOD&gt; methods defined in the session bean class.
-The matching <em>Init</em> method or ejbCreate&lt;METHOD&gt; method must have the
+must be named <code>create&lt;METHOD&gt;</code>, and it must match one of the <code>Init</code>
+methods or <code>ejbCreate&lt;METHOD&gt;</code> methods defined in the session bean class.
+The matching <code>Init</code> method or <code>ejbCreate&lt;METHOD&gt;</code> method must have the
 same number and types of arguments. (Note that the return type is
-different.) The <em>create</em> method for a stateless session bean must be
-named “ <em>create</em> ” but need not have a matching “ <em>ejbCreate</em> ” method.</p>
-</div>
-<div class="paragraph">
-<p>The return type for a create <em>&lt;METHOD&gt;</em>
+different.) The <code>create</code> method for a stateless session bean must be
+named &#8220;create&#8221; but need not have a matching &#8220;ejbCreate&#8221; method.</p>
+</li>
+<li>
+<p>The return type for a <code>create&lt;METHOD&gt;</code>
 method must be the session bean’s local component interface type.</p>
-</div>
-<div class="paragraph">
-<p>All the exceptions defined in the <em>throws</em>
-clause of an ejbCreate <em>&lt;METHOD&gt;</em> method of the session bean class must
-be defined in the <em>throws</em> clause of the matching create <em>&lt;METHOD&gt;</em>
+</li>
+<li>
+<p>All the exceptions defined in the <code>throws</code>
+clause of an <code>ejbCreate&lt;METHOD&gt;</code> method of the session bean class must
+be defined in the <code>throws</code> clause of the matching <code>create&lt;METHOD&gt;</code>
 method of the local home interface.</p>
-</div>
-<div class="paragraph">
-<p>The <em>throws</em>
-clause must include
-javax.ejb.CreateException.</p>
+</li>
+<li>
+<p>The <code>throws</code> clause must include <code>javax.ejb.CreateException</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -9179,8 +8980,7 @@ implement a web service endpoint.</p>
 specifications do not require that a separate interface be defined for a
 web service endpoint. The requirements for web service endpoints under
 JAX-WS and Web Services for Java EE are given in
-<a href="Ejb.html#a9881">See Java™ API for XML-based Web Service</a> and
-<a href="Ejb.html#a9879">See Web Services for Java EE</a>.</p>
+<a href="#a9881">[31]</a> and <a href="#a9879">[30]</a>.</p>
 </div>
 </div>
 </div>
@@ -9213,37 +9013,39 @@ the session bean’s deployment descriptor.</p>
 <p>The deployment
 tools must generate the following classes:</p>
 </div>
-<div class="paragraph">
-<p>A class that implements the session bean’s
-business interface.</p>
-</div>
-<div class="paragraph">
-<p>A class that implements the session bean’s
-no-interface view.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>A class that implements the session bean’s business interface.</p>
+</li>
+<li>
+<p>A class that implements the session bean’s no-interface view.</p>
+</li>
+<li>
 <p>A class that implements the session bean’s
 remote home interface (session EJBHome class).</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A class that implements the session bean’s
 remote component interface (session EJBObject class).</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A class that implements the session bean’s
 local home interface (session EJBLocalHome class).</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A class that implements the session bean’s
 local component interface (session EJBLocalObject class).</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A class that implements the session bean’s
 web service endpoint.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A class that implements the return value of
-an asynchronous method with return type <em>Future&lt;V&gt;</em> .</p>
+an asynchronous method with return type <code>Future&lt;V&gt;</code>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The deployment
@@ -9256,18 +9058,18 @@ subclassing, delegation, and code generation.</p>
 <p>The deployment tools may also allow the
 generation of additional code that wraps the business methods and is
 used to customize the business logic to an existing operational
-environment. For example, a wrapper for a debit function on the
-AccountManager bean may check that the debited amount does not exceed a
+environment. For example, a wrapper for a <code>debit</code> function on the
+<code>AccountManager</code> bean may check that the debited amount does not exceed a
 certain limit.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="generation-of-wsdl"><a class="anchor" href="#generation-of-wsdl"></a>4.10.2. Generation of WSDL</h4>
 <div class="paragraph">
-<p>Reference <a href="Ejb.html#a9879">See Web</a>
+<p>Reference <a href="#a9879">[30]</a>
 describes the generation of a WSDL document for a web service endpoint.
 The Java to WSDL mapping must adhere to the requirements of JAX-WS
-<a href="Ejb.html#a9881">See Java™ API for XML-based Web Service</a>.</p>
+<a href="#a9881">[31]</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9286,9 +9088,8 @@ business method on the instance.</p>
 </div>
 <div class="paragraph">
 <p>The Container Provider is responsible for
-providing the implementation of the <em>equals</em> and <em>hashCode</em> methods for
-the business interface, in conformance with the requirements of section
-<a href="Ejb.html#a342">See Session Object Identity</a>.</p>
+providing the implementation of the <code>equals</code> and <code>hashCode</code> methods for
+the business interface, in conformance with the requirements of <a href="#a342">Session Object Identity</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9307,10 +9108,9 @@ business method on the instance.</p>
 </div>
 <div class="paragraph">
 <p>The Container Provider is responsible for
-providing the implementation of the <em>equals</em> and <em>hashCode</em> methods for
+providing the implementation of the <code>equals</code> and <code>hashCode</code> methods for
 the no-interface view reference class, in conformance with the
-requirements of section <a href="Ejb.html#a519">See Client view of
-Session Object’s Life Cycle</a>.</p>
+requirements of <a href="#a519">Client view of Session Object’s Life Cycle</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9319,12 +9119,12 @@ Session Object’s Life Cycle</a>.</p>
 <p>The session
 EJBHome class, which is generated by the deployment tools, implements
 the session bean’s remote home interface. This class implements the
-methods of the javax.ejb.EJBHome interface and the create&lt;METHOD&gt;
+methods of the <code>javax.ejb.EJBHome</code> interface and the <code>create&lt;METHOD&gt;</code>
 methods specific to the session bean.</p>
 </div>
 <div class="paragraph">
-<p>The implementation of each create&lt;METHOD&gt;
-method invokes a matching ejbCreate&lt;METHOD&gt; method.</p>
+<p>The implementation of each <code>create&lt;METHOD&gt;</code>
+method invokes a matching <code>ejbCreate&lt;METHOD&gt;</code> method.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9333,7 +9133,7 @@ method invokes a matching ejbCreate&lt;METHOD&gt; method.</p>
 <p>The session
 EJBObject class, which is generated by the deployment tools, implements
 the session bean’s remote component interface. It implements the methods
-of the javax.ejb.EJBObject interface and the business methods specific
+of the <code>javax.ejb.EJBObject</code> interface and the business methods specific
 to the session bean.</p>
 </div>
 <div class="paragraph">
@@ -9349,12 +9149,12 @@ business method on the instance.</p>
 <p>The session
 EJBLocalHome class, which is generated by the deployment tools,
 implements the session bean’s local home interface. This class
-implements the methods of the javax.ejb.EJBLocalHome interface and the
-create&lt;METHOD&gt; methods specific to the session bean.</p>
+implements the methods of the <code>javax.ejb.EJBLocalHome</code> interface and the
+<code>create&lt;METHOD&gt;</code> methods specific to the session bean.</p>
 </div>
 <div class="paragraph">
-<p>The implementation of each create&lt;METHOD&gt;
-method invokes a matching ejbCreate&lt;METHOD&gt; method.</p>
+<p>The implementation of each <code>create&lt;METHOD&gt;</code>
+method invokes a matching <code>ejbCreate&lt;METHOD&gt;</code> method.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9363,7 +9163,7 @@ method invokes a matching ejbCreate&lt;METHOD&gt; method.</p>
 <p>The session
 EJBLocalObject class, which is generated by the deployment tools,
 implements the session bean’s local component interface. It implements
-the methods of the javax.ejb.EJBLocalObject interface and the business
+the methods of the <code>javax.ejb.EJBLocalObject</code> interface and the business
 methods specific to the session bean.</p>
 </div>
 <div class="paragraph">
@@ -9388,17 +9188,15 @@ matches the web service endpoint method that corresponds to the request.</p>
 <h4 id="asynchronous-client-futurev-return-value-implementation-class"><a class="anchor" href="#asynchronous-client-futurev-return-value-implementation-class"></a>4.10.10. Asynchronous Client Future&lt;V&gt; Return Value Implementation Class</h4>
 <div class="paragraph">
 <p>The object returned from an asynchronous
-method with return type <em>Future&lt;V&gt;</em> is implemented by the container’s
+method with return type <code>Future&lt;V&gt;</code> is implemented by the container’s
 deployment tools.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="handle-classes"><a class="anchor" href="#handle-classes"></a>4.10.11. Handle Classes</h4>
 <div class="paragraph">
-<p>The deployment
-tools are responsible for implementing the
-handle classes for the session bean’s remote
-home and remote component interfaces.</p>
+<p>The deployment tools are responsible for implementing the handle classes
+for the session bean’s remote home and remote component interfaces.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9407,7 +9205,7 @@ home and remote component interfaces.</p>
 <p>The deployment tools are responsible for
 implementing the class that provides metadata to the remote client view
 contract. The class must be a valid RMI Value class and must implement
-the javax.ejb.EJBMetaData interface.</p>
+the <code>javax.ejb.EJBMetaData</code> interface.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9426,10 +9224,8 @@ calls to a stateless or stateful session bean instance.</p>
 <div class="paragraph">
 <p>The container
 must follow the rules with respect to transaction scoping, security
-checking, and exception handling, as described in Chapters
-<a href="Ejb.html#a2172">See Support for Transactions</a>,
-<a href="Ejb.html#a4945">See Security Management</a>, and
-<a href="Ejb.html#a2940">See Exception Handling</a>, respectively.</p>
+checking, and exception handling, as described in
+<a href="#a2172">Support for Transactions</a>, <a href="#a4945">Security Management</a>, and <a href="#a2940">Exception Handling</a>, respectively.</p>
 </div>
 </div>
 <div class="sect3">
@@ -9437,9 +9233,7 @@ checking, and exception handling, as described in Chapters
 <div class="paragraph">
 <p>The container must support the use of JAX-WS
 message handlers for web service endpoints. Container requirements for
-support of message handlers are specified in
-<a href="Ejb.html#a9881">See Java™ API for XML-based Web Service</a> and
-<a href="Ejb.html#a9879">See Web Services for Java EE</a>.</p>
+support of message handlers are specified in <a href="#a9881">[31]</a> and <a href="#a9879">[30]</a>.</p>
 </div>
 <div class="paragraph">
 <p>If message handlers are present, they must be
@@ -9450,19 +9244,19 @@ invoked before any business method interceptor methods.</p>
 <h4 id="sessioncontext"><a class="anchor" href="#sessioncontext"></a>4.10.16. SessionContext</h4>
 <div class="paragraph">
 <p>The container must implement the
-SessionContext.getEJBObject method such that the bean instance can use
+<code>SessionContext.getEJBObject</code> method such that the bean instance can use
 the Java language cast to convert the returned value to the session
 bean’s remote component interface type. Specifically, the bean instance
-does not have to use the PortableRemoteObject.narrow method for the type
+does not have to use the <code>PortableRemoteObject.narrow</code> method for the type
 conversion.</p>
 </div>
 <div class="paragraph">
 <p>The container must implement the
-<em>EJBContext.lookup</em> method such that when the <em>lookup</em> method is used to
+<code>EJBContext.lookup</code> method such that when the <code>lookup</code> method is used to
 look up a bean’s remote home interface, a bean instance can use the Java
 language cast to convert the returned value to a session bean’s remote
 home interface type. Specifically, the bean instance does not have to
-use the PortableRemoteObject.narrow method for the type conversion.</p>
+use the <code>PortableRemoteObject.narrow</code> method for the type conversion.</p>
 </div>
 </div>
 </div>
@@ -35064,7 +34858,7 @@ beans with a no-methods listener interface</p>
 <div id="footer">
 <div id="footer-text">
  4.0-SNAPSHOT<br>
-Last updated 2020-03-05 11:01:01 +0530
+Last updated 2020-03-04 05:35:13 +0530
 </div>
 </div>
 </body>
