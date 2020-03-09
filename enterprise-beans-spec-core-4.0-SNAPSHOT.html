@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Enterprise Beans Team, https://projects.eclipse.org/projects/ee4j.ejb</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/ejb-api-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/ejb-api-dev</a></span><br>
 <span id="revnumber"> 4.0-SNAPSHOT,</span>
-<span id="revdate">March 08, 2020</span>
+<span id="revdate">March 09, 2020</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
@@ -1551,7 +1551,7 @@ Version: 4.0-SNAPSHOT
 
 Status: DRAFT
 
-Release: March 08, 2020</pre>
+Release: March 09, 2020</pre>
 </div>
 </div>
 </div>
@@ -3233,7 +3233,8 @@ dependency injection:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Resource</span> SessionContext ctx;
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Resource</span>
+SessionContext ctx;
 ...
 CartBean cart = (CartBean)ctx.lookup(<span class="string"><span class="delimiter">&quot;</span><span class="content">cart</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
@@ -4007,9 +4008,9 @@ home interface that defines two <code>create&lt;METHOD&gt;</code> methods:</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">CartHome</span> <span class="directive">extends</span> javax.ejb.EJBLocalHome {
  Cart create(<span class="predefined-type">String</span> customerName, <span class="predefined-type">String</span> account)
- <span class="directive">throws</span> BadAccountException, CreateException;
+     <span class="directive">throws</span> BadAccountException, CreateException;
  Cart createLargeCart(<span class="predefined-type">String</span> customerName, <span class="predefined-type">String</span> account)
- <span class="directive">throws</span> BadAccountException, CreateException;
+     <span class="directive">throws</span> BadAccountException, CreateException;
 }</code></pre>
 </div>
 </div>
@@ -4252,7 +4253,7 @@ items to it:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java">CartHome cartHome = (CartHome)javax.rmi.PortableRemoteObject.narrow(
- initialContext.lookup(...), CartHome.class);
+     initialContext.lookup(...), CartHome.class);
 Cart cart = cartHome.createLargeCart(...);
 cart.addItem(<span class="integer">66</span>);
 cart.addItem(<span class="integer">22</span>);</code></pre>
@@ -4278,7 +4279,7 @@ the contents of the shopping cart:</p>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java">Handle cartHandle = ...; <span class="comment">// deserialize from a file...</span>
 Cart cart = (Cart)javax.rmi.PortableRemoteObject.narrow(
- cartHandle.getEJBObject(), Cart.class);
+              cartHandle.getEJBObject(), Cart.class);
 cart.purchase();
 cart.remove();</code></pre>
 </div>
@@ -4311,7 +4312,7 @@ the life of a client process by serializing the handle to persistent
 storage. When the handle is later deserialized, the session object it
 returns will work as long as the session object still exists on the
 server. (An earlier timeout or server crash may have destroyed the
-session object.)A handle is not a
+session object.) A handle is not a
 capability, in the security sense, that
 would automatically grant its holder the right to invoke methods on the
 object. When a reference to a session object is obtained from a handle,
@@ -4342,11 +4343,11 @@ the <code>isIdentical</code> method for a stateful session object.</p>
 Foo foo1 = fooHome.create(...);
 Foo foo2 = fooHome.create(...);
 
-<span class="keyword">if</span> (foo1.isIdentical(foo1)) <span class="error">\</span>{ <span class="comment">// this test must return true</span>
+<span class="keyword">if</span> (foo1.isIdentical(foo1)) { <span class="comment">// this test must return true</span>
  ...
 }
 
-<span class="keyword">if</span> (foo1.isIdentical(foo2)) <span class="error">\</span>{ <span class="comment">// this test must return false</span>
+<span class="keyword">if</span> (foo1.isIdentical(foo2)) { <span class="comment">// this test must return false</span>
  ...
 }</code></pre>
 </div>
@@ -10542,8 +10543,8 @@ and <a href="#a2940">Exception Handling</a>.</p>
 <p>The model for persistence and
 object/relational mapping was considerably revised and enhanced in the
 Enterprise JavaBeans 3.0 release. The contracts and requirements for
-persistent entities are defined by the “ <em>Java Persistence API</em> ”
-specification <a href="Ejb.html#a9851">See Java™ Persistence API</a>, which also contains
+persistent entities are defined by the "<em>Java Persistence API</em>"
+specification <a href="#a9851">[2]</a>, which also contains
 the full specification of the Java Persistence query language and the
 metadata for object/relational mapping.</p>
 </div>
@@ -10554,12 +10555,12 @@ Beans with Container-Managed Persistence, the contracts for the EJB QL
 query language, the contracts for EJB 2.1 Entity Beans with Bean-Managed
 Persistence, and the contracts for EJB 1.1 Entity Beans with
 Container-Managed Persistence are described in the EJB Optional Features
-document <a href="Ejb.html#a9890">See EJB 3.2 Optional Features</a> Chapters
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>,
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>,
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>,
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>, and
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a> respectively.</p>
+document <a href="#a9890">[40]</a>. See
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a41">Chapter 3</a>,
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a384">Chapter 4</a>,
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a1840">Chapter 5</a>,
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a2456">Chapter 6</a> and
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a3071">Chapter 7</a> respectively.</p>
 </div>
 </div>
 </div>
@@ -30932,15 +30933,14 @@ available in all EJB containers.</p>
 </div>
 <div class="paragraph">
 <p>The set of required APIs is divided into two
-categories: a complete set and a minimum set. The minimum set is also
-referred to as “EJB Lite.” This reflects the ability of a Server
+categories: a <em>complete</em> set and a <em>minimum</em> set. The <em>minimum</em> set is also
+referred to as "EJB Lite". This reflects the ability of a Server
 Provider to provide an EJB container within a product that implements
 the Full Java EE Platform or within a subset profile such as the Java EE
 Web Profile. The <em>complete</em> set is required within an implementation of
 the Full Java EE Platform. The minimum set must be supported within an
 implementation of the Java EE Web Profile. Profile requirements are
-described within the Java EE Platform specification
-<a href="Ejb.html#a9861">See Java™ Platform</a>.</p>
+described within the Java EE Platform specification <a href="#a9861">[12]</a>.</p>
 </div>
 <div class="paragraph">
 <p>The chapter also defines the restrictions
@@ -30980,45 +30980,45 @@ Enterprise JavaBeans technology, whether that product supports EJB Lite
 or the full EJB API.</p>
 </div>
 <div class="paragraph">
-<p>As detailed in
-<a href="Ejb.html#a9442">See EJB API Groups</a>, the EJB Lite API is
+<p>As detailed in <a href="#a9442">EJB API Groups</a>, the EJB Lite API is
 composed of the following subset of the EJB API:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Stateless, stateful, and singleton session
 bean components only</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Local business interface and no-interface
 view only</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Container-managed transactions and
-bean-managed transactions</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
+<p>Container-managed transactions and bean-managed transactions</p>
+</li>
+<li>
 <p>Declarative and programmatic security</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Interceptors</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Local asynchronous session bean invocations</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Non-persistent EJB Timer Service</p>
+</li>
+<li>
+<p>Deployment descriptor support (<code>ejb-jar.xml</code>)</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Deployment descriptor support ( <em>ejb-jar.xml</em>
-)</p>
-</div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a9442"></a>EJB API Groups</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="a9442" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. EJB API Groups</caption>
 <colgroup>
 <col style="width: 34%;">
 <col style="width: 33%;">
@@ -31033,16 +31033,16 @@ bean-managed transactions</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EJB Lite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EJB Lite</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>COMPONENTS:</p>
+<p><strong>COMPONENTS:</strong></p>
 </div>
 <div class="paragraph">
 <p>Session Beans (stateful, stateless,
 singleton)</p>
 </div>
 <div class="paragraph">
-<p>SESSION BEAN CLIENT VIEWS:</p>
+<p><strong>SESSION BEAN CLIENT VIEWS:</strong></p>
 </div>
 <div class="paragraph">
 <p>Local business interface</p>
@@ -31051,7 +31051,7 @@ singleton)</p>
 <p>No-interface</p>
 </div>
 <div class="paragraph">
-<p>SERVICES:</p>
+<p><strong>SERVICES:</strong></p>
 </div>
 <div class="paragraph">
 <p>Interceptors</p>
@@ -31072,7 +31072,7 @@ singleton)</p>
 <p>Declarative and Programmatic Security</p>
 </div>
 <div class="paragraph">
-<p>PACKAGING:</p>
+<p><strong>PACKAGING:</strong></p>
 </div>
 <div class="paragraph">
 <p>Session beans packaged in a .war file</p>
@@ -31080,15 +31080,15 @@ singleton)</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Message-Driven Beans</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Message-Driven Beans</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>COMPONENTS:</p>
+<p><strong>COMPONENTS:</strong></p>
 </div>
 <div class="paragraph">
 <p>Message-driven Beans</p>
 </div>
 <div class="paragraph">
-<p>DEPENDENCIES:</p>
+<p><strong>DEPENDENCIES:</strong></p>
 </div>
 <div class="paragraph">
 <p>Standalone connector with support for Message
@@ -31097,15 +31097,15 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EJB 3.x Remote</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EJB 3.x Remote</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SESSION BEAN CLIENT VIEWS:</p>
+<p><strong>SESSION BEAN CLIENT VIEWS:</strong></p>
 </div>
 <div class="paragraph">
 <p>3.x Remote Business view</p>
 </div>
 <div class="paragraph">
-<p>SERVICES:</p>
+<p><strong>SERVICES:</strong></p>
 </div>
 <div class="paragraph">
 <p>Remote asynchronous session bean invocations</p>
@@ -31113,9 +31113,9 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Persistent EJB Timer Service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Persistent EJB Timer Service</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SERVICES:</p>
+<p><strong>SERVICES:</strong></p>
 </div>
 <div class="paragraph">
 <p>Persistent EJB Timer Service</p>
@@ -31123,15 +31123,15 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JAX-WS Web Service Endpoints</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JAX-WS Web Service Endpoints</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SESSION BEAN CLIENT VIEWS:</p>
+<p><strong>SESSION BEAN CLIENT VIEWS:</strong></p>
 </div>
 <div class="paragraph">
 <p>JAX-WS Web Service Endpoints</p>
 </div>
 <div class="paragraph">
-<p>DEPENDENCIES:</p>
+<p><strong>DEPENDENCIES:</strong></p>
 </div>
 <div class="paragraph">
 <p>JAX-WS API</p>
@@ -31139,9 +31139,9 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Embeddable EJB Container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Embeddable EJB Container</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SERVICES:</p>
+<p><strong>SERVICES:</strong></p>
 </div>
 <div class="paragraph">
 <p>Embeddable EJB Container</p>
@@ -31149,21 +31149,21 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EJB 2.x API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EJB 2.x API</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>COMPONENTS:</p>
+<p><strong>COMPONENTS:</strong></p>
 </div>
 <div class="paragraph">
 <p>Session Beans</p>
 </div>
 <div class="paragraph">
-<p>SESSION BEAN CLIENT VIEWS:</p>
+<p><strong>SESSION BEAN CLIENT VIEWS:</strong></p>
 </div>
 <div class="paragraph">
 <p>2.x Local and Remote Home and Component views</p>
 </div>
 <div class="paragraph">
-<p>SERVICES:</p>
+<p><strong>SERVICES:</strong></p>
 </div>
 <div class="paragraph">
 <p>TimedObject interface</p>
@@ -31177,15 +31177,15 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Entity Beans</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Entity Beans</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>COMPONENTS:</p>
+<p><strong>COMPONENTS:</strong></p>
 </div>
 <div class="paragraph">
 <p>2.x / 1.x CMP/BMP Entity Beans</p>
 </div>
 <div class="paragraph">
-<p>SERVICES:</p>
+<p><strong>SERVICES:</strong></p>
 </div>
 <div class="paragraph">
 <p>EJB QL</p>
@@ -31193,9 +31193,9 @@ Inflow and MessageEndpoint deployment</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JAX-RPC Web Service Endpoints</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JAX-RPC Web Service Endpoints</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SESSION BEAN CLIENT VIEWS:</p>
+<p><strong>SESSION BEAN CLIENT VIEWS:</strong></p>
 </div>
 <div class="paragraph">
 <p>JAX-RPC Web Service Endpoints</p>
@@ -31208,57 +31208,58 @@ Inflow and MessageEndpoint deployment</p>
 <h4 id="a9516"><a class="anchor" href="#a9516"></a>16.1.1. Support for Other EJB API Groups in an EJB Lite Container</h4>
 <div class="paragraph">
 <p>An EJB Lite container provider may support
-EJB features in addition to the “EJB Lite” group defined in
-<a href="Ejb.html#a9442">See EJB API Groups</a>. If it does, the
+EJB features in addition to the "EJB Lite" group defined in
+<a href="#a9442">EJB API Groups</a>. If it does, the
 following rules apply:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>If any feature in a group is supported, the
 whole group must be supported.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Support for these features must adhere to the
 requirements of this specification.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Except for the programmatic timers in the
 Persistent EJB Timer Service group, the EJB Container must detect that
 an application depends on a feature that is not supported and fail
 deployment of the application. A product may offer a deployment option
 to force deployment of applications that use EJB features not supported
 by the product. Use of these features must fail at runtime.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If the Persistent EJB Timer Service group is
 not supported, and an application attempts to create a programmatic
 persistent timer, the EJB container must throw the EJBException when the
 API is invoked.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If JMS message-driven beans are supported,
-the JMS API (see <a href="Ejb.html#a9862">See Java™ Message Service</a>) must be
-supported.</p>
-</div>
-<div class="paragraph">
+the JMS API (see <a href="#a9862">[13]</a>) must be supported.</p>
+</li>
+<li>
 <p>If JAX-WS Web Service Endpoints are
 supported, the web service interoperability rules specified in
-<a href="Ejb.html#a179">See Mapping to Web Service Protocols</a> must
-be observed.</p>
-</div>
-<div class="paragraph">
+<a href="#a179">Mapping to Web Service Protocols</a> must be observed.</p>
+</li>
+<li>
 <p>To use a session bean written to the EJB 3.x
 API, and adapted for use with an earlier client view, support for the
 EJB 2.x API group is required.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>To use an application client to access an EJB
 3.x remote session bean, the application client container must be
 supported.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Support for deployment descriptor versions
-must observe the rules in <a href="Ejb.html#a9696">See Support for
-Existing Applications</a>.</p>
+must observe the rules in <a href="#a9696">Support for Existing Applications</a>.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -31272,15 +31273,13 @@ that supports other Java EE technologies.</p>
 <p>If Java Persistence API is supported, the EJB
 Container must support the use of the Java Persistence API in
 conformance with the contracts defined in the Java Persistence API
-specification <a href="Ejb.html#a9851">See Java™ Persistence API</a> and the rules
-specified in <a href="Ejb.html#a9838">See EJB Container Provider’s
-Responsibilities</a> must be observed.</p>
+specification <a href="#a9851">[2]</a> and the rules specified in <a href="#a9838">EJB Container Provider’s Responsibilities</a> must be observed.</p>
 </div>
 <div class="paragraph">
 <p>If JAX-RS API is supported, singleton and
 stateless session beans must be supported as JAX-RS root resource
-classes, providers and Application subclasses as defined by the JAX-RS
-specification <a href="Ejb.html#a9889">See The Java API for RESTful</a>.</p>
+classes, providers and <code>Application</code> subclasses as defined by the JAX-RS
+specification <a href="#a9889">[39]</a>.</p>
 </div>
 </div>
 </div>
@@ -31295,8 +31294,7 @@ responsibilities of the Bean Provider.</p>
 <div class="paragraph">
 <p>The requirements
 on APIs provided by the Container are determined by the associated
-profile specification, e.g. the Java EE specification
-<a href="Ejb.html#a9861">See Java™ Platform</a>
+profile specification, e.g. the Java EE specification <a href="#a9861">[12]</a>
 or the Web Profile Specification.</p>
 </div>
 </div>
@@ -31307,198 +31305,168 @@ or the Web Profile Specification.</p>
 describes the programming restrictions that a Bean Provider must follow
 to ensure that the enterprise bean is <em>portable</em> and can be deployed in
 any compliant EJB container. The restrictions apply to the
-implementation of the business methods. Section
-<a href="Ejb.html#a9586">See Container Provider’s Responsibility</a>,
+implementation of the business methods. <a href="#a9586">Container Provider’s Responsibility</a>,
 which describes the container’s view of these restrictions, defines the
 programming environment that all EJB containers must provide.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>An enterprise bean must not use read/write
 static fields. Using read-only static fields
 is allowed. Therefore, it is recommended that all static fields in the
-enterprise bean class be declared as final.</p>
-</div>
-<div class="paragraph">
-<p>This rule is required to ensure consistent
+enterprise bean class be declared as <code>final</code>.<br>
+<em>This rule is required to ensure consistent
 runtime semantics because while some EJB containers may use a single JVM
 to execute all enterprise bean’s instances, others may distribute the
-instances across multiple JVMs.</p>
-</div>
-<div class="paragraph">
+instances across multiple JVMs.</em></p>
+</li>
+<li>
 <p>An enterprise bean must not use
 thread synchronization primitives to
 synchronize execution of multiple instances, unless it is a singleton
-session bean with bean-managed concurrency.</p>
-</div>
-<div class="paragraph">
-<p>This is for the same reason as above.
+session bean with bean-managed concurrency.<br>
+<em>This is for the same reason as above.
 Synchronization would not work if the EJB container distributed
-enterprise bean’s instances across multiple JVMs.</p>
-</div>
-<div class="paragraph">
+enterprise bean’s instances across multiple JVMs.</em></p>
+</li>
+<li>
 <p>An enterprise bean must not use the
 AWT functionality to attempt to output
-information to a display, or to input information from a keyboard.</p>
-</div>
-<div class="paragraph">
-<p>Servers do not allow direct interaction
+information to a display, or to input information from a keyboard.<br>
+<em>Servers do not allow direct interaction
 between an application program and a keyboard/display attached to the
-server system.</p>
-</div>
-<div class="paragraph">
+server system.</em></p>
+</li>
+<li>
 <p>An enterprise bean should exercise caution
-when using the Java I/O package to attempt
-to access files and directories in the file system.</p>
-</div>
-<div class="paragraph">
-<p>The file system APIs are not well-suited for
+when using the <code>Java I/O</code> package to attempt
+to access files and directories in the file system.<br>
+<em>The file system APIs are not well-suited for
 business components to access data. Files might not be accessible from
 all instances, or their content might be different on different
 instances, and coordinating updates to the file can be difficult.
 Business components should use a resource manager API, such as JDBC, to
-store data.</p>
-</div>
-<div class="paragraph">
+store data.</em></p>
+</li>
+<li>
 <p>An enterprise bean must not attempt to listen
 on a socket, accept connections on a socket,
-or use a socket for multicast.</p>
-</div>
-<div class="paragraph">
-<p>The EJB architecture allows an enterprise
+or use a socket for multicast.<br>
+<em>The EJB architecture allows an enterprise
 bean instance to be a network socket client, but it does not allow it to
 be a network server. Allowing the instance to become a network server
 would conflict with the basic function of the enterprise bean— to serve
-the EJB clients.</p>
-</div>
-<div class="paragraph">
+the EJB clients.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to query
 a class to obtain information about the declared members that are not
 otherwise accessible to the enterprise bean because of the security
 rules of the Java language. The enterprise bean must not attempt to use
 the Reflection API to access information
 that the security rules of the Java programming language make
-unavailable.</p>
-</div>
-<div class="paragraph">
-<p>Allowing the enterprise bean to access
+unavailable.<br>
+<em>Allowing the enterprise bean to access
 information about other classes and to access the classes in a manner
 that is normally disallowed by the Java programming language could
-compromise security.</p>
-</div>
-<div class="paragraph">
+compromise security.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to
 create a class loader; set the context class
 loader; set security manager; create a new security manager; stop the
 JVM; or change the input, output, and error
-streams.</p>
-</div>
-<div class="paragraph">
-<p>These functions are reserved for the EJB
+streams.<br>
+<em>These functions are reserved for the EJB
 container. Allowing the enterprise bean to use these functions could
 compromise security and decrease the container’s ability to properly
-manage the runtime environment.</p>
-</div>
-<div class="paragraph">
+manage the runtime environment.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to set
 the socket factory used by ServerSocket,
-Socket, or the stream handler factory used by URL.</p>
-</div>
-<div class="paragraph">
-<p>These networking functions are reserved for
+Socket, or the stream handler factory used by URL.<br>
+<em>These networking functions are reserved for
 the EJB container. Allowing the enterprise bean to use these functions
 could compromise security and decrease the container’s ability to
-properly manage the runtime environment.</p>
-</div>
-<div class="paragraph">
+properly manage the runtime environment.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to
 manage threads. The enterprise bean must not attempt to start, stop,
 suspend, or resume a thread, or to change a thread’s priority or name.
-The enterprise bean must not attempt to manage thread groups.</p>
-</div>
-<div class="paragraph">
-<p>These functions are reserved for the EJB
+The enterprise bean must not attempt to manage thread groups.<br>
+<em>These functions are reserved for the EJB
 container. Allowing the enterprise bean to manage threads would decrease
-the container’s ability to properly manage the runtime environment.</p>
-</div>
-<div class="paragraph">
+the container’s ability to properly manage the runtime environment.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to
-directly read or write a file descriptor.</p>
-</div>
-<div class="paragraph">
-<p>Allowing the enterprise bean to read and
-write file descriptors directly could compromise security.</p>
-</div>
-<div class="paragraph">
+directly read or write a file descriptor.<br>
+<em>Allowing the enterprise bean to read and
+write file descriptors directly could compromise security.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to
 obtain the security policy information for a
-particular code source.</p>
-</div>
-<div class="paragraph">
-<p>Allowing the enterprise bean to access the
-security policy information would create a security hole.</p>
-</div>
-<div class="paragraph">
+particular code source.<br>
+<em>Allowing the enterprise bean to access the
+security policy information would create a security hole.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to load
-a native library.</p>
-</div>
-<div class="paragraph">
-<p>This function is reserved for the EJB
+a native library.<br>
+<em>This function is reserved for the EJB
 container. Allowing the enterprise bean to load native code would create
-a security hole.</p>
-</div>
-<div class="paragraph">
+a security hole.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to gain
 access to packages and classes that the usual rules of the Java
-programming language make unavailable to the enterprise bean.</p>
-</div>
-<div class="paragraph">
-<p>This function is reserved for the EJB
+programming language make unavailable to the enterprise bean.<br>
+<em>This function is reserved for the EJB
 container. Allowing the enterprise bean to perform this function would
-create a security hole.</p>
-</div>
-<div class="paragraph">
+create a security hole.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to
-define a class in a package.</p>
-</div>
-<div class="paragraph">
-<p>This function is reserved for the EJB
+define a class in a package.<br>
+<em>This function is reserved for the EJB
 container. Allowing the enterprise bean to perform this function would
-create a security hole.</p>
-</div>
-<div class="paragraph">
+create a security hole.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to
 access or modify the security configuration
-objects (Policy, Security, Provider, Signer, and Identity).</p>
-</div>
-<div class="paragraph">
-<p>These functions are reserved for the EJB
+objects (Policy, Security, Provider, Signer, and Identity).<br>
+<em>These functions are reserved for the EJB
 container. Allowing the enterprise bean to use these functions could
-compromise security.</p>
-</div>
-<div class="paragraph">
+compromise security.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to use
 the subclass and object substitution features of the
-Java Serialization Protocol.</p>
-</div>
-<div class="paragraph">
-<p>Allowing the enterprise bean to use these
-functions could compromise security.</p>
-</div>
-<div class="paragraph">
+Java Serialization Protocol.<br>
+<em>Allowing the enterprise bean to use these
+functions could compromise security.</em></p>
+</li>
+<li>
 <p>The enterprise bean must not attempt to pass
-this as an argument or method result. The
+<code>this</code> as an argument or method result. The
 enterprise bean must pass the result of
-<em>SessionContext.getBusinessObject</em> , SessionContext.getEJBObject,
-<em>SessionContext.getEJBLocalObject</em> , EntityContext.getEJBObject, or
-EntityContext.getEJBLocalObject instead.</p>
+<code>SessionContext.getBusinessObject</code>, <code>SessionContext.getEJBObject</code>,
+<code>SessionContext.getEJBLocalObject</code>, <code>EntityContext.getEJBObject</code>, or
+<code>EntityContext.getEJBLocalObject</code> instead.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>To guarantee
 portability of the enterprise bean’s implementation across all compliant
 EJB containers, the Bean Provider should test the enterprise bean using
-a container with the security settings defined in Table
-<a href="Ejb.html#a9591">See Java 2 Platform Security Policy for a
-Standard EJB Container</a>. That table defines the minimal functionality
+a container with the security settings defined in <a href="#a9591">Java 2 Platform Security Policy for a Standard EJB Container</a>.
+That table defines the minimal functionality
 that a compliant EJB container must provide to the enterprise bean
 instances at runtime.</p>
 </div>
@@ -31520,112 +31488,79 @@ requirements in more detail.</p>
 <div class="paragraph">
 <p>The following table defines the Java 2
 platform security permissions that the EJB container must be able to
-grant to the enterprise bean instances at runtime. The term “grant”
+grant to the enterprise bean instances at runtime. The term "grant"
 means that the container must be able to grant the permission, the term
-“deny” means that the container should deny the permission.</p>
+"deny" means that the container should deny the permission.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a9591"></a>Java 2 Platform Security
-Policy for a Standard EJB Container</p>
-</div>
-<div class="paragraph">
-<p>Permission name</p>
-</div>
-<div class="paragraph">
-<p>EJB Container policy</p>
-</div>
-<div class="paragraph">
-<p>java.security.AllPermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.awt.AWTPermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.io.FilePermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.net.NetPermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.util.PropertyPermission</p>
-</div>
-<div class="paragraph">
-<p>grant “*”, “read</p>
-</div>
-<div class="paragraph">
-<p>deny all other</p>
-</div>
-<div class="paragraph">
-<p>java.lang.reflect.ReflectPermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.lang.RuntimePermission</p>
-</div>
-<div class="paragraph">
-<p>grant “queuePrintJob”</p>
-</div>
-<div class="paragraph">
-<p>grant “loadLibrary”</p>
-</div>
-<div class="paragraph">
-<p>deny all other</p>
-</div>
-<div class="paragraph">
-<p>java.io.FilePermission</p>
-</div>
-<div class="paragraph">
-<p>grant “*”, “read,write”</p>
-</div>
-<div class="paragraph">
-<p>deny all other</p>
-</div>
-<div class="paragraph">
-<p>java.lang.SecurityPermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.io.SerializablePermission</p>
-</div>
-<div class="paragraph">
-<p>deny</p>
-</div>
-<div class="paragraph">
-<p>java.net.SocketPermission</p>
-</div>
-<div class="paragraph">
-<p>grant ”*”, “connect”
+<table id="a9591" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. Java 2 Platform Security Policy for a Standard EJB Container</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Permission name</th>
+<th class="tableblock halign-left valign-top">EJB Container policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.security.AllPermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deny</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.awt.AWTPermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deny</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.io.FilePermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deny</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.net.NetPermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deny</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.util.PropertyPermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">grant "*", "read"</p>
+<p class="tableblock">deny all other</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.reflect.ReflectPermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deny</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.RuntimePermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">grant "queuePrintJob"</p>
+<p class="tableblock">grant "loadLibrary"</p>
+<p class="tableblock">deny all other</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.io.FilePermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">grant "*", "read,write"</p>
+<p class="tableblock">deny all other</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.SecurityPermission</p>
+<p class="tableblock">deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.io.SerializablePermission</p>
+<p class="tableblock">deny</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.net.SocketPermission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">grant "*", "connect"
 <sup class="footnote" id="_footnote_a10342">[<a id="_footnoteref_123" class="footnote" href="#_footnotedef_123" title="View footnote.">123</a>]</sup></p>
-</div>
+<p class="tableblock">deny all other</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>deny all other</p>
-</div>
-<div class="paragraph">
-<p>Some containers may allow the Deployer to
+<p><em>Some containers may allow the Deployer to
 grant more, or fewer, permissions to the enterprise bean instances than
-specified in Table <a href="Ejb.html#a9591">See Java 2 Platform
-Security Policy for a Standard EJB Container</a>. Support for this is not
+specified in <a href="#a9591">Java 2 Platform Security Policy for a Standard EJB Container</a>. Support for this is not
 required by the EJB specification. Enterprise beans that rely on more or
-fewer permissions will not be portable across all EJB containers.</p>
+fewer permissions will not be portable across all EJB containers.</em></p>
 </div>
 <div class="sect3">
 <h4 id="a9622"><a class="anchor" href="#a9622"></a>16.3.1. EJB Interfaces and Annotations Requirements</h4>
@@ -31641,8 +31576,7 @@ this specification.</p>
 <div class="paragraph">
 <p>The container must support the use of the
 Java Persistence API in conformance with the contracts defined in the
-<em>Java Persistence API</em> specification <a href="Ejb.html#a9851">See
-Java™ Persistence API</a>.</p>
+<em>Java Persistence API</em> specification <a href="#a9851">[2]</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -31651,7 +31585,7 @@ Java™ Persistence API</a>.</p>
 <p>At the minimum,
 the EJB container must provide a JNDI API name space to the enterprise
 bean instances. The EJB container must make the name space available to
-an instance when the instance invokes the javax.naming.InitialContext
+an instance when the instance invokes the <code>javax.naming.InitialContext</code>
 default (no-arg) constructor.</p>
 </div>
 <div class="paragraph">
@@ -31659,85 +31593,89 @@ default (no-arg) constructor.</p>
 the Web Profile or the embeddable EJB container, must make available the
 following objects in the name space:</p>
 </div>
-<div class="paragraph">
-<p>The local business interfaces of other
-enterprise beans.</p>
-</div>
-<div class="paragraph">
-<p>References to the no-interfaces view of other
-enterprise beans.</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The local business interfaces of other enterprise beans.</p>
+</li>
+<li>
+<p>References to the no-interfaces view of other enterprise beans.</p>
+</li>
+<li>
 <p>UserTransaction objects</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>EJBContext objects</p>
-</div>
-<div class="paragraph">
-<p>The resource factories used by the enterprise
-beans.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
+<p>The resource factories used by the enterprise beans.</p>
+</li>
+<li>
 <p>The entity managers and entity manager
 factories used by the enterprise beans.</p>
-</div>
-<div class="paragraph">
-<p>TimerService objects for non-persistent
-timers</p>
+</li>
+<li>
+<p>TimerService objects for non-persistent timers</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>An EJB container within an implementation of
 the Full Java EE Platform must make available the following objects in
 the name space:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>All objects listed as available in the Web
 Profile.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The remote business interfaces of other
 enterprise beans.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The web service interfaces used by the
 enterprise beans.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The home interfaces of other enterprise
 beans.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>ORB objects</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>TimerService objects for persistent timers</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>All enterprise beans deployed within the same
-.war file are presented with the same JNDI name space. In addition, all
+<code>.war</code> file are presented with the same JNDI name space. In addition, all
 the instances of the same enterprise bean deployed within an ejb-jar
 file must be presented with the same JNDI API name space.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="a9644"><a class="anchor" href="#a9644"></a>16.3.3. JTA API Requirements</h4>
 <div class="paragraph">
 <p>The EJB Container
-must include the JTA javax.transaction API.</p>
+must include the JTA <code>javax.transaction</code> API.</p>
 </div>
 <div class="paragraph">
 <p>The EJB Container
-must provide the javax.transaction.UserTransaction interface to
+must provide the <code>javax.transaction.UserTransaction</code> interface to
 enterprise beans with bean-managed transaction demarcation by dependency
-injection, through the javax.ejb.EJBContext interface, and also in JNDI
-under the name java:comp/UserTransaction, in the cases required by the
+injection, through the <code>javax.ejb.EJBContext</code> interface, and also in JNDI
+under the name <code>java:comp/UserTransaction</code>, in the cases required by the
 EJB specification.</p>
 </div>
 <div class="paragraph">
 <p>The EJB Container
-must provide the javax.transaction.TransactionSynchronizationRegistry
+must provide the <code>javax.transaction.TransactionSynchronizationRegistry</code>
 interface by dependency injection and in JNDI under the name
-java:comp/TransactionSynchronizationRegistry.</p>
+<code>java:comp/TransactionSynchronizationRegistry</code>.</p>
 </div>
 <div class="paragraph">
 <p>It is illegal to associate JTA
@@ -31754,7 +31692,7 @@ not intended for direct use by enterprise beans.</p>
 <h4 id="a9650"><a class="anchor" href="#a9650"></a>16.3.4. JDBC™ API Requirements</h4>
 <div class="paragraph">
 <p>The EJB Container
-must include the JDBC javax.sql API and provide its functionality to the
+must include the JDBC <code>javax.sql</code> API and provide its functionality to the
 enterprise bean instances, with the exception of the low-level XA and
 connection pooling interfaces. These low-level interfaces are intended
 for integration of a JDBC driver with an application server, not for
@@ -31769,145 +31707,75 @@ must include the JMS 2.0 API and provide its
 functionality to the enterprise bean instances, with the exception of
 the low-level interfaces that are intended for integration of a JMS
 provider with an application server, not for direct use by enterprise
-beans. These interfaces include: <em>javax.jms.ServerSession</em> ,
-<em>javax.jms.ServerSessionPool</em> , <em>javax.jms.ConnectionConsumer</em> , and all
-the <em>javax.jms</em> XA interfaces.</p>
+beans. These interfaces include: <code>javax.jms.ServerSession</code>,
+<code>javax.jms.ServerSessionPool</code>, <code>javax.jms.ConnectionConsumer</code>, and all
+the <code>javax.jms</code> XA interfaces.</p>
 </div>
 <div class="paragraph">
 <p>In addition, the following methods are for
-use by the container only. Enterprise beans must not call these methods:
-__</p>
+use by the container only. Enterprise beans must not call these methods:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>_javax.jms.Session.setMessageListener_</pre>
+<pre class="CodeRay highlight"><code data-lang="java">javax.jms.Session.setMessageListener
+javax.jms.Session.getMessageListener
+javax.jms.Session.run
+javax.jms.Connection.createConnectionConsumer
+javax.jms.Connection.createSharedConnectionConsumer
+javax.jms.Connection.createDurableConnectionConsumer
+javax.jms.Connection.createSharedDurableConnectionConsumer</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_javax.jms.Session.getMessageListener_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_javax.jms.Session.run_</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>javax.jms.Connection.createConnectionConsumer</em></p>
-</div>
-<div class="paragraph">
-<p>javax.jms.Connection.createSharedConnectionConsumer</p>
-</div>
-<div class="paragraph">
-<p>javax.jms.Connection.createDurableConnectionConsumer</p>
-</div>
-<div class="paragraph">
-<p>javax.jms.Connection.createSharedDurableConnectionConsumer</p>
 </div>
 <div class="paragraph">
 <p>The following methods must not be called by
 enterprise beans because they may interfere with the connection
 management by the container:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>_javax.jms.Connection.setExceptionListener_</pre>
+<pre class="CodeRay highlight"><code data-lang="java">javax.jms.Connection.setExceptionListener
+javax.jms.Connection.stop
+javax.jms.Connection.setClientID
+javax.jms.JMSContext.setExceptionListener
+javax.jms.JMSContext.stop
+javax.jms.JMSContext.setClientID</code></pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p>Enterprise beans must not call the following methods:</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_javax.jms.Connection.stop_</pre>
+<pre class="CodeRay highlight"><code data-lang="java">javax.jms.MessageConsumer.setMessageListener
+javax.jms.MessageConsumer.getMessageListener
+javax.jms.JMSContext.setMessageListener
+javax.jms.JMSContext.getMessageListener</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_javax.jms.Connection.setClientID_</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>javax.jms.JMSContext.setExceptionListener</p>
-</div>
-<div class="paragraph">
-<p>javax.jms.JMSContext.stop</p>
-</div>
-<div class="paragraph">
-<p>javax.jms.JMSContext.setClientID</p>
-</div>
-<div class="paragraph">
-<p>Enterprise beans must not call the following
-methods:</p>
-</div>
-<div class="paragraph">
-<p><em>javax.jms.MessageConsumer.setMessageListener</em></p>
-</div>
-<div class="paragraph">
-<p><em>javax.jms.MessageConsumer.getMessageListener</em></p>
-</div>
-<div class="paragraph">
-<p>javax.jms.JMSContext.setMessageListener</p>
-</div>
-<div class="paragraph">
-<p>javax.jms.JMSContext.getMessageListener</p>
 </div>
 <div class="paragraph">
 <p>An asynchronous send is not permitted in an
 enterprise bean. The following methods must therefore not be called by
 enterprise beans:</p>
 </div>
-<div class="paragraph">
-<p>javax.jms.Session.send(Message message,</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>CompletionListener completionListener)</pre>
+<pre class="CodeRay highlight"><code data-lang="java">javax.jms.Session.send(Message message,
+     CompletionListener completionListener)
+javax.jms.Session.send(Message message, <span class="type">int</span> deliveryMode,
+     <span class="type">int</span> priority, <span class="type">long</span> timeToLive,
+     CompletionListener completionListener)
+javax.jms.Session.send(<span class="predefined-type">Destination</span> destination, Message message,
+     CompletionListener completionListener)
+javax.jms.Session.send(<span class="predefined-type">Destination</span> destination, Message message,
+     <span class="type">int</span> deliveryMode, <span class="type">int</span> priority, <span class="type">long</span> timeToLive,
+     CompletionListener completionListener)
+javax.jms.JMSProducer.setAsync</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>javax.jms.Session.send(Message message, int
-deliveryMode,</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>int priority, long timeToLive,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>CompletionListener completionListener)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>javax.jms.Session.send(Destination
-destination, Message message,</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>CompletionListener completionListener)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>javax.jms.Session.send(Destination
-destination, Message message,</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> int deliveryMode, int priority, long
-timeToLive,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>CompletionListener completionListener)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>javax.jms.JMSProducer.setAsync</p>
 </div>
 <div class="paragraph">
 <p>This specification recommends, but does not
-require, that the container throw the <em>javax.jms.JMSException</em> or a
-javax.jms.JMSRuntimeException (depending on the method signature) if
+require, that the container throw the <code>javax.jms.JMSException</code> or a
+<code>javax.jms.JMSRuntimeException</code> (depending on the method signature) if
 enterprise beans call any of the methods listed in this section.</p>
 </div>
 </div>
@@ -31916,7 +31784,7 @@ enterprise beans call any of the methods listed in this section.</p>
 <div class="paragraph">
 <p>An enterprise
 bean’s remote business interfaces and/or remote home and remote
-component interfaces are remote interfaces for Java RMI. The container
+component interfaces are <em>remote interfaces</em> for Java RMI. The container
 must ensure the semantics for passing arguments conforms to Java
 RMI-IIOP. Non-remote objects must be passed by value.</p>
 </div>
@@ -31932,7 +31800,7 @@ for passing arguments conforms to Java RMI-IIOP.</p>
 <div class="paragraph">
 <p>An enterprise bean’s local business
 interfaces and/or local home and local interfaces are <em>local Java
-interfaces</em> . The caller and callee enterprise beans that make use of
+interfaces</em>. The caller and callee enterprise beans that make use of
 these local interfaces are typically collocated in the same JVM. The EJB
 container must ensure the semantics for passing arguments across these
 interfaces conforms to the standard argument passing semantics of the
@@ -31983,13 +31851,12 @@ allowed the container to choose the default behavior in the event of
 concurrent access attempts to a stateful session bean instance. This
 specification requires a default of serialized requests in the face of
 concurrency. This means by default clients will not receive the
-javax.ejb.ConcurrentAccessException when concurrent access occurs for a
+<code>javax.ejb.ConcurrentAccessException</code> when concurrent access occurs for a
 request. This should have minimal impact to correctly written
 applications since even with the prior behavior there was no guarantee
 of receiving such an exception due to the inherent race conditions.
 Applications wishing to receive an exception in the face of concurrency
-can request that behavior through newly defined metadata. See
-<a href="Ejb.html#a778">See Serializing Session Bean Methods</a> for
+can request that behavior through newly defined metadata. See <a href="#a778">Serializing Session Bean Methods</a> for
 more details.</p>
 </div>
 </div>
@@ -32001,9 +31868,8 @@ respect to whether the designation of an unchecked exception as an
 application exception applied to that exception’s subclasses. The EJB
 3.1 specification clarified that, by default, the application exception
 designation is inherited by subclasses. Non-inheriting behavior may be
-specified by means of the <em>ApplicationException</em> annotation and/or the
-deployment descriptor. See <a href="Ejb.html#a2942">See Application
-Exceptions</a> for more detail.</p>
+specified by means of the <code>ApplicationException</code> annotation and/or the
+deployment descriptor. See <a href="#a2942">Application Exceptions</a> for more detail.</p>
 </div>
 </div>
 <div class="sect2">
@@ -32032,8 +31898,7 @@ the EJB 3.x APIs and components written to the earlier EJB APIs within
 the same transaction.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="Ejb.html#a9716">See Adapting
-EJB 3.x Session Beans to Earlier Client Views</a> for a discussion of the
+<p>See <a href="#a9716">Adapting EJB 3.x Session Beans to Earlier Client Views</a> for a discussion of the
 mechanisms that are used to enable components written to the EJB 3.x API
 to be accessed and utilized by clients written to earlier versions of
 the EJB specification.</p>
@@ -32053,7 +31918,7 @@ the same transaction.</p>
 <div class="paragraph">
 <p>Such clients access components written to the
 earlier EJB APIs using the EJB 2.1 client view home and component
-interfaces. The EJB annotation (or the ejb-ref and ejb-local-ref
+interfaces. The <code>EJB</code> annotation (or the <code>ejb-ref</code> and <code>ejb-local-ref</code>
 deployment descriptor elements) may be used to specify the injection of
 home interfaces into components that are clients of beans written to the
 earlier EJB client view.</p>
@@ -32081,19 +31946,19 @@ be adapted to such earlier preexisting client view interfaces.</p>
 </div>
 <div class="paragraph">
 <p>The session bean designates the interfaces to
-be adapted by using the RemoteHome and LocalHome metadata annotations on
+be adapted by using the <code>RemoteHome</code> and <code>LocalHome</code> metadata annotations on
 the bean class (or equivalent deployment descriptor elements). The
 corresponding remote and local component interfaces are not explicitly
 specified when using these annotations. Rather, they are derived from
-the Home and LocalHome interfaces respectively.</p>
+the <code>Home</code> and <code>LocalHome</code> interfaces respectively.</p>
 </div>
 <div class="paragraph">
 <p>When the client is deployed, the container
 classes that implement the EJB 2.1 home and remote component interfaces
 (or local home and local component interfaces) referenced by the client
-must provide the implementation of the javax.ejb.EJBHome and
-javax.ejb.EJBObject interfaces (or the javax.ejb.EJBLocalHome and
-javax.ejb.EJBLocalObject interfaces) respectively.</p>
+must provide the implementation of the <code>javax.ejb.EJBHome</code> and
+<code>javax.ejb.EJBObject</code> interfaces (or the <code>javax.ejb.EJBLocalHome</code> and
+<code>javax.ejb.EJBLocalObject</code> interfaces) respectively.</p>
 </div>
 <div class="paragraph">
 <p>In addition, the container implementation
@@ -32103,7 +31968,7 @@ to apply to the EJB 3.x component being referenced as described below.</p>
 <div class="sect3">
 <h4 id="stateless-session-beans-3"><a class="anchor" href="#stateless-session-beans-3"></a>17.5.1. Stateless Session Beans</h4>
 <div class="paragraph">
-<p>The invocation of the home create() method
+<p>The invocation of the home <code>create()</code> method
 must return the corresponding local component interface or remote
 component interface of the bean. This may or may not cause the creation
 of the bean instance, depending on the container’s implementation
@@ -32111,20 +31976,18 @@ strategy. For example, the container may preallocate bean instances
 (e.g., in a pooling strategy) or may defer the creation of the bean
 instance until the first invocation of a business method on the bean
 class. When the bean instance is created, the container invokes the
-setSessionContext method, if any, performs any other dependency
-injection, and invokes the PostConstruct lifecycle callback methods, if
-any, as specified in <a href="Ejb.html#a756">See Session Bean
-Creation</a>.</p>
+<code>setSessionContext</code> method, if any, performs any other dependency
+injection, and invokes the <code>PostConstruct</code> lifecycle callback methods, if
+any, as specified in <a href="#a756">Session Bean Creation</a>.</p>
 </div>
 <div class="paragraph">
 <p>It is likewise
-implementation-dependent as to whether the invocation of the EJBHome
-remove(Handle) or EJBObject or EJBLocalObject remove() methods causes
+implementation-dependent as to whether the invocation of the <code>EJBHome
+remove(Handle)</code> or <code>EJBObject</code> or <code>EJBLocalObject remove()</code> methods causes
 the immediate removal of the bean instance, depending on the container’s
 implementation strategy. When the bean instance is removed, the
-PreDestroy callback methods, if any, are invoked, as specified in
-<a href="Ejb.html#a1077">See Stateless Session Bean Lifecycle State
-Diagram</a></p>
+<code>PreDestroy</code> callback methods, if any, are invoked, as specified in
+<a href="#a1077">Stateless Session Bean Lifecycle State Diagram</a></p>
 </div>
 <div class="paragraph">
 <p>The invocations of the business methods of
@@ -32134,21 +31997,20 @@ the component interface are delegated to the bean class.</p>
 <div class="sect3">
 <h4 id="a9726"><a class="anchor" href="#a9726"></a>17.5.2. Stateful Session Beans</h4>
 <div class="paragraph">
-<p>The invocation of the home create&lt;METHOD&gt;()
+<p>The invocation of the home <code>create&lt;METHOD&gt;()</code>
 method causes construction of the bean instance, invocation of the
-PostConstruct lifecycle callbacks, if any, and invocation of the
-matching <em>Init</em> method, and returns the corresponding local component
+<code>PostConstruct</code> lifecycle callbacks, if any, and invocation of the
+matching <code>Init</code> method, and returns the corresponding local component
 interface or remote component interface of the bean. Invocations of the
-PostConstruct lifecycle callback methods occur in a transaction context
+<code>PostConstruct</code> lifecycle callback methods occur in a transaction context
 determined by the methods’ transaction attributes, if any.</p>
 </div>
 <div class="paragraph">
-<p>The invocation of the EJBHome remove(Handle)
-or the EJBObject or EJBLocalObject remove() method causes the invocation
-of the <em>PreDestroy</em> lifecycle callback method(s), if any, and removal of
-the bean instance, as described in section
-<a href="Ejb.html#a767">See Stateful Session Bean Removal</a>.
-Invocation of the PreDestroy lifecycle callback methods occur in a
+<p>The invocation of the <code>EJBHome remove(Handle)</code>
+or the <code>EJBObject</code> or <code>EJBLocalObject remove()</code> method causes the invocation
+of the <code>PreDestroy</code> lifecycle callback method(s), if any, and removal of
+the bean instance, as described in <a href="#a767">Stateful Session Bean Removal</a>.
+Invocation of the <code>PreDestroy</code> lifecycle callback methods occur in a
 transaction context determined by the methods’ transaction attributes,
 if any.</p>
 </div>
@@ -32157,12 +32019,12 @@ if any.</p>
 the component interface are delegated to the bean class.</p>
 </div>
 <div class="paragraph">
-<p>The Init annotation is used to specify the
-correspondence of a method on the bean class with a <em>create&lt;METHOD&gt;</em>
-method of the adapted EJBHome and/or adapted EJBLocalHome interface. The
+<p>The <code>Init</code> annotation is used to specify the
+correspondence of a method on the bean class with a <code>create&lt;METHOD&gt;</code>
+method of the adapted <code>EJBHome</code> and/or adapted <code>EJBLocalHome</code> interface. The
 result type of such an Init method is required to be void, and its
 parameter types must be exactly the same as those of the referenced
-create&lt;METHOD&gt; method.</p>
+<code>create&lt;METHOD&gt;</code> method.</p>
 </div>
 </div>
 </div>
@@ -32174,7 +32036,7 @@ create&lt;METHOD&gt; method.</p>
 <div class="paragraph">
 <p>The embeddable API is designed to support the
 execution of EJB applications within a Java SE environment only. Use of
-the javax.ejb.embeddable package is not allowed from an application
+the <code>javax.ejb.embeddable</code> package is not allowed from an application
 running in a Java EE environment. Unlike traditional Java EE
 server-based execution, embeddable usage allows client code and its
 corresponding enterprise beans to run within the same JVM and class
@@ -32211,7 +32073,7 @@ significant rework.</p>
 <h3 id="bootstrapping-api"><a class="anchor" href="#bootstrapping-api"></a>18.2. Bootstrapping API</h3>
 <div class="paragraph">
 <p>The embeddable EJB container is instantiated
-using a bootstrapping API defined within the javax.ejb package. By
+using a bootstrapping API defined within the <code>javax.ejb</code> package. By
 default, the embeddable container uses the JVM class path to scan for
 the enterprise bean modules to be initialized. The client can override
 this behavior during setup by specifying an alternative set of target
@@ -32220,90 +32082,89 @@ modules.</p>
 <div class="sect3">
 <h4 id="a9743"><a class="anchor" href="#a9743"></a>18.2.1. EJBContainer</h4>
 <div class="paragraph">
-<p>The javax.ejb.embeddable.EJBContainer
+<p>The <code>javax.ejb.embeddable.EJBContainer</code>
 abstract class represents an instance of an embeddable container. It
 contains factory methods for creating a container instance. The client
-initializes a new embeddable container by calling the createEJBContainer
-method of the javax.ejb.embeddable.EJBContainer class.</p>
+initializes a new embeddable container by calling the <code>createEJBContainer</code>
+method of the <code>javax.ejb.embeddable.EJBContainer</code> class.</p>
 </div>
 <div class="paragraph">
 <p>For example,</p>
 </div>
-<div class="paragraph">
-<p>EJBContainer ec =
-EJBContainer.createEJBContainer();</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">EJBContainer ec = EJBContainer.createEJBContainer();</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>By default, the embeddable container searches
 the JVM classpath (the value of the Java System property
-java.class.path) to find the set of EJB modules for initialization. A
+<code>java.class.path</code>) to find the set of EJB modules for initialization. A
 classpath entry is considered a matching entry if it meets one of the
 following criteria:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>It is an ejb-jar according to the standard
 module-type identification rules defined by the Java EE platform
 specification</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>It is a directory containing a
-<em>META-INF/ejb-jar.xml</em> file or at least one <em>.class</em> file with an
+<code>META-INF/ejb-jar.xml</code> file or at least one <code>.class</code> file with an
 enterprise bean component-defining annotation</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Each such matching entry is considered
 an EJB module within the same application. <sup class="footnote" id="_footnote_a10346">[<a id="_footnoteref_127" class="footnote" href="#_footnotedef_127" title="View footnote.">127</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>If an <em>ejb-jar.xml</em> file is present the
-<em>module-name</em> element defines the module name. Otherwise, for ejb-jar
-files, the module name is the unqualified file name excluding the “
-<em>.jar</em> ” extension, and for directories the module name is the
+<p>If an <code>ejb-jar.xml</code> file is present the
+<code>module-name</code> element defines the module name. Otherwise, for ejb-jar
+files, the module name is the unqualified file name excluding the
+<code>.jar</code> extension, and for directories the module name is the
 unqualified name of the directory (the last name in the pathname’s name
 sequence). The embeddable container is not required to support more than
 one matching entry with the same module name.</p>
 </div>
 <div class="paragraph">
-<p>An alternative form of the createEJBContainer
+<p>An alternative form of the <code>createEJBContainer</code>
 method provides a set of properties for customizing the embeddable
 container creation:</p>
 </div>
-<div class="paragraph">
-<p>javax.ejb.embeddable.EJBContainer
-createEJBContainer(Map&lt;?, ?&gt; properties)</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">javax.ejb.embeddable.EJBContainer createEJBContainer(<span class="predefined-type">Map</span>&lt;?, ?&gt; properties)</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>This specification reserves the prefix
-“javax.ejb.” for standard property names. It is expected that embeddable
+<code>javax.ejb.</code> for standard property names. It is expected that embeddable
 Container Providers will define their own properties as well.</p>
 </div>
 <div class="paragraph">
-<p>For example, given the following java command
-and assuming that foo.jar and bar.jar are both valid ejb-jar files,</p>
+<p>For example, given the following <code>java</code> command
+and assuming that <code>foo.jar</code> and <code>bar.jar</code> are both valid ejb-jar files,</p>
 </div>
-<div class="paragraph">
-<p>java -classpath
-foo.jar:bar.jar:vendor-rt.jar:client.jar</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>com.acme.Client</pre>
+<pre class="CodeRay highlight"><code>java -classpath foo.jar:bar.jar:vendor-rt.jar:client.jar com.acme.Client</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>the following will result in only the bar.jar
+<p>the following will result in only the <code>bar.jar</code>
 module being initialized by the container:</p>
 </div>
-<div class="paragraph">
-<p>Properties props = new Properties();</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Properties</span> props = <span class="keyword">new</span> <span class="predefined-type">Properties</span>();
+props.setProperty(EJBContainer.MODULES, <span class="string"><span class="delimiter">&quot;</span><span class="content">bar</span><span class="delimiter">&quot;</span></span>);
+
+EJBContainer ec = EJBContainer.createEJBContainer(props);</code></pre>
 </div>
-<div class="paragraph">
-<p>props.setProperty(EJBContainer.MODULES,
-"bar");</p>
-</div>
-<div class="paragraph">
-<p>EJBContainer ec =
-EJBContainer.createEJBContainer(props);</p>
 </div>
 <div class="paragraph">
 <p>An embeddable Container Provider is permitted
@@ -32314,14 +32175,14 @@ application modules prior to JVM initialization.</p>
 <p>After identifying the set of matching
 modules, the embeddable container commences application initialization.
 Any singleton session beans configured for eager initialization will be
-initialized at this point. When the createEJBContainer method returns
+initialized at this point. When the <code>createEJBContainer</code> method returns
 successfully, the client can access the client view of any enterprise
 bean in the application.</p>
 </div>
 <div class="paragraph">
 <p>Enterprise beans running within the
 embeddable container are loaded using the context class loader active on
-the thread at the time that the createEJBContainer method is called.</p>
+the thread at the time that the <code>createEJBContainer</code> method is called.</p>
 </div>
 </div>
 <div class="sect3">
@@ -32341,7 +32202,7 @@ should be used for this application.</p>
 </div>
 <div class="paragraph">
 <p>The property name is defined as
-EJBContainer.PROVIDER.</p>
+<code>EJBContainer.PROVIDER</code>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -32354,16 +32215,16 @@ included in the JVM classpath or to modules outside the JVM classpath.</p>
 <div class="paragraph">
 <p>If the target modules are part of the
 classpath, this property holds either a single module name (of type
-java.lang.String) or an array of module names (of type
-java.lang.String[]). For each specified module name, the container
+<code>java.lang.String</code>) or an array of module names (of type
+<code>java.lang.String[]</code>). For each specified module name, the container
 searches the class path for the first eligible ejb-jar file or directory
 whose corresponding module name matches the given name. All specified
 modules must match an entry in the classpath.</p>
 </div>
 <div class="paragraph">
 <p>If the target modules are outside of the
-classpath, this property holds either a single java.io.File object or an
-array of java.io.File objects, where each file object refers to either
+classpath, this property holds either a single <code>java.io.File</code> object or an
+array of <code>java.io.File</code> objects, where each file object refers to either
 an ejb-jar file or an exploded ejb-jar directory in the format listed
 above. Note that in this case it is the responsibility of the caller to
 ensure that the context class loader has visibility to the classes
@@ -32371,7 +32232,7 @@ required by these modules.</p>
 </div>
 <div class="paragraph">
 <p>The property name is defined as
-EJBContainer.MODULES.</p>
+<code>EJBContainer.MODULES</code>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -32379,46 +32240,47 @@ EJBContainer.MODULES.</p>
 <div class="paragraph">
 <p>This property specifies an application name
 for the EJB modules executing within the embeddable container. If
-specified, the property value applies to the &lt;app-name&gt; portion of the
+specified, the property value applies to the <code>&lt;app-name&gt;</code> portion of the
 portable global JNDI name syntax. It is recommended that this property
 be set whenever an embeddable container is executed with more than one
 EJB module.</p>
 </div>
 <div class="paragraph">
 <p>The property name is defined as
-EJBContainer.APP_NAME.</p>
+<code>EJBContainer.APP_NAME</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="looking-up-session-bean-references"><a class="anchor" href="#looking-up-session-bean-references"></a>18.2.3. Looking Up Session Bean References</h4>
 <div class="paragraph">
-<p>The <em>EJBContainer</em> instance can be used to
-retrieve a javax.naming.Context object that supports the lookup of
+<p>The <code>EJBContainer</code> instance can be used to
+retrieve a <code>javax.naming.Context</code> object that supports the lookup of
 client references to session beans running within the embeddable
 container. Session bean references are identified using the portable
-"java:global/" JNDI name syntax defined in section
-<a href="Ejb.html#a800">See Access in the Global JNDI Namespace</a>.</p>
+&#8220;java:global/&#8221; JNDI name syntax defined in section
+<a href="#a800">Access in the Global JNDI Namespace</a>.</p>
 </div>
 <div class="paragraph">
-<p>A client retrieves a Context object using the
-following <em>EJBContainer</em> method:</p>
+<p>A client retrieves a <code>Context</code> object using the
+following <code>EJBContainer</code> method:</p>
 </div>
-<div class="paragraph">
-<p>javax.naming.Context
-EJBContainer.getContext();</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">javax.naming.Context EJBContainer.getContext();</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>The following example illustrates the lookup
-of a FooLocal local business interface of a session bean with ejb-name
-FooBean in the ejb-jar foo.jar:</p>
+of a <code>FooLocal</code> local business interface of a session bean with ejb-name
+<code>FooBean</code> in the ejb-jar foo.jar:</p>
 </div>
-<div class="paragraph">
-<p>Context ctx = ec.getContext();</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="predefined-type">Context</span> ctx = ec.getContext();
+
+FooLocal foo = (FooLocal) ctx.lookup(<span class="string"><span class="delimiter">&quot;</span><span class="content">java:global/foo/FooBean</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
-<div class="paragraph">
-<p>FooLocal foo = (FooLocal)
-ctx.lookup("java:global/foo/FooBean");</p>
 </div>
 </div>
 <div class="sect3">
@@ -32426,30 +32288,34 @@ ctx.lookup("java:global/foo/FooBean");</p>
 <div class="paragraph">
 <p>To shut down an embeddable container instance
 and its associated application, the client may call the
-EJBContainer.close() method or, because the EJBContainer class
-implements the java.lang.AutoCloseable interface, the client may close
+<code>EJBContainer.close()</code> method or, because the <code>EJBContainer</code> class
+implements the <code>java.lang.AutoCloseable</code> interface, the client may close
 the container implicitly by using the try-with-resources statement when
-aquiring the EJBContainer instance.</p>
+aquiring the <code>EJBContainer</code> instance.</p>
 </div>
 <div class="paragraph">
-<p>The client is not required to call close() or
-use the try-with-resources statement, but their use is recommended for
+<p>The client is not required to call <code>close()</code> or
+use the <code>try-with-resources</code> statement, but their use is recommended for
 optimal resource cleanup, especially in the case when the application
 lifetime is shorter than the lifetime of the enclosing JVM.</p>
 </div>
 <div class="paragraph">
 <p>During the implicit or explicit processing of
-the close() method, the embeddable container:</p>
+the <code>close()</code> method, the embeddable container:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>cancels all non-persistent timers</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>cancels all pending asynchronous invocations</p>
-</div>
-<div class="paragraph">
-<p>calls the PreDestroy methods of any singleton
+</li>
+<li>
+<p>calls the <code>PreDestroy</code> methods of any singleton
 session bean instances in the application</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>An embeddable Container Provider is only
@@ -32471,12 +32337,10 @@ environment.</p>
 <div class="paragraph">
 <p>Except for the packaging requirements, the
 embeddable Container Provider is required to support the EJB Lite group
-of the EJB API within an embeddable container environment. See section
-<a href="Ejb.html#a9743">See EJBContainer</a> for the packaging
-requirements. An embeddable Container Provider may additionally support
-other EJB API groups within an embeddable container environment. See
-<a href="Ejb.html#a9428">See EJB Lite and Other EJB API Groups</a> for
-more details.</p>
+of the EJB API within an embeddable container environment. See <a href="#a9743">EJBContainer</a>
+for the packaging requirements. An embeddable Container Provider may
+additionally support other EJB API groups within an embeddable container
+environment. See <a href="#a9428">EJB Lite and Other EJB API Groups</a> for more details.</p>
 </div>
 </div>
 <div class="sect3">
@@ -32486,8 +32350,7 @@ more details.</p>
 to support naming lookups of the local and no-interface views of any
 session beans defined to run within the embeddable container. Naming
 entries for these enterprise beans must conform to the portable global
-JNDI name requirements in <a href="Ejb.html#a800">See Access in the
-Global JNDI Namespace</a>.</p>
+JNDI name requirements in <a href="#a800">Access in the Global JNDI Namespace</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -32496,103 +32359,104 @@ Global JNDI Namespace</a>.</p>
 <p>An embeddable Container Provider
 implementation must act as a service provider by supplying a service
 provider configuration file as described in the JAR File Specification
-<a href="Ejb.html#a9882">See JAR File Specification</a>.</p>
+<a href="#a9882">[32]</a>.</p>
 </div>
 <div class="paragraph">
 <p>The service provider configuration file
 serves to export the embeddable container implementation class to the
-EJBContainer bootstrap class, positioning itself as a candidate for
+<code>EJBContainer</code> bootstrap class, positioning itself as a candidate for
 instantiation.</p>
 </div>
 <div class="paragraph">
 <p>The embeddable Container Provider supplies
 the provider configuration file by creating a text file named
-javax.ejb.spi.EJBContainerProvider and placing it in the
+<code>javax.ejb.spi.EJBContainerProvider</code> and placing it in the
 META-INF/services directory of one of its JAR files. The contents of the
 file must be the name of the embeddable Container Provider
-implementation class of the javax.ejb.spi.EJBContainerProvider
+implementation class of the <code>javax.ejb.spi.EJBContainerProvider</code>
 interface.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>_Example:_</pre>
-</div>
+<div class="paragraph">
+<p><strong>Example:</strong></p>
 </div>
 <div class="paragraph">
 <p>An embeddable Container Provider creates a
-JAR called acme.jar that contains its embeddable container
+JAR called <code>acme.jar</code> that contains its embeddable container
 implementation. The JAR includes the provider configuration file:</p>
 </div>
-<div class="paragraph">
-<p>acme.jar</p>
-</div>
-<div class="paragraph">
-<p>META-INF/services/javax.ejb.spi.EJBContainerProvider</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>com/acme/EJBContainerProvider.class</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code>acme.jar
+    META-INF/services/javax.ejb.spi.EJBContainerProvider
+    com/acme/EJBContainerProvider.class
+    ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The contents of the
-META-INF/services/javax.ejb.spi.EJBContainerProvider file is nothing
+<code>META-INF/services/javax.ejb.spi.EJBContainerProvider</code> file is nothing
 more than the name of the implementation class:
-com.acme.EJBContainerProvider.</p>
+<code>com.acme.EJBContainerProvider</code>.</p>
 </div>
 <div class="paragraph">
-<p>The EJBContainer bootstrap class will locate
+<p>The <code>EJBContainer</code> bootstrap class will locate
 all of the embeddable Container Providers by their provider
 configuration files and call the
-EJBContainerProvider.createEJBContainer(Map&lt;?, ?&gt;) method on them in
-turn until an appropriate backing provider returns an EJBContainer
+<code>EJBContainerProvider.createEJBContainer(Map&lt;?, ?&gt;)</code> method on them in
+turn until an appropriate backing provider returns an <code>EJBContainer</code>
 instance. A provider may deem itself as appropriate for the embeddable
 application if any of the following are true:</p>
 </div>
-<div class="paragraph">
-<p>The javax.ejb.embeddable.provider property
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>javax.ejb.embeddable.provider</code> property
 was included in the Map passed to the createEJBContainer method and the
 value of the property is the provider’s implementation class.</p>
-</div>
-<div class="paragraph">
-<p>No javax.ejb.embeddable.provider property was
+</li>
+<li>
+<p>No <code>javax.ejb.embeddable.provider</code> property was
 specified.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>If a provider does not qualify as the
-provider for the embeddable application, it must return null when
-createEJBContainer is invoked on it.</p>
+provider for the embeddable application, it must return <code>null</code> when
+<code>createEJBContainer</code> is invoked on it.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="concrete-javax-ejb-embeddable-ejbcontainer-implementation-class"><a class="anchor" href="#concrete-javax-ejb-embeddable-ejbcontainer-implementation-class"></a>18.3.4. Concrete javax.ejb.embeddable.EJBContainer Implementation Class</h4>
 <div class="paragraph">
 <p>The embeddable Container Provider is required
-to provide a subclass of the javax.ejb.embeddable.EJBContainer class.
+to provide a subclass of the <code>javax.ejb.embeddable.EJBContainer</code> class.
 The following are the requirements for this class:</p>
 </div>
-<div class="paragraph">
-<p>The class must be defined as public and must
-not be abstract</p>
-</div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>The class must be defined as public and must not be abstract</p>
+</li>
+<li>
 <p>The class must extend either directly or
-indirectly the class javax.ejb.embeddable.EJBContainer</p>
-</div>
-<div class="paragraph">
+indirectly the class <code>javax.ejb.embeddable.EJBContainer</code></p>
+</li>
+<li>
 <p>The class must provide implementations of the
-following javax.ejb.embeddable.EJBContainer methods:</p>
+following <code>javax.ejb.embeddable.EJBContainer</code> methods:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getContext()</code></p>
+</li>
+<li>
+<p><code>close()</code></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>getContext()</p>
-</div>
-<div class="paragraph">
-<p>close()</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -32625,13 +32489,11 @@ requirements defined in the individual chapters of this document.</p>
 <div class="paragraph">
 <p>The Bean Provider is responsible for
 packaging the enterprise beans in an ejb-jar
-file or <em>.war</em> file in the format described in Chapter
-<a href="Ejb.html#a9294">See Packaging</a>.</p>
+file or <code>.war</code> file in the format described in <a href="#a9294">Packaging</a>.</p>
 </div>
 <div class="paragraph">
 <p>The deployment descriptor, if present, must
-conform to the requirements of <a href="Ejb.html#a5804">See
-Deployment Descriptor</a>.</p>
+conform to the requirements of <a href="#a5804">Deployment Descriptor</a>.</p>
 </div>
 </div>
 </div>
@@ -32639,9 +32501,7 @@ Deployment Descriptor</a>.</p>
 <h3 id="application-assemblers-responsibilities-4"><a class="anchor" href="#application-assemblers-responsibilities-4"></a>19.2. Application Assembler’s Responsibilities</h3>
 <div class="paragraph">
 <p>The requirements
-for the Application Assembler are in defined in
-<a href="Ejb.html#a5804">See Deployment Descriptor</a> and
-<a href="Ejb.html#a9294">See Packaging</a>.</p>
+for the Application Assembler are in defined in <a href="#a5804">Deployment Descriptor</a> and <a href="#a9294">Packaging</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -32657,7 +32517,7 @@ chapters of this document.</p>
 <p>The EJB Container Provider is responsible for
 implementing its part of the EJB contracts and its part of the contracts
 described in <em>Java Persistence API</em> specification
-<a href="Ejb.html#a9851">See Java™ Persistence API</a>, and for providing all the runtime
+<a href="#a9851">[2]</a>, and for providing all the runtime
 services described in the individual chapters of this document.</p>
 </div>
 </div>
@@ -32666,7 +32526,7 @@ services described in the individual chapters of this document.</p>
 <div class="paragraph">
 <p>The Deployer uses
 the deployment tools provided by the EJB Container Provider to deploy
-ejb-jar files or <em>.war</em> files produced by the Bean Providers and
+ejb-jar files or <code>.war</code> files produced by the Bean Providers and
 Application Assemblers.</p>
 </div>
 <div class="paragraph">
