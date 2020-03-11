@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Enterprise Beans Team, https://projects.eclipse.org/projects/ee4j.ejb</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/ejb-api-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/ejb-api-dev</a></span><br>
 <span id="revnumber"> 4.0-SNAPSHOT,</span>
-<span id="revdate">March 09, 2020</span>
+<span id="revdate">March 11, 2020</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
@@ -1551,7 +1551,7 @@ Version: 4.0-SNAPSHOT
 
 Status: DRAFT
 
-Release: March 09, 2020</pre>
+Release: March 11, 2020</pre>
 </div>
 </div>
 </div>
@@ -10577,30 +10577,28 @@ enterprise bean instance.</p>
 <div class="paragraph">
 <p>The general rules for defining Interceptor
 classes, their lifecycle, and associated metadata are described in the
-<em>Interceptors</em> specification <a href="Ejb.html#a9887">See
-Interceptors</a>. This
+<em>Interceptors</em> specification <a href="#a9887">[37]</a>. This
 chapter describes the set of requirements that are specific to the use
 of interceptors with Enterprise JavaBeans.</p>
 </div>
 <div class="paragraph">
 <p>For the use of interceptors with Enterprise
-JavaBeans, the interceptor “target class” is the bean class.
+JavaBeans, the interceptor "target class" is the bean class.
 Interceptors may be used with session beans and message-driven beans.</p>
 </div>
 <div class="paragraph">
 <p>The programming restrictions that apply to
-enterprise bean components apply to interceptors as well. See
-<a href="Ejb.html#a9535">See Programming Restrictions</a>.</p>
+enterprise bean components apply to interceptors as well. See <a href="#a9535">Programming Restrictions</a>.</p>
 </div>
 <div class="paragraph">
 <p>It is illegal to associate JTA
-transactional interceptors (see <a href="Ejb.html#a9857">See Java™</a>) with Enterprise JavaBeans. The
+transactional interceptors (see <a href="#a9857">[8]</a>) with Enterprise JavaBeans. The
 EJB Container should fail deployment of such
 applications. <sup class="footnote" id="_footnote_a10261">[<a id="_footnoteref_42" class="footnote" href="#_footnotedef_42" title="View footnote.">42</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Default interceptors are interceptors that
-apply to all components within an ejb-jar file or <em>.war</em> file.</p>
+apply to all components within an ejb-jar file or <code>.war</code> file.</p>
 </div>
 </div>
 <div class="sect2">
@@ -10610,22 +10608,18 @@ apply to all components within an ejb-jar file or <em>.war</em> file.</p>
 the same as that of the bean instance with which it is associated. In
 the case of interceptors associated with stateful session beans, the
 interceptor instances are passivated upon bean instance passivation, and
-activated when the bean instance is activated. See sections
-<a href="Ejb.html#a921">See Stateful Session Beans</a>,
-<a href="Ejb.html#a1077">See Stateless Session Bean Lifecycle State
-Diagram</a>, and <a href="Ejb.html#a1871">See Message-Driven Bean State
-Diagram</a>.</p>
+activated when the bean instance is activated. See
+<a href="#a921">Stateful Session Beans</a>, <a href="#a1077">Stateless Session Bean Lifecycle State Diagram</a>, and <a href="#a1871">Message-Driven Bean State Diagram</a>.</p>
 </div>
 <div class="paragraph">
-<p>In addition to the AroundConstruct,
-PostConstruct and PreDestroy callback support required by the
-<em>Interceptors</em> specification <a href="Ejb.html#a9887">See
-Interceptors</a>,
+<p>In addition to the <code>AroundConstruct</code>,
+<code>PostConstruct</code> and <code>PreDestroy</code> callback support required by the
+<em>Interceptors</em> specification <a href="#a9887">[37]</a>,
 interceptors associated with stateful session beans may define
-PostActivate and PrePassivate callbacks. Both the interceptor instance
+<code>PostActivate</code> and <code>PrePassivate</code> callbacks. Both the interceptor instance
 and the bean instance are created or activated before any of the
-respective <em>PostConstruct</em> or <em>PostActivate</em> callbacks are invoked. Any
-<em>PreDestroy</em> and <em>PrePassivate</em> callbacks are invoked before the
+respective <code>PostConstruct</code> or <code>PostActivate</code> callbacks are invoked. Any
+<code>PreDestroy</code> and <code>PrePassivate</code> callbacks are invoked before the
 respective destruction or passivation of either the bean instance or
 interceptor instance.</p>
 </div>
@@ -10637,18 +10631,16 @@ session beans.</p>
 </div>
 <div class="sect2">
 <h3 id="business-method-interceptors"><a class="anchor" href="#business-method-interceptors"></a>7.3. Business Method Interceptors</h3>
-<div class="literalblock">
-<div class="content">
-<pre> _AroundInvoke_ interceptor methods may be
+<div class="paragraph">
+<p><code>AroundInvoke</code> interceptor methods may be
 defined for business methods of sessions beans and for the message
-listener methods of message-driven beans.</pre>
-</div>
+listener methods of message-driven beans.</p>
 </div>
 <div class="paragraph">
 <p>Business method interceptor methods may throw
 runtime exceptions or application exceptions that are allowed in the
-<em>throws</em> clause of the business method. See section
-<a href="Ejb.html#a2031">See Exception Handling</a> for further details.</p>
+<code>throws</code> clause of the business method. See section
+<a href="#a2031">Exception Handling</a> for further details.</p>
 </div>
 </div>
 <div class="sect2">
@@ -10656,19 +10648,16 @@ runtime exceptions or application exceptions that are allowed in the
 <div class="paragraph">
 <p>Interceptor methods may be defined for the
 EJB timer timeout methods of session beans and message-driven beans.
-Such methods are referred to as AroundTimeout methods.</p>
+Such methods are referred to as <code>AroundTimeout</code> methods.</p>
 </div>
 <div class="paragraph">
-<p>Within an AroundTimeout method, the
-<em>InvocationContext.getTimer()</em> method returns the <em>javax.ejb.Timer</em>
+<p>Within an <code>AroundTimeout</code> method, the
+<code>InvocationContext.getTimer()</code> method returns the <code>javax.ejb.Timer</code>
 object associated with the timeout being intercepted.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _AroundTimeout_ methods may throw system
-exceptions, but not application exceptions. See section
-link:Ejb.html#a2031[See Exception Handling] for further details.</pre>
-</div>
+<div class="paragraph">
+<p><code>AroundTimeout</code> methods may throw system exceptions, but not
+application exceptions. See <a href="#a2031">Exception Handling</a> for further details.</p>
 </div>
 </div>
 <div class="sect2">
@@ -10678,10 +10667,10 @@ link:Ejb.html#a2031[See Exception Handling] for further details.</pre>
 defined for session beans and message-driven beans.</p>
 </div>
 <div class="paragraph">
-<p>The AroundConstruct, <em>PostConstruct</em> ,
-<em>PreDestroy</em> , <em>PostActivate</em> , and <em>PrePassivate</em> annotations are used
+<p>The <code>AroundConstruct</code>, <code>PostConstruct</code>,
+<code>PreDestroy</code>, <code>PostActivate</code>, and <code>PrePassivate</code> annotations are used
 to define interceptor methods for a lifecycle callback events. An
-AroundConstruct lifecycle callback interceptor method may be defined on
+<code>AroundConstruct</code> lifecycle callback interceptor method may be defined on
 an interceptor class only. All other interceptor methods can be defined
 on an interceptor class and/or directly on the bean class.</p>
 </div>
@@ -10689,69 +10678,59 @@ on an interceptor class and/or directly on the bean class.</p>
 <p>Lifecycle callback interceptor methods are
 invoked in an unspecified security context. Lifecycle callback
 interceptor methods are invoked in an unspecified transaction context,
-except for singleton and stateful session bean PostConstruct and
-PreDestroy methods and stateful session bean <em>PostActivate</em> , and
-<em>PrePassivate</em> methods, whose transaction context is based on their
-respective transaction attributes. See <a href="Ejb.html#a705">See
-Session Bean Lifecycle Callback Interceptor Methods</a>.</p>
+except for singleton and stateful session bean <code>PostConstruct</code> and
+<code>PreDestroy</code> methods and stateful session bean <code>PostActivate</code>, and
+<code>PrePassivate</code> methods, whose transaction context is based on their
+respective transaction attributes. See <a href="#a705">Session Bean Lifecycle Callback Interceptor Methods</a>.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _PostActivate_ , and _PrePassivate_ methods
+<div class="paragraph">
+<p><code>PostActivate</code>, and <code>PrePassivate</code> methods
 follow requirements for the lifecycle callback interceptor methods
-defined in the Interceptors specification document
-link:Ejb.html#a9887[See Interceptors, version 1.2.
-http://jcp.org/en/jsr/detail?id=318.].</pre>
-</div>
+defined in the Interceptors specification document <a href="#a9887">[37]</a>.</p>
 </div>
 <div class="paragraph">
 <p>Lifecycle callback interceptor methods may
 throw system runtime exceptions, but not application exceptions. See
-section <a href="Ejb.html#a2031">See Exception Handling</a> for further
-details.</p>
+<a href="#a2031">Exception Handling</a> for further details.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="a2029"><a class="anchor" href="#a2029"></a>7.6. InvocationContext</h3>
 <div class="paragraph">
-<p>The <em>InvocationContext</em> object provides
+<p>The <code>InvocationContext</code> object provides
 metadata that enables interceptor methods to control the behavior of the
-invocation chain. The <em>getContextData</em> method enables an interceptor to
+invocation chain. The <code>getContextData</code> method enables an interceptor to
 retrieve or update the data associated with the invocation by another
 interceptor, business method, and/or webservices context in the
 invocation chain. The contextual data is not sharable across separate
 business method invocations or lifecycle callback events. If
 interceptors are invoked as a result of the invocation on a web service
-endpoint, the map returned by the <em>getContextData</em> method will be the
-JAX-WS MessageContext <a href="Ejb.html#a9881">See Java™ API for</a>. The lifecycle of the
-<em>InvocationContext</em> instance is otherwise unspecified.</p>
+endpoint, the map returned by the <code>getContextData</code> method will be the
+JAX-WS MessageContext <a href="#a9881">[31]</a>. The lifecycle of the
+<code>InvocationContext</code> instance is otherwise unspecified.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="a2031"><a class="anchor" href="#a2031"></a>7.7. Exception Handling</h3>
-<div class="literalblock">
-<div class="content">
-<pre> _Interceptor_ methods are allowed to throw
+<div class="paragraph">
+<p>Interceptor methods are allowed to throw
 runtime exceptions or any checked exceptions that the method they
-interpose on allows within its _throws_ clause. _Interceptor_ methods
+interpose on allows within its <code>throws</code> clause. Interceptor methods
 are allowed to catch and suppress exceptions and recover by calling
-_proceed()._</pre>
+<code>proceed()</code>.</p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _Interceptor_ method invoked in a
+<div class="paragraph">
+<p>Interceptor method invoked in a
 transaction context, can mark the transaction for rollback by throwing a
-runtime exception or by calling the _EJBContext_ method
-_setRollbackOnly()_ . This may be done before or after
-_InvocationContext.proceed()_ is called.</pre>
-</div>
+runtime exception or by calling the <code>EJBContext</code> method
+<code>setRollbackOnly()</code>. This may be done before or after
+<code>InvocationContext.proceed()</code> is called.</p>
 </div>
 <div class="paragraph">
 <p>If a system exception escapes the interceptor
 chain, the bean instance and any associated interceptor instances are
 discarded (unless the bean is a singleton session
-bean. <sup class="footnote" id="_footnote_a10262">[<a id="_footnoteref_43" class="footnote" href="#_footnotedef_43" title="View footnote.">43</a>]</sup>) The <em>PreDestroy</em> callbacks are not invoked
+bean <sup class="footnote" id="_footnote_a10262">[<a id="_footnoteref_43" class="footnote" href="#_footnotedef_43" title="View footnote.">43</a>]</sup>). The <code>PreDestroy</code> callbacks are not invoked
 in this case: the interceptor methods in the chain should perform any
 necessary clean-up operations as the interceptor chain unwinds.</p>
 </div>
@@ -10767,11 +10746,11 @@ interceptors as specified in annotations.</p>
 <div class="sect3">
 <h4 id="specification-of-interceptors"><a class="anchor" href="#specification-of-interceptors"></a>7.8.1. Specification of Interceptors</h4>
 <div class="paragraph">
-<p>The <em>interceptor</em> deployment descriptor
+<p>The <code>interceptor</code> deployment descriptor
 element is used to specify the interceptor methods of an interceptor
 class. The interceptor methods are specified by using the
-<em>around-invoke</em> , <em>around-timeout</em> , <em>around-construct</em> ,
-<em>post-construct</em> , <em>pre-destroy,</em> pre-passivate, and post-activate
+<code>around-invoke</code>, <code>around-timeout</code>, <code>around-construct</code>,
+<code>post-construct</code>, <code>pre-destroy</code>, <code>pre-passivate</code>, and <code>post-activate</code>
 elements.</p>
 </div>
 <div class="paragraph">
@@ -10785,47 +10764,51 @@ combination of annotations and deployment descriptor elements is used.</p>
 <div class="sect3">
 <h4 id="binding-of-interceptors-to-target-classes"><a class="anchor" href="#binding-of-interceptors-to-target-classes"></a>7.8.2. Binding of Interceptors to Target Classes</h4>
 <div class="paragraph">
-<p>The <em>interceptor-binding</em> element is used to
+<p>The <code>interceptor-binding</code> element is used to
 specify the binding of interceptor classes to target classes and their
-methods. The subelements of the <em>interceptor-binding</em> element are as
+methods. The subelements of the <code>interceptor-binding</code> element are as
 follows:</p>
 </div>
-<div class="paragraph">
-<p>The <em>target-name</em> element must identify the
-associated target class or the wildcard value " <em>*</em> " (which is used to
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>target-name</code> element must identify the
+associated target class or the wildcard value <code>"*"</code> (which is used to
 define interceptors that are bound to all target classes).</p>
-</div>
-<div class="paragraph">
-<p>The <em>interceptor-class</em> element specifies the
+</li>
+<li>
+<p>The <code>interceptor-class</code> element specifies the
 interceptor class. The interceptor class contained in an
-<em>interceptor-class</em> element must either be declared in the <em>interceptor</em>
-deployment descriptor element or appear in at least one <em>Interceptor</em>
-annotation on a target class. The <em>interceptor-order</em> element is used as
+<code>interceptor-class</code> element must either be declared in the <code>interceptor</code>
+deployment descriptor element or appear in at least one <code>Interceptor</code>
+annotation on a target class. The <code>interceptor-order</code> element is used as
 an optional alternative to specify a total ordering over the
 interceptors defined for the given level and above.</p>
-</div>
-<div class="paragraph">
-<p>The <em>exclude-default-interceptors</em> and
-<em>exclude-class-interceptors</em> elements specify that default interceptors
+</li>
+<li>
+<p>The <code>exclude-default-interceptors</code> and
+<code>exclude-class-interceptors</code> elements specify that default interceptors
 and class interceptors, respectively, are not to be applied to a target
 class and/or method.</p>
-</div>
-<div class="paragraph">
-<p>The <em>method-name</em> element specifies the
+</li>
+<li>
+<p>The <code>method-name</code> element specifies the
 method name for a method-level interceptor; and the optional
-<em>method-params</em> elements identify a single method among multiple methods
+<code>method-params</code> elements identify a single method among multiple methods
 with an overloaded method name.</p>
-</div>
-<div class="paragraph">
-<p>The <em>method-name</em> element may be used to bind
+</li>
+<li>
+<p>The <code>method-name</code> element may be used to bind
 a constructor-level interceptor using the unqualified name of the bean
-class as the value; the optional <em>method-params</em> elements identify the
-constructor if a bean class has a constructor annotated with the Inject
+class as the value; the optional <code>method-params</code> elements identify the
+constructor if a bean class has a constructor annotated with the <code>Inject</code>
 annotation in addition to a no-arg constructor.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Default interceptors are bound to all target
-classes in a module using the wildcard syntax " <em>*</em> ". In addition,
+classes in a module using the wildcard syntax <code>"*"</code>. In addition,
 interceptors may be bound at the level of the target class (class-level
 interceptors) or methods of the target class (method-level
 interceptors).</p>
@@ -10840,112 +10823,72 @@ interceptor methods defined by means of annotations. When the deployment
 descriptor is used to augment the interceptors specified in annotations,
 the interceptor methods specified in the deployment descriptor will be
 invoked after those specified in annotations, according to the ordering
-specified earlier. The <em>interceptor-order</em> deployment descriptor element
+specified earlier. The <code>interceptor-order</code> deployment descriptor element
 may be used to override this ordering.</p>
 </div>
 <div class="paragraph">
-<p>The <em>exclude-default-interceptors</em> element
+<p>The <code>exclude-default-interceptors</code> element
 disables default interceptors for the level at which it is specified and
-lower. That is, <em>exclude-default-interceptors</em> when applied at the class
+lower. That is, <code>exclude-default-interceptors</code> when applied at the class
 level disables the application of default interceptors for all methods
-of the class. The <em>exclude-class-interceptors</em> element applied to a
+of the class. The <code>exclude-class-interceptors</code> element applied to a
 method disables the application of class-level interceptors for the
 given method. Explicitly listing an excluded higher-level interceptor at
 a lower level causes it to be applied at that level and below.</p>
 </div>
 <div class="paragraph">
 <p>It is possible to override the ordering of
-interceptors by using the <em>interceptor-order</em> element to specify a total
+interceptors by using the <code>interceptor-order</code> element to specify a total
 ordering of interceptors at class level and/or method level. If the
-<em>interceptor-order</em> element is used, the ordering specified at the given
+<code>interceptor-order</code> element is used, the ordering specified at the given
 level must be a total order over all interceptor classes that have been
 defined at that level and above (unless they have been explicitly
-excluded by means of one of the <em>exclude-</em> elements described above).</p>
+excluded by means of one of the <code>exclude-</code> elements described above).</p>
 </div>
 <div class="paragraph">
 <p>There are four possible styles of the
-<em>interceptor-binding</em> element syntax:</p>
+<code>interceptor-binding</code> element syntax:</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Style 1:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Style 1_ :</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;*&lt;/target-name&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>*<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>INTERCEPTOR<span class="tag">&lt;/interceptor-class&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;interceptor-class&gt;INTERCEPTOR&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
-</div>
+<p>Specifying the <code>target-name</code> element as the
+wildcard value <code>"*"</code> designates default interceptors.</p>
 </div>
 <div class="paragraph">
-<p>Specifying the <em>target-name</em> element as the
-wildcard value " <em>*</em> " designates default interceptors.</p>
+<p><strong>Style 2:</strong></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>_Style 2_ :</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;TARGETNAME&lt;/target-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;INTERCEPTOR&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>TARGETNAME<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>INTERCEPTOR<span class="tag">&lt;/interceptor-class&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This style is used to refer to interceptors
 associated with the specified target class (class-level interceptors).</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>_Style 3_ :</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;TARGETNAME&lt;/target-name&gt;</pre>
-</div>
-</div>
 <div class="paragraph">
-<p>&lt;interceptor-class&gt;INTERCEPTOR&lt;/interceptor-class&gt;</p>
+<p><strong>Style 3:</strong></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;method-name&gt;METHOD&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>TARGETNAME<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>INTERCEPTOR<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>METHOD<span class="tag">&lt;/method-name&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10953,77 +10896,37 @@ associated with the specified target class (class-level interceptors).</p>
 method-level interceptor with the specified method of the specified
 target class. If there are multiple methods with the same overloaded
 name, the element of this style refers to all the methods with the
-overloaded name. Note that the wildcard value " <em>*</em> " cannot be used to
+overloaded name. Note that the wildcard value <code>"*"</code> cannot be used to
 specify method-level interceptors.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>_Style 4_ :</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;TARGETNAME&lt;/target-name&gt;</pre>
-</div>
-</div>
 <div class="paragraph">
-<p>&lt;interceptor-class&gt;INTERCEPTOR&lt;/interceptor-class&gt;</p>
+<p><strong>Style 4:</strong></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;method-name&gt;METHOD&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-params&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-param&gt;PARAM-1&lt;/method-param&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-param&gt;PARAM-2&lt;/method-param&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-param&gt;PARAM-n&lt;/method-param&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-params&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>TARGETNAME<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>INTERCEPTOR<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>METHOD<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;method-params&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>PARAM-1<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>PARAM-2<span class="tag">&lt;/method-param&gt;</span>
+        ...
+        <span class="tag">&lt;method-param&gt;</span>PARAM-n<span class="tag">&lt;/method-param&gt;</span>
+    <span class="tag">&lt;/method-params&gt;</span>
+<span class="tag">&lt;interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This style is used to associate a
 method-level interceptor with the specified method of the specified
 target class. This style is used to refer to a single method within a
-set of methods with an overloaded name. The values <em>PARAM-1</em> through
-<em>PARAM-n</em> are the fully-qualified Java types of the method’s input
-parameters (if the method has no input arguments, the <em>method-params</em>
-element contains no <em>method-param</em> elements). Arrays are specified by
+set of methods with an overloaded name. The values <code>PARAM-1</code> through
+<code>PARAM-n</code> are the fully-qualified Java types of the method’s input
+parameters (if the method has no input arguments, the <code>method-params</code>
+element contains no <code>method-param</code> elements). Arrays are specified by
 the array element’s type, followed by one or more pair of square
-brackets (e.g. <em>int[][]</em> ).</p>
+brackets (e.g. <code>int[][]</code>).</p>
 </div>
 <div class="paragraph">
 <p>If both styles 3 and 4 are used to define
@@ -11034,349 +10937,145 @@ those method-level interceptors is undefined.</p>
 <h5 id="examples-2"><a class="anchor" href="#examples-2"></a>7.8.2.1. Examples</h5>
 <div class="paragraph">
 <p>Examples of the usage of the
-<em>interceptor-binding</em> syntax are given below.</p>
+<code>interceptor-binding</code> syntax are given below.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Style 1:</strong> The following interceptors are
+default interceptors. They will be invoked in the order specified.</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre> _Style 1_ : The following interceptors are
-default interceptors. They will be invoked in the order specified.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;*&lt;/target-name&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>*<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyDefaultIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyDefaultIC2<span class="tag">&lt;/interceptor-class&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyDefaultIC&lt;/interceptor-class&gt;</p>
+<p><strong>Style 2:</strong> The following interceptors are
+the class-level interceptors of the <code>EmployeeService</code> class. They will
+be invoked in the order specified after any default interceptors.</p>
 </div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyDefaultIC2&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _Style 2:_ The following interceptors are
-the class-level interceptors of the _EmployeeService_ class. They will
-be invoked in the order specified after any default interceptors.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC2<span class="tag">&lt;/interceptor-class&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC&lt;/interceptor-class&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC2&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _Style 3_ : The following interceptors apply
-to all the _myMethod_ methods of the _EmployeeService_ class. They will
+<p><strong>Style 3:</strong> The following interceptors apply
+to all the <code>myMethod</code> methods of the <code>EmployeeService</code> class. They will
 be invoked in the order specified after any default interceptors and
-class-level interceptors.</pre>
+class-level interceptors.</p>
 </div>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC&lt;/interceptor-class&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC2&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;myMethod&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC2<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>myMethod<span class="tag">&lt;/method-name&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following example illustrates more
-complex parameter types. The method <em>myMethod(char</em> <em>s,</em> <em>int</em> <em>i,</em>
-<em>int[]</em> <em>iar,</em> <em>mypackage.MyClass</em> <em>mycl,</em> <em>mypackage.MyClass[][]</em>
-<em>myclaar)</em> would be specified as:</p>
+complex parameter types. The method <code>myMethod(char s, int i,
+int[] iar, mypackage.MyClass mycl, mypackage.MyClass[][]
+myclaar)</code> would be specified as:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;myMethod&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-params&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-param&gt;char&lt;/method-param&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-param&gt;int&lt;/method-param&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-param&gt;int[]&lt;/method-param&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;method-param&gt;mypackage.MyClass&lt;/method-param&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;method-param&gt;mypackage.MyClass[][]&lt;/method-param&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-params&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>myMethod<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;method-params&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>char<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>int<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>int[]<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>mypackage.MyClass<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>mypackage.MyClass[][]<span class="tag">&lt;/method-param&gt;</span>
+    <span class="tag">&lt;/method-params&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following example illustrates
 constructor-level interceptors that apply to all constructors of the
-<em>EmployeeService</em> class. They will be invoked in the order specified
+<code>EmployeeService</code> class. They will be invoked in the order specified
 after any default interceptors and class-level interceptors.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC2<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>EmployeeService<span class="tag">&lt;/method-name&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC&lt;/interceptor-class&gt;</p>
+<p><strong>Style 4:</strong> The following interceptor
+element refers to the <code>myMethod(String firstName, String LastName)</code>
+method of the <code>EmployeeService</code> class.</p>
 </div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC2&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;method-name&gt;EmployeeService&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> _Style 4_ : The following interceptor
-element refers to the _myMethod(String_ _firstName, String_ _LastName)_
-method of the _EmployeeService_ class.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;myMethod&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-params&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;method-param&gt;java.lang.String&lt;/method-param&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;method-param&gt;java.lang.String&lt;/method-param&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-params&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>myMethod<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;method-params&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>java.lang.String<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>java.lang.String<span class="tag">&lt;/method-param&gt;</span>
+    <span class="tag">&lt;/method-params&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following example illustrates
 constructor-level interceptors that apply to the specific constructor of
-the <em>EmployeeService</em> class.</p>
+the <code>EmployeeService</code> class.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC&lt;/interceptor-class&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;interceptor-class&gt;org.acme.MyIC2&lt;/interceptor-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;EmployeeService&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-params&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;method-param&gt;org.acme.Account&lt;/method-param&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;method-param&gt;java.lang.String&lt;/method-param&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-params&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC2<span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span>EmployeeService<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;method-params&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>org.acme.Account<span class="tag">&lt;/method-param&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span>java.lang.String<span class="tag">&lt;/method-param&gt;</span>
+    <span class="tag">&lt;/method-params&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following example illustrates the total
-ordering of interceptors using the <em>interceptor-order</em> element:</p>
+ordering of interceptors using the <code>interceptor-order</code> element:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;interceptor-binding&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;target-name&gt;EmployeeService&lt;/target-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-order&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-class&gt;org.acme.MyIC</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-class&gt;org.acme.MyDefaultIC</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-class&gt;org.acme.MyDefaultIC2</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;interceptor-class&gt;org.acme.MyIC2</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-order&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/interceptor-binding&gt;</pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;interceptor-binding&gt;</span>
+    <span class="tag">&lt;target-name&gt;</span>EmployeeService<span class="tag">&lt;/target-name&gt;</span>
+    <span class="tag">&lt;interceptor-order&gt;</span>
+        <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC
+        <span class="tag">&lt;/interceptor-class&gt;</span>
+        <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyDefaultIC
+        <span class="tag">&lt;/interceptor-class&gt;</span>
+        <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyDefaultIC2
+        <span class="tag">&lt;/interceptor-class&gt;</span>
+        <span class="tag">&lt;interceptor-class&gt;</span>org.acme.MyIC2
+        <span class="tag">&lt;/interceptor-class&gt;</span>
+    <span class="tag">&lt;/interceptor-order&gt;</span>
+<span class="tag">&lt;/interceptor-binding&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -24909,7 +24608,7 @@ duration, or at specific recurring intervals.</p>
 <div class="paragraph">
 <p>The Timer Service is implemented by the EJB
 container. An enterprise bean accesses this service by means of
-dependency injection, through the <em>EJBContext</em> interface, or through
+dependency injection, through the <code>EJBContext</code> interface, or through
 lookup in the JNDI namespace.</p>
 </div>
 <div class="paragraph">
@@ -24918,12 +24617,17 @@ timer notification service that is designed for use in the modeling of
 application-level processes. It is not intended for the modeling of
 real-time events.</p>
 </div>
-<div class="paragraph">
-<p>While timer durations are expressed in
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>While timer durations are expressed in
 millisecond units, this is because the millisecond is the unit of time
 granularity used by the APIs of the Java SE platform. It is expected
 that most timed events will correspond to hours, days, or longer periods
-of time.</p>
+of time.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>The following sections describe the Timer
@@ -24954,9 +24658,9 @@ programmatically-created timers.</p>
 <div class="paragraph">
 <p>For programmatically created timers, the
 timeout callback method must either be a single method that is annotated
-with the <em>Timeout</em> annotation or the bean must implement the
-<em>javax.ejb.TimedObject</em> interface. The <em>javax.ejb.TimedObject</em> interface
-has a single method, the timer callback method <em>ejbTimeout</em> .</p>
+with the <code>Timeout</code> annotation or the bean must implement the
+<code>javax.ejb.TimedObject</code> interface. The <code>javax.ejb.TimedObject</code> interface
+has a single method, the timer callback method <code>ejbTimeout</code>.</p>
 </div>
 <div class="paragraph">
 <p>For automatically created timers, the
@@ -24988,8 +24692,8 @@ distributed.</p>
 <p>For each automatically-created persistent
 timer, the container creates a single persistent timer, regardless of
 the number of JVMs across which the container is distributed. For
-automatically-created non-persistent timers, the container creates a new
-non-persistent timer during application initialization for each JVM
+automatically-created non-persistent timers, the container creates a <em>new</em>
+non-persistent timer during application initialization for <em>each</em> JVM
 across which the container is distributed.</p>
 </div>
 <div class="paragraph">
@@ -25005,8 +24709,8 @@ automatically created persistent timers.</p>
 elapses, the container invokes the associated timeout callback method of
 the bean. A timer may be cancelled before its expiration. If a timer is
 cancelled, its associated timeout callback method is not
-called. <sup class="footnote" id="_footnote_a10334">[<a id="_footnoteref_115" class="footnote" href="#_footnotedef_115" title="View footnote.">115</a>]</sup> A timer is cancelled by calling
-its <em>cancel</em> method.</p>
+called. <sup class="footnote" id="_footnote_a10334">[<a id="_footnoteref_115" class="footnote" href="#_footnotedef_115" title="View footnote.">115</a>]</sup> A timer is cancelled by calling its
+<code>cancel</code> method.</p>
 </div>
 <div class="paragraph">
 <p>Invocations of the timeout callback methods
@@ -25037,123 +24741,54 @@ schedule shares common syntax and defaults.</p>
 <p>There are seven attributes in a
 calendar-based time expression:</p>
 </div>
-<div class="paragraph">
-<p>second: one or more seconds within a minute</p>
-</div>
-<div class="paragraph">
-<p> Allowable values: [0,59]</p>
-</div>
-<div class="paragraph">
-<p>minute: one or more minutes within an hour</p>
-</div>
-<div class="paragraph">
-<p> Allowable values: [0,59]</p>
-</div>
-<div class="paragraph">
-<p>hour: one or more hours within a day</p>
-</div>
-<div class="paragraph">
-<p> Allowable values: [0,23]</p>
-</div>
-<div class="paragraph">
-<p>dayOfMonth: one or more days within a month</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Allowable values:</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[1,31] or</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[-7, -1] or</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>“Last” or</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> \{“1st”, “2nd”, “3rd”, “4th”, “5th”, “Last”}
-\{“Sun”, “Mon”, “Tue”, “Wed”, “Thu”, “Fri”, “Sat”}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>“Last” means the last day of the month</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> -x (where x is in the range [-7, -1]) means
-x day(s) before the last day of the month</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> “1st”,”2nd”, etc. applied to a day of the
-week identifies a single occurrence of that day within the month.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>month: one or more months within a year</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Allowable values:</pre>
-</div>
-</div>
-<div class="paragraph">
-<p> [1,12]</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>or</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> \{“Jan”, “Feb”, “Mar”, ‘’Apr”, “May”, “Jun”,
-“Jul”, “Aug”, “Sep”, “Oct”, “Nov”, Dec”}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>dayOfWeek: one or more days within a week</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Allowable values:</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[0,7] or</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> \{“Sun”, “Mon”, “Tue”, “Wed”, “Thu”, “Fri”,
-“Sat”}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>“0” and “7” both refer to Sunday</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>year: a particular calendar year</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Allowable values: a four-digit calendar year</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>second</em></strong>: one or more seconds within a minute<br>
+Allowable values: [0,59]</p>
+</li>
+<li>
+<p><strong><em>minute</em></strong>: one or more minutes within an hour<br>
+Allowable values: [0,59]</p>
+</li>
+<li>
+<p><strong><em>hour</em></strong>: one or more hours within a day<br>
+Allowable values: [0,23]</p>
+</li>
+<li>
+<p><strong><em>dayOfMonth</em></strong>: one or more days within a month<br>
+ Allowable values:<br>
+[1,31] or<br>
+[-7, -1] or<br>
+"Last" or<br>
+{"1st", "2nd", "3rd", "4th", "5th", "Last"}<br>
+{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"}<br>
+"Last" means the last day of the month<br>
+-x (where x is in the range [-7, -1]) means
+x day(s) before the last day of the month<br>
+"1st","2nd", etc. applied to a day of the
+week identifies a single occurrence of that day within the month.</p>
+</li>
+<li>
+<p><strong><em>month</em></strong>: one or more months within a year<br>
+Allowable values:<br>
+[1,12]<br>
+or<br>
+{"Jan", "Feb", "Mar", ‘’Apr", "May", "Jun",
+"Jul", "Aug", "Sep", "Oct", "Nov", Dec"}</p>
+</li>
+<li>
+<p><strong><em>dayOfWeek</em></strong>: one or more days within a week<br>
+Allowable values:<br>
+[0,7] or<br>
+{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"}<br>
+"0" and "7" both refer to Sunday</p>
+</li>
+<li>
+<p><strong><em>year</em></strong>: a particular calendar year<br>
+Allowable values: a four-digit calendar year</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect4">
@@ -25168,41 +24803,29 @@ one of the following forms:</p>
 <p>Use of a single value constrains the
 attribute to only one of its possible values.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Examples:_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>second = "10"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>month= "Sep"</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> second = <span class="string"><span class="delimiter">&quot;</span><span class="content">10</span><span class="delimiter">&quot;</span></span>
+ month= <span class="string"><span class="delimiter">&quot;</span><span class="content">Sep</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
 <h6 id="wild-card"><a class="anchor" href="#wild-card"></a>Wild Card</h6>
 <div class="paragraph">
-<p>The wild card " <em>*</em> " represents all possible
+<p>The wild card <code>"*"</code> represents all possible
 values for a given attribute.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Examples:_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_second = "*"_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_dayOfWeek = "*"_</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> second = <span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>
+ dayOfWeek = <span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -25216,29 +24839,14 @@ the list must be an individual attribute value or a range. List items
 cannot themselves be lists, wild-cards, or increments. Duplicate values
 are allowed, but are ignored.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Examples:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Examples:_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_second = "10,20,30"_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>__</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_dayOfWeek = "Mon,Wed,Fri"_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_minute = "0-10,30,40"_</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> second = <span class="string"><span class="delimiter">&quot;</span><span class="content">10,20,30</span><span class="delimiter">&quot;</span></span>
+ dayOfWeek = <span class="string"><span class="delimiter">&quot;</span><span class="content">Mon,Wed,Fri</span><span class="delimiter">&quot;</span></span>
+ minute = <span class="string"><span class="delimiter">&quot;</span><span class="content">0-10,30,40</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -25246,34 +24854,23 @@ are allowed, but are ignored.</p>
 <h6 id="range"><a class="anchor" href="#range"></a>Range</h6>
 <div class="paragraph">
 <p>A range constrains the attribute to an
-inclusive range of values, with a dash separating both ends of the
+<em>inclusive</em> range of values, with a dash separating both ends of the
 range. Each side of the range must be an individual attribute value.
 Members of a range cannot themselves be lists, wild-cards, ranges, or
-increments. In range "x-y", if <em>x</em> is larger than <em>y</em> , the range is
-equivalent to "x-max, min-y", where max is the largest value of the
-corresponding attribute and min is the smallest. The range "x-x", where
-both range values are the same, is equivalent to the single value x. The
-dayOfWeek range "0-7" is equivalent to " <em>*</em> ".</p>
+increments. In range <code>"x-y"</code>, if <code>x</code> is larger than <code>y</code>, the range is
+equivalent to <code>"x-max, min-y"</code>, where max is the largest value of the
+corresponding attribute and min is the smallest. The range <code>"x-x"</code>, where
+both range values are the same, is equivalent to the single value <code>x</code>. The
+dayOfWeek range <code>"0-7"</code> is equivalent to <code>"*"</code>.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Examples:_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>second= "1-10"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>dayOfWeek = "Fri-Mon"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> dayOfMonth = "27-3" (Equivalent to "27-Last,
-1-3")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> second= <span class="string"><span class="delimiter">&quot;</span><span class="content">1-10</span><span class="delimiter">&quot;</span></span>
+ dayOfWeek = <span class="string"><span class="delimiter">&quot;</span><span class="content">Fri-Mon</span><span class="delimiter">&quot;</span></span>
+ dayOfMonth = <span class="string"><span class="delimiter">&quot;</span><span class="content">27-3</span><span class="delimiter">&quot;</span></span> (Equivalent to <span class="string"><span class="delimiter">&quot;</span><span class="content">27-Last, 1-3</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
@@ -25282,75 +24879,66 @@ dayOfWeek range "0-7" is equivalent to " <em>*</em> ".</p>
 <div class="paragraph">
 <p>The forward slash constrains an attribute
 based on a starting point and an interval, and is used to specify every
-N \{ seconds | minutes | hours } within the \{ minute | hour | day }
-respectively. For an expression x/y, the attribute is constrained to
-every yth value within the set of allowable values beginning at time x.
-The x value is inclusive. The wildcard character ( <em>*</em> ) can be used in
-the x position, and is equivalent to 0. Increments are only supported
+N { seconds | minutes | hours } within the { minute | hour | day }
+respectively. For an expression <code>x/y</code>, the attribute is constrained to
+every <code>yth</code> value within the set of allowable values beginning at time <code>x</code>.
+The <code>x</code> value is inclusive. The wildcard character (<code>*</code>) can be used in
+the <code>x</code> position, and is equivalent to <code>0</code>. Increments are only supported
 within the second, minute, and hour attributes. For the second and
-minute attributes, x and y must each be in the range [0,59]. For the
-hour attribute, <em>x</em> and y must each be in the range [0,23].</p>
+minute attributes, <code>x</code> and <code>y</code> must each be in the range <code>[0,59]</code>. For the
+hour attribute, <code>x</code> and <code>y</code> must each be in the range <code>[0,23]</code>.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Example:</strong> Every five minutes within the hour</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre> _Example:_ _Every five minutes within the
-hour_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>minute = "*/5"</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> minute = <span class="string"><span class="delimiter">&quot;</span><span class="content">*/5</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following is equivalent:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>minute = "0,5,10,15,20,25,30,35,40,45,50,55"</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> minute = <span class="string"><span class="delimiter">&quot;</span><span class="content">0,5,10,15,20,25,30,35,40,45,50,55</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Example:</strong> Every 10 seconds within the minute, starting at second 30</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre> _Example:_ Every 10 seconds within the
-minute, starting at second 30</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>second = "30/10"</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> second = <span class="string"><span class="delimiter">&quot;</span><span class="content">30/10</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following is equivalent:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>second = "30,40,50"</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> second = <span class="string"><span class="delimiter">&quot;</span><span class="content">30,40,50</span><span class="delimiter">&quot;</span></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Note that the set of matching increment
 values stops once the maximum value for that attribute is exceeded. It
-does not “roll over” past the boundary.</p>
+does not "roll over" past the boundary.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Example:</strong> Every 14 minutes within the hour, for the hours of 1 and 2 a.m.</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre> _Example:_ _Every 14 minutes within the
-hour, for the hours of 1 and 2 a.m._</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>(minute = "*/14", hour="1,2")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> (minute = <span class="string"><span class="delimiter">&quot;</span><span class="content">*/14</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">1,2</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following is equivalent:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>( minute = "0,14,28,42,56", hour = "1,2")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> ( minute = <span class="string"><span class="delimiter">&quot;</span><span class="content">0,14,28,42,56</span><span class="delimiter">&quot;</span></span>, hour = <span class="string"><span class="delimiter">&quot;</span><span class="content">1,2</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
@@ -25371,25 +24959,25 @@ executing.</p>
 String. <sup class="footnote" id="_footnote_a10335">[<a id="_footnoteref_116" class="footnote" href="#_footnotedef_116" title="View footnote.">116</a>]</sup>
 The set of required time zone IDs is
 defined by the Zone Name(TZ) column of the public domain zoneinfo
-database <a href="Ejb.html#a9885">See List of zoneinfo time zones:</a>.</p>
+database <a href="#a9885">[35]</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="expression-rules"><a class="anchor" href="#expression-rules"></a>13.2.1.3. Expression Rules</h5>
 <div class="paragraph">
-<p>The second, minute, and hour attributes have
-a default value of " <em>0</em> ".</p>
+<p>The <code>second</code>, <code>minute</code>, and <code>hour</code> attributes have
+a default value of <code>"0"</code>.</p>
 </div>
 <div class="paragraph">
-<p>The dayOfMonth, month, dayOfWeek, and year
-attributes have a default value of " <em>*</em> ".</p>
+<p>The <code>dayOfMonth</code>, <code>month</code>, <code>dayOfWeek</code>, and <code>year</code>
+attributes have a default value of <code>"*"</code>.</p>
 </div>
 <div class="paragraph">
-<p>If the dayOfMonth attribute has a
-non-wildcard value and the dayOfWeek attribute has a non-wildcard value,
-then the timer expires when the current day matches either the
-dayOfMonth attribute or the dayOfWeek attribute (i.e. the current day
+<p>If the <code>dayOfMonth</code> attribute has a
+non-wildcard value and the <code>dayOfWeek</code> attribute has a non-wildcard value,
+then the timer expires when the current day matches <em>either</em> the
+<code>dayOfMonth</code> attribute <em>or</em> the <code>dayOfWeek</code> attribute (i.e. the current day
 does not need to match of both attributes).</p>
 </div>
 <div class="paragraph">
@@ -25398,11 +24986,11 @@ constants and numeric values.</p>
 </div>
 <div class="paragraph">
 <p>All string constants (" <em>Sun</em> ", " <em>Jan</em> ", "
-<em>1st</em> ", etc.) are case insensitive.</p>
+<em>1st</em> ", etc.) are case <em>insensitive</em>.</p>
 </div>
 <div class="paragraph">
-<p>“5th” is the highest ordinal number allowed
-as the value for the dayOfMonth</p>
+<p>"5th" is the highest ordinal number allowed
+as the value for the <code>dayOfMonth</code></p>
 </div>
 <div class="paragraph">
 <p>Duplicate values within attributes using the
@@ -25410,110 +24998,102 @@ list syntax are ignored.</p>
 </div>
 <div class="paragraph">
 <p>The increments syntax is only supported
-within the second, minute, and hour attributes.</p>
+within the <code>second</code>, <code>minute</code>, and <code>hour</code> attributes.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="examples-3"><a class="anchor" href="#examples-3"></a>13.2.1.4. Examples</h5>
 <div class="paragraph">
 <p>These examples illustrate the use of
-attribute syntax in conjunction with the <em>Schedule</em> annotation.</p>
+attribute syntax in conjunction with the <code>Schedule</code> annotation.</p>
 </div>
 <div class="sect5">
-<h6 id="every-monday-at-midnight"><a class="anchor" href="#every-monday-at-midnight"></a>“Every Monday at Midnight”</h6>
-<div class="literalblock">
+<h6 id="every-monday-at-midnight"><a class="anchor" href="#every-monday-at-midnight"></a>"Every Monday at Midnight"</h6>
+<div class="listingblock">
 <div class="content">
-<pre>@Schedule(dayOfWeek="Mon")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(dayOfWeek=<span class="string"><span class="delimiter">&quot;</span><span class="content">Mon</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following fully-qualified expression is
 equivalent:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> @Schedule(second="0", minute="0", hour="0",
-dayOfMonth="*", month="*", dayOfWeek="Mon", year="*")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(second=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span>, minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span>, dayOfMonth=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>,
+ month=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>, dayOfWeek=<span class="string"><span class="delimiter">&quot;</span><span class="content">Mon</span><span class="delimiter">&quot;</span></span>, year=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="every-weekday-morning-at-315"><a class="anchor" href="#every-weekday-morning-at-315"></a>“Every Weekday morning at 3:15”</h6>
-<div class="literalblock">
+<h6 id="every-weekday-morning-at-315"><a class="anchor" href="#every-weekday-morning-at-315"></a>"Every Weekday morning at 3:15"</h6>
+<div class="listingblock">
 <div class="content">
-<pre> @Schedule(minute="15", hour="3",
-dayOfWeek="Mon-Fri")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">15</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">3</span><span class="delimiter">&quot;</span></span>, dayOfWeek=<span class="string"><span class="delimiter">&quot;</span><span class="content">Mon-Fri</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="every-morning-at-315-u-s-eastern-time"><a class="anchor" href="#every-morning-at-315-u-s-eastern-time"></a>“Every morning at 3:15 U.S. Eastern Time”</h6>
-<div class="literalblock">
+<h6 id="every-morning-at-315-u-s-eastern-time"><a class="anchor" href="#every-morning-at-315-u-s-eastern-time"></a>"Every morning at 3:15 U.S. Eastern Time"</h6>
+<div class="listingblock">
 <div class="content">
-<pre> @Schedule(minute="15", hour="3",
-timezone="America/New_York")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">15</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">3</span><span class="delimiter">&quot;</span></span>, timezone=<span class="string"><span class="delimiter">&quot;</span><span class="content">America/New_York</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="every-minute-of-every-hour-of-every-day"><a class="anchor" href="#every-minute-of-every-hour-of-every-day"></a>“Every minute of every hour of every day”</h6>
-<div class="literalblock">
+<h6 id="every-minute-of-every-hour-of-every-day"><a class="anchor" href="#every-minute-of-every-hour-of-every-day"></a>"Every minute of every hour of every day"</h6>
+<div class="listingblock">
 <div class="content">
-<pre>@Schedule(minute="*", hour="*")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="every-monday-wednesday-and-friday-at-30-seconds-past-noon"><a class="anchor" href="#every-monday-wednesday-and-friday-at-30-seconds-past-noon"></a>“Every Monday, Wednesday, and Friday at 30 seconds past noon”</h6>
-<div class="literalblock">
+<h6 id="every-monday-wednesday-and-friday-at-30-seconds-past-noon"><a class="anchor" href="#every-monday-wednesday-and-friday-at-30-seconds-past-noon"></a>"Every Monday, Wednesday, and Friday at 30 seconds past noon"</h6>
+<div class="listingblock">
 <div class="content">
-<pre> @Schedule(second="30", hour="12",
-dayOfWeek="Mon,Wed,Fri"</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(second=<span class="string"><span class="delimiter">&quot;</span><span class="content">30</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">12</span><span class="delimiter">&quot;</span></span>, dayOfWeek=<span class="string"><span class="delimiter">&quot;</span><span class="content">Mon,Wed,Fri</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="every-five-minutes-within-the-hour"><a class="anchor" href="#every-five-minutes-within-the-hour"></a>“Every five minutes within the hour”</h6>
-<div class="literalblock">
+<h6 id="every-five-minutes-within-the-hour"><a class="anchor" href="#every-five-minutes-within-the-hour"></a>"Every five minutes within the hour"</h6>
+<div class="listingblock">
 <div class="content">
-<pre>@Schedule(minute="*/5", hour="*")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">*/5</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The following expression is equivalent:</p>
 </div>
-<div class="paragraph">
-<p>@Schedule(minute="0,5,10,15,20,25,30,35,40,45,50,55", hour="*")</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="the-last-thursday-in-november-at-2-p-m"><a class="anchor" href="#the-last-thursday-in-november-at-2-p-m"></a>“The last Thursday in November at 2 p.m.”</h6>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> @Schedule(hour="14", dayOfMonth="Last Thu",
-month="Nov"}</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Schedule</span>(minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">0,5,10,15,20,25,30,35,40,45,50,55</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="the-second-to-last-day-one-day-before-the-last-day-of-each-month-at-1-a-m"><a class="anchor" href="#the-second-to-last-day-one-day-before-the-last-day-of-each-month-at-1-a-m"></a>“The second to last day (one day before the last day) of each month at 1 a.m.”</h6>
-<div class="literalblock">
+<h6 id="the-last-thursday-in-november-at-2-p-m"><a class="anchor" href="#the-last-thursday-in-november-at-2-p-m"></a>"The last Thursday in November at 2 p.m."</h6>
+<div class="listingblock">
 <div class="content">
-<pre>@Schedule(hour="1", dayOfMonth="-1")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">14</span><span class="delimiter">&quot;</span></span>, dayOfMonth=<span class="string"><span class="delimiter">&quot;</span><span class="content">Last Thu</span><span class="delimiter">&quot;</span></span>, month=<span class="string"><span class="delimiter">&quot;</span><span class="content">Nov</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="every-other-hour-within-the-day-starting-at-noon-on-the-2nd-tuesday-of-every-month"><a class="anchor" href="#every-other-hour-within-the-day-starting-at-noon-on-the-2nd-tuesday-of-every-month"></a>“Every other hour within the day starting at noon on the 2nd Tuesday of every month.”</h6>
-<div class="literalblock">
+<h6 id="the-second-to-last-day-one-day-before-the-last-day-of-each-month-at-1-a-m"><a class="anchor" href="#the-second-to-last-day-one-day-before-the-last-day-of-each-month-at-1-a-m"></a>"The second to last day (one day before the last day) of each month at 1 a.m."</h6>
+<div class="listingblock">
 <div class="content">
-<pre>__</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>, dayOfMonth=<span class="string"><span class="delimiter">&quot;</span><span class="content">-1</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
-<div class="literalblock">
+</div>
+<div class="sect5">
+<h6 id="every-other-hour-within-the-day-starting-at-noon-on-the-2nd-tuesday-of-every-month"><a class="anchor" href="#every-other-hour-within-the-day-starting-at-noon-on-the-2nd-tuesday-of-every-month"></a>"Every other hour within the day starting at noon on the 2nd Tuesday of every month."</h6>
+<div class="listingblock">
 <div class="content">
-<pre> _@Schedule(hour=_ " _12/2_ " _, dayOfMonth=_
-" _2nd Tue_ ")</pre>
+<pre class="CodeRay highlight"><code data-lang="java"> <span class="annotation">@Schedule</span>(hour= <span class="string"><span class="delimiter">&quot;</span><span class="content">12/2</span><span class="delimiter">&quot;</span></span>, dayOfMonth=<span class="string"><span class="delimiter">&quot;</span><span class="content">2nd Tue</span><span class="delimiter">&quot;</span></span>)</code></pre>
 </div>
 </div>
 </div>
@@ -25528,90 +25108,59 @@ the deployment descriptor. Automatically created timers are created by
 the container as a result of application deployment.</p>
 </div>
 <div class="paragraph">
-<p>The Schedule annotation can be used to
+<p>The <code>Schedule</code> annotation can be used to
 automatically create a timer with a particular timeout schedule. This
 annotation is applied to a method of a bean class (or superclass) that
 should receive the timer callbacks associated with that schedule.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Example:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Example:_</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// Generate account statements at 1 a.m. on the 1st of every month</span>
+<span class="annotation">@Schedule</span>(hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>, dayOfMonth=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>)
+<span class="directive">public</span> <span class="type">void</span> generateMonthlyAccountStatements() { ... }</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>the 1st of every month</p>
-</div>
-<div class="paragraph">
-<p>@Schedule(hour="1", dayOfMonth="1")</p>
-</div>
-<div class="paragraph">
-<p>public void
-generateMonthlyAccountStatements() \{ &#8230;&#8203; }</p>
 </div>
 <div class="paragraph">
 <p>Multiple automatic timers can be applied to a
-single timeout callback method using the Schedules annotation.</p>
+single timeout callback method using the <code>Schedules</code> annotation.</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Example:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Example:_</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Schedules</span>(
+ { <span class="annotation">@Schedule</span>(hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">12</span><span class="delimiter">&quot;</span></span>, dayOfWeek=<span class="string"><span class="delimiter">&quot;</span><span class="content">Mon-Thu</span><span class="delimiter">&quot;</span></span>),
+   <span class="annotation">@Schedule</span>(hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">11</span><span class="delimiter">&quot;</span></span>, dayOfWeek=<span class="string"><span class="delimiter">&quot;</span><span class="content">Fri</span><span class="delimiter">&quot;</span></span>)
+})
+<span class="directive">public</span> <span class="type">void</span> sendLunchNotification() { ... }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>@Schedules(</p>
-</div>
-<div class="paragraph">
-<p>\{ @Schedule(hour="12", dayOfWeek="Mon-Thu"),</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>@Schedule(hour="11", dayOfWeek="Fri")</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>})</p>
-</div>
-<div class="paragraph">
-<p>public void sendLunchNotification() \{ &#8230;&#8203; }</p>
-</div>
-<div class="paragraph">
-<p>A Schedule annotation can optionally
+<p>A <code>Schedule</code> annotation can optionally
 specify an info string. This string can be retrieved by calling
-Timer.getInfo() on the associated Timer object. If no info string is
-specified, the getInfo() method for a timer created by means of the
-Schedule annotation returns null. <sup class="footnote" id="_footnote_a10336">[<a id="_footnoteref_117" class="footnote" href="#_footnotedef_117" title="View footnote.">117</a>]</sup></p>
+<code>Timer.getInfo()</code> on the associated Timer object. If no <code>info</code> string is
+specified, the <code>getInfo()</code> method for a timer created by means of the
+<code>Schedule</code> annotation returns <code>null</code>. <sup class="footnote" id="_footnote_a10336">[<a id="_footnoteref_117" class="footnote" href="#_footnotedef_117" title="View footnote.">117</a>]</sup></p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Example:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>_Example:_</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">// Generate account statements at 1 a.m. on the 1st of every month</span>
+<span class="annotation">@Schedule</span>(hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>, dayOfMonth=<span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>, info=<span class="string"><span class="delimiter">&quot;</span><span class="content">AccountStatementTimer</span><span class="delimiter">&quot;</span></span>)
+<span class="directive">public</span> <span class="type">void</span> generateMonthlyAccountStatements(<span class="predefined-type">Timer</span> t) {
+ <span class="predefined-type">String</span> timerInfo = t.getInfo();
+ ...
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>the 1st of every month</p>
-</div>
-<div class="paragraph">
-<p>@Schedule(hour="1", dayOfMonth="1",
-info="AccountStatementTimer")</p>
-</div>
-<div class="paragraph">
-<p>public void
-generateMonthlyAccountStatements(Timer t) \{</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>String timerInfo = t.getInfo();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>By default, each Schedule annotation
+<p>By default, each <code>Schedule</code> annotation
 corresponds to a single persistent timer, regardless of the number of
 JVMs across which the container is distributed.</p>
 </div>
@@ -25627,202 +25176,77 @@ started.</p>
 </div>
 <div class="paragraph">
 <p>Non-persistent timers can be created
-programmatically or created automatically using the Schedule annotation
+programmatically or created automatically using the <code>Schedule</code> annotation
 or the deployment descriptor.</p>
 </div>
 <div class="paragraph">
 <p>Automatically-created non-persistent timers
-can be specified by setting the persistent element of the Schedule
-annotation to false.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_Example:_</pre>
-</div>
+can be specified by setting the persistent element of the <code>Schedule</code>
+annotation to <code>false</code>.</p>
 </div>
 <div class="paragraph">
-<p>@Singleton</p>
+<p><strong>Example:</strong></p>
 </div>
-<div class="paragraph">
-<p>public class CacheBean \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Cache cache;</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Singleton</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">CacheBean</span> {
+    Cache cache;
+
+    <span class="comment">// Setup an automatic timer to refresh</span>
+    <span class="comment">// the Singleton instance cache every 10 minutes</span>
+    <span class="annotation">@Schedule</span>(minute=<span class="string"><span class="delimiter">&quot;</span><span class="content">*/10</span><span class="delimiter">&quot;</span></span>, hour=<span class="string"><span class="delimiter">&quot;</span><span class="content">*</span><span class="delimiter">&quot;</span></span>, persistent=<span class="predefined-constant">false</span>)
+    <span class="directive">public</span> <span class="type">void</span> refresh() {
+    <span class="comment">// ...</span>
+    }
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// Setup an automatic timer to refresh</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> // the Singleton instance cache every 10
-minutes</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> @Schedule(minute="*/10", hour="*",
-persistent=false)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void refresh() \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// ...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="the-timerservice-interface"><a class="anchor" href="#the-timerservice-interface"></a>13.2.4. The TimerService Interface</h4>
 <div class="paragraph">
-<p>The <em>TimerService</em> object is accessed via
-dependency injection, through the <em>getTimerService</em> method of the
-<em>EJBContext</em> interface, or through lookup in the JNDI namespace. The
-<em>TimerService</em> interface has the following methods:</p>
+<p>The <code>TimerService</code> object is accessed via
+dependency injection, through the <code>getTimerService</code> method of the
+<code>EJBContext</code> interface, or through lookup in the JNDI namespace. The
+<code>TimerService</code> interface has the following methods:</p>
 </div>
-<div class="paragraph">
-<p>public interface javax.ejb.TimerService \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public Timer createTimer(long duration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>java.io.Serializable info);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer createTimer(java.util.Date
-expiration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>java.io.Serializable info);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer createSingleActionTimer(long
-duration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>TimerConfig timerConfig);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer
-createSingleActionTimer(java.util.Date expiration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>TimerConfig timerConfig);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer createTimer(long
-initialDuration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> long intervalDuration, java.io.Serializable
-info);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer createTimer(java.util.Date
-initialExpiration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> long intervalDuration, java.io.Serializable
-info);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer createIntervalTimer(long
-initialDuration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> long intervalDuration, TimerConfig
-timerConfig);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public Timer createIntervalTimer(</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>java.util.Date initialExpiration,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> long intervalDuration, TimerConfig
-timerConfig);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer
-createCalendarTimer(ScheduleExpression schedule);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public Timer
-createCalendarTimer(ScheduleExpression schedule,</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>TimerConfig timerConfig);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public Collection&lt;Timer&gt; getTimers();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public Collection&lt;Timer&gt; getAllTimers();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">javax</span>.ejb.TimerService {
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createTimer(<span class="type">long</span> duration, java.io.Serializable info);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createTimer(java.util.Date expiration,
+     java.io.Serializable info);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createSingleActionTimer(<span class="type">long</span> duration,
+     TimerConfig timerConfig);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createSingleActionTimer(java.util.Date expiration,
+     TimerConfig timerConfig);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createTimer(<span class="type">long</span> initialDuration, <span class="type">long</span> intervalDuration,
+     java.io.Serializable info);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createTimer(java.util.Date initialExpiration,
+     <span class="type">long</span> intervalDuration, java.io.Serializable info);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createIntervalTimer(<span class="type">long</span> initialDuration,
+     <span class="type">long</span> intervalDuration, TimerConfig timerConfig);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createIntervalTimer(java.util.Date initialExpiration,
+     <span class="type">long</span> intervalDuration, TimerConfig timerConfig);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createCalendarTimer(ScheduleExpression schedule);
+
+ <span class="directive">public</span> <span class="predefined-type">Timer</span> createCalendarTimer(ScheduleExpression schedule,
+     TimerConfig timerConfig);
+
+ <span class="directive">public</span> <span class="predefined-type">Collection</span>&lt;<span class="predefined-type">Timer</span>&gt; getTimers();
+
+ <span class="directive">public</span> <span class="predefined-type">Collection</span>&lt;<span class="predefined-type">Timer</span>&gt; getAllTimers();
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -25840,11 +25264,10 @@ creation.</p>
 </div>
 <div class="paragraph">
 <p>For calendar-based timers, the schedule is
-expressed by a ScheduleExpression helper object passed as a parameter to
-a createCalendarTimer method. The ScheduleExpression object represents a
+expressed by a <code>ScheduleExpression</code> helper object passed as a parameter to
+a <code>createCalendarTimer</code> method. The <code>ScheduleExpression</code> object represents a
 calendar based timer expression conforming to the requirements in
-section <a href="Ejb.html#a5478">See Calendar-Based Time
-Expressions</a>. The ScheduleExpression class has additional methods that
+<a href="#a5478">Calendar-Based Time Expressions</a>. The <code>ScheduleExpression</code> class has additional methods that
 further constrain the schedule based on an optional start date and/or
 end date.</p>
 </div>
@@ -25858,17 +25281,17 @@ serializable. <sup class="footnote" id="_footnote_a10337">[<a id="_footnoteref_1
 <div class="paragraph">
 <p>By default, all timers created using the
 timer creation methods are persistent. A non-persistent timer can be
-created by calling setPersistent(false) on a TimerConfig object passed
-to a timer creation method. The TimerConfig object also supports the
+created by calling <code>setPersistent(false)</code> on a <code>TimerConfig</code> object passed
+to a timer creation method. The <code>TimerConfig</code> object also supports the
 setting of an info object.</p>
 </div>
 <div class="paragraph">
-<p>The timer creation methods return a <em>Timer</em>
+<p>The timer creation methods return a <code>Timer</code>
 object that allows the timer to be cancelled or to obtain information
 about the timer prior to its cancellation and/or expiration.</p>
 </div>
 <div class="paragraph">
-<p>The <em>getTimers</em> method returns active timers
+<p>The <code>getTimers</code> method returns active timers
 associated with the bean. These include all active persistent timers
 regardless of the number of JVMs across which the container is
 distributed, and active non-persistent timers created in the same JVM as
@@ -25876,7 +25299,7 @@ the executing method. Timers returned by this method include both the
 programmatically-created timers and the automatically-created timers.</p>
 </div>
 <div class="paragraph">
-<p>The <em>getAllTimers</em> method returns active
+<p>The <code>getAllTimers</code> method returns active
 timers associated with the beans in the same module in which the caller
 bean is packaged. These include all active persistent timers regardless
 of the number of JVMs across which the container is distributed, and
@@ -25890,18 +25313,12 @@ programmatically-created timers and the automatically-created timers.</p>
 <p>This code programmatically creates a timer
 that expires every Saturday at 1 a.m.</p>
 </div>
-<div class="paragraph">
-<p>ScheduleExpression schedule =</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> new
-ScheduleExpression().dayOfWeek("Sat").hour(1);</pre>
+<pre class="CodeRay highlight"><code data-lang="java">ScheduleExpression schedule =
+     <span class="keyword">new</span> ScheduleExpression().dayOfWeek(<span class="string"><span class="delimiter">&quot;</span><span class="content">Sat</span><span class="delimiter">&quot;</span></span>).hour(<span class="integer">1</span>);
+<span class="predefined-type">Timer</span> timer = timerService.createCalendarTimer(schedule);</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Timer timer =
-timerService.createCalendarTimer(schedule);</p>
 </div>
 </div>
 </div>
@@ -25916,40 +25333,40 @@ one or more timeout callback methods.</p>
 <p>There are two kinds of timeout callback
 methods:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>timeout callback methods for timers that are
-programmatically created via a <em>TimerService</em> timer creation method</p>
-</div>
-<div class="paragraph">
+programmatically created via a <code>TimerService</code> timer creation method</p>
+</li>
+<li>
 <p>timeout callback methods for timers that are
-automatically created via the Schedule annotation or the deployment
+automatically created via the <code>Schedule</code> annotation or the deployment
 descriptor</p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="timeout-callbacks-for-programmatic-timers"><a class="anchor" href="#timeout-callbacks-for-programmatic-timers"></a>13.2.5.1. Timeout Callbacks for Programmatic Timers</h5>
 <div class="paragraph">
 <p>All timers created via one of the
-<em>TimerService</em> timer creation methods for a particular bean must use a
+<code>TimerService</code> timer creation methods for a particular bean must use a
 single timeout callback method. This method must either be a single
-method annotated with the <em>Timeout</em> annotation (or a method specified as
+method annotated with the <code>Timeout</code> annotation (or a method specified as
 a timeout method in the deployment descriptor) or the bean must
-implement the <em>javax.ejb.TimedObject</em> interface. The <em>TimedObject</em>
-interface has a single method, <em>ejbTimeout</em> . If the bean implements the
-<em>TimedObject</em> interface, the <em>Timeout</em> annotation or <em>timeout-method</em>
+implement the <code>javax.ejb.TimedObject</code> interface. The <code>TimedObject</code>
+interface has a single method, <code>ejbTimeout</code>. If the bean implements the
+<code>TimedObject</code> interface, the <code>Timeout</code> annotation or <code>timeout-method</code>
 deployment descriptor element can only be used to specify the
-<em>ejbTimeout</em> method. A bean can have at most one timeout method for
+<code>ejbTimeout</code> method. A bean can have at most one timeout method for
 handling programmatic timers. <sup class="footnote" id="_footnote_a10338">[<a id="_footnoteref_119" class="footnote" href="#_footnotedef_119" title="View footnote.">119</a>]</sup></p>
 </div>
-<div class="paragraph">
-<p>public interface javax.ejb.TimedObject \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public void ejbTimeout(Timer timer);</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">javax</span>.ejb.TimedObject {
+    <span class="directive">public</span> <span class="type">void</span> ejbTimeout(<span class="predefined-type">Timer</span> timer);
+}</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 </div>
 <div class="sect4">
@@ -25957,7 +25374,7 @@ handling programmatic timers. <sup class="footnote" id="_footnote_a10338">[<a id
 <div class="paragraph">
 <p>Each automatically-created timer is
 associated with a single timeout callback method. Each timeout method is
-declared using either the Schedule annotation or the deployment
+declared using either the <code>Schedule</code> annotation or the deployment
 descriptor. A timed object can have any number of automatically created
 timers. The timeout callback method for the programmatically-created
 timers can also be associated with the automatically-created timers.</p>
@@ -25970,17 +25387,34 @@ timers can also be associated with the automatically-created timers.</p>
 the two signatures below, where &lt;METHOD&gt; designates the method
 name. <sup class="footnote" id="_footnote_a10339">[<a id="_footnoteref_120" class="footnote" href="#_footnotedef_120" title="View footnote.">120</a>]</sup></p>
 </div>
-<div class="paragraph">
-<p>void &lt;METHOD&gt;()</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="type">void</span> &lt;METHOD&gt;()
+
+<span class="type">void</span> &lt;METHOD&gt;(<span class="predefined-type">Timer</span> timer) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
-<div class="paragraph">
-<p>void &lt;METHOD&gt;(Timer
-timer) <sup class="footnote" id="_footnote_a10340">[<a id="_footnoteref_121" class="footnote" href="#_footnotedef_121" title="View footnote.">121</a>]</sup></p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>An earlier version of the specification required that
+timeout callbacks accept the <code>Timer</code> parameter but did not require that this
+parameter be listed when declared by means of the deployment descriptor. To
+preserve backward compatibility, a <code>timeout-method</code> that does not include a
+<code>method-param</code> element for the <code>javax.ejb.Timer</code> parameter may be used to
+match either a timeout method signature with or without a Timer parameter,
+if there is only one method with the specified name. If methods with the
+specified name are overloaded, a <code>timeout-method</code> element with an empty
+<code>method-params</code> element will be used to explicitly refer to a the no-arg
+timeout method.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>A timeout callback method can have public,
 private, protected, or package level access. A timeout callback method
-must not be declared as <em>final</em> or <em>static</em> .</p>
+must not be declared as <code>final</code> or <code>static</code>.</p>
 </div>
 <div class="paragraph">
 <p>Timeout callback methods must not throw
@@ -25993,13 +25427,16 @@ passed), the container calls the associated timeout method of the bean
 that was registered for the timer. The timeout method contains the
 business logic that the Bean Provider supplies to handle the timeout
 event. The container calls the timeout method with the timer that has
-expired. The Bean Provider can use the <em>getInfo</em> method to retrieve the
+expired. The Bean Provider can use the <code>getInfo</code> method to retrieve the
 information that was supplied when the timer was created. This
 information may be useful in enabling the timed object to recognize the
 significance of the timer expiration.</p>
 </div>
-<div class="paragraph">
-<p>The container interleaves calls to a timeout
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>The container interleaves calls to a timeout
 callback method with the calls to the business methods and the life
 cycle callback methods of the bean. The time at which a timeout callback
 method is called may therefore not correspond exactly to the time
@@ -26007,31 +25444,33 @@ specified at timer creation. If multiple timers have been created for a
 bean and will expire at approximately the same times, the Bean Provider
 must be prepared to handle timeout callbacks that are out of sequence.
 The Bean Provider must be prepared to handle extraneous calls to a
-<em>timeout</em> <em>callback</em> method in the event that a timer expiration is
-outstanding when a call to the cancellation method has been made.</p>
+timeout callback method in the event that a timer expiration is
+outstanding when a call to the cancellation method has been made.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>In general, <em>a</em> timeout callback method can
+<p>In general, a timeout callback method can
 perform the same operations as business methods from the component
-interface or message listener methods. See Tables
-<a href="Ejb.html#a1091">See Operations Allowed in the Methods of a
-Stateless Session Bean</a>, <a href="Ejb.html#a1886">See Operations
-Allowed in the Methods of a Message-Driven Bean</a>,
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>, and
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a> for the specification of the
+interface or message listener methods. See <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>, <a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>,
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a1367">Operations Allowed in the Methods of Entity Class in
+Container-Managed Persistence</a>, and
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a2625">Operations Allowed in the Methods of Entity Class in
+Bean-Managed Persistence</a>
+for the specification of the
 operations that may be performed by a timeout callback method.</p>
 </div>
 <div class="paragraph">
 <p>Since a timeout callback method is an
 internal method of the bean class, it has no client security context.
-When <em>getCallerPrincipal</em> is called from within a timeout callback
+When <code>getCallerPrincipal</code> is called from within a timeout callback
 method, it returns the container’s representation of the unauthenticated
 identity.</p>
 </div>
 <div class="paragraph">
 <p>If the timed object needs to make use of the
 identity of the timer to recognize the significance of the timer
-expiration, it may use the <em>equals</em> method to compare it with any other
+expiration, it may use the <code>equals</code> method to compare it with any other
 timer references it might have outstanding.</p>
 </div>
 <div class="paragraph">
@@ -26040,7 +25479,7 @@ container removes the timer after the timeout callback method has been
 successfully invoked (e.g., when the transaction that has been started
 for the invocation of the timeout callback method commits). If any
 method is invoked on the timer after the termination of the timeout
-callback method, a <em>NoSuchObjectLocalException</em> must be thrown.</p>
+callback method, a <code>NoSuchObjectLocalException</code> must be thrown.</p>
 </div>
 <div class="paragraph">
 <p>If the timer is a calendar-based timer, the
@@ -26049,101 +25488,62 @@ successfully invoked (e.g., when the transaction that has been started
 for the invocation of the timeout callback method commits) and there are
 no future timeouts corresponding to the timer’s schedule expression. If
 any method is invoked on the timer after it has been removed, the
-<em>NoSuchObjectLocalException</em> must be thrown. If the bean invokes the
-getNextTimeout or getTimeRemaining method on the timer associated with a
-timeout callback while within the timeout callback, and there are no
+<code>NoSuchObjectLocalException</code> must be thrown. If the bean invokes the
+<code>getNextTimeout</code> or <code>getTimeRemaining</code> method on the timer associated with a
+timeout callback while <em>within</em> the timeout callback, and there are no
 future timeouts for this calendar-based timer, the
-NoMoreTimeoutsException must be thrown.</p>
+<code>NoMoreTimeoutsException</code> must be thrown.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="the-timer-and-timerhandle-interfaces"><a class="anchor" href="#the-timer-and-timerhandle-interfaces"></a>13.2.6. The Timer and TimerHandle Interfaces</h4>
 <div class="paragraph">
-<p>The <em>javax.ejb.Timer</em> interface allows the
+<p>The <code>javax.ejb.Timer</code> interface allows the
 caller to cancel a timer and to obtain information about the timer.</p>
 </div>
 <div class="paragraph">
-<p>The <em>javax.ejb.TimerHandle</em> interface allows
+<p>The <code>javax.ejb.TimerHandle</code> interface allows
 the caller to obtain a serializable timer handle that may be persisted.
 Timer handles are only available for persistent timers. Since timers are
 local objects, a TimerHandle must not be passed through a bean’s remote
 business interface, remote interface or web service interface.</p>
 </div>
 <div class="paragraph">
-<p>The methods of these interfaces are as
-follows:</p>
+<p>The methods of these interfaces are as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>_public interface javax.ejb.Timer \{_</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">javax</span>.ejb.Timer {
+    <span class="directive">public</span> <span class="type">void</span> cancel();
+
+    <span class="directive">public</span> <span class="type">long</span> getTimeRemaining();
+
+    <span class="directive">public</span> java.util.Date getNextTimeout();
+
+    <span class="directive">public</span> javax.ejb.ScheduleExpression getSchedule();
+
+    <span class="directive">public</span> javax.ejb.TimerHandle getHandle();
+
+    <span class="directive">public</span> java.io.Serializable getInfo();
+
+    <span class="directive">public</span> <span class="type">boolean</span> isPersistent();
+
+    <span class="directive">public</span> <span class="type">boolean</span> isCalendarTimer();
+}
+
+<span class="directive">public</span> <span class="type">interface</span> <span class="class">javax</span>.ejb.TimerHandle <span class="directive">extends</span> java.io.Serializable {
+    <span class="directive">public</span> javax.ejb.Timer getTimer();
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_public void cancel();_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_public long getTimeRemaining();_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public java.util.Date getNextTimeout();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public javax.ejb.ScheduleExpression
-getSchedule();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_public javax.ejb.TimerHandle getHandle();_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public java.io.Serializable getInfo();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public boolean isPersistent();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public boolean isCalendarTimer();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_}_</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>public interface javax.ejb.TimerHandle
-extends java.io.Serializable \{</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public javax.ejb.Timer getTimer();</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="timer-identity"><a class="anchor" href="#timer-identity"></a>13.2.7. Timer Identity</h4>
 <div class="paragraph">
 <p>Timer instances must be compared using
-Timer.equals(Object obj) method. The <em>==</em> operator should not be used
-for “object equality” of the timers.</p>
+<code>Timer.equals(Object obj)</code> method. The <code>==</code> operator should not be used
+for "object equality" of the timers.</p>
 </div>
 </div>
 <div class="sect3">
@@ -26161,14 +25561,14 @@ the timer cancellation.</p>
 <div class="paragraph">
 <p>A timeout callback method on a bean with
 container-managed transactions must have transaction attribute
-<em>REQUIRED</em> or <em>REQUIRES_NEW</em> (or <em>Required</em> or <em>RequiresNew</em> if the
+<code>REQUIRED</code> or <code>REQUIRES_NEW</code> (or <code>Required</code> or <code>RequiresNew</code> if the
 deployment descriptor is used to specify the transaction attribute). If
 the container-managed transaction is rolled back, the container retries
 the timeout.</p>
 </div>
 <div class="paragraph">
 <p>Note that the container must start a new
-transaction if the <em>REQUIRED</em> <em>(</em> <em>Required</em> <em>)</em> transaction attribute
+transaction if the <code>REQUIRED</code> (<code>Required</code>) transaction attribute
 value is used. This transaction attribute value is allowed so that
 specification of a transaction attribute for the timeout callback method
 can be defaulted.</p>
@@ -26182,8 +25582,7 @@ section apply to both persistent and non-persistent timers.</p>
 <div class="sect2">
 <h3 id="bean-providers-responsibilities-8"><a class="anchor" href="#bean-providers-responsibilities-8"></a>13.3. Bean Provider’s Responsibilities</h3>
 <div class="paragraph">
-<p>This section defines the Bean Provider’s
-responsibilities.</p>
+<p>This section defines the Bean Provider’s responsibilities.</p>
 </div>
 <div class="sect3">
 <h4 id="enterprise-bean-class"><a class="anchor" href="#enterprise-bean-class"></a>13.3.1. Enterprise Bean Class</h4>
@@ -26198,14 +25597,14 @@ the bean class, or in any of its superclasses.</p>
 <div class="sect3">
 <h4 id="timerhandle"><a class="anchor" href="#timerhandle"></a>13.3.2. TimerHandle</h4>
 <div class="paragraph">
-<p>Since the <em>TimerHandle</em> interface extends
-<em>java.io.Serializable</em> , a client may serialize the handle. The
+<p>Since the <code>TimerHandle</code> interface extends
+<code>java.io.Serializable</code>, a client may serialize the handle. The
 serialized handle may be used later to obtain a reference to the timer
-identified by the handle. A TimerHandle is intended to be storable in
+identified by the handle. A <code>TimerHandle</code> is intended to be storable in
 persistent storage.</p>
 </div>
 <div class="paragraph">
-<p>A TimerHandle must not be passed as an
+<p>A <code>TimerHandle</code> must not be passed as an
 argument or result of an enterprise bean’s remote business interface,
 remote interface, or web service method.</p>
 </div>
@@ -26221,7 +25620,7 @@ of the Container Provider to support the EJB Timer Service.</p>
 <h4 id="timerservice-timer-and-timerhandle-interfaces"><a class="anchor" href="#timerservice-timer-and-timerhandle-interfaces"></a>13.4.1. TimerService, Timer, and TimerHandle Interfaces</h4>
 <div class="paragraph">
 <p>The container must provide the implementation
-of the <em>TimerService</em> , <em>Timer</em> , and <em>TimerHandle</em> interfaces.</p>
+of the <code>TimerService</code>, <code>Timer</code>, and <code>TimerHandle</code> interfaces.</p>
 </div>
 <div class="paragraph">
 <p>Timer instances must not be serializable.</p>
@@ -26232,7 +25631,7 @@ to be usable over the lifetime of the timer.</p>
 </div>
 <div class="paragraph">
 <p>The container must provide suitable
-implementations of the <em>Timer</em> <em>equals(Object</em> <em>obj)</em> and <em>hashCode()</em>
+implementations of the <code>Timer.equals(Object obj)</code> and <code>hashCode()</code>
 methods.</p>
 </div>
 </div>
@@ -26240,7 +25639,7 @@ methods.</p>
 <h4 id="automatic-timers"><a class="anchor" href="#automatic-timers"></a>13.4.2. Automatic Timers</h4>
 <div class="paragraph">
 <p>The container must create a timer for each
-automatic timer specified by means of the Schedule annotation or the
+automatic timer specified by means of the <code>Schedule</code> annotation or the
 deployment descriptor.</p>
 </div>
 </div>
@@ -26253,27 +25652,27 @@ the timer creation method has passed. The container must also call a
 timeout callback method if a time matching the timer’s schedule
 expression has been reached. The Timer Service must begin to count down
 the timer duration upon timer creation. The container must call a
-timeout callback method with the expired <em>Timer</em> object, unless the
+timeout callback method with the expired <code>Timer</code> object, unless the
 method is a no-arg timeout callback method.</p>
 </div>
 <div class="paragraph">
 <p>If container-managed transaction demarcation
-is used and the <em>REQUIRED</em> or <em>REQUIRES_NEW</em> transaction attribute is
-specified or defaulted ( <em>Required</em> or <em>RequiresNew</em> if the deployment
+is used and the <code>REQUIRED</code> or <code>REQUIRES_NEW</code> transaction attribute is
+specified or defaulted (<code>Required</code> or <code>RequiresNew</code> if the deployment
 descriptor is used), the container must begin a new transaction prior to
 invoking the timeout callback method. If the transaction fails or is
 rolled back, the container must retry the timeout at least once.</p>
 </div>
 <div class="paragraph">
 <p>If the timer is a single-event timer, the
-container must cause the timer to no longer exist. If a javax.ejb.Timer
+container must cause the timer to no longer exist. If a <code>javax.ejb.Timer</code>
 interface method is subsequently invoked on the timer after the
 completion of the timeout callback method, the container must throw the
-<em>javax.ejb.NoSuchObjectLocalException</em> .</p>
+<code>javax.ejb.NoSuchObjectLocalException</code>.</p>
 </div>
 <div class="paragraph">
 <p>If the Bean Provider invokes the
-<em>setRollbackOnly</em> method from within the timeout callback method, the
+<code>setRollbackOnly</code> method from within the timeout callback method, the
 container must rollback the transaction in which the timeout callback
 method is invoked. This has the effect of rescinding the timer
 expiration. The container must retry the timeout after the transaction
@@ -26294,16 +25693,16 @@ once upon restart.</p>
 <div class="sect3">
 <h4 id="timer-cancellation"><a class="anchor" href="#timer-cancellation"></a>13.4.4. Timer Cancellation</h4>
 <div class="paragraph">
-<p>When a timer’s <em>cancel</em> method has been
+<p>When a timer’s <code>cancel</code> method has been
 called, the container must cause the timer to no longer exist. If a
-javax.ejb.Timer method is subsequently invoked on the timer, the
-container must throw the <em>javax.ejb.NoSuchObjectLocalException</em> .</p>
+<code>javax.ejb.Timer</code> method is subsequently invoked on the timer, the
+container must throw the <code>javax.ejb.NoSuchObjectLocalException</code>.</p>
 </div>
 <div class="paragraph">
-<p>When the cancel method of an automatically
+<p>When the <code>cancel</code> method of an automatically
 created non-persistent timer has been called, the container only causes
 the timer in the currently running JVM to no longer exist. The container
-does not nullify the rule that creates a new non-persistent timer upon
+does <em>not</em> nullify the rule that creates a new non-persistent timer upon
 application startup.</p>
 </div>
 <div class="paragraph">
@@ -26564,7 +25963,7 @@ transaction demarcation.</p>
 If the enterprise bean is a singleton session bean, the Bean Provider
 may use the <code>concurrency-management-type</code> element to declare whether
 concurrency management is handled by the container or is performed by
-the Bean Provider. <sup class="footnote" id="_footnote_a10341">[<a id="_footnoteref_122" class="footnote" href="#_footnotedef_122" title="View footnote.">122</a>]</sup> If neither the
+the Bean Provider. <sup class="footnote" id="_footnote_a10341">[<a id="_footnoteref_121" class="footnote" href="#_footnotedef_121" title="View footnote.">121</a>]</sup> If neither the
 <code>ConcurrencyManagement</code> annotation is used nor the
 <code>concurrency-management-type</code> deployment descriptor element, the singleton
 session bean will have container-managed concurrency.</p>
@@ -30320,7 +29719,7 @@ definition from a previous version of this specification.</p>
 <div class="paragraph">
 <p>The ejb-jar file is the standard format for
 the packaging of enterprise beans. Enterprise beans can also be packaged
-within a web application module (.war file). The ejb-jar file or .war
+within a web application module (<code>.war</code> file). The ejb-jar file or <code>.war</code>
 file format is used to package un-assembled enterprise beans (the Bean
 Provider’s output), and to package assembled applications (the
 Application Assembler’s output).</p>
@@ -30328,7 +29727,7 @@ Application Assembler’s output).</p>
 <div class="sect2">
 <h3 id="overview-8"><a class="anchor" href="#overview-8"></a>15.1. Overview</h3>
 <div class="paragraph">
-<p>The ejb-jar file and .war file formats serve
+<p>The ejb-jar file and <code>.war</code> file formats serve
 as the contract between the Bean Provider and the Application Assembler,
 and between the Application Assembler and the Deployer.</p>
 </div>
@@ -30342,10 +29741,10 @@ beans, plus application assembly information describing how the
 enterprise beans are combined into a single application deployment unit.</p>
 </div>
 <div class="paragraph">
-<p>A .war file is not required to contain any
-enterprise beans. A .war file produced by a Bean Provider contains one
+<p>A <code>.war</code> file is not required to contain any
+enterprise beans. A <code>.war</code> file produced by a Bean Provider contains one
 or more enterprise beans that typically do not contain application
-assembly instructions. A .war file produced by an Application Assembler
+assembly instructions. A <code>.war</code> file produced by an Application Assembler
 (which can be the same person or organization as the Bean Provider)
 contains one or more enterprise beans, plus application assembly
 information describing how the enterprise beans are combined into a
@@ -30354,14 +29753,17 @@ single application deployment unit.</p>
 <div class="paragraph">
 <p>An ejb-jar file is designed specifically for
 the packaging of enterprise beans. An ejb-jar file that is packaged
-stand-alone or within an <em>.ear</em> file constitutes a Java EE module.</p>
+stand-alone or within an <code>.ear</code> file constitutes a Java EE module.</p>
 </div>
-<div class="paragraph">
-<p>While the use of an ejb-jar file within a
-<em>.war</em> file is supported by this specification, an ejb-jar file within a
-<em>.war</em> file does not constitute a Java EE module. See section
-<a href="Ejb.html#a9314">See Enterprise Beans Packaged in a .war
-file</a>.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>While the use of an ejb-jar file within a
+<code>.war</code> file is supported by this specification, an ejb-jar file within a
+<code>.war</code> file does not constitute a Java EE module. See <a href="#a9314">Enterprise Beans Packaged in a .war file</a>.</em></p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
@@ -30370,50 +29772,53 @@ file</a>.</p>
 <p>The EJB
 deployment descriptor is optional in either packaging scenario. If a
 deployment descriptor is provided it must conform to the format defined
-in Chapter <a href="Ejb.html#a5804">See Deployment Descriptor</a>.</p>
+in &lt;&lt;a5804&gt;.</p>
 </div>
 <div class="paragraph">
-<p>In a .war file, the deployment descriptor is
-stored with the name WEB-INF/ejb-jar.xml.</p>
+<p>In a <code>.war</code> file, the deployment descriptor is
+stored with the name <code>WEB-INF/ejb-jar.xml</code>.</p>
 </div>
 <div class="paragraph">
 <p>In an ejb-jar file that is packaged
-stand-alone or within an <em>.ear</em> file, the deployment descriptor is
-stored with the name META-INF/ejb-jar.xml. If the enterprise beans are
-contained in an ejb-jar file packaged within a <em>.war</em> file, the
-deployment descriptor is stored with the name WEB-INF/ejb-jar.xml. When
-enterprise beans are packaged within a <em>.war</em> , the ejb-jar file does
+stand-alone or within an <code>.ear</code> file, the deployment descriptor is
+stored with the name <code>META-INF/ejb-jar.xml</code>. If the enterprise beans are
+contained in an ejb-jar file packaged within a <code>.war</code> file, the
+deployment descriptor is stored with the name <code>WEB-INF/ejb-jar.xml</code>. When
+enterprise beans are packaged within a <code>.war</code>, the ejb-jar file does
 <em>not</em> constitute a separate module, and there can portably be only one
-<em>ejb-jar.xml</em> file. See section <a href="Ejb.html#a9314">See
-Enterprise Beans Packaged in a .war file</a>.</p>
+<code>ejb-jar.xml</code> file. See <a href="#a9314">Enterprise Beans Packaged in a .war file</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="a9306"><a class="anchor" href="#a9306"></a>15.3. Packaging Requirements</h3>
 <div class="paragraph">
 <p>The ejb-jar file
-or .war file must contain, either by inclusion or by reference, the
+or <code>.war</code> file must contain, either by inclusion or by reference, the
 class files of each enterprise bean as follows:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The enterprise bean class.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The enterprise bean business interfaces, web
 service endpoint interfaces, and home and component interfaces.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Interceptor classes.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>We say that a jar file contains a second file
-“by reference” if the second file is named in the Class-Path attribute
+<p><em>We say that a jar file contains a second file
+"by reference" if the second file is named in the Class-Path attribute
 in the Manifest file of the referencing jar file or is contained (either
 by inclusion or by reference) in another jar file that is named in the
-Class-Path attribute in the Manifest file of the referencing jar file.</p>
+Class-Path attribute in the Manifest file of the referencing jar file.</em></p>
 </div>
 <div class="paragraph">
-<p>The ejb-jar file or .war file must also
+<p>The ejb-jar file or <code>.war</code> file must also
 contain, either by inclusion or by reference, the class files for all
 the classes and interfaces that each enterprise bean class and the
 business interfaces, home interfaces, component interfaces, and/or web
@@ -30424,13 +29829,13 @@ exceptions.</p>
 </div>
 <div class="paragraph">
 <p>The Application Assembler must not package
-the stubs of the EJBHome and EJBObject interfaces in the ejb-jar file or
-.war file. This includes the stubs for the enterprise beans whose
-implementations are provided in the ejb-jar file or .war file as well as
+the stubs of the <code>EJBHome</code> and <code>EJBObject</code> interfaces in the ejb-jar file or
+<code>.war</code> file. This includes the stubs for the enterprise beans whose
+implementations are provided in the ejb-jar file or <code>.war</code> file as well as
 the referenced enterprise beans. Generating the stubs is the
 responsibility of the container. The stubs are typically generated by
 the Container Provider’s deployment tools for each class that extends
-the EJBHome or EJBObject interfaces, or they may be generated by the
+the <code>EJBHome</code> or <code>EJBObject</code> interfaces, or they may be generated by the
 container at runtime.</p>
 </div>
 </div>
@@ -30439,73 +29844,69 @@ container at runtime.</p>
 <div class="paragraph">
 <p>An enterprise bean class with a
 component-defining annotation defines an enterprise bean component when
-packaged within the WEB-INF/classes directory or within a jar file
-within the WEB-INF/lib directory. An enterprise bean can also be defined
-via the WEB-INF/ejb-jar.xml deployment descriptor.</p>
+packaged within the <code>WEB-INF/classes</code> directory or within a jar file
+within the <code>WEB-INF/lib</code> directory. An enterprise bean can also be defined
+via the <code>WEB-INF/ejb-jar.xml</code> deployment descriptor.</p>
 </div>
 <div class="paragraph">
-<p>A <em>.war</em> file may contain enterprise bean
-classes in a combination of classes within the WEB-INF/classes directory
-and one or more jar files within the WEB-INF/lib directory.</p>
+<p>A <code>.war</code> file may contain enterprise bean
+classes in a combination of classes within the <code>WEB-INF/classes</code> directory
+and one or more jar files within the <code>WEB-INF/lib directory</code>.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _A “ejb-jar” file in the WEB-INF/lib
+<div class="paragraph">
+<p><strong><em>A "ejb-jar" file in the <code>WEB-INF/lib</code>
 directory that contains enterprise beans is not considered an
-independent Java EE “module” in the way that a .war file, stand-alone
+independent Java EE "module" in the way that a <code>.war</code> file, stand-alone
 ejb-jar file, or an .ear-level ejb-jar file is considered a module. Such
-an “ejb-jar file” does not define its own module name or its own
+an "ejb-jar" file does not define its own module name or its own
 namespace for ejb-names, environment dependencies, persistence units,
-etc. All such namespaces are scoped to the enclosing .war file. In that
-sense, the packaging of enterprise bean classes in an “ejb-jar” file in
-the WEB-INF/lib directory is merely a convenience. It is semantically
-equivalent to packaging the classes within WEB-INF/classes_ directory
-_._</pre>
-</div>
+etc. All such namespaces are scoped to the enclosing <code>.war</code> file. In that
+sense, the packaging of enterprise bean classes in an "ejb-jar" file in
+the <code>WEB-INF/lib</code> directory is merely a convenience. It is semantically
+equivalent to packaging the classes within <code>WEB-INF/classes</code> directory.</em></strong></p>
 </div>
 <div class="paragraph">
-<p>A <em>.war</em> file may contain an ejb-jar.xml
-file. If present, the ejb-jar.xml is packaged as WEB-INF/ejb-jar.xml. If
-an ejb-jar.xml is present, it applies to all enterprise beans defined by
-the .war file, independently of whether they are packaged with the
-WEB-INF/classes directory or in a jar file within WEB-INF/lib directory.
-The packaging of an <em>ejb-jar.xml</em> file anywhere else within the <em>.war</em>
+<p>A <code>.war</code> file may contain an <code>ejb-jar.xml</code>
+file. If present, the <code>ejb-jar.xml</code> is packaged as <code>WEB-INF/ejb-jar.xml</code>. If
+an <code>ejb-jar.xml</code> is present, it applies to all enterprise beans defined by
+the <code>.war</code> file, independently of whether they are packaged with the
+<code>WEB-INF/classes</code> directory or in a jar file within <code>WEB-INF/lib</code> directory.
+The packaging of an <code>ejb-jar.xml</code> file anywhere else within the <code>.war</code>
 file is not portable and may result in a deployment error.</p>
 </div>
 <div class="sect3">
 <h4 id="class-loading"><a class="anchor" href="#class-loading"></a>15.4.1. Class Loading</h4>
 <div class="paragraph">
 <p>Enterprise beans (and any related classes)
-packaged in a .war file have the same class loading requirements as
-other non-enterprise bean classes packaged in a .war file. This means,
-for example, that a servlet packaged within a .war file is guaranteed to
+packaged in a <code>.war</code> file have the same class loading requirements as
+other non-enterprise bean classes packaged in a <code>.war</code> file. This means,
+for example, that a servlet packaged within a <code>.war</code> file is guaranteed to
 have visibility to an enterprise bean component packaged within the same
-.war file, and vice versa. Detailed class loading requirements for web
-modules are covered in the Java EE Platform specification
-[<a href="Ejb.html#a9861">See Java™ Platform</a>].</p>
+<code>.war</code> file, and vice versa. Detailed class loading requirements for web
+modules are covered in the Java EE Platform specification <a href="#a9861">[12]</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="component-environment"><a class="anchor" href="#component-environment"></a>15.4.2. Component Environment</h4>
 <div class="paragraph">
-<p>In a .war file, there is a single component
+<p>In a <code>.war</code> file, there is a single component
 naming environment shared between all the components (web, enterprise
 bean, etc.) defined by the module. Each enterprise bean defined in the
-.war file shares this single component environment namespace with all
-other enterprise beans defined by the .war file and with all other web
-components defined by the .war file.</p>
+<code>.war</code> file shares this single component environment namespace with all
+other enterprise beans defined by the <code>.war</code> file and with all other web
+components defined by the <code>.war</code> file.</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider should be aware of this
 name scoping behavior when selecting names of environment dependencies
-for enterprise beans packaged within a .war file. Unlike enterprise
-beans packaged in an ejb-jar file outside a .war file, the names of
-environment entries defined by an enterprise bean inside a . <em>war</em> file
+for enterprise beans packaged within a <code>.war</code> file. Unlike enterprise
+beans packaged in an ejb-jar file outside a <code>.war</code> file, the names of
+environment entries defined by an enterprise bean inside a <code>.war</code> file
 can clash with names defined by other components. Likewise, enterprise
-beans packaged in a .war file have visiblity to all environment entries
-defined by any other components in the .war file, including any entries
-defined within the <em>web.xml</em> file. This is also true of the advanced
-case in which the ejb-jar.xml file is used to define multiple bean
+beans packaged in a <code>.war</code> file have visiblity to all environment entries
+defined by any other components in the <code>.war</code> file, including any entries
+defined within the <code>web.xml</code> file. This is also true of the advanced
+case in which the <code>ejb-jar.xml</code> file is used to define multiple bean
 components based on the same bean class. Extra caution should be used
 when configuring environment dependencies for such bean components.</p>
 </div>
@@ -30514,61 +29915,48 @@ when configuring environment dependencies for such bean components.</p>
 <h4 id="a9324"><a class="anchor" href="#a9324"></a>15.4.3. Visibility of the Local Client View</h4>
 <div class="paragraph">
 <p>The local client view (including the
-no-interface view) of an enterprise bean component defined within a .war
+no-interface view) of an enterprise bean component defined within a <code>.war</code>
 file is only required to be accessible to components within the same
-.war file. Applications needing access to the local client view of an
-enterprise bean from a different module in the same application should
-use an ejb-jar file outside the <em>.war</em> file to define the enterprise
+<code>.war</code> file. Applications needing access to the local client view of an
+enterprise bean from a <em>different</em> module in the same application should
+use an ejb-jar file outside the <code>.war</code> file to define the enterprise
 bean that exposes the local client view.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="ejb-names"><a class="anchor" href="#ejb-names"></a>15.4.4. Ejb-names</h4>
 <div class="paragraph">
-<p>A .war file has a single namespace for the
-ejb-names of any enterprise beans it defines. This single ejb-name
-namespace applies to all enterprise beans defined in the <em>.war</em> file,
-regardless of where in the .war file the enterprise beans are defined
-and regardless of whether they are defined by means of the ejb-jar.xml
+<p>A <code>.war</code> file has a single namespace for the
+<code>ejb-names</code> of any enterprise beans it defines. This single <code>ejb-name</code>
+namespace applies to all enterprise beans defined in the <code>.war</code> file,
+regardless of where in the <code>.war</code> file the enterprise beans are defined
+and regardless of whether they are defined by means of the <code>ejb-jar.xml</code>
 deployment descriptor or by annotations.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="example-2"><a class="anchor" href="#example-2"></a>15.4.5. Example</h4>
-<div class="paragraph">
-<p>package com.acme;</p>
-</div>
-<div class="paragraph">
-<p>@Stateless</p>
-</div>
-<div class="paragraph">
-<p>public class FooBean \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public void foo() \{ ... }</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme</span>;
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">FooBean</span> <span class="error">\</span>{
+ <span class="directive">public</span> <span class="type">void</span> foo() <span class="error">\</span>{ ... }
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>FooBean is a stateless session bean with a
+<p><code>FooBean</code> is a stateless session bean with a
 component-defining annotation and a no-interface view. It is packaged in
-a .war file under a WEB-INF/classes subdirectory corresponding to its
-package name. The .war file also contains a Servlet.</p>
+a <code>.war</code> file under a <code>WEB-INF/classes</code> subdirectory corresponding to its
+package name. The <code>.war</code> file also contains a <code>Servlet</code>.</p>
 </div>
-<div class="paragraph">
-<p>webejb.war:</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>WEB-INF/classes/com/acme/FooServlet.class</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>WEB-INF/classes/com/acme/FooBean.class</pre>
+<pre class="CodeRay highlight"><code>webejb.war:
+    WEB-INF/classes/com/acme/FooServlet.class
+    WEB-INF/classes/com/acme/FooBean.class</code></pre>
 </div>
 </div>
 </div>
@@ -30583,20 +29971,14 @@ annotations on the enterprise bean classes in a module.</p>
 <div class="sect3">
 <h4 id="ejb-jar-deployment-descriptor-and-annotation-processing"><a class="anchor" href="#ejb-jar-deployment-descriptor-and-annotation-processing"></a>15.5.1. Ejb-jar Deployment Descriptor and Annotation Processing</h4>
 <div class="paragraph">
-<p><a href="Ejb.html#a9344">See Ejb-jar
-Annotation Processing Requirements</a> describes the requirements for
+<p><a href="#a9344">Ejb-jar Annotation Processing Requirements</a> describes the requirements for
 determining when to process annotations on the classes in a standalone
-ejb-jar file or an ejb-jar file packaged within an . <em>ear</em> file. If the
+ejb-jar file or an ejb-jar file packaged within an <code>.ear</code> file. If the
 deployment descriptor is not included or is included but not marked
-<em>metadata-complete</em> , the deployment tool will process annotations.</p>
+<code>metadata-complete</code>, the deployment tool will process annotations.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a9344"></a>Ejb-jar Annotation Processing Requirements</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="a9344" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Ejb-jar Annotation Processing Requirements</caption>
 <colgroup>
 <col style="width: 34%;">
 <col style="width: 33%;">
@@ -30636,24 +30018,17 @@ deployment descriptor is not included or is included but not marked
 <div class="sect3">
 <h4 id="war-deployment-descriptor-and-annotation-processing"><a class="anchor" href="#war-deployment-descriptor-and-annotation-processing"></a>15.5.2. .war Deployment Descriptor and Annotation Processing</h4>
 <div class="paragraph">
-<p><a href="Ejb.html#a9360">See .war
-Annotation Processing Requirements for enterprise beans</a> describes the
+<p><a href="#a9360">.war Annotation Processing Requirements for enterprise beans</a> describes the
 requirements for determining when to process annotations on the
-enterprise bean classes of a .war file. If the <em>.war</em> file contains an
-ejb-jar.xml file, the deployment tool will process annotations unless
-the ejb-jar.xml has been marked metadata-complete. If the . <em>war</em> file
-does not contain an ejb-jar.xml file, the deployment tool will process
-annotations unless the <em>web.xml</em> is marked metadata-complete or its
-version is prior to web-app_2_5.</p>
+enterprise bean classes of a <code>.war</code> file. If the <code>.war</code> file contains an
+<code>ejb-jar.xml</code> file, the deployment tool will process annotations unless
+the <code>ejb-jar.xml</code> has been marked <code>metadata-complete</code>. If the <code>.war</code> file
+does not contain an <code>ejb-jar.xml</code> file, the deployment tool will process
+annotations unless the <code>web.xml</code> is marked <code>metadata-complete</code> or its
+version is prior to <code>web-app_2_5</code>.</p>
 </div>
-<div class="paragraph">
-<p>===</p>
-</div>
-<div class="paragraph">
-<p><a id="a9360"></a>.war Annotation Processing Requirements for
-enterprise beans</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="a9360" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. .war Annotation Processing Requirements for enterprise beans</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -30664,13 +30039,9 @@ enterprise beans</p>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">ejb-jar.xml</th>
-<th class="tableblock halign-left valign-top">ejb-jar.xml
-
- metadata-complete?</th>
+<th class="tableblock halign-left valign-top">ejb-jar.xml metadata-complete?</th>
 <th class="tableblock halign-left valign-top">web.xml</th>
-<th class="tableblock halign-left valign-top">web.xml
-
- metadata-complete?</th>
+<th class="tableblock halign-left valign-top">web.xml metadata-complete?</th>
 <th class="tableblock halign-left valign-top">process annotations?</th>
 </tr>
 </thead>
@@ -30692,48 +30063,21 @@ enterprise beans</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
-<div class="content">
-<pre>web-app_2_5</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>or later</pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">web-app_2_5 or later</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
-<div class="content">
-<pre>web-app_2_5</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>or later</pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">web-app_2_5 or later</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
-<div class="content">
-<pre>web-app_2_4</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>or earlier</pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">web-app_2_4 or earlier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
@@ -30746,9 +30090,6 @@ enterprise beans</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>.</p>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -30762,13 +30103,13 @@ superinterfaces, the classes and interfaces used as method parameters,
 results, and exceptions. The serializable application value classes,
 including the classes which may be used as members of a collection in a
 remote method call to an enterprise bean, are part of the client view.
-An example of an application value class might be an <em>Address</em> class
+An example of an application value class might be an <code>Address</code> class
 used as a parameter in a method call.</p>
 </div>
 <div class="paragraph">
 <p>The ejb-jar file
-or .war file producer can create an ejb-client JAR file for the ejb-jar
-file or <em>.war</em> file. The ejb-client JAR file contains all the class
+or <code>.war</code> file producer can create an ejb-client JAR file for the ejb-jar
+file or <code>.war</code> file. The ejb-client JAR file contains all the class
 files that a client program needs to use the client view of the
 enterprise beans that are contained in the ejb-jar file or <em>.war</em> file.
 If this option is used, it is the responsibility of the Application
@@ -30777,28 +30118,28 @@ view of an enterprise bean in the ejb-client JAR file.</p>
 </div>
 <div class="paragraph">
 <p>The ejb-client JAR file is specified in the
-<em>ejb-jar.xml</em> deployment descriptor of the ejb-jar file or .war file
-using the ejb-client-jar element. The value
-of the ejb-client-jar element is the path name specifying the location
+<code>ejb-jar.xml</code> deployment descriptor of the ejb-jar file or .war file
+using the <code>ejb-client-jar</code> element. The value
+of the <code>ejb-client-jar</code> element is the path name specifying the location
 of the ejb-client JAR file in the containing
-Java EE Enterprise Application Archive (
-<em>.ear</em> ) file. The path name is relative to the location of the
-referencing ejb-jar file or . <em>war</em> file.</p>
+Java EE Enterprise Application Archive (<code>.ear</code>) file.
+The path name is relative to the location of the
+referencing ejb-jar file or <code>.war</code> file.</p>
 </div>
 <div class="paragraph">
 <p>The EJB specification does not specify
-whether an ejb-jar file or .war file should include by copy or by
+whether an ejb-jar file or <code>.war</code> file should include by copy or by
 reference the classes that are in an ejb-client JAR file, but they must
 be included either one way or the other. If the by-copy approach is
 used, the producer simply includes all the class files in the ejb-client
-JAR file also in the ejb-jar file or .war file. If the by-reference
-approach is used, the ejb-jar file or .war file producer does not
+JAR file also in the ejb-jar file or <code>.war</code> file. If the by-reference
+approach is used, the ejb-jar file or <code>.war</code> file producer does not
 duplicate the content of the ejb-client JAR file in the ejb-jar file or
-.war file, but instead uses a Manifest Class-Path entry in the ejb-jar
-file or .war file to specify that the ejb-jar file or .war file depends
+<code>.war</code> file, but instead uses a Manifest Class-Path entry in the ejb-jar
+file or <code>.war</code> file to specify that the ejb-jar file or <code>.war</code> file depends
 on the ejb-client JAR at runtime. The use of the Class-Path entries in
-JAR files and .war files is explained in the Java EE Platform
-specification [<a href="Ejb.html#a9861">See Java™ Platform</a>].</p>
+JAR files and <code>.war</code> files is explained in the Java EE Platform
+specification <a href="#a9861">[12]</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -30808,7 +30149,7 @@ specification [<a href="Ejb.html#a9861">See Java™ Platform</a>].</p>
 application to insure that the client view classes are available to the
 client at runtime. The client of an enterprise bean may be another
 enterprise bean packaged in the same ejb-jar or different ejb-jar file,
-another enterprise bean packaged in the same .war file or different .war
+another enterprise bean packaged in the same <code>.war</code> file or different <code>.war</code>
 file, or the client may be another Java EE component, such as a web
 component.</p>
 </div>
@@ -30820,102 +30161,72 @@ client view classes of the referenced beans. The client view classes may
 have been packaged in an ejb-client JAR file. In other words, the jar
 file that contains the client should contain one of the following:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>a reference to the ejb-client JAR file</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>a reference to the ejb-jar file that contains
 the client view classes</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>a copy of the client view classes</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The client may also require the use of system
 value classes (e.g., the serializable value classes implementing the
-javax.ejb.Handle, javax.ejb.HomeHandle, javax.ejb.EJBMetaData,
-java.util.Enumeration, java.util.Collection, and java.util.Iterator
+<code>javax.ejb.Handle</code>, <code>javax.ejb.HomeHandle</code>, <code>javax.ejb.EJBMetaData</code>,
+<code>java.util.Enumeration</code>, <code>java.util.Collection</code>, and <code>java.util.Iterator</code>
 interfaces), although these are not packaged with the application. It is
 the responsibility of the provider of the container hosting the
 referenced beans to provide the system value classes and make them
-available for use when the client is deployed. See Section
-<a href="Ejb.html#a3410">See System Value Classes</a>.</p>
+available for use when the client is deployed. See <a href="#a3410">System Value Classes</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="example-3"><a class="anchor" href="#example-3"></a>15.8. Example</h3>
 <div class="paragraph">
 <p>In this example, the Bean Provider has chosen
-to package the enterprise bean client view classes in a separate <em>.jar</em>
-file and to reference that <em>.jar</em> file from the other <em>.jar</em> files that
-need those classes. Those classes are needed both by <em>ejb2.jar</em> ,
-packaged in the same application as <em>ejb1.jar</em> , and by <em>ejb3.jar</em> ,
+to package the enterprise bean client view classes in a separate <code>.jar</code>
+file and to reference that <code>.jar</code> file from the other <code>.jar</code> files that
+need those classes. Those classes are needed both by <code>ejb2.jar</code>,
+packaged in the same application as <code>ejb1.jar</code>, and by <code>ejb3.jar</code>,
 packaged in a different application. Those classes are also needed by
-<em>ejb1.jar</em> itself because they define the remote interface of the
-enterprise beans in <em>ejb1.jar</em> , and the Bean Provider has chosen the
+<code>ejb1.jar</code> itself because they define the remote interface of the
+enterprise beans in <code>ejb1.jar</code>, and the Bean Provider has chosen the
 <em>by reference</em> approach to making these classes available.</p>
 </div>
 <div class="paragraph">
-<p>The deployment descriptor for <em>ejb1.jar</em>
-names the client view jar file in the <em>ejb-client-jar</em> element. Because
-<em>ejb2.jar</em> requires these client view classes, it includes a Class-Path
-reference to <em>ejb1_client.jar</em> .</p>
+<p>The deployment descriptor for <code>ejb1.jar</code>
+names the client view jar file in the <code>ejb-client-jar</code> element. Because
+<code>ejb2.jar</code> requires these client view classes, it includes a Class-Path
+reference to <code>ejb1_client.jar</code>.</p>
 </div>
 <div class="paragraph">
 <p>The Class-Path mechanism must be used by
-components in <em>app2.ear</em> to reference the client view jar file that
-corresponds to the enterprise beans packaged in <em>ejb1.jar</em> of <em>app1.ear</em>
-. Those enterprise beans are referenced by enterprise beans in
-<em>ejb3.jar</em> . Note that the client view jar file must be included
-directly in the <em>app2.ear</em> file.</p>
+components in <code>app2.ear</code> to reference the client view jar file that
+corresponds to the enterprise beans packaged in <code>ejb1.jar</code> of <code>app1.ear</code>.
+Those enterprise beans are referenced by enterprise beans in
+<code>ejb3.jar</code>. Note that the client view jar file must be included
+directly in the <code>app2.ear</code> file.</p>
 </div>
-<div class="paragraph">
-<p>app1.ear:</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>META-INF/application.xml</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ejb1.jar Class-Path: ejb1_client.jar</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_deployment descriptor contains:_</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;ejb-client-jar&gt;ejb1_client.jar&lt;/ejb-client-jar&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ejb1_client.jar</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ejb2.jar Class-Path: ejb1_client.jar</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>app2.ear:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>META-INF/application.xml</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ejb1_client.jar</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ejb3.jar Class-Path: ejb1_client.jar</pre>
+<pre class="CodeRay highlight"><code>app1.ear:
+    META-INF/application.xml
+    ejb1.jar       Class-Path: ejb1_client.jar
+        deployment descriptor contains:
+            &lt;ejb-client-jar&gt;ejb1_client.jar&lt;/ejb-client-jar&gt;
+    ejb1_client.jar
+    ejb2.jar       Class-Path: ejb1_client.jar
+
+app2.ear:
+    META-INF/application.xml
+    ejb1_client.jar
+    ejb3.jar       Class-Path: ejb1_client.jar</code></pre>
 </div>
 </div>
 </div>
@@ -31018,7 +30329,7 @@ view only</p>
 </ul>
 </div>
 <table id="a9442" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. EJB API Groups</caption>
+<caption class="title">Table 7. EJB API Groups</caption>
 <colgroup>
 <col style="width: 34%;">
 <col style="width: 33%;">
@@ -31493,7 +30804,7 @@ means that the container must be able to grant the permission, the term
 "deny" means that the container should deny the permission.</p>
 </div>
 <table id="a9591" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. Java 2 Platform Security Policy for a Standard EJB Container</caption>
+<caption class="title">Table 8. Java 2 Platform Security Policy for a Standard EJB Container</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -31550,7 +30861,7 @@ means that the container must be able to grant the permission, the term
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.net.SocketPermission</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">grant "*", "connect"
-<sup class="footnote" id="_footnote_a10342">[<a id="_footnoteref_123" class="footnote" href="#_footnotedef_123" title="View footnote.">123</a>]</sup></p>
+<sup class="footnote" id="_footnote_a10342">[<a id="_footnoteref_122" class="footnote" href="#_footnotedef_122" title="View footnote.">122</a>]</sup></p>
 <p class="tableblock">deny all other</p></td>
 </tr>
 </tbody>
@@ -31680,7 +30991,7 @@ interface by dependency injection and in JNDI under the name
 <div class="paragraph">
 <p>It is illegal to associate JTA
 transactional interceptors with Enterprise JavaBeans. The EJB Container
-should fail deployment of such applications. <sup class="footnote" id="_footnote_a10343">[<a id="_footnoteref_124" class="footnote" href="#_footnotedef_124" title="View footnote.">124</a>]</sup></p>
+should fail deployment of such applications. <sup class="footnote" id="_footnote_a10343">[<a id="_footnoteref_123" class="footnote" href="#_footnotedef_123" title="View footnote.">123</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The other JTA interfaces are low-level
@@ -31831,7 +31142,7 @@ clients.</p>
 <div class="paragraph">
 <p>Existing EJB 3.1 and earlier applications
 that do not include entity bean components and JAX-RPC based web
-services endpoints <sup class="footnote" id="_footnote_a10344">[<a id="_footnoteref_125" class="footnote" href="#_footnotedef_125" title="View footnote.">125</a>]</sup> must be supported to run
+services endpoints <sup class="footnote" id="_footnote_a10344">[<a id="_footnoteref_124" class="footnote" href="#_footnotedef_124" title="View footnote.">124</a>]</sup> must be supported to run
 unchanged in EJB 3.2 containers.</p>
 </div>
 <div class="paragraph">
@@ -31930,7 +31241,7 @@ earlier EJB client view.</p>
 <p>EJB clients may access Java
 Persistence entities and/or the EntityManager together with EJB 2.x
 entity beans within the same transaction as well as within separate
-transactions. <sup class="footnote" id="_footnote_a10345">[<a id="_footnoteref_126" class="footnote" href="#_footnotedef_126" title="View footnote.">126</a>]</sup></p>
+transactions. <sup class="footnote" id="_footnote_a10345">[<a id="_footnoteref_125" class="footnote" href="#_footnotedef_125" title="View footnote.">125</a>]</sup></p>
 </div>
 </div>
 </div>
@@ -32119,7 +31430,7 @@ enterprise bean component-defining annotation</p>
 </div>
 <div class="paragraph">
 <p>Each such matching entry is considered
-an EJB module within the same application. <sup class="footnote" id="_footnote_a10346">[<a id="_footnoteref_127" class="footnote" href="#_footnotedef_127" title="View footnote.">127</a>]</sup></p>
+an EJB module within the same application. <sup class="footnote" id="_footnote_a10346">[<a id="_footnoteref_126" class="footnote" href="#_footnotedef_126" title="View footnote.">126</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>If an <code>ejb-jar.xml</code> file is present the
@@ -34499,31 +33810,28 @@ beans with a no-methods listener interface</p>
 <a href="#_footnoteref_120">120</a>. If the bean implements the <code>TimedObject</code> interface, the <code>Timeout</code> annotation may optionally be applied to the <code>ejbTimeout</code> method.
 </div>
 <div class="footnote" id="_footnotedef_121">
-<a href="#_footnoteref_121">121</a>. An earlier version of the specification required that timeout callbacks accept the <code>Timer</code> parameter but did not require that this parameter be listed when declared by means of the deployment descriptor. To preserve backward compatibility, a <code>timeout-method</code> that does not include a <code>method-param</code> element for the <code>javax.ejb.Timer</code> parameter may be used to match either a timeout method signature with or without a Timer parameter, if there is only one method with the specified name. If methods with the specified name are overloaded, a <code>timeout-method</code> element with an empty <code>method-params</code> element will be used to explicitly refer to a the no-arg timeout method.
+<a href="#_footnoteref_121">121</a>. The concurrency-management-type Container may be specified for stateful session beans, but doing so has no impact on the semantics of concurrency management for such beans.
 </div>
 <div class="footnote" id="_footnotedef_122">
-<a href="#_footnoteref_122">122</a>. The concurrency-management-type Container may be specified for stateful session beans, but doing so has no impact on the semantics of concurrency management for such beans.
+<a href="#_footnoteref_122">122</a>. This permission is necessary, for example, to allow enterprise beans to use the client functionality of the Java IDL and RMI-IIOP packages that are part of the Java 2 platform.
 </div>
 <div class="footnote" id="_footnotedef_123">
-<a href="#_footnoteref_123">123</a>. This permission is necessary, for example, to allow enterprise beans to use the client functionality of the Java IDL and RMI-IIOP packages that are part of the Java 2 platform.
+<a href="#_footnoteref_123">123</a>. This restriction may be removed in a future release of this specification.
 </div>
 <div class="footnote" id="_footnotedef_124">
-<a href="#_footnoteref_124">124</a>. This restriction may be removed in a future release of this specification.
+<a href="#_footnoteref_124">124</a>. See <a href="#a182">Pruning the EJB API</a>.
 </div>
 <div class="footnote" id="_footnotedef_125">
-<a href="#_footnoteref_125">125</a>. See <a href="#a182">Pruning the EJB API</a>.
+<a href="#_footnoteref_125">125</a>. In general, the same database data should not be accessed by both Java Persistence entities and EJB 2.x entities within the same application: behavior is unspecified if data aliasing occurs.
 </div>
 <div class="footnote" id="_footnotedef_126">
-<a href="#_footnoteref_126">126</a>. In general, the same database data should not be accessed by both Java Persistence entities and EJB 2.x entities within the same application: behavior is unspecified if data aliasing occurs.
-</div>
-<div class="footnote" id="_footnotedef_127">
-<a href="#_footnoteref_127">127</a>. Support for more than one module is required for a Full Java EE platform product. Multi-module support is only required for Java EE profiles that require support for .ear files.
+<a href="#_footnoteref_126">126</a>. Support for more than one module is required for a Full Java EE platform product. Multi-module support is only required for Java EE profiles that require support for .ear files.
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
  4.0-SNAPSHOT<br>
-Last updated 2020-03-06 21:55:57 +0530
+Last updated 2020-03-05 11:01:01 +0530
 </div>
 </div>
 </body>
