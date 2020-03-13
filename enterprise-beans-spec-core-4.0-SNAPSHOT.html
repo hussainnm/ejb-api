@@ -530,7 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Jakarta Enterprise Beans Team, https://projects.eclipse.org/projects/ee4j.ejb</span><br>
 <span id="email" class="email"><a href="https://dev.eclipse.org/mailman/listinfo/ejb-api-dev" class="bare">https://dev.eclipse.org/mailman/listinfo/ejb-api-dev</a></span><br>
 <span id="revnumber"> 4.0-SNAPSHOT,</span>
-<span id="revdate">March 12, 2020</span>
+<span id="revdate">March 13, 2020</span>
 <br><span id="revremark">DRAFT</span>
 </div>
 <div id="toc" class="toc2">
@@ -1551,7 +1551,7 @@ Version: 4.0-SNAPSHOT
 
 Status: DRAFT
 
-Release: March 12, 2020</pre>
+Release: March 13, 2020</pre>
 </div>
 </div>
 </div>
@@ -20837,25 +20837,29 @@ support for security management.</p>
 <div class="sect2">
 <h3 id="overview-6"><a class="anchor" href="#overview-6"></a>12.1. Overview</h3>
 <div class="paragraph">
-<p>We set the following goals for the security
-management in the EJB architecture:</p>
+<p><em>We set the following goals for the security
+management in the EJB architecture:</em></p>
 </div>
-<div class="paragraph">
-<p>Lessen the burden of the application
+<div class="ulist">
+<ul>
+<li>
+<p><em>Lessen the burden of the application
 developer (i.e. the Bean Provider) for securing the application by
 allowing greater coverage from more qualified EJB roles. The EJB
 Container Provider provides the implementation of the security
 infrastructure; the Deployer and System Administrator define the
-security policies.</p>
-</div>
-<div class="paragraph">
-<p>Allow the security policies to be set by the
-Application Assembler or Deployer.</p>
-</div>
-<div class="paragraph">
-<p>Allow the enterprise bean applications to be
+security policies.</em></p>
+</li>
+<li>
+<p><em>Allow the security policies to be set by the
+Application Assembler or Deployer.</em></p>
+</li>
+<li>
+<p><em>Allow the enterprise bean applications to be
 portable across multiple EJB servers that use different security
-mechanisms.</p>
+mechanisms.</em></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The EJB architecture encourages the Bean
@@ -20869,12 +20873,12 @@ for the operational environment of the enterprise.</p>
 <div class="paragraph">
 <p>To make the
 Deployer’s task easier, the Bean Provider or the Application Assembler
-(which could be the same party as the Bean Provider) may define security
-roles for an application composed of one or more enterprise beans. A
+(which could be the same party as the Bean Provider) may define <em>security
+roles</em> for an application composed of one or more enterprise beans. A
 security role is a semantic grouping of permissions that a given type of
 users of the application must have in order to successfully use the
 application. The Bean Provider can define declaratively using metadata
-annotations or the deployment descriptor the method permissions for each
+annotations or the deployment descriptor the <em>method permissions</em> for each
 security role. The Applications Assembler can define, augment, or
 override the method permissions using the deployment descriptor. A
 method permission is a permission to invoke a specified group of methods
@@ -20899,7 +20903,7 @@ and any methods of other enterprise beans that the bean may call.</p>
 <p>This determines whether the caller principal
 is propagated from the caller to the callee—that is, whether the called
 enterprise bean will see the same returned value of the
-EJBContext.getCallerPrincipal as the calling enterprise bean—or whether
+<code>EJBContext.getCallerPrincipal</code> as the calling enterprise bean—or whether
 a security principal that has been assigned to the specified security
 role will be used for the execution of the bean’s methods and will be
 visible as the caller principal in the bean’s callee.</p>
@@ -20910,27 +20914,29 @@ annotations or the deployment descriptor to specify whether the caller’s
 security identity or a run-as security identity should be used for the
 execution of the bean’s methods.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>By default, the caller principal will be
-propagated as the caller identity. The Bean Provider can use the <em>RunAs</em>
+propagated as the caller identity. The Bean Provider can use the <code>RunAs</code>
 annotation to specify that a security principal that has been assigned
-to a specified security role be used instead. See Section
-<a href="Ejb.html#a5322">See Specification of Security Identities in
-the Deployment Descriptor</a>.</p>
-</div>
-<div class="paragraph">
+to a specified security role be used instead. See <a href="#a5322">Specification of Security Identities in the Deployment Descriptor</a>.</p>
+</li>
+<li>
 <p>If the deployment descriptor is used to
 specify the security principal, the Bean Provider or the Application
-Assembler can use the <em>security-identity</em> deployment descriptor element
-to specify the security identity. If the <em>security-identity</em> deployment
+Assembler can use the <code>security-identity</code> deployment descriptor element
+to specify the security identity. If the <code>security-identity</code> deployment
 descriptor element is not specified and if a run-as identity has not
-been specified by the use of the <em>RunAs</em> annotation or if
-<em>use-caller-identity</em> is specified as the value of the
-<em>security-identity</em> element, the caller principal is propagated from the
-caller to the callee. If the <em>run-as</em> element is specified, a security
+been specified by the use of the <code>RunAs</code> annotation or if
+<code>use-caller-identity</code> is specified as the value of the
+<code>security-identity</code> element, the caller principal is propagated from the
+caller to the callee. If the <code>run-as</code> element is specified, a security
 principal that has been assigned to the specified security role will be
 used. The Application Assembler is permitted to override a security
 identity value set or defaulted by the Bean Provider.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The Deployer is responsible for assigning
@@ -20950,8 +20956,7 @@ client call has been assigned by the Deployer to have at least one
 security role that is allowed to invoke the business method or if the
 Bean Provider or Application Assembler has specified that security
 authorization is not to be checked for the method (i.e., that all roles,
-including any unauthenticated roles, are permitted). See
-<a href="Ejb.html#a5186">See Method Permissions</a>.</p>
+including any unauthenticated roles, are permitted). See <a href="#a5186">Method Permissions</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Container Provider is responsible for
@@ -20977,9 +20982,7 @@ management.</p>
 <p>This section defines the Bean Provider’s
 perspective of the EJB architecture support for security, and defines
 his or her responsibilities. In addition, the Bean Provider may define
-the security roles for the application, as defined in
-<a href="Ejb.html#a5121">See Responsibilities of the Bean Provider
-and/or Application Assembler</a>.</p>
+the security roles for the application, as defined in <a href="#a5121">Responsibilities of the Bean Provider and/or Application Assembler</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="invocation-of-other-enterprise-beans"><a class="anchor" href="#invocation-of-other-enterprise-beans"></a>12.2.1. Invocation of Other Enterprise Beans</h4>
@@ -20991,20 +20994,18 @@ provides no programmatic interfaces for the invoking enterprise bean to
 control the principal passed to the invoked enterprise bean.</p>
 </div>
 <div class="paragraph">
-<p>The
-management of caller principals passed on
-<em>inter-enterprise</em> bean invocations (i.e. principal delegation) is set
+<p>The management of caller principals passed on
+<code>inter-enterprise</code> bean invocations (i.e. principal delegation) is set
 up by the Deployer and System Administrator in a container-specific way.
 The Bean Provider and Application Assembler should describe all the
-requirements for the caller’s principal management of inter-enterprise
+requirements for the caller’s principal management of <code>inter-enterprise</code>
 bean invocations as part of the description.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="resource-access"><a class="anchor" href="#resource-access"></a>12.2.2. Resource Access</h4>
 <div class="paragraph">
-<p>Section <a href="Ejb.html#a4159">See
-Resource Manager Connection Factory References</a> defines the protocol for
+<p><a href="#a4159">Resource Manager Connection Factory References</a> defines the protocol for
 accessing resource managers, including the requirements for security
 management.</p>
 </div>
@@ -21016,15 +21017,14 @@ management.</p>
 operating system principal under which
 enterprise bean methods execute. Therefore, the Bean Provider cannot
 rely on a specific principal for accessing the underlying OS resources,
-such as files. (See Subsection <a href="Ejb.html#a5425">See System
-Principal</a> for the reasons behind this rule.)</p>
+such as files. (See <a href="#a5425">System Principal</a> for the reasons behind this rule.)</p>
 </div>
 <div class="paragraph">
-<p>We believe that most enterprise business
+<p><em>We believe that most enterprise business
 applications store information in resource managers such as relational
 databases rather than in resources at the operating system levels.
 Therefore, this rule should not affect the portability of most
-enterprise beans.</p>
+enterprise beans.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -21046,190 +21046,132 @@ up the appropriate security policy for the enterprise bean application.</p>
 <div class="sect3">
 <h4 id="programmatic-access-to-callers-security-context"><a class="anchor" href="#programmatic-access-to-callers-security-context"></a>12.2.5. Programmatic Access to Caller’s Security Context</h4>
 <div class="paragraph">
-<p>Note: In general, security management should
+<p><em>Note: In general, security management should
 be enforced by the container in a manner that is transparent to the
 enterprise beans’ business methods. The security API described in this
 section should be used only in the less frequent situations in which the
 enterprise bean business methods need to access the security context
-information.</p>
+information.</em></p>
 </div>
 <div class="paragraph">
-<p>The
-javax.ejb.EJBContext interface provides two
+<p>The <code>javax.ejb.EJBContext</code> interface provides two
 methods (plus two deprecated methods that were defined in EJB 1.0) that
 allow the Bean Provider to access security information about the
 enterprise bean’s caller.</p>
 </div>
-<div class="paragraph">
-<p>public interface javax.ejb.EJBContext \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">interface</span> <span class="class">javax</span>.ejb.EJBContext {
+    ...
+    <span class="comment">//</span>
+    <span class="comment">// The following two methods allow the EJB class</span>
+    <span class="comment">// to access security information.</span>
+    <span class="comment">//</span>
+    java.security.Principal getCallerPrincipal();
+    <span class="type">boolean</span> isCallerInRole(<span class="predefined-type">String</span> roleName);
+
+    <span class="comment">//</span>
+    <span class="comment">// The following two EJB 1.0 methods are deprecated.</span>
+    <span class="comment">//</span>
+    java.security.Identity getCallerIdentity();
+    <span class="type">boolean</span> isCallerInRole(java.security.Identity role);
+    ...
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>//</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> // The following two methods allow the EJB
-class</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// to access security information.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>//</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> java.security.Principal
-getCallerPrincipal();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>boolean isCallerInRole(String roleName);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>//</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> // The following two EJB 1.0 methods are
-deprecated.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>//</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>java.security.Identity getCallerIdentity();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> boolean
-isCallerInRole(java.security.Identity role);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider
-can invoke the getCallerPrincipal and isCallerInRole methods only in the
+can invoke the <code>getCallerPrincipal</code> and <code>isCallerInRole</code> methods only in the
 enterprise bean’s business methods as specified in
-<a href="Ejb.html#a953">See Operations Allowed in the Methods of a
-Stateful Session Bean</a>, <a href="Ejb.html#a1091">See Operations
-Allowed in the Methods of a Stateless Session Bean</a>,
-<a href="Ejb.html#a1886">See Operations Allowed in the Methods of a
-Message-Driven Bean</a>, <a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>, and
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>. If they are otherwise invoked
+<a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a>, <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>, <a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>,
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a1367">Operations Allowed in the Methods of Entity Class in Container-Managed Persistence</a>, and
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a2625">Operations Allowed in the Methods of Entity Class in Bean-Managed Persistence</a>.
+If they are otherwise invoked
 when no security context exists, they should throw the
-<em>java.lang.IllegalStateException</em> runtime exception.</p>
+<code>java.lang.IllegalStateException</code> runtime exception.</p>
 </div>
 <div class="paragraph">
 <p>The
-getCallerIdentity() and isCallerInRole(Identity role) methods were
+<code>getCallerIdentity()</code> and <code>isCallerInRole(Identity role)</code> methods were
 deprecated in EJB 1.1. The Bean Provider must use the
-getCallerPrincipal() and isCallerInRole(String roleName) methods for new
+<code>getCallerPrincipal()</code> and <code>isCallerInRole(String roleName)</code> methods for new
 enterprise beans.</p>
 </div>
 <div class="paragraph">
 <p>An EJB 1.1 or later compliant container may
 choose to implement the two deprecated methods as follows.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A container that does not want to provide
-support for this deprecated method should throw a RuntimeException (or
-subclass of RuntimeException) from the getCallerIdentity method.</p>
-</div>
-<div class="paragraph">
+support for this deprecated method should throw a <code>RuntimeException</code> (or
+subclass of <code>RuntimeException</code>) from the <code>getCallerIdentity</code> method.</p>
+</li>
+<li>
 <p>A container that wants to provide support for
-the getCallerIdentity method should return an instance of a subclass of
-the java.security.Identity abstract class from the method. The getName
+the <code>getCallerIdentity</code> method should return an instance of a subclass of
+the <code>java.security.Identity</code> abstract class from the method. The <code>getName</code>
 method invoked on the returned object must return the same value that
-getCallerPrincipal().getName() would return.</p>
-</div>
-<div class="paragraph">
+<code>getCallerPrincipal().getName()</code> would return.</p>
+</li>
+<li>
 <p>A container that does not want to provide
-support for this deprecated method should throw a RuntimeException (or
-subclass of RuntimeException) from the isCallerInRole(Identity identity)
+support for this deprecated method should throw a <code>RuntimeException</code> (or
+subclass of <code>RuntimeException</code>) from the <code>isCallerInRole(Identity identity)</code>
 method.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A container that wants to implement the
-isCallerInRole(Identity identity) method should implement it as follows:</p>
+<code>isCallerInRole(Identity identity)</code> method should implement it as follows:</p>
+</li>
+</ul>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> public boolean isCallerInRole(Identity
-identity) \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>return isCallerInRole(identity.getName());</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
+<pre>public boolean isCallerInRole(Identity identity) {
+    return isCallerInRole(identity.getName());
+}</pre>
 </div>
 </div>
 <div class="sect4">
 <h5 id="use-of-getcallerprincipal"><a class="anchor" href="#use-of-getcallerprincipal"></a>12.2.5.1. Use of getCallerPrincipal</h5>
 <div class="paragraph">
-<p>The purpose of the <em>getCallerPrincipal</em>
+<p><em>The purpose of the <code>getCallerPrincipal</code>
 method is to allow the enterprise bean methods to obtain the current
 caller principal’s name. The methods might, for example, use the name as
-a key to information in a database.</p>
+a key to information in a database.</em></p>
 </div>
 <div class="paragraph">
 <p>An enterprise
-bean can invoke the getCallerPrincipal method to obtain a
-java.security.Principal interface representing the current caller. The
+bean can invoke the <code>getCallerPrincipal</code> method to obtain a
+<code>java.security.Principal</code> interface representing the current caller. The
 enterprise bean can then obtain the distinguished name of the caller
-principal using the getName method of the java.security.Principal
+principal using the <code>getName</code> method of the <code>java.security.Principal</code>
 interface. If the security identity has not been established,
-<em>getCallerPrincipal</em> returns the container’s representation of the
+<code>getCallerPrincipal</code> returns the container’s representation of the
 unauthenticated identity.</p>
 </div>
-<div class="paragraph">
-<p>Note that
-getCallerPrincipal returns the principal that represents the caller of
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>Note that
+<code>getCallerPrincipal</code> returns the principal that represents the caller of
 the enterprise bean, not the principal that corresponds to the run-as
-security identity for the bean, if any.</p>
+security identity for the bean, if any.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
-<p>The meaning of the current caller, the Java
+<p>The meaning of the <em>current caller</em>, the Java
 class that implements the
-java.security.Principal interface, and the
-realm of the principals returned by the getCallerPrincipal method depend
+<code>java.security.Principal</code> interface, and the
+realm of the principals returned by the <code>getCallerPrincipal</code> method depend
 on the operational environment and the configuration of the application.</p>
 </div>
 <div class="paragraph">
-<p>An enterprise may have a complex security
+<p><em>An enterprise may have a complex security
 infrastructure that includes multiple security domains. The security
 infrastructure may perform one or more mapping of principals on the path
 from an EJB caller to the EJB object. For example, an employee accessing
@@ -21238,108 +21180,51 @@ password (basic authentication), and the security infrastructure may
 authenticate the principal and then map the principal to a Kerberos
 principal that is used on the enterprise’s intranet before delivering
 the method invocation to the EJB object. If the security infrastructure
-performs principal mapping, the <em>getCallerPrincipal</em> method returns the
+performs principal mapping, the <code>getCallerPrincipal</code> method returns the
 principal that is the result of the mapping, not the original caller
-principal. (In the previous example, <em>getCallerPrincipal</em> would return
+principal. (In the previous example, <code>getCallerPrincipal</code> would return
 the Kerberos principal.) The management of the security infrastructure,
 such as principal mapping, is performed by the System Administrator
-role; it is beyond the scope of the EJB specification.</p>
+role; it is beyond the scope of the EJB specification.</em></p>
 </div>
 <div class="paragraph">
 <p>The following code sample illustrates the use
-of the getCallerPrincipal() method.</p>
+of the <code>getCallerPrincipal()</code> method.</p>
 </div>
-<div class="paragraph">
-<p>@Stateless public class EmployeeServiceBean</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>implements EmployeeService\{</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">EmployeeServiceBean</span> <span class="directive">implements</span> EmployeeService {
+
+    <span class="annotation">@Resource</span>
+    SessionContext ctx;
+
+    <span class="annotation">@PersistenceContext</span>
+    EntityManager em;
+
+    <span class="directive">public</span> <span class="type">void</span> changePhoneNumber(...) {
+        ...
+        <span class="comment">// obtain the caller principal.</span>
+        callerPrincipal = ctx.getCallerPrincipal();
+
+        <span class="comment">// obtain the caller principal’s name.</span>
+        callerKey = callerPrincipal.getName();
+
+        <span class="comment">// use callerKey as primary key to find EmployeeRecord</span>
+        EmployeeRecord myEmployeeRecord =
+            em.find(EmployeeRecord.class, callerKey);
+
+        <span class="comment">// update phone number</span>
+        myEmployeeRecord.setPhoneNumber(...);
+        ...
+    }
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>@Resource SessionContext ctx;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>@PersistenceContext EntityManager em;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void changePhoneNumber(...) \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// obtain the caller principal.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>callerPrincipal = ctx.getCallerPrincipal();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// obtain the caller principal’s name.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>callerKey = callerPrincipal.getName();</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> // use callerKey as primary key to find
-EmployeeRecord</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>EmployeeRecord myEmployeeRecord =</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>em.find(EmployeeRecord.class, callerKey);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// update phone number</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>myEmployeeRecord.setPhoneNumber(...);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 <div class="paragraph">
 <p>In the previous example, the enterprise bean
 obtains the principal name of the current caller and uses it as the
-primary key to locate an <em>EmployeeRecord</em> entity. This example assumes
+primary key to locate an <code>EmployeeRecord</code> entity. This example assumes
 that application has been deployed such that the current caller
 principal contains the primary key used for the identification of
 employees (e.g., employee number).</p>
@@ -21348,114 +21233,72 @@ employees (e.g., employee number).</p>
 <div class="sect4">
 <h5 id="use-of-iscallerinrole"><a class="anchor" href="#use-of-iscallerinrole"></a>12.2.5.2. Use of isCallerInRole</h5>
 <div class="paragraph">
-<p>The main purpose of the
-<em>isCallerInRole(String</em> <em>roleName)</em> method is to allow the Bean Provider
+<p><em>The main purpose of the
+<code>isCallerInRole(String roleName)</code> method is to allow the Bean Provider
 to code the security checks that cannot be easily defined declaratively
 in the deployment descriptor using method permissions. Such a check
 might impose a role-based limit on a request, or it might depend on
-information stored in the database.</p>
+information stored in the database.</em></p>
 </div>
 <div class="paragraph">
 <p>The enterprise
-bean code can use the isCallerInRole method to test whether the current
+bean code can use the <code>isCallerInRole</code> method to test whether the current
 caller has been assigned to a given security role. Security roles are
 defined by the Container, Bean Provider or the Application Assembler
-(see Subsection <a href="Ejb.html#a5130">See Security Roles</a>), and
+(see <a href="#a5130">Security Roles</a>), and
 are assigned to principals or principal groups that exist in the
 operational environment by the Deployer.</p>
 </div>
 <div class="paragraph">
 <p>The enterprise bean code can also use the
-isCallerInRole method to test whether the current caller has been
+<code>isCallerInRole</code> method to test whether the current caller has been
 authenticated; and without further consideration of whether the
 authenticated caller has been assigned to one or more specific security
-roles. To perform this test, the code passes the value “**” as the
-argument to the isCallerInRole method. As is the case with all calls to
-the isCallerInRole method, the run-time return value of the call will
+roles. To perform this test, the code passes the value <code>"**"</code> as the
+argument to the <code>isCallerInRole</code> method. As is the case with all calls to
+the <code>isCallerInRole</code> method, the run-time return value of the call will
 depend on the security role linked to the reference (as defined in
-section <a href="Ejb.html#a5293">See Linking Security Role References
-to Security Roles</a>) and on the principal-to-role mapping configured for
-the linked role (as defined in section <a href="Ejb.html#a5371">See
-Assignment of Security Roles</a>).</p>
+<a href="#a5293">Linking Security Role References to Security Roles</a>) and on the principal-to-role mapping configured for
+the linked role (as defined in <a href="#a5371">Assignment of Security Roles</a>).</p>
 </div>
-<div class="paragraph">
-<p>Note that isCallerInRole(String roleName)
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><em>Note that <code>isCallerInRole(String roleName)</code>
 tests the principal that represents the caller of the enterprise bean,
 not the principal that corresponds to the run-as security identity for
-the bean, if any.</p>
+the bean, if any.</em></p>
+</dd>
+</dl>
 </div>
 <div class="paragraph">
 <p>The following code sample illustrates the use
-of the isCallerInRole(String roleName) method.</p>
+of the <code>isCallerInRole(String roleName)</code> method.</p>
 </div>
-<div class="paragraph">
-<p>@Stateless public class PayrollBean
-implements Payroll \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Resource SessionContext ctx;</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">PayrollBean</span> <span class="directive">implements</span> Payroll {
+
+    <span class="annotation">@Resource</span>
+    SessionContext ctx;
+
+    <span class="directive">public</span> <span class="type">void</span> updateEmployeeInfo(EmplInfo info) {
+
+        oldInfo = ... read from database;
+
+        <span class="comment">// The salary field can be changed only by callers</span>
+        <span class="comment">// who have the security role &quot;payroll&quot;</span>
+        <span class="keyword">if</span> (info.salary != oldInfo.salary &amp;&amp;
+            !ctx.isCallerInRole(<span class="string"><span class="delimiter">&quot;</span><span class="content">payroll</span><span class="delimiter">&quot;</span></span>)) {
+            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="exception">SecurityException</span>(...);
+        }
+        ...
+    }
+    ...
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public void updateEmployeeInfo(EmplInfo
-info) \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>oldInfo = ... read from database;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> // The salary field can be changed only by
-callers</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// who have the security role "payroll"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>if (info.salary != oldInfo.salary &amp;&amp;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>!ctx.isCallerInRole("payroll")) \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>throw new SecurityException(...);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 </div>
 <div class="sect4">
@@ -21464,16 +21307,16 @@ callers</pre>
 <p>The Bean Provider
 is responsible for declaring all names that may be used to reference
 security roles from the enterprise bean code. The names of security
-roles defined in the deployment descriptor or used in the RolesAllowed
+roles defined in the deployment descriptor or used in the <code>RolesAllowed</code>
 annotation are implicitly declared. The Bean Provider is responsible for
-using either the <em>DeclareRoles</em> annotation or the security-role-ref
+using either the <code>DeclareRoles</code> annotation or the <code>security-role-ref</code>
 elements of the deployment descriptor to declare all such names that are
 not implicitly declared.</p>
 </div>
 <div class="paragraph">
-<p>The <em>DeclareRoles</em> annotation is specified on
+<p>The <code>DeclareRoles</code> annotation is specified on
 a bean class, where it serves to declare the names of (otherwise
-undeclared) roles that may be tested by calling <em>isCallerInRole</em> from
+undeclared) roles that may be tested by calling <code>isCallerInRole</code> from
 within the methods of the annotated class. Declaring the security roles
 allows the Bean Provider, Application Assembler, or Deployer to link
 security role names used in the code to the security roles defined for
@@ -21482,230 +21325,111 @@ security role name as used in the code will be assumed to correspond to
 a security role of the same name.</p>
 </div>
 <div class="paragraph">
-<p>When the Bean Provider uses the DeclareRoles
+<p>When the Bean Provider uses the <code>DeclareRoles</code>
 annotation to declare the name of a role used as a parameter to the
-isCallerInRole(String roleName) method, the declared name must be the
+<code>isCallerInRole(String roleName)</code> method, the declared name must be the
 same as the parameter value. The Bean Provider may optionally provide a
 description of the named security roles in the description element of
-the <em>DeclareRoles</em> annotation.</p>
+the <code>DeclareRoles</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>In the following example, the <em>DeclareRoles</em>
-annotation is used to indicate that the enterprise bean AardvarkPayroll
-makes the security check using isCallerInRole("payroll") in its business
+<p>In the following example, the <code>DeclareRoles</code>
+annotation is used to indicate that the enterprise bean <code>AardvarkPayroll</code>
+makes the security check using <code>isCallerInRole("payroll")</code> in its business
 method.</p>
 </div>
-<div class="paragraph">
-<p>@DeclareRoles("payroll")</p>
-</div>
-<div class="paragraph">
-<p>@Stateless public class PayrollBean
-implements Payroll \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Resource SessionContext ctx;</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@DeclareRoles</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">payroll</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">PayrollBean</span> <span class="directive">implements</span> Payroll {
+
+    <span class="annotation">@Resource</span>
+    SessionContext ctx;
+
+    <span class="directive">public</span> <span class="type">void</span> updateEmployeeInfo(EmplInfo info) {
+
+        oldInfo = ... read from database;
+        <span class="comment">// The salary field can be changed only by callers</span>
+        <span class="comment">// who have the security role &quot;payroll&quot;</span>
+        <span class="keyword">if</span> (info.salary != oldInfo.salary &amp;&amp;
+            !ctx.isCallerInRole(<span class="string"><span class="delimiter">&quot;</span><span class="content">payroll</span><span class="delimiter">&quot;</span></span>)) {
+            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="exception">SecurityException</span>(...);
+        }
+        ...
+    }
+    ...
+}</code></pre>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> public void updateEmployeeInfo(EmplInfo
-info) \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>oldInfo = ... read from database;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> // The salary field can be changed only by
-callers</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>// who have the security role "payroll"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>if (info.salary != oldInfo.salary &amp;&amp;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>!ctx.isCallerInRole("payroll")) \{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>throw new SecurityException(...);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider must use the
-<em>security-role-ref</em> elements of the deployment descriptor to declare any
+<code>security-role-ref</code> elements of the deployment descriptor to declare any
 security roles referenced in the code and not otherwise declared. The
-security-role-ref elements are defined as follows:</p>
+<code>security-role-ref</code> elements are defined as follows:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Declare the name of the security role using
-the role-name element. The name must be the security role name that is
-used as a parameter to the isCallerInRole(String <em>roleName</em> ) method.</p>
-</div>
-<div class="paragraph">
+the <code>role-name</code> element. The name must be the security role name that is
+used as a parameter to the <code>isCallerInRole(String roleName)</code> method.</p>
+</li>
+<li>
 <p>Optionally provide a description of the
-security role in the description element.</p>
+security role in the <code>description</code> element.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The following example illustrates how an
 enterprise bean’s references to security roles are declared in the
 deployment descriptor.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;ejb-class&gt;com.aardvark.payroll.PayrollBean&lt;/ejb-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>This security role should be assigned to the</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>employees of the payroll department who are</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>allowed to update employees’ salaries.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;payroll&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-role-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="xml">    ...
+    <span class="tag">&lt;enterprise-beans&gt;</span>
+        ...
+        <span class="tag">&lt;session&gt;</span>
+            <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+            <span class="tag">&lt;ejb-class&gt;</span>com.aardvark.payroll.PayrollBean<span class="tag">&lt;/ejb-class&gt;</span>
+            ...
+            <span class="tag">&lt;security-role-ref&gt;</span>
+                <span class="tag">&lt;description&gt;</span>
+                    This security role should be assigned to the
+                    employees of the payroll department who are
+                    allowed to update employees’ salaries.
+                <span class="tag">&lt;/description&gt;</span>
+                <span class="tag">&lt;role-name&gt;</span>payroll<span class="tag">&lt;/role-name&gt;</span>
+            <span class="tag">&lt;/security-role-ref&gt;</span>
+            ...
+        <span class="tag">&lt;/session&gt;</span>
+        ...
+    <span class="tag">&lt;/enterprise-beans&gt;</span>
+    ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The deployment descriptor above indicates
-that the enterprise bean AardvarkPayroll makes the security check using
-isCallerInRole("payroll") in its business method.</p>
+that the enterprise bean <code>AardvarkPayroll</code> makes the security check using
+<code>isCallerInRole("payroll")</code> in its business method.</p>
 </div>
 <div class="paragraph">
 <p>A security role reference, including the name
 defined by the reference, is scoped to the component whose bean class
-contains the <em>DeclareRoles</em> metadata annotation or whose deployment
-descriptor element contains the security-role-ref deployment descriptor
+contains the <code>DeclareRoles</code> metadata annotation or whose deployment
+descriptor element contains the <code>security-role-ref</code> deployment descriptor
 element.</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider (or Application Assembler)
-may also use the security-role-ref elements for those references that
+may also use the <code>security-role-ref</code> elements for those references that
 were declared in annotations and which the Bean Provider wishes to have
-linked to a security-role whose name differs from the reference value.
+linked to a <code>security-role</code> whose name differs from the reference value.
 If a security role reference is not linked to a security role in this
 way, the container must map the reference name to the security role of
-the same name. See section <a href="Ejb.html#a5293">See Linking
-Security Role References to Security Roles</a> for a description of how
+the same name. See <a href="#a5293">Linking Security Role References to Security Roles</a> for a description of how
 security role references are linked to security roles.</p>
 </div>
 </div>
@@ -21716,12 +21440,12 @@ security role references are linked to security roles.</p>
 <div class="paragraph">
 <p>The Bean Provider
 and Application Assembler (which could be the same party as the Bean
-Provider) may define a security view of the enterprise beans contained
+Provider) may define a <em>security view</em> of the enterprise beans contained
 in the ejb-jar file. Providing the security view is optional for the
 Bean Provider and Application Assembler.</p>
 </div>
 <div class="paragraph">
-<p>The main reason for providing the security
+<p><em>The main reason for providing the security
 view of the enterprise beans is to simplify the Deployer’s job. In the
 absence of a security view of an application, the Deployer needs
 detailed knowledge of the application in order to deploy the application
@@ -21729,34 +21453,34 @@ securely. For example, the Deployer would have to know what each
 business method does to determine which users can call it. The security
 view defined by the Bean Provider or Application Assembler presents a
 more consolidated view to the Deployer, allowing the Deployer to be less
-familiar with the application.</p>
+familiar with the application.</em></p>
 </div>
 <div class="paragraph">
 <p>The security view consists of a set of
-security roles. A security role is a
+<em>security roles</em>. A security role is a
 semantic grouping of permissions that a given type of users of an
 application must have in order to successfully use the application.</p>
 </div>
 <div class="paragraph">
 <p>The Bean Provider
-or Application Assembler defines method permissions for each security
+or Application Assembler defines <em>method permissions</em> for each security
 role. A method permission is a permission to
 invoke a specified group of methods of the enterprise beans’ business
 interface, no-interface view, home interface, component interface,
 and/or web service endpoint.</p>
 </div>
 <div class="paragraph">
-<p>It is important to keep in mind that the
+<p><em>It is important to keep in mind that the
 security roles are used to define the logical security view of an
 application. They should not be confused with the user groups, users,
 principals, and other concepts that exist in the target enterprise’s
-operational environment.</p>
+operational environment.</em></p>
 </div>
 <div class="paragraph">
-<p>In special cases, a qualified Deployer may
+<p><em>In special cases, a qualified Deployer may
 change the definition of the security roles for an application, or
 completely ignore them and secure the application using a different
-mechanism that is specific to the operational environment.</p>
+mechanism that is specific to the operational environment.</em></p>
 </div>
 <div class="sect3">
 <h4 id="a5130"><a class="anchor" href="#a5130"></a>12.3.1. Security Roles</h4>
@@ -21772,7 +21496,7 @@ security view of the application.</p>
 <div class="paragraph">
 <p>Because the Bean Provider and Application
 Assembler do not, in general, know the security environment of the
-operational environment, the security roles are meant to be logical
+operational environment, the security roles are meant to be <em>logical</em>
 roles (or actors), each representing a type of user that should have the
 same access rights to the application.</p>
 </div>
@@ -21782,7 +21506,7 @@ user accounts defined in the operational environment to the security
 roles defined by the Bean Provider and Application Assembler.</p>
 </div>
 <div class="paragraph">
-<p>A security role with the name “<strong>” is defined
+<p>A security role with the name <code>"**"</code> is defined
 by the Container, and is intended to be used by the Bean Provider,
 Application Assembler, or Deployer to indicate that the caller must log
 on or authenticate to invoke a method or to perform some processing
@@ -21795,8 +21519,8 @@ role. Moreover the assignment of principals to the container role with
 this name should not be subject to reconfiguration that would remove any
 authenticated user from membership in the container role. That said,
 when an application defines a security role in its deployment descriptor
-with the name “</strong>”, this application role is applied wherever the
-application or its deployment descriptor refers to a role named “**”.</p>
+with the name <code>"**"</code>, this application role is applied wherever the
+application or its deployment descriptor refers to a role named <code>"**"</code>.</p>
 </div>
 <div class="paragraph">
 <p>Defining the security roles in the metadata
@@ -21807,236 +21531,83 @@ deployment related instructions to the Deployer.</p>
 </div>
 <div class="paragraph">
 <p>If Java language metadata annotations are
-used, the Bean Provider uses the <em>DeclareRoles</em> and <em>RolesAllowed</em>
+used, the Bean Provider uses the <code>DeclareRoles</code> and <code>RolesAllowed</code>
 annotations to define the security roles. The set of security roles used
 by the application is taken to be the aggregation of the security roles
-defined by the security role names used in the <em>DeclareRoles</em> and
-<em>RolesAllowed</em> annotations. The Bean Provider may augment the set of
+defined by the security role names used in the <code>DeclareRoles</code> and
+<code>RolesAllowed</code> annotations. The Bean Provider may augment the set of
 security roles defined for the application by annotations in this way by
-means of the <em>security-role</em> deployment descriptor element.</p>
+means of the <code>security-role</code> deployment descriptor element.</p>
 </div>
 <div class="paragraph">
 <p>If the deployment descriptor is used, the
-Bean Provider and/or Application Assembler uses the <em>security-role</em>
+Bean Provider and/or Application Assembler uses the <code>security-role</code>
 deployment descriptor element as follows:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Define each security role using a
-security-role element. An application
-security role with name “**” should not be defined as the Container must
+<code>security-role</code> element. An application
+security role with name <code>"**"</code> should not be defined as the Container must
 provide a container security role with this name.</p>
-</div>
-<div class="paragraph">
-<p>Use the role-name element to define the name
-of the security role.</p>
-</div>
-<div class="paragraph">
-<p>Optionally, use the description element to
+</li>
+<li>
+<p>Use the <code>role-name</code> element to define the name of the security role.</p>
+</li>
+<li>
+<p>Optionally, use the <code>description</code> element to
 provide a description of a security role.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The following example illustrates security
 roles definition in a deployment descriptor.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="xml">...
+<span class="tag">&lt;assembly-descriptor&gt;</span>
+    <span class="tag">&lt;security-role&gt;</span>
+        <span class="tag">&lt;description&gt;</span>
+            This role includes the employees of the
+            enterprise who are allowed to access the
+            employee self-service application. This role
+            is allowed only to access his/her own
+            information.
+        <span class="tag">&lt;/description&gt;</span>
+        <span class="tag">&lt;role-name&gt;</span>employee<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;/security-role&gt;</span>
+    <span class="tag">&lt;security-role&gt;</span>
+        <span class="tag">&lt;description&gt;</span>
+            This role includes the employees of the human
+            resources department. The role is allowed to
+            view and update all employee records.
+        <span class="tag">&lt;/description&gt;</span>
+        <span class="tag">&lt;role-name&gt;</span>hr-department<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;/security-role&gt;</span>
+    <span class="tag">&lt;security-role&gt;</span>
+        <span class="tag">&lt;description&gt;</span>
+            This role includes the employees of the payroll
+            department. The role is allowed to view and
+            update the payroll entry for any employee.
+        <span class="tag">&lt;/description&gt;</span>
+        <span class="tag">&lt;role-name&gt;</span>payroll-department<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;/security-role&gt;</span>
+    <span class="tag">&lt;security-role&gt;</span>
+        <span class="tag">&lt;description&gt;</span>
+            This role should be assigned to the personnel
+            authorized to perform administrative functions
+            for the employee self-service application.
+            This role does not have direct access to
+            sensitive employee and payroll information.
+        <span class="tag">&lt;/description&gt;</span>
+        <span class="tag">&lt;role-name&gt;</span>admin<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;/security-role&gt;</span>
+    ...
+<span class="tag">&lt;/assembly-descriptor&gt;</span></code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>&lt;assembly-descriptor&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>This role includes the employees of the</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>enterprise who are allowed to access the</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>employee self-service application. This role</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>is allowed only to access his/her own</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>information.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;employee&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> This role includes the employees of the
-human</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>resources department. The role is allowed to</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>view and update all employee records.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;hr-department&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> This role includes the employees of the
-payroll</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>department. The role is allowed to view and</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>update the payroll entry for any employee.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;payroll-department&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> This role should be assigned to the
-personnel</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> authorized to perform administrative
-functions</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>for the employee self-service application.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>This role does not have direct access to</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>sensitive employee and payroll information.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;admin&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;/assembly-descriptor&gt;</p>
 </div>
 </div>
 <div class="sect3">
@@ -22060,9 +21631,9 @@ views, and/or web service endpoints of session and
 entity <sup class="footnote" id="_footnote_a10328">[<a id="_footnoteref_88" class="footnote" href="#_footnotedef_88" title="View footnote.">88</a>]</sup> beans,
 including all their
 superinterfaces (including the methods of the EJBHome and EJBObject
-interfaces and/or EJBLocalHome and EJBLocalObject interfaces). The
-method permissions relation includes the pair (R, M) if and only if the
-security role R is allowed to invoke the method M.</p>
+interfaces and/or <code>EJBLocalHome</code> and <code>EJBLocalObject</code> interfaces). The
+method permissions relation includes the pair <em>(R, M)</em> if and only if the
+security role <em>R</em> is allowed to invoke the method <em>M</em>.</p>
 </div>
 <div class="sect4">
 <h5 id="specification-of-method-permissions-with-metadata-annotations"><a class="anchor" href="#specification-of-method-permissions-with-metadata-annotations"></a>12.3.2.1. Specification of Method Permissions with Metadata Annotations</h5>
@@ -22077,19 +21648,19 @@ bean class may be specified on the class, the business methods of the
 class, or both.</p>
 </div>
 <div class="paragraph">
-<p>The <em>RolesAllowed</em> , <em>PermitAll</em> , and
-<em>DenyAll</em> annotations are used to specify method permissions. The value
-of the <em>RolesAllowed</em> annotation is a list of security role names to be
+<p>The <code>RolesAllowed</code>, <code>PermitAll</code>, and
+<code>DenyAll</code> annotations are used to specify method permissions. The value
+of the <code>RolesAllowed</code> annotation is a list of security role names to be
 mapped to the security roles that are permitted to execute the specified
-method(s). The <em>PermitAll</em> annotation specifies that all security roles,
+method(s). The <code>PermitAll</code> annotation specifies that all security roles,
 including any unauthenticated roles, are permitted to execute the
-specified method(s). The <em>DenyAll</em> annotation specifies that no security
+specified method(s). The <code>DenyAll</code> annotation specifies that no security
 roles, including any unauthenticated roles, are permitted to execute the
 specified method(s).</p>
 </div>
 <div class="paragraph">
-<p>Specifying the <em>RolesAllowed</em> or <em>PermitAll</em>
-or DenyAll annotation on the bean class means that it applies to all
+<p>Specifying the <code>RolesAllowed</code> or <code>PermitAll</code>
+or <code>DenyAll</code> annotation on the bean class means that it applies to all
 applicable business methods of the class.</p>
 </div>
 <div class="paragraph">
@@ -22101,84 +21672,53 @@ specified on the bean class.</p>
 <p>If the bean class has superclasses, the
 following additional rules apply.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A method permissions value specified on a
 superclass <em>S</em> applies to the business methods defined by <em>S</em> .</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A method permissions value may be specified
 on a business method <em>M</em> defined by class <em>S</em> to override for method <em>M</em>
 the method permissions value explicitly or implicitly specified on the
-class <em>S</em> .</p>
-</div>
-<div class="paragraph">
+class <em>S</em>.</p>
+</li>
+<li>
 <p>If a method <em>M</em> of class <em>S</em> overrides a
-business method defined by a superclass of <em>S</em> , the method permissions
-value of <em>M</em> is determined by the above rules as applied to class <em>S</em> .</p>
+business method defined by a superclass of <em>S</em>, the method permissions
+value of <em>M</em> is determined by the above rules as applied to class <em>S</em>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Example:</p>
 </div>
-<div class="paragraph">
-<p>@RolesAllowed("admin")</p>
-</div>
-<div class="paragraph">
-<p>public class SomeClass \{</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public void aMethod () \{...}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void bMethod () \{...}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@RolesAllowed</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">admin</span><span class="delimiter">&quot;</span></span>)
+<span class="directive">public</span> <span class="type">class</span> <span class="class">SomeClass</span> {
+    <span class="directive">public</span> <span class="type">void</span> aMethod () {...}
+    <span class="directive">public</span> <span class="type">void</span> bMethod () {...}
+    ...
+}
+
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">MyBean</span> <span class="directive">extends</span> SomeClass <span class="directive">implements</span> A {
+    <span class="annotation">@RolesAllowed</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">HR</span><span class="delimiter">&quot;</span></span>)
+    <span class="directive">public</span> <span class="type">void</span> aMethod () {...}
+
+    <span class="directive">public</span> <span class="type">void</span> cMethod () {...}
+    ...
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>@Stateless public class MyBean extends
-SomeClass implements A \{</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>@RolesAllowed("HR")</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void aMethod () \{...}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>public void cMethod () \{...}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>}</p>
-</div>
-<div class="paragraph">
-<p>Assuming <em>aMethod</em> , <em>bMethod</em> , <em>cMethod</em>
-are methods of business interface <em>A</em> , the method permissions values of
-methods <em>aMethod</em> and <em>bMethod</em> are <em>RolesAllowed(</em> " <em>HR</em> " <em>)</em> and
-<em>RolesAllowed(</em> " <em>admin</em> " <em>)</em> respectively. The method permissions for
-method <em>cMethod</em> have not been specified (see Sections
-<a href="Ejb.html#a5219">See Specification of Method Permissions in
-the Deployment Descriptor</a> and <a href="Ejb.html#a5291">See
-Unspecified Method Permissions</a>) .</p>
+<p>Assuming <code>aMethod</code>, <code>bMethod</code>, <code>cMethod</code>
+are methods of business interface <code>A</code>, the method permissions values of
+methods <code>aMethod</code> and <code>bMethod</code> are <code>RolesAllowed("HR")</code> and
+<code>RolesAllowed("admin")</code> respectively. The method permissions for
+method <code>cMethod</code> have not been specified (see <a href="#a5219">Specification of Method Permissions in the Deployment Descriptor</a> and <a href="#a5291">Unspecified Method Permissions</a>).</p>
 </div>
 </div>
 <div class="sect4">
@@ -22202,119 +21742,131 @@ granularity of overriding is on the per-method basis.</p>
 <div class="paragraph">
 <p>The Bean Provider
 or Application Assembler defines the method permissions relation in the
-deployment descriptor using the method-permission elements as follows.</p>
+deployment descriptor using the <code>method-permission</code> elements as follows.</p>
 </div>
-<div class="paragraph">
-<p>Each method-permission element includes a
+<div class="ulist">
+<ul>
+<li>
+<p>Each <code>method-permission</code> element includes a
 list of one or more security roles and a list of one or more methods.
 All the listed security roles are allowed to invoke all the listed
-methods. Each security role in the list is identified by the role-name
+methods. Each security role in the list is identified by the <code>role-name</code>
 element, and each method (or a set of methods, as described below) is
-identified by the method element. An optional description can be
-associated with a method-permission element using the description
+identified by the <code>method</code> element. An optional description can be
+associated with a <code>method-permission</code> element using the description
 element.</p>
-</div>
-<div class="paragraph">
-<p>If the role name “**” is included in the list
+</li>
+<li>
+<p>If the role name <code>"**"</code> is included in the list
 of allowed roles, and the application has not defined in its deployment
 descriptor an application security role with this name, then the list of
 allowed roles includes every and any authenticated user.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The method permissions relation is defined as
 the union of all the method permissions defined in the individual
-method-permission elements.</p>
-</div>
-<div class="paragraph">
+<code>method-permission</code> elements.</p>
+</li>
+<li>
 <p>A security role or a method may appear in
-multiple method-permission elements.</p>
+multiple <code>method-permission</code> elements.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The Bean Provider or Application Assembler
 can indicate that all roles, including any unauthenticated roles, are
 permitted to execute one or more specified methods (i.e., the methods
 should not be “checked” for authorization prior to invocation by the
-container). The <em>unchecked</em> element is used instead of a role name in
-the <em>method-permission</em> element to indicate that all roles, including
+container). The <code>unchecked</code> element is used instead of a role name in
+the <code>method-permission</code> element to indicate that all roles, including
 any unauthenticated roles, are permitted.</p>
 </div>
 <div class="paragraph">
 <p>If the method permission relation specifies
-both the <em>unchecked</em> element for a given method and one or more security
+both the <code>unchecked</code> element for a given method and one or more security
 roles, all roles are permitted for the specified methods.</p>
 </div>
 <div class="paragraph">
-<p>The <em>exclude-list</em>
- element can be used to indicate the set of
+<p>The <code>exclude-list</code> element can be used to indicate the set of
 methods that should not be called. The Deployer should configure the
 enterprise bean’s security such that no access is permitted to any
-method contained in the <em>exclude-list</em> .</p>
+method contained in the <code>exclude-list</code>.</p>
 </div>
 <div class="paragraph">
 <p>If a given method is specified both in the
-<em>exclude-list</em> element and in the method permission relation, the
+<code>exclude-list</code> element and in the method permission relation, the
 Deployer should configure the enterprise bean’s security such that no
 access is permitted to the method.</p>
 </div>
 <div class="paragraph">
 <p>The method
-element uses the ejb-name, method-name, and method-params elements to
+element uses the <code>ejb-name</code>, <code>method-name</code>, and <code>method-params</code> elements to
 denote one or more methods of an enterprise bean’s business interface,
 home interface, component interface, no-interface view, and/or web
 service endpoint. There are three legal styles for composing the method
 element:</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p><strong>Style 1:</strong></p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre> +
-&lt;method&gt; +
-&lt;ejb-name&gt;EJBNAME&lt;/ejb-name&gt; +
-&lt;method-name&gt;*&lt;/method-name&gt; +
-&lt;/method&gt; +
- +
-This style is used for referring to all of the methods of the business,
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;method&gt;</span>
+    <span class="tag">&lt;ejb-name&gt;</span><em>EJBNAME</em><span class="tag">&lt;/ejb-name&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span><em>*</em><span class="tag">&lt;/method-name&gt;</span>
+<span class="tag">&lt;/method&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This style is used for referring to all of the methods of the business,
 home, and component interfaces, no-interface view, and web service
-endpoint of a specified enterprise bean.</pre>
+endpoint of a specified enterprise bean.</p>
 </div>
+<div class="paragraph">
+<p><strong>Style 2:</strong></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> +
-&lt;method&gt; +
-&lt;ejb-name&gt;EJBNAME&lt;/ejb-name&gt; +
-&lt;method-name&gt;METHOD&lt;/method-name&gt; +
-&lt;/method&gt; +
- +
-This style is used for referring to a specified method of the business,
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;method&gt;</span>
+    <span class="tag">&lt;ejb-name&gt;</span><em>EJBNAME</em><span class="tag">&lt;/ejb-name&gt;</span>
+    <span class="tag">&lt;method-name&gt;</span><em>METHOD</em><span class="tag">&lt;/method-name&gt;</span>
+<span class="tag">&lt;/method&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This style is used for referring to a specified method of the business,
 home, or component interface, no-interface view, or web service endpoint
 of the specified enterprise bean. If there are multiple methods with the
 same overloaded name, this style refers to all of the overloaded
-methods.</pre>
+methods.</p>
 </div>
+<div class="paragraph">
+<p><strong>Style 3:</strong></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> +
-&lt;method&gt; +
-&lt;ejb-name&gt;EJBNAME&lt;/ejb-name&gt; +
-&lt;method-name&gt;METHOD&lt;/method-name&gt; +
-&lt;method-params&gt; +
-&lt;method-param&gt;PARAMETER_1&lt;/method-param&gt; +
-... +
-&lt;method-param&gt;PARAMETER_N&lt;/method-param&gt; +
-&lt;/method-params&gt; +
-&lt;/method&gt; +
- +
-This style is used to refer to a specified method within a set of
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;method&gt;</span>
+    <span class="tag">&lt;ejb-name&gt;</span><em>EJBNAME</em><span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span><em>METHOD</em><span class="tag">&lt;/method-name&gt;</span>
+        <span class="tag">&lt;method-params&gt;</span>
+        <span class="tag">&lt;method-param&gt;</span><em>PARAMETER_1</em><span class="tag">&lt;/method-param&gt;</span>
+        ...
+        <span class="tag">&lt;method-param&gt;</span><em>PARAMETER_N</em><span class="tag">&lt;/method-param&gt;</span>
+    <span class="tag">&lt;/method-params&gt;</span>
+<span class="tag">&lt;/method&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This style is used to refer to a specified method within a set of
 methods with an overloaded name. The method must be defined in the
 specified enterprise bean’s business, home, or component interface,
 no-interface view, or web service endpoint. If there are multiple
 methods with the same overloaded name, however, this style refers to all
-of the overloaded methods.</pre>
-</div>
+of the overloaded methods.</p>
 </div>
 <div class="paragraph">
-<p>The optional <em>method-intf</em> element can be
+<p>The optional <code>method-intf</code> element can be
 used to differentiate between methods with the same name and signature
 that are multiply defined across the business, component, or home
 interfaces, no-interface view, and/or web service endpoint. If the same
@@ -22330,250 +21882,58 @@ interfaces.</p>
 security roles are assigned method permissions in the deployment
 descriptor:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;employee&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;EmployeeService&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;*&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;employee&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;findByPrimaryKey&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;getEmployeeInfo&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;method-name&gt;updateEmployeeInfo&lt;/method-name&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;payroll-department&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;findByPrimaryKey&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;getEmployeeInfo&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;method-name&gt;updateEmployeeInfo&lt;/method-name&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;updateSalary&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;admin&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;EmployeeServiceAdmin&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;method-name&gt;*&lt;/method-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/method-permission&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="xml">...
+<span class="tag">&lt;method-permission&gt;</span>
+    <span class="tag">&lt;role-name&gt;</span>employee<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>EmployeeService<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>*<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+<span class="tag">&lt;/method-permission&gt;</span>
+<span class="tag">&lt;method-permission&gt;</span>
+    <span class="tag">&lt;role-name&gt;</span>employee<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>findByPrimaryKey<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>getEmployeeInfo<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>updateEmployeeInfo<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+<span class="tag">&lt;/method-permission&gt;</span>
+<span class="tag">&lt;method-permission&gt;</span>
+    <span class="tag">&lt;role-name&gt;</span>payroll-department<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>findByPrimaryKey<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>getEmployeeInfo<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>updateEmployeeInfo<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>updateSalary<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+<span class="tag">&lt;/method-permission&gt;</span>
+<span class="tag">&lt;method-permission&gt;</span>
+    <span class="tag">&lt;role-name&gt;</span>admin<span class="tag">&lt;/role-name&gt;</span>
+    <span class="tag">&lt;method&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>EmployeeServiceAdmin<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;method-name&gt;</span>*<span class="tag">&lt;/method-name&gt;</span>
+    <span class="tag">&lt;/method&gt;</span>
+<span class="tag">&lt;/method-permission&gt;</span>
+ ...</code></pre>
 </div>
 </div>
 </div>
@@ -22581,12 +21941,12 @@ descriptor:</p>
 <h5 id="a5291"><a class="anchor" href="#a5291"></a>12.3.2.3. Unspecified Method Permissions</h5>
 <div class="paragraph">
 <p>It is possible that some methods are not
-assigned to any security roles nor annotated as <em>DenyAll</em> or contained
-in the <em>exclude-list</em> element. In this case, the Deployer should assign
+assigned to any security roles nor annotated as <code>DenyAll</code> or contained
+in the <code>exclude-list</code> element. In this case, the Deployer should assign
 method permissions for all of the unspecified methods, either by
-assigning them to security roles, or by marking them as unchecked. If
+assigning them to security roles, or by marking them as <code>unchecked</code>. If
 the Deployer does not assigned method permissions to the unspecified
-methods, those methods must be treated by the container as <em>unchecked</em> .</p>
+methods, those methods must be treated by the container as <code>unchecked</code>.</p>
 </div>
 </div>
 </div>
@@ -22597,150 +21957,59 @@ methods, those methods must be treated by the container as <em>unchecked</em> .<
 roles are linked to the security roles defined for the application. In
 the absence of any explicit linking, a security role reference will be
 linked to a security role having the same name. This requirement also
-applies to role references with value “<strong>”, and an explicit mapping
-should only be defined for a role reference with value “</strong>” when the
+applies to role references with value <code>"**"</code>, and an explicit mapping
+should only be defined for a role reference with value <code>"**"</code> when the
 reference needs to be linked to an application role with name other than
-“**”.</p>
+<code>"**"</code>.</p>
 </div>
 <div class="paragraph">
 <p>The Application Assembler uses a
-security-role-ref element to explicitly link a role reference by a
+<code>security-role-ref</code> element to explicitly link a role reference by a
 component to a security role defined by annotation and/or by
-security-role element (as described in section
-<a href="Ejb.html#a5130">See Security Roles</a>). The linkage is made
-explicit using the role-link element of the security-role-ref element;
-in which case the value of the role-link element must be the name of one
-of the security roles defined by annotation and/or security-role
+<code>security-role</code> element (as described in <a href="#a5130">Security Roles</a>). The linkage is made
+explicit using the <code>role-link</code> element of the <code>security-role-ref</code> element;
+in which case the value of the <code>role-link</code> element must be the name of one
+of the security roles defined by annotation and/or <code>security-role</code>
 element.</p>
 </div>
 <div class="paragraph">
-<p>A security-role-ref element need not be
+<p>A <code>security-role-ref</code> element need not be
 defined for a role reference that is to be mapped to a security-role
-with the same name as the role reference, and when a role-link is not
-specified within a security-role-ref, the reference is implicitly mapped
+with the same name as the role reference, and when a <code>role-link</code> is not
+specified within a <code>security-role-ref</code>, the reference is implicitly mapped
 to the security role with the same name as the reference.</p>
 </div>
 <div class="paragraph">
 <p>The following deployment descriptor example
-shows how to link the security role reference named payroll to the
-security role named payroll-department.</p>
+shows how to link the security role reference named <code>payroll</code> to the
+security role named <code>payroll-department</code>.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;AardvarkPayroll&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;ejb-class&gt;com.aardvark.payroll.PayrollBean&lt;/ejb-class&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>This role should be assigned to the</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>employees of the payroll department.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Members of this role have access to</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>anyone’s payroll record.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The role has been linked to the</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>payroll-department role.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;payroll&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-link&gt;payroll-department&lt;/role-link&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-role-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="xml">...
+<span class="tag">&lt;enterprise-beans&gt;</span>
+    ...
+    <span class="tag">&lt;session&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>AardvarkPayroll<span class="tag">&lt;/ejb-name&gt;</span>
+        <span class="tag">&lt;ejb-class&gt;</span>com.aardvark.payroll.PayrollBean<span class="tag">&lt;/ejb-class&gt;</span>
+        ...
+        <span class="tag">&lt;security-role-ref&gt;</span>
+            <span class="tag">&lt;description&gt;</span>
+                This role should be assigned to the
+                employees of the payroll department.
+                Members of this role have access to
+                anyone’s payroll record.
+                The role has been linked to the
+                payroll-department role.
+            <span class="tag">&lt;/description&gt;</span>
+            <span class="tag">&lt;role-name&gt;</span>payroll<span class="tag">&lt;/role-name&gt;</span>
+            <span class="tag">&lt;role-link&gt;</span>payroll-department<span class="tag">&lt;/role-link&gt;</span>
+        <span class="tag">&lt;/security-role-ref&gt;</span>
+        ...
+    <span class="tag">&lt;/session&gt;</span>
+    ...
+<span class="tag">&lt;/enterprise-beans&gt;</span>
+...</code></pre>
 </div>
 </div>
 </div>
@@ -22755,14 +22024,13 @@ run-as identity should be used.</p>
 </div>
 <div class="paragraph">
 <p>By default the caller’s security identity is
-used. The Bean Provider can use the <em>RunAs</em> metadata annotation to
+used. The Bean Provider can use the <code>RunAs</code> metadata annotation to
 specify a run-as identity for the execution of the bean’s methods. If
 the deployment descriptor is used, the Bean Provider or the Application
-Assembler can use the <em>security-identity</em> deployment descriptor element
+Assembler can use the <code>security-identity</code> deployment descriptor element
 for this purpose or to override a security identity specified in
-metadata. The value of the <em>security-identity</em>
- element is either <em>use-caller-identity</em> or
-<em>run-as</em> .</p>
+metadata. The value of the <code>security-identity</code> element is either
+<code>use-caller-identity</code> or <code>run-as</code>.</p>
 </div>
 <div class="paragraph">
 <p>Defining the security identities in the
@@ -22779,9 +22047,9 @@ security identity for the execution of the bean’s methods.</p>
 <div class="sect4">
 <h5 id="a5329"><a class="anchor" href="#a5329"></a>12.3.4.1. Run-as</h5>
 <div class="paragraph">
-<p>The Bean Provider can use the <em>RunAs</em>
+<p>The Bean Provider can use the <code>RunAs</code>
 metadata annotation or the Bean Provider or Application Assembler can
-use the <em>run-as</em>  deployment descriptor
+use the <code>run-as</code> deployment descriptor
 element to define a run-as identity for an enterprise bean in the
 deployment descriptor. The run-as identity applies to the enterprise
 bean as a whole, that is, to all methods of the enterprise bean’s
@@ -22790,14 +22058,12 @@ service endpoint; to the message listener methods of a message-driven
 bean; and to the timeout callback methods of an enterprise bean; and all
 internal methods of the bean that they might in turn call.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> _Establishing a run-as identity for an
+<div class="paragraph">
+<p><em>Establishing a run-as identity for an
 enterprise bean does not affect the identities of its callers, which are
 the identities tested for permission to access the methods of the
 enterprise bean. The run-as identity establishes the identity the
-enterprise bean will use when it makes calls._</pre>
-</div>
+enterprise bean will use when it makes calls.</em></p>
 </div>
 <div class="paragraph">
 <p>Because the Bean Provider and Application
@@ -22812,8 +22078,8 @@ annotations or deployment descriptor.</p>
 principal defined in the operational environment to be used as the
 principal for the run-as identity. The security principal assigned by
 the Deployer should be a principal that has been assigned to the
-security role specified by <em>RunAs</em>
-annotation or by the <em>role-name</em> element of the <em>run-as</em> deployment
+security role specified by <code>RunAs</code>
+annotation or by the <code>role-name</code> element of the <code>run-as</code> deployment
 descriptor element.</p>
 </div>
 <div class="paragraph">
@@ -22821,122 +22087,55 @@ descriptor element.</p>
 Assembler is responsible for the following in the specification of
 run-as identities:</p>
 </div>
-<div class="paragraph">
-<p>Use the <em>RunAs</em> metadata annotation or
-<em>role-name</em>  element of the <em>run-as</em>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <code>RunAs</code> metadata annotation or
+<code>role-name</code> element of the <code>run-as</code>
 deployment descriptor element to define the name of the security role.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>Optionally, use the
-description element to provide a description
+<code>description</code> element to provide a description
 of the principal that is expected to be bound to the run-as identity in
 terms of its security role.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The following example illustrates the
 definition of a run-as identity using metadata annotations.</p>
 </div>
-<div class="paragraph">
-<p>@RunAs("admin")</p>
-</div>
-<div class="paragraph">
-<p>@Stateless public class EmployeeServiceBean</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>implements EmployeeService\{</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span class="annotation">@RunAs</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">admin</span><span class="delimiter">&quot;</span></span>)
+<span class="annotation">@Stateless</span>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">EmployeeServiceBean</span> <span class="directive">implements</span> EmployeeService {
+ ...
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>}</p>
+<p>Using the deployment descriptor, this can be specified as follows.</p>
 </div>
-<div class="paragraph">
-<p>Using the deployment descriptor, this can be
-specified as follows.</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;EmployeeService&lt;/ejb-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-identity&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;run-as&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;role-name&gt;admin&lt;/role-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/run-as&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/security-identity&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>...</pre>
+<pre class="CodeRay highlight"><code data-lang="xml">...
+<span class="tag">&lt;enterprise-beans&gt;</span>
+    ...
+    <span class="tag">&lt;session&gt;</span>
+        <span class="tag">&lt;ejb-name&gt;</span>EmployeeService<span class="tag">&lt;/ejb-name&gt;</span>
+        ...
+        <span class="tag">&lt;security-identity&gt;</span>
+            <span class="tag">&lt;run-as&gt;</span>
+                <span class="tag">&lt;role-name&gt;</span>admin<span class="tag">&lt;/role-name&gt;</span>
+            <span class="tag">&lt;/run-as&gt;</span>
+        <span class="tag">&lt;/security-identity&gt;</span>
+        ...
+    <span class="tag">&lt;/session&gt;</span>
+    ...
+<span class="tag">&lt;/enterprise-beans&gt;</span>
+...</code></pre>
 </div>
 </div>
 </div>
@@ -22975,10 +22174,10 @@ responsible for assigning the security domain and principal realm to an
 enterprise bean application.</p>
 </div>
 <div class="paragraph">
-<p>Multiple principal realms within the same
+<p><em>Multiple principal realms within the same
 security domain may exist, for example, to separate the realms of
 employees, trading partners, and customers. Multiple security domains
-may exist, for example, in application hosting scenarios.</p>
+may exist, for example, in application hosting scenarios.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -22987,13 +22186,13 @@ may exist, for example, in application hosting scenarios.</p>
 <p>The Deployer assigns principals and/or groups
 of principals (such as individual users or user groups) used for
 managing security in the operational environment to the security roles
-defined by means of the <em>DeclareRoles</em> and <em>RolesAllowed</em> metadata
-annotations and/or security-role elements of the deployment descriptor.</p>
+defined by means of the <code>DeclareRoles</code> and <code>RolesAllowed</code> metadata
+annotations and/or <code>security-role</code> elements of the deployment descriptor.</p>
 </div>
 <div class="paragraph">
 <p>The Deployer does not define (or in effect
 redefine) the principals assigned to the container security role with
-name “**”. The Container is required to assign a principal of any and
+name <code>"**"</code>. The Container is required to assign a principal of any and
 every authenticated user (as defined by the operational environment of
 the application) to the container security role with this name.</p>
 </div>
@@ -23002,15 +22201,14 @@ the application) to the container security role with this name.</p>
 and/or principal groups to the security role references—the principals
 and/or principals groups assigned to a security role apply also to all
 the linked security role references. For example, the Deployer of the
-AardvarkPayroll enterprise bean in subsection
-<a href="Ejb.html#a5293">See Linking Security Role References to
-Security Roles</a> would assign principals and/or principal groups to the
-security-role payroll-department, and the assigned principals and/or
+<code>AardvarkPayroll</code> enterprise bean in <a href="#a5293">Linking Security Role References to Security Roles</a>
+would assign principals and/or principal groups to the
+security-role <code>payroll-department</code>, and the assigned principals and/or
 principal groups would be implicitly assigned also to the linked
-security role reference payroll.</p>
+security role reference <code>payroll</code>.</p>
 </div>
 <div class="paragraph">
-<p>The EJB architecture does not specify how an
+<p><em>The EJB architecture does not specify how an
 enterprise should implement its security architecture. Therefore, the
 process of assigning the logical security roles defined in the
 application’s deployment descriptor to the operational environment’s
@@ -23022,7 +22220,7 @@ basis. (That is, if multiple independent ejb-jar files use the same
 security role name, each may be assigned differently.) If the Deployer
 does not assign the logical security roles defined by the application to
 groups in the operational environment, it must be assumed that a logical
-role maps to a principal or principal group of the same name.</p>
+role maps to a principal or principal group of the same name.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -23032,14 +22230,14 @@ role maps to a principal or principal group of the same name.</p>
 responsible for configuring the principal delegation for inter-component
 calls. The Deployer must follow any instructions supplied by the Bean
 Provider and/or Application Assembler (for example, provided in the
-<em>RunAs</em> metadata annotations, the <em>run-as</em>
+<code>RunAs</code> metadata annotations, the <code>run-as</code>
 elements of the deployment descriptor, in the description elements of
 the annotations or deployment descriptor, or in a deployment manual).</p>
 </div>
 <div class="paragraph">
 <p>If the security identity is defaulted, or it
 is explicitly specified that the caller identity be used (e.g.,
-<em>use-caller-identity</em>  deployment descriptor
+<code>use-caller-identity</code>  deployment descriptor
 element is specified), the caller principal is propagated from one
 component to another (i.e., the caller principal of the first enterprise
 bean in a call-chain is passed to the enterprise beans down the chain).</p>
@@ -23058,8 +22256,7 @@ the absence of the specification of any further run-as elements).</p>
 <h4 id="security-management-of-resource-access"><a class="anchor" href="#security-management-of-resource-access"></a>12.4.4. Security Management of Resource Access</h4>
 <div class="paragraph">
 <p>The Deployer’s responsibilities with respect
-to securing resource managers access are defined in subsection
-<a href="Ejb.html#a4312">See Deployer’s Responsibility</a>.</p>
+to securing resource managers access are defined in <a href="#a4312">Deployer’s Responsibility</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -23067,7 +22264,7 @@ to securing resource managers access are defined in subsection
 <div class="paragraph">
 <p>The Deployer can
 use the security view defined in the deployment descriptor by the Bean
-Provider and Application Assembler merely as “hints” and may change the
+Provider and Application Assembler merely as "hints" and may change the
 information whenever necessary to adapt the security policy to the
 operational environment.</p>
 </div>
@@ -23097,26 +22294,30 @@ transactions.</p>
 <div class="paragraph">
 <p>These rules are:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>A transactional
 client cannot change its principal association within a transaction.
 This rule ensures that all calls from the client within a transaction
 are performed with the same security context.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>A session bean’s client must not change its
 principal association for the duration of the communication with the
 session object. This rule ensures that the server can associate a
 security identity with the session instance
 at instance creation time, and never have to change the security
 association during the session instance lifetime.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>If transactional requests within a single
 transaction arrive from multiple clients (this could happen if there are
 intermediary objects or programs in the transaction call-chain), all
 requests within the same transaction must be associated with the same
 security context.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -23130,8 +22331,7 @@ of the EJB Container Provider and Server Provider.</p>
 <div class="paragraph">
 <p>The EJB Container Provider is responsible for
 providing the deployment tools that the Deployer can use to perform the
-tasks defined in Section <a href="Ejb.html#a5364">See Deployer’s
-Responsibilities</a>.</p>
+tasks defined in <a href="#a5364">Deployer’s Responsibilities</a>.</p>
 </div>
 <div class="paragraph">
 <p>The deployment
@@ -23158,16 +22358,16 @@ server should implement a security domain, and does not define the scope
 of a security domain.</p>
 </div>
 <div class="paragraph">
-<p>A security domain can be implemented,
+<p><em>A security domain can be implemented,
 managed, and administered by the EJB server. For example, the EJB server
 may store X509 certificates or it might use an external security
-provider such as Kerberos.</p>
+provider such as Kerberos.</em></p>
 </div>
 <div class="paragraph">
-<p>The EJB specification does not define the
+<p><em>The EJB specification does not define the
 scope of the security domain. For example, the scope may be defined by
 the boundaries of the application, EJB server, operating system,
-network, or enterprise.</p>
+network, or enterprise.</em></p>
 </div>
 <div class="paragraph">
 <p>The EJB server can, but is not required to,
@@ -23175,11 +22375,11 @@ provide support for multiple security domains, and/or multiple principal
 realms.</p>
 </div>
 <div class="paragraph">
-<p>The case of multiple domains on the same EJB
+<p><em>The case of multiple domains on the same EJB
 server can happen when a large server is used for application hosting.
 Each hosted application can have its own security domain to ensure
 security and management isolation between applications owned by multiple
-organizations.</p>
+organizations.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -23192,19 +22392,20 @@ specify the exact mechanisms that must be implemented and supported by
 the EJB server.</p>
 </div>
 <div class="paragraph">
-<p>The typical security functions provided by
-the EJB server include:</p>
+<p><em>The typical security functions provided by the EJB server include:</em></p>
 </div>
-<div class="paragraph">
-<p>Authentication of principals.</p>
-</div>
-<div class="paragraph">
-<p>Access authorization for EJB calls and
-resource manager access.</p>
-</div>
-<div class="paragraph">
-<p>Secure communication with remote clients
-(privacy, integrity, etc.).</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Authentication of principals.</em></p>
+</li>
+<li>
+<p><em>Access authorization for EJB calls and resource manager access.</em></p>
+</li>
+<li>
+<p><em>Secure communication with remote clients (privacy, integrity, etc.).</em></p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -23222,12 +22423,12 @@ must be capable of allowing the Deployer to specify that, for all calls
 from a single application within a single Java EE product, the caller
 principal is propagated on calls from one enterprise bean to another
 (i.e., the multiple beans in the call chain will see the same return
-value from getCallerPrincipal).</p>
+value from <code>getCallerPrincipal</code>).</p>
 </div>
 <div class="paragraph">
-<p>This requirement is necessary for
-applications that need a consistent return value of <em>getCallerPrincipal</em>
-across a chain of calls between enterprise beans.</p>
+<p><em>This requirement is necessary for
+applications that need a consistent return value of <code>getCallerPrincipal</code>
+across a chain of calls between enterprise beans.</em></p>
 </div>
 <div class="paragraph">
 <p>The EJB container must be capable of allowing
@@ -23244,32 +22445,27 @@ of a message-driven bean.</p>
 <div class="paragraph">
 <p>The EJB container
 must provide access to the caller’s security context information from
-the enterprise beans’ instances via the getCallerPrincipal() and
-isCallerInRole(String roleName) methods. The EJB container must provide
+the enterprise beans’ instances via the <code>getCallerPrincipal()</code> and
+<code>isCallerInRole(String roleName)</code> methods. The EJB container must provide
 the caller’s security context information during the execution of a
 business method invoked via the enterprise bean’s business, home,
 component, no-interface view, or messsage listener interface, web
-service endpoint, and/or <em>TimedObject</em> interface, as defined in
-<a href="Ejb.html#a953">See Operations Allowed in the Methods of a
-Stateful Session Bean</a>, <a href="Ejb.html#a1091">See Operations
-Allowed in the Methods of a Stateless Session Bean</a>,
-<a href="Ejb.html#a1886">See Operations Allowed in the Methods of a
-Message-Driven Bean</a>, <a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>, and
-<a href="../Optional/Chapters.html#UNKNOWN" class="bare">../Optional/Chapters.html#UNKNOWN</a>. The container must ensure that
+service endpoint, and/or <code>TimedObject</code> interface, as defined in
+<a href="#a953">Operations Allowed in the Methods of a Stateful Session Bean</a>, <a href="#a1091">Operations Allowed in the Methods of a Stateless Session Bean</a>,<a href="#a1886">Operations Allowed in the Methods of a Message-Driven Bean</a>, <a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a1367">Operations Allowed in the Methods of Entity Class in Container-Managed Persistence</a>, and
+<a href="./enterprise-beans-spec-opt-4.0-SNAPSHOT.html#a2625">Operations Allowed in the Methods of Entity Class in Bean-Managed Persistence</a>.
+The container must ensure that
 all enterprise bean method invocations received through these interfaces
 are associated with some principal. If the security identity of the
 caller has not been established, the container returns the container’s
 representation of the unauthenticated identity. The container must never
-return a null from the getCallerPrincipal method.</p>
+return a <code>null</code> from the <code>getCallerPrincipal</code> method.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="secure-access-to-resource-managers"><a class="anchor" href="#secure-access-to-resource-managers"></a>12.6.6. Secure Access to Resource Managers</h4>
 <div class="paragraph">
-<p>The EJB Container Provider is responsible for
-providing secure access to resource managers
-as described in Subsection <a href="Ejb.html#a4322">See Container
-Provider Responsibility</a>.</p>
+<p>The EJB Container Provider is responsible for providing secure access to
+resource managers as described in <a href="#a4322">Container Provider Responsibility</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -23286,12 +22482,11 @@ configure the security for the application’s environment.</p>
 <div class="sect3">
 <h4 id="a5425"><a class="anchor" href="#a5425"></a>12.6.8. System Principal</h4>
 <div class="paragraph">
-<p>The EJB specification does not define the
-“system” principal under which the JVM
-running an enterprise bean’s method executes.</p>
+<p>The EJB specification does not define the "system" principal under which
+the  JVM running an enterprise bean’s method executes.</p>
 </div>
 <div class="paragraph">
-<p>Leaving the principal undefined makes it
+<p><em>Leaving the principal undefined makes it
 easier for the EJB container vendors to provide runtime support for EJB
 on top of their existing server infrastructures. For example, while one
 EJB container implementation can execute all instances of all enterprise
@@ -23299,7 +22494,7 @@ beans in a single JVM, another implementation can use a separate JVM per
 ejb-jar per client. Some EJB containers may make the system principal
 the same as the application-level principal. Others may use different
 principals, potentially from different principal realms and even
-security domains.</p>
+security domains.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -23313,35 +22508,37 @@ have to, use the Java programming language security as the enforcement
 mechanism.</p>
 </div>
 <div class="paragraph">
-<p>For example, to isolate multiple executing
+<p><em>For example, to isolate multiple executing
 enterprise bean instances, the EJB container can load the multiple
 instances into the same JVM and isolate them via using multiple class
 loaders, or it can load each instance into its own JVM and rely on the
-address space protection provided by the operating system.</p>
+address space protection provided by the operating system.</em></p>
 </div>
 <div class="paragraph">
 <p>The general security enforcement requirements
 for the EJB container follow:</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The EJB container must provide enforcement of
 the client access control per the policy defined by the Deployer. A
 caller is allowed to invoke a method if, and only if, the method is
-specified as <em>PermitAll</em> or the caller is assigned <em>at least one</em> of the
+specified as <code>PermitAll</code> or the caller is assigned <em>at least one</em> of the
 security roles that includes the method in its method permissions
 definition. (That is, it is not meant that the caller must be assigned
 <em>all</em> the roles associated with the method.) If the container denies a
 client access to a business method, the container should throw the
-<em>javax.ejb.EJBAccessException</em>.<sup class="footnote" id="_footnote_a10330">[<a id="_footnoteref_90" class="footnote" href="#_footnotedef_90" title="View footnote.">90</a>]</sup>
+<code>javax.ejb.EJBAccessException</code>.<sup class="footnote" id="_footnote_a10330">[<a id="_footnoteref_90" class="footnote" href="#_footnotedef_90" title="View footnote.">90</a>]</sup>
 If the EJB 2.1
 client view is used, the container must throw the
-java.rmi.RemoteException (or its subclass,
-the <em>java.rmi.AccessException</em> ) to the client if the client is a remote
-client, or the <em>javax.ejb.EJBException</em>  (or
-its subclass, the <em>javax.ejb.AccessLocalException</em> ) if the client is a
+<code>java.rmi.RemoteException</code> (or its subclass,
+the <code>java.rmi.AccessException</code>) to the client if the client is a remote
+client, or the <code>javax.ejb.EJBException</code> (or
+its subclass, the <code>javax.ejb.AccessLocalException</code>) if the client is a
 local client.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The EJB container must isolate an enterprise
 bean instance from other instances and other application components
 running on the server. The EJB container must ensure that other
@@ -23349,8 +22546,8 @@ enterprise bean instances and other application components are allowed
 to access an enterprise bean only via the enterprise bean’s business
 interface, component interface, home interface, no-interface view,
 and/or web service endpoint.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The EJB container must isolate an enterprise
 bean instance at runtime such that the instance does not gain
 unauthorized access to privileged system information. Such information
@@ -23360,22 +22557,24 @@ references of other enterprise bean instances, or resource managers used
 by other enterprise bean instances. The EJB container must ensure that
 the interactions between the enterprise beans and the container are only
 through the EJB architected views.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The EJB container must ensure
 the security of the persistent state of the
 enterprise beans.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The EJB container must manage the mapping of
 principals on calls to other enterprise beans or on access to resource
 managers according to the security policy defined by the Deployer.</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>The container must allow the same enterprise
 bean to be deployed independently multiple times, each time with a
 different security policy.<sup class="footnote" id="_footnote_a10331">[<a id="_footnoteref_91" class="footnote" href="#_footnotedef_91" title="View footnote.">91</a>]</sup> The container must
 allow multiple-deployed enterprise beans to co-exist at runtime.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -23383,7 +22582,7 @@ allow multiple-deployed enterprise beans to co-exist at runtime.</p>
 <div class="paragraph">
 <p>The EJB container
 may provide a security audit trail mechanism. A security audit trail
-mechanism typically logs all <em>java.security.Exceptions</em> . It also logs
+mechanism typically logs all <code>java.security</code> Exceptions. It also logs
 all denials of access to EJB servers, EJB containers, EJB business
 interfaces, EJB component interfaces, EJB home interfaces, EJB
 no-interface views, and EJB web service endpoints.</p>
@@ -23406,10 +22605,10 @@ the administration of principals. Security
 domain administration is beyond the scope of the EJB specification.</p>
 </div>
 <div class="paragraph">
-<p>Typically, the System Administrator is
+<p><em>Typically, the System Administrator is
 responsible for creating a new user account, adding a user to a user
 group, removing a user from a user group, and removing or freezing a
-user account.</p>
+user account.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -32627,7 +31826,7 @@ beans with a no-methods listener interface</p>
 <div id="footer">
 <div id="footer-text">
  4.0-SNAPSHOT<br>
-Last updated 2020-03-12 14:23:19 +0530
+Last updated 2020-03-06 21:55:57 +0530
 </div>
 </div>
 </body>
