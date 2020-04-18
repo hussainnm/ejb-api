@@ -1,124 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650" height="580">
-  <path fill="none" d="M0 0h650v580H0z"/>
-  <path fill="#fff" d="M515 215h120v100H515z"/>
-  <text transform="translate(523 235)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="1.875" y="0">object.remove()</tspan><tspan x="44.398" y="17.609">or</tspan><tspan x="-1.906" y="35.219">home.remove(...)</tspan><tspan x="42.883" y="52.828">or </tspan><tspan x="12.484" y="70.438">direct delete</tspan>
-  </text>
-  <g transform="translate(379 182)">
-    <defs>
-      <path id="a" d="M-158-13l-6-6 6-6m-6 6H49" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#a" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#a" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#a" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(294 196)">
-    <defs>
-      <path id="b" d="M-97.524-.505L148.192 141.01l4.332 2.496M150 136l2.524 7.505L145 146" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#b" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#b" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#b" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(166 280)">
-    <defs>
-      <path id="c" d="M-24-76l5.5-6 5.5 6m-5.5-6V57" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#c" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#c" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#c" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(197 275)">
-    <defs>
-      <path id="d" d="M229 75l6 6-6 6m6-6H14" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#d" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#d" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#d" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(302 518)">
-    <defs>
-      <path id="e" d="M-84-124l-6-6 6-6m-6 6h220" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#e" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#e" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#e" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(633 260)">
-    <defs>
-      <path id="f" d="M-143-56l5.5-6 5.5 6m-5.5-6V77" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#f" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#f" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#f" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(373 468)">
-    <defs>
-      <path id="g" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#g" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#g" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#g" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(681 81)">
-    <defs>
-      <path id="h" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#h" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#h" stroke="#000" stroke-width="2"/>
-    <text font-family="&quot;Liberation Sans&quot;,Arial,sans-serif" font-size="13" font-weight="400">
-      <textPath xlink:href="#h" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
-  <path fill="#fff" d="M157 248h119v60H157z"/>
-  <text transform="translate(165 266)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="12.039" y="0">direct delete</tspan><tspan x="44.141" y="17.844">or</tspan><tspan x="-2.406" y="35.688">home.remove(...)</tspan>
-  </text>
-  <path fill="#fff" d="M393 468h205v27H393z"/>
-  <text transform="translate(401 487)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="10.07" y="0">object.businessMethod(...)</tspan>
-  </text>
-  <path fill="#fff" d="M355 10h280v60H355z"/>
-  <text transform="translate(375 28)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="0" y="0">object.businessMethod(...)</tspan><tspan x="0" y="17.609">throws NoSuchObjectException</tspan><tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
-  </text>
-  <path fill="#fff" d="M251 398h167v20H251z"/>
-  <text transform="translate(259 414)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="21.031" y="0">release reference</tspan>
-  </text>
-  <path fill="#fff" d="M254 133h167v20H254z"/>
-  <text transform="translate(262 149)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="21.031" y="0">release reference</tspan>
-  </text>
-  <path fill="#fff" d="M251 325h125v20H251z"/>
-  <text transform="translate(259 340)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="11.398" y="0">home.find(...)</tspan>
-  </text>
-  <path fill="#fff" d="M293 215h192v20H293z"/>
-  <text transform="translate(301 231)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="-6.477" y="0">home.create&lt;METHOD&gt;(...)</tspan>
-  </text>
-  <path d="M105.833 342h83.334C199.583 342 210 357 210 372s-10.417 30-20.833 30h-83.334C95.417 402 85 387 85 372s10.417-30 20.833-30" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(94 360)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
-  </text>
   <path d="M105.833 133h83.334C199.583 133 210 148 210 163s-10.417 30-20.833 30h-83.334C95.417 193 85 178 85 163s10.417-30 20.833-30" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
   <text transform="translate(94 151)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="10.32" y="0">does not exist</tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
+    <tspan x="10.32" y="0">does not exist </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
   </text>
   <path d="M453.833 133h83.334C547.583 133 558 148 558 163s-10.417 30-20.833 30h-83.334C443.417 193 433 178 433 163s10.417-30 20.833-30" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
   <text transform="translate(441 151)" font-family="serif" font-size="16" font-weight="400">
@@ -128,48 +11,80 @@
   <text transform="translate(442 360)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="19.945" y="35.219">referenced</tspan>
   </text>
+  <path d="M105.833 342h83.334C199.583 342 210 357 210 372s-10.417 30-20.833 30h-83.334C95.417 402 85 387 85 372s10.417-30 20.833-30" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(94 360)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
+  </text>
   <g transform="translate(10 215)">
-    <defs>
-      <path id="i" d="M113-16v137m6-6l-6 6-6-6" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#i" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#i" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#i" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
+      <path id="i" d="M113-16v137m6-6l-6 6-6-6" stroke-linejoin="round" fill="none"  stroke="#000" stroke-width="2"/>
   </g>
-  <path fill="#fff" d="M32 247h75v40H32z"/>
   <text transform="translate(40 264)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="10.797" y="0">direct</tspan><tspan x="10.938" y="17.297">insert</tspan>
+    <tspan x="10.797" y="0">direct </tspan><tspan x="10.938" y="17.297">insert</tspan>
+  </text>
+  <g transform="translate(294 196)">
+      <path id="b" d="M-97.524-.505L148.192 141.01l4.332 2.496M150 136l2.524 7.505L145 146" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(301 231)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="-6.477" y="0">home.create&lt;METHOD&gt;(...)</tspan>
+  </text>
+  <g transform="translate(197 275)">
+      <path id="d" d="M229 75l6 6-6 6m6-6H14" stroke-linejoin="round" fill="none"  stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(259 340)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="11.398" y="0">home.find(...)</tspan>
   </text>
   <g transform="translate(19.6 372.8)">
-    <defs>
-      <path id="j" d="M83.257 29.2C8 79 128 119 127.9 29.2M122 35l5.9-5.8L134 35" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#j" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#j" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#j" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
+      <path id="j" d="M83.257 29.2C8 79 128 119 127.9 29.2M122 35l5.9-5.8L134 35" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
   </g>
-  <path fill="#fff" d="M14 468h205v27H14z"/>
   <text transform="translate(22 487)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
     <tspan x="12.289" y="0">home.businessMethod(...)</tspan>
   </text>
+  <g transform="translate(373 468)">
+      <path id="g" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(401 487)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="10.07" y="0">object.businessMethod(...)</tspan>
+  </text>  
+  <g transform="translate(302 518)">
+      <path id="e" d="M-84-124l-6-6 6-6m-6 6h220" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(259 414)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="21.031" y="0">release reference</tspan>
+  </text>
+  <g transform="translate(166 280)">
+      <path id="c" d="M-24-76l5.5-6 5.5 6m-5.5-6V57" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(165 266)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="12.039" y="0">direct delete </tspan><tspan x="44.141" y="17.844">or </tspan><tspan x="-2.406" y="35.688">home.remove(...)</tspan>
+  </text>
+  <g transform="translate(633 260)">
+      <path id="f" d="M-143-56l5.5-6 5.5 6m-5.5-6V77" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(523 235)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="1.875" y="0">object.remove() </tspan><tspan x="44.398" y="17.609">or </tspan><tspan x="-1.906" y="35.219">home.remove(...) </tspan><tspan x="42.883" y="52.828">or </tspan><tspan x="12.484" y="70.438">direct delete</tspan>
+  </text>
+  <g transform="translate(681 81)">
+      <path id="h" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(375 28)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="0" y="0">object.businessMethod(...) </tspan><tspan x="0" y="17.609">throws NoSuchObjectException </tspan><tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
+  </text>
+  <g transform="translate(379 182)">
+      <path id="a" d="M-158-13l-6-6 6-6m-6 6H49" stroke-linejoin="round" fill="none"  stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(262 149)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
+    <tspan x="21.031" y="0">release reference</tspan>
+  </text>
   <path stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff" d="M107 514h429v55H107z"/>
-  <path stroke-linejoin="round" stroke="#fff" stroke-width="2" fill="#fff" d="M109 518h66v22h-66z"/>
   <text transform="translate(117 535)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
-    <tspan x="0" y="0">create()</tspan>
+    <tspan x="0" y="0">create() </tspan>
   </text>
-  <path stroke-linejoin="round" stroke="#fff" stroke-width="2" fill="#fff" d="M109 543h95v22h-95z"/>
-  <text transform="translate(117 560)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="0" y="0">direct delete</tspan>
-  </text>
-  <path stroke-linejoin="round" stroke="#fff" stroke-width="2" fill="#fff" d="M203 518h175v22H203z"/>
   <text transform="translate(213 535)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="0" y="0">action initiated by client</tspan>
   </text>
-  <path stroke-linejoin="round" stroke="#fff" stroke-width="2" fill="#fff" d="M203 543h330v22H203z"/>
+  <text transform="translate(117 560)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">direct delete </tspan>
+  </text>
   <text transform="translate(212 560)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="0" y="0">action on database from outsite Enterprise Beans</tspan>
   </text>
