@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="679" height="484">
+  <path fill="none" d="M0 0h679v484H0z"/>
+  <path d="M309.833 20h83.334C403.583 20 414 30 414 40s-10.417 20-20.833 20h-83.334C299.417 60 289 50 289 40s10.417-20 20.833-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(297 37)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="25.609" y="0">does not </tspan><tspan x="39.211" y="17.609">exist</tspan>
+  </text>
+  <path d="M309.833 189h83.334C403.583 189 414 199 414 209s-10.417 20-20.833 20h-83.334C299.417 229 289 219 289 209s10.417-20 20.833-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(298 215)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="31.914" y="0">pooled</tspan>
+  </text>
+  <path d="M309.833 358h83.334C403.583 358 414 368 414 378s-10.417 20-20.833 20h-83.334C299.417 398 289 388 289 378s10.417-20 20.833-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(298 383)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="36.25" y="0">ready</tspan>
+  </text>
+  <g transform="translate(219 74)">
+    <defs>
+      <path id="a" d="M121-9v119m6-6l-6 6-6-6" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#a" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#a" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#a" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(238 74)">
+    <defs>
+      <path id="b" d="M115-3l6-6 6 6m-6-6v119" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#b" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#b" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#b" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(238 243)">
+    <defs>
+      <path id="c" d="M115-3l6-6 6 6m-6-6v119" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#c" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#c" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#c" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(219 243)">
+    <defs>
+      <path id="d" d="M121-9v119m6-6l-6 6-6-6" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#d" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#d" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#d" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <path fill="#fff" d="M537 10h130v60H537z"/>
+  <text transform="translate(546 29)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">instance throws</tspan><tspan x="0" y="17">system exception</tspan><tspan x="0" y="34">from any method</tspan>
+  </text>
+  <g transform="translate(429.75 114.75)">
+    <defs>
+      <path id="e" d="M102.25-74.75h-113M-5-69l-5.75-5.75L-5-80" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#e" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#e" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#e" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <path fill="#fff" d="M367 94h170v20H367z"/>
+  <text transform="translate(377 110)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">1. unsetEntityContext()</tspan>
+  </text>
+  <path fill="#fff" d="M159 94h170v40H159z"/>
+  <text transform="translate(170 111)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">1. newInstance()</tspan><tspan x="0" y="17">2. setEntityContext(ec)</tspan>
+  </text>
+  <g transform="translate(75.25 189)">
+    <defs>
+      <path id="f" d="M227.404-1.97C145-37 119 20 208.75 20M203 14l5.75 6-5.75 6" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#f" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#f" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#f" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(93.5 244.75)">
+    <defs>
+      <path id="g" d="M208.716-13.89C153 8 154 87 208.794 111.206M206 104l2.794 7.206L201 114" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#g" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#g" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#g" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(123.5 264.75)">
+    <defs>
+      <path id="h" d="M280-27l-2.716-6.89L285-37m-7.716 3.11C333-12 332 67 277.206 91.206" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#h" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#h" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#h" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <path fill="#fff" d="M344 263h90v20h-90z"/>
+  <text transform="translate(344 278)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbPassivate()</tspan>
+  </text>
+  <path fill="#fff" d="M269 303h85v20h-85z"/>
+  <text transform="translate(269 318)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbActivate()</tspan>
+  </text>
+  <path fill="#fff" d="M40 199h190v20H40z"/>
+  <text transform="translate(44 214)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbHome&lt;METHOD&gt;(args)</tspan>
+  </text>
+  <path fill="#fff" d="M36 263h220v40H36z"/>
+  <text transform="translate(48 280)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="19.188" y="0">ejbCreate&lt;METHOD&gt;(args)</tspan><tspan x="-8.375" y="17.297">ejbPostCreate&lt;METHOD&gt;(args)</tspan>
+  </text>
+  <path fill="#fff" d="M477 175h190v20H477z"/>
+  <text transform="translate(486 191)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbFind&lt;METHOD&gt;(args)</tspan>
+  </text>
+  <path fill="#fff" d="M447 283h90v20h-90z"/>
+  <text transform="translate(450 298)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbRemove()</tspan>
+  </text>
+  <g transform="translate(477.4 202)">
+    <defs>
+      <path id="i" d="M-76.681-15.015C6-51 32 7-58.4 7m5.4 6l-5.4-6 5.4-6" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#i" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#i" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#i" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(147.4 343.2)">
+    <defs>
+      <path id="j" d="M154.863 12.826C72-23 47 35 136.6 34.8M131 29l5.6 5.8L131 40" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#j" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#j" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#j" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(192.4 363.2)">
+    <defs>
+      <path id="k" d="M91.6 14.834C2 15 28 74 109.894 36.844M102 34l7.894 2.844L107 44" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#k" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#k" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#k" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(242.4 413.2)">
+    <defs>
+      <path id="l" d="M158.331-57.186C241-93 267-37 177-35.104M183-30l-6.001-5.104L183-41" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#l" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#l" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#l" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <path fill="#fff" d="M447 378h90v20h-90z"/>
+  <text transform="translate(460 393)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbStore()</tspan>
+  </text>
+  <path fill="#fff" d="M151 348h70v20h-70z"/>
+  <text transform="translate(154 364)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbLoad()</tspan>
+  </text>
+  <g transform="translate(10.75 388.75)">
+    <defs>
+      <path id="m" d="M341 9c-3 90 126 37 44 0m3 7l-3-7 7-3" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#m" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#m" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#m" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <path fill="#fff" d="M199 427h130v20H199z"/>
+  <text transform="translate(208 443)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">business methods</tspan>
+  </text>
+  <path fill="#fff" d="M435 427h115v20H435z"/>
+  <text transform="translate(441 443)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="0" y="0">ejbTimeout(arg)</tspan>
+  </text>
+</svg>

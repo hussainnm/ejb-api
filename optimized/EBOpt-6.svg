@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="546">
+  <path fill="none" d="M0 0h600v546H0z"/>
+  <rect transform="translate(364 10)" width="225" height="525" rx="28.125" ry="28.125" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <rect transform="translate(378 263)" width="175" height="188" rx="21.875" ry="21.875" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <rect transform="translate(378 49)" width="175" height="188" rx="21.875" ry="21.875" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <path d="M367.833 69h83.334C461.583 69 472 77.75 472 86.5S461.583 104 451.167 104h-83.334C357.417 104 347 95.25 347 86.5S357.417 69 367.833 69" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <path d="M357.833 79h83.334C451.583 79 462 87.75 462 96.5S451.583 114 441.167 114h-83.334C347.417 114 337 105.25 337 96.5S347.417 79 357.833 79" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <path d="M347.833 89h83.334C441.583 89 452 97.75 452 106.5S441.583 124 431.167 124h-83.334C337.417 124 327 115.25 327 106.5S337.417 89 347.833 89" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(335 112)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="16.633" y="0">EJBObjects</tspan>
+  </text>
+  <path d="M367.833 283h83.334c10.416 0 20.833 8.75 20.833 17.5S461.583 318 451.167 318h-83.334C357.417 318 347 309.25 347 300.5s10.417-17.5 20.833-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <path d="M357.833 292h83.334c10.416 0 20.833 8.75 20.833 17.5S451.583 327 441.167 327h-83.334C347.417 327 337 318.25 337 309.5s10.417-17.5 20.833-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <path d="M347.833 302h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 337 431.167 337h-83.334C337.417 337 327 328.25 327 319.5s10.417-17.5 20.833-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(335 325)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="-1.578" y="0">EJBLocalObjects</tspan>
+  </text>
+  <path d="M347.833 153h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 188 431.167 188h-83.334C337.417 188 327 179.25 327 170.5s10.417-17.5 20.833-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(335 176)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="21.563" y="0">EJBHome</tspan>
+  </text>
+  <path d="M347.833 367h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 402 431.167 402h-83.334C337.417 402 327 393.25 327 384.5s10.417-17.5 20.833-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(335 390)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="3.352" y="0">EJBLocalHome</tspan>
+  </text>
+  <path fill="#fff" d="M396 201h100v20H396z"/>
+  <text transform="translate(404 217)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x=".68" y="0">entity bean 1</tspan>
+  </text>
+  <path fill="#fff" d="M396 414h100v20H396z"/>
+  <text transform="translate(404 430)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x=".68" y="0">entity bean 2</tspan>
+  </text>
+  <path fill="#fff" d="M391 477h160v20H391z"/>
+  <text transform="translate(399 493)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="1.719" y="0">other enterprise beans</tspan>
+  </text>
+  <path fill="#fff" d="M20 235h50v20H20z"/>
+  <text transform="translate(28 251)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="-.953" y="0">client</tspan>
+  </text>
+  <g transform="translate(102 108)">
+    <defs>
+      <path id="a" d="M-27.528 124.764L216.056 2.972l4.472-2.236M213-2l7.528 2.736L218 8" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#a" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#a" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#a" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(26 236)">
+    <defs>
+      <path id="b" d="M48.802 7.608l242.593-70.324 4.803-1.392M289-68l7.198 3.892L292-57" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#b" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#b" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#b" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(10 263)">
+    <defs>
+      <path id="c" d="M64.802-16.608l242.593 70.324 4.803 1.392M308 48l4.198 7.108L305 59" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#c" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#c" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#c" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <g transform="translate(91 292)">
+    <defs>
+      <path id="d" d="M-16.535-34.75L227.07 88l4.465 2.25M229 83l2.535 7.25L224 93" stroke-linejoin="round" fill="none"/>
+    </defs>
+    <use xlink:href="#d" stroke-width="10" stroke-opacity="0" stroke="red"/>
+    <use xlink:href="#d" stroke="#000" stroke-width="2"/>
+    <text font-family="serif" font-size="16" font-weight="400">
+      <textPath xlink:href="#d" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+    </text>
+  </g>
+  <path fill="#fff" d="M396 22h150v20H396z"/>
+  <text transform="translate(404 38)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="36.695" y="0">container</tspan>
+  </text>
+</svg>
