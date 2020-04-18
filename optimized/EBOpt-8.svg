@@ -1,89 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="613" height="544">
-  <path fill="none" d="M0 0h613v544H0z"/>
-  <path stroke-linejoin="round" stroke="#fff" stroke-width="2" fill="#fff" d="M79 17h450v40H79z"/>
   <text transform="translate(94 34)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
     <tspan x="0" y="0">(a) Entity bean is an object view of a collection of related records</tspan><tspan x="0" y="17.609">in the database</tspan>
   </text>
   <rect transform="translate(193 75)" width="176" height="162" rx="20.25" ry="20.25" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(254 100)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="-3.305" y="0">container</tspan>
+  </text>
   <path d="M26.667 137h66.666c8.334 0 16.667 10 16.667 20s-8.333 20-16.667 20H26.667C18.333 177 10 167 10 157s8.333-20 16.667-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
   <text transform="translate(18 163)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="24.047" y="0">client</tspan>
   </text>
-  <path d="M465 123.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0-8.334-25-16.667-50-16.667s-50 8.333-50 16.667z" fill="#fff"/>
-  <path fill="none" d="M465 123.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(473 179)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="9.344" y="0">Order 100</tspan>
-  </text>
+  <g transform="translate(78 208)">
+      <path id="a" d="M37-51h111m-6-6l6 6-6 6" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
   <path d="M247.667 137h66.666c8.334 0 16.667 10 16.667 20s-8.333 20-16.667 20h-66.666C239.333 177 231 167 231 157s8.333-20 16.667-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
   <text transform="translate(239 154)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="4.5" y="0">order entity</tspan><tspan x="26.086" y="17.609">bean</tspan>
   </text>
-  <g transform="translate(78 208)">
-    <defs>
-      <path id="a" d="M37-51h111m-6-6l6 6-6 6" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#a" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#a" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#a" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
   <g transform="translate(231 265)">
-    <defs>
-      <path id="b" d="M105-108h124m-6-6l6 6-6 6" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#b" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#b" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#b" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
+      <path id="b" d="M105-108h124m-6-6l6 6-6 6" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
   </g>
-  <path fill="#fff" d="M246 84h70v20h-70z"/>
-  <text transform="translate(254 100)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="-3.305" y="0">container</tspan>
+  <path fill="none" d="M465 123.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <text transform="translate(473 179)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="9.344" y="0">Order 100</tspan>
   </text>
-  <path stroke-linejoin="round" stroke="#fff" stroke-width="2" fill="#fff" d="M97 283h400v20H97z"/>
   <text transform="translate(110 299)" font-family="serif" font-size="16" font-weight="400" font-style="italic">
     <tspan x="0" y="0">(b) Entity bean is an object view of an existing application</tspan>
   </text>
   <rect transform="translate(134 322)" width="176" height="162" rx="20.25" ry="20.25" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
+  <text transform="translate(195 347)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="-3.305" y="0">container</tspan>
+  </text>
   <path d="M26.667 384h66.666c8.334 0 16.667 10 16.667 20s-8.333 20-16.667 20H26.667C18.333 424 10 414 10 404s8.333-20 16.667-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
   <text transform="translate(18 410)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="24.047" y="0">client</tspan>
   </text>
-  <path d="M502 370.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0-8.334-25-16.667-50-16.667s-50 8.333-50 16.667z" fill="#fff"/>
-  <path fill="none" d="M502 370.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(510 426)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="9.344" y="0">Order 100</tspan>
-  </text>
+  <g transform="translate(63 455)">
+      <path id="c" d="M52-51h52m-6-6l6 6-6 6" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
+  </g>
   <path d="M188.667 384h66.666c8.334 0 16.667 10 16.667 20s-8.333 20-16.667 20h-66.666C180.333 424 172 414 172 404s8.333-20 16.667-20" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
   <text transform="translate(180 401)" font-family="serif" font-size="16" font-weight="400">
     <tspan x="4.5" y="0">order entity</tspan><tspan x="26.086" y="17.609">bean</tspan>
   </text>
-  <g transform="translate(63 455)">
-    <defs>
-      <path id="c" d="M52-51h52m-6-6l6 6-6 6" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#c" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#c" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#c" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
-  </g>
   <g transform="translate(163 512)">
-    <defs>
-      <path id="d" d="M114-108.04l49-.382 5-.039M162-114l6 5.54-6 5.46" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#d" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#d" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#d" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
+      <path id="d" d="M114-108.04l49-.382 5-.039M162-114l6 5.54-6 5.46" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
   </g>
-  <path fill="#fff" d="M187 331h70v20h-70z"/>
-  <text transform="translate(195 347)" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="-3.305" y="0">container</tspan>
-  </text>
   <g transform="translate(336 366)">
     <ellipse cx="62.5" cy="37.5" rx="62.5" ry="37.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
     <text transform="translate(8 34)" font-family="serif" font-size="16" font-weight="400">
@@ -91,13 +52,10 @@
     </text>
   </g>
   <g transform="translate(341 433)">
-    <defs>
-      <path id="e" d="M125-29.439l26 .317 5 .061M150-35l6 5.939L150-23" stroke-linejoin="round" fill="none"/>
-    </defs>
-    <use xlink:href="#e" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#e" stroke="#000" stroke-width="2"/>
-    <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#e" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
-    </text>
+      <path id="e" d="M125-29.439l26 .317 5 .061M150-35l6 5.939L150-23" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="2"/>
   </g>
+  <path fill="none" d="M502 370.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <text transform="translate(510 426)" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="9.344" y="0">Order 100</tspan>
+  </text>
 </svg>
