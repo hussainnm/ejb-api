@@ -28,258 +28,96 @@
   <text transform="translate(102 424)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">afterBegin</tspan>
   </text>
-  <text transform="translate(371 273)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">PrePassivate callbacks, if any</tspan>
-  </text>
-  <path fill="#fff" d="M468 66h194.32v32.52H468z"/>
-  <text transform="translate(477 79)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">instance throws system</tspan> <tspan y="17.609" x="0">exception from any method</tspan>
-  </text>
-  <path fill="#fff" d="M307 201h182.921v50.181H307z"/>
-  <text transform="translate(317 214)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">Remove method</tspan> <tspan y="17.609" x="0">or CDI context destroyed</tspan> <tspan y="35.219" x="0">or timeout</tspan>
-  </text>
-  <path fill="#fff" d="M420 179h166.16v15.88H420z"/>
-  <text transform="translate(432 193)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">chosen as LRU victim</tspan>
-  </text>
-  <path fill="#fff" d="M310 138h200.322v18.518H310z"/>
-  <text transform="translate(320 153)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">PreDestroy callbacks, if any</tspan>
-  </text>
-  <path fill="#fff" d="M376 326h210.96v15.88H376z"/>
-  <text transform="translate(386 340)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">PostActivate callbacks, if any</tspan>
-  </text>
-  <path fill="#fff" d="M82 648h84.24v19.72H82z"/>
-  <text transform="translate(92 663)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">tx method</tspan>
-  </text>
   <path d="M242.5 583h102c12.75 0 25.5 12.75 25.5 25.5S357.25 634 344.5 634h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
   <text transform="translate(226 614)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="3.367">method ready in TX</tspan>
+  </text>
+  <path d="M212 608.583C122 610 153 674 234.327 636.114M227 633l7.326 3.114L232 644" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <text transform="translate(92 663)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">tx method</tspan>
+  </text>
+  <path d="M293.5 578V334m-5.5 6l5.5-6 5.5 6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <path fill="#fff" d="M204 444h178.96v40.8H204z"/>
+  <text transform="translate(215 461)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">1. beforeCompletion()</tspan> <tspan y="17.609" x="0">2. afterCompletion(true)</tspan>
+  </text>
+  <path d="M324.92 398.48v40m6-6l-6 6-6-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <text transform="translate(303 393)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">commit</tspan>
+  </text>
+  <path d="M375 608.501l135 .036 5 .002m-5.88-5.339l5.88 5.339-5.88 5.661" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <text transform="translate(381 594)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">non-tx or different method</tspan>
+  </text>
+  <text transform="translate(527 614)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">ERROR</tspan>
+  </text>
+  <path d="M464.807 523.27l-107.763 55.173-8.901 4.557" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <path d="M464 524l.931-135 .069-10" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <path d="M355.884 338.314l-3.156-7.32 7.399-2.58m-7.399 2.58l108.536 47.174 4.586 1.994" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <path fill="#fff" d="M391 444h146.96v25.48H391z"/>
+  <text transform="translate(394 462)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">afterCompletion(true)</tspan>
+  </text>
+  <path d="M421.92 398.48v40m6-6l-6 6-6-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  <text transform="translate(393 393)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">rollback</tspan>
+  </text>
+  <g transform="translate(360 254)">
+    <path d="M6 30.027l170 .919 5 .027M175 25l6 5.973L175 37" id="b" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(371 273)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">PrePassivate callbacks, if any</tspan>
+  </text>
+  <g transform="translate(444.92 145.48)">
+      <path d="M58.146 54.4L58.028 97l-.014 5M64 96l-5.986 6L52 96" id="g" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(432 193)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">chosen as LRU victim</tspan>
   </text>
   <path d="M563.5 276h102c12.75 0 25.5 12.75 25.5 25.5S678.25 327 665.5 327h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
   <text transform="translate(547 307)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="44.492">passive</tspan>
   </text>
-  <g transform="translate(277 112)">
-    <defs>
-      <path d="M21 23l6-6 6 6m-6-6v143" id="a" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#a" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#a" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#a" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="translate(360 254)">
-    <defs>
-      <path d="M6 30.027l170 .919 5 .027M175 25l6 5.973L175 37" id="b" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#b" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#b" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#b" text-anchor="middle"/>
-
-    </text>
-  </g>
   <g transform="rotate(-180 275 158)">
-    <defs>
-      <path d="M10-1.972l166 .917 5 .027M175-7l6 5.972L175 5" id="c" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#c" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#c" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#c" text-anchor="middle"/>
-
-    </text>
+    <path d="M10-1.972l166 .917 5 .027M175-7l6 5.972L175 5" id="c" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
-  <g transform="translate(215 352)">
-    <defs>
-      <path d="M78.5 226V-18M73-12l5.5-6 5.5 6" id="d" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#d" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#d" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#d" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="translate(323 302)">
-    <defs>
-      <path d="M141 222l.931-135L142 77" id="e" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#e" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#e" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#e" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="rotate(-135 284.802 214.237)">
-    <defs>
-      <path d="M-61 123L-23.813 7.787l3.072-9.516" id="f" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#f" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#f" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#f" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="translate(439 121)">
-    <defs>
-      <path d="M140.084 28.09L-61.167-9.18l-4.917-.91M-62-3l-4.084-7.09L-59-15" id="g" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#g" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#g" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#g" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="translate(529 142)">
-    <defs>
-      <path d="M49 7l33.738 117.39L85.5 134" id="h" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#h" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#h" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#h" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="translate(142 470)">
-    <defs>
-      <path d="M70 138.583C-20 140 11 204 92.327 166.114M85 163l7.326 3.114L90 174" id="i" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#i" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#i" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#i" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <path fill="#fff" d="M204 444h178.96v40.8H204z"/>
-  <text transform="translate(215 461)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">1. beforeCompletion()</tspan> <tspan y="17.609" x="0">2. afterCompletion(true)</tspan>
-  </text>
-  <g transform="rotate(135 131.186 283.585)">
-    <defs>
-      <path d="M11 86l-2.945 7.408L1 90m7.055 3.408L-35.334-16.696l-1.833-4.652" id="j" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#j" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#j" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#j" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <path fill="#fff" d="M391 444h146.96v25.48H391z"/>
-  <text transform="translate(394 462)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">afterCompletion(true)</tspan>
-  </text>
-  <g transform="translate(265.92 344.48)">
-    <defs>
-      <path d="M59 54v40m6-6l-6 6-6-6" id="k" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#k" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#k" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#k" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <g transform="translate(362.92 344.48)">
-    <defs>
-      <path d="M59 54v40m6-6l-6 6-6-6" id="l" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#l" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#l" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#l" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <path fill="#fff" d="M298 379h58.64v16.52H298z"/>
-  <text transform="translate(303 393)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">commit</tspan>
-  </text>
-  <path fill="#fff" d="M391 379h58.64v16.52H391z"/>
-  <text transform="translate(393 393)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">rollback</tspan>
-  </text>
-  <g transform="translate(414.12 596.2)">
-    <defs>
-      <path d="M-39.12 12.301l135 .036 5 .002M95 7l5.88 5.339L95 18" id="m" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#m" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#m" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#m" text-anchor="middle"/>
-
-    </text>
-  </g>
-  <path fill="#fff" d="M520 599h67.6v19.08H520z"/>
-  <text transform="translate(527 614)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">ERROR</tspan>
-  </text>
-  <path fill="#fff" d="M372 577h187.92v22.28H372z"/>
-  <text transform="translate(381 594)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">non-tx or different method</tspan>
+  <text transform="translate(386 340)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">PostActivate callbacks, if any</tspan>
   </text>
   <g transform="translate(454.92 271.48)">
-    <defs>
-      <path d="M52 80l6-6 6 6m-6-6v27" id="n" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#n" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#n" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#n" text-anchor="middle"/>
-
-    </text>
+      <path d="M52 80l6-6 6 6m-6-6v27" id="f" fill="none" stroke-linejoin="round"  stroke="#000" stroke-width="2"/>
   </g>
   <text transform="translate(489 391)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">method</tspan>
   </text>
-  <g transform="translate(444.92 145.48)">
-    <defs>
-      <path d="M58.146 54.4L58.028 97l-.014 5M64 96l-5.986 6L52 96" id="o" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#o" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#o" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#o" text-anchor="middle"/>
-
-    </text>
+  <g transform="translate(277 112)">
+      <path d="M21 23l6-6 6 6m-6-6v143" id="a" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
+  <text transform="translate(317 214)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">Remove method</tspan> <tspan y="17.609" x="0">or CDI context destroyed</tspan> <tspan y="35.219" x="0">or timeout</tspan>
+  </text>
   <g transform="translate(338.92 105.48)">
-    <defs>
-      <path d="M11 65l6-6 6 6m-6-6v29" id="p" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#p" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#p" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#p" text-anchor="middle"/>
-
-    </text>
+      <path d="M11 65l6-6 6 6m-6-6v29" id="h" fill="none" stroke-linejoin="round"  stroke="#000" stroke-width="2"/>
   </g>
-  <g transform="translate(418 63.28)">
-    <defs>
-      <path d="M45 35.011l-83 .187-5 .01M-37 41l-6-5.791L-37 30" id="q" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#q" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#q" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#q" text-anchor="middle"/>
-
-    </text>
+  <text transform="translate(320 153)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">PreDestroy callbacks, if any</tspan>
+  </text>
+  <g transform="translate(529 142)">
+      <path d="M49 7l33.738 117.39L85.5 134" id="e" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <g transform="translate(439 121)">
+      <path d="M140.084 28.09L-61.167-9.18l-4.917-.91M-62-3l-4.084-7.09L-59-15" id="d" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <path d="M588.92 149.4l-14.958-11.056-8.042-5.944m1 8l-1-8 8-1" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <text transform="translate(589 164)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">timeout</tspan>
+  </text>  
+  <g transform="translate(418 63.28)">
+      <path d="M45 35.011l-83 .187-5 .01M-37 41l-6-5.791L-37 30" id="i" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text transform="translate(477 79)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="0" x="0">instance throws system</tspan> <tspan y="17.609" x="0">exception from any method</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round" d="M217 669h299v51H217z"/>
   <text transform="translate(224 689)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
