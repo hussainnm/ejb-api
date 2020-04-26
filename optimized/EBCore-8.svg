@@ -1,72 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="525" width="619.969">
-  <text style="text-decoration-line:none" transform="translate(409 230)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan x="32.375" y="0">object.remove(),</tspan><tspan x="32.594" y="17.609">home.remove(), </tspan><tspan x=".344" y="35.219">system exception in bean, </tspan><tspan x="40.953" y="52.828">bean timeout </tspan><tspan x="75.383" y="70.438">or </tspan><tspan x="34.063" y="88.047">container crash</tspan>
-  </text>
-  <g transform="translate(273 182)">
-    <path id="e" d="M-127-13l-6-6 6-6m-6 6H49" stroke="#000" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <g>
+    <path d="M30.833 133h83.334C124.583 133 135 148 135 163s-10.417 30-20.833 30H30.833C20.417 193 10 178 10 163s10.417-30 20.833-30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+    <text style="text-decoration-line:none" transform="translate(19 151)" font-weight="400" font-size="16" font-family="serif">
+      <tspan x="10.32" y="0">does not exist </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
+    </text>
   </g>
   <g transform="translate(188 196)">
       <path id="f" d="M-66.673-.262l215.162 140.787 4.184 2.737M151 135l1.673 8.262L145 145" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
-  <g transform="translate(60 280)">
-      <path id="g" d="M7-76l5.5-6 5.5 6m-5.5-6V57" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  </g>
-  <g transform="translate(91 275)">
-      <path id="h" d="M229 75l6 6.025L229 87m6-5.975L51 81.95l-5 .025" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  </g>
-  <g transform="translate(196 518)">
-      <path id="i" d="M-55-123l-6-6.025 6-5.975m-6 5.975l186-.925 5-.025" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  </g>
-  <g transform="translate(527 260)">
-      <path id="j" d="M-143-56l5.5-6 5.5 6m-5.5-6V77" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  </g>
-  <g transform="translate(267 468)">
-      <path id="k" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  </g>
-  <g transform="translate(575 81)">
-      <path id="l" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  </g>
-  <text style="text-decoration-line:none" transform="translate(89 273)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan x="1.063" y="0">container crash</tspan><tspan x=".258" y="17.609">or bean timeout</tspan>
-  </text>
-  <text style="text-decoration-line:none" transform="translate(295 487)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan x="4.695" y="0">client&apos;s method on reference</tspan>
-  </text>
-  <text style="text-decoration-line:none" transform="translate(260 28)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan x="0" y="0">client&apos;s method on reference </tspan><tspan x="0" y="17.609">generates NoSuchObjectException</tspan><tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
-  </text>
-  <text style="text-decoration-line:none" transform="translate(153 414)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan x="21.031" y="0">release reference</tspan>
-  </text>
-  <text style="text-decoration-line:none" transform="translate(156 149)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan x="21.031" y="0">release reference</tspan>
-  </text>
-  <g>
-    <text style="text-decoration-line:none" transform="translate(153 341)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-      <tspan x="1.977" y="0">handle.getEJBObject()</tspan>
-    </text>
-  </g>
   <g>
     <text style="text-decoration-line:none" transform="translate(195 231)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
       <tspan x="-6.477" y="0">home.create&lt;METHOD&gt;(...)</tspan>
-    </text>
-  </g>
-  <g>
-    <path d="M30.833 342h83.334C124.583 342 135 357 135 372s-10.417 30-20.833 30H30.833C20.417 402 10 387 10 372s10.417-30 20.833-30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <text style="text-decoration-line:none" transform="translate(19 360)" font-weight="400" font-size="16" font-family="serif">
-      <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
-    </text>
-  </g>
-  <g>
-    <path d="M30.833 133h83.334C124.583 133 135 148 135 163s-10.417 30-20.833 30H30.833C20.417 193 10 178 10 163s10.417-30 20.833-30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <text style="text-decoration-line:none" transform="translate(19 151)" font-weight="400" font-size="16" font-family="serif">
-      <tspan x="10.32" y="0">does not exist</tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
-    </text>
-  </g>
-  <g>
-    <path d="M347.833 133h83.334C441.583 133 452 148 452 163s-10.417 30-20.833 30h-83.334C337.417 193 327 178 327 163s10.417-30 20.833-30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <text style="text-decoration-line:none" transform="translate(335 151)" font-weight="400" font-size="16" font-family="serif">
-      <tspan x="8.5" y="0">does not exist </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="19.945" y="35.219">referenced</tspan>
     </text>
   </g>
   <g>
@@ -75,4 +19,61 @@
       <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="19.945" y="35.219">referenced</tspan>
     </text>
   </g>
+  <g transform="translate(267 468)">
+      <path id="k" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text style="text-decoration-line:none" transform="translate(295 487)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan x="4.695" y="0">client&apos;s method on reference</tspan>
+  </text>
+  <g transform="translate(527 260)">
+      <path id="j" d="M-143-56l5.5-6 5.5 6m-5.5-6V77" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text style="text-decoration-line:none" transform="translate(409 230)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan x="32.375" y="0">object.remove(),</tspan><tspan x="32.594" y="17.609">home.remove(), </tspan><tspan x=".344" y="35.219">system exception in bean, </tspan><tspan x="40.953" y="52.828">bean timeout </tspan><tspan x="75.383" y="70.438">or </tspan><tspan x="34.063" y="88.047">container crash</tspan>
+  </text>
+  <g>
+    <path d="M347.833 133h83.334C441.583 133 452 148 452 163s-10.417 30-20.833 30h-83.334C337.417 193 327 178 327 163s10.417-30 20.833-30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+    <text style="text-decoration-line:none" transform="translate(335 151)" font-weight="400" font-size="16" font-family="serif">
+      <tspan x="8.5" y="0">does not exist </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="19.945" y="35.219">referenced</tspan>
+    </text>
+  </g>
+  <g transform="translate(575 81)">
+      <path id="l" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text style="text-decoration-line:none" transform="translate(260 28)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan x="0" y="0">client&apos;s method on reference </tspan><tspan x="0" y="17.609">generates NoSuchObjectException</tspan><tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
+  </text>
+  <g transform="translate(273 182)">
+    <path id="e" d="M-127-13l-6-6 6-6m-6 6H49" stroke="#000" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  </g>
+  <text style="text-decoration-line:none" transform="translate(156 149)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan x="21.031" y="0">release reference</tspan>
+  </text>  
+  <g transform="translate(60 280)">
+      <path id="g" d="M7-76l5.5-6 5.5 6m-5.5-6V57" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text style="text-decoration-line:none" transform="translate(89 273)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan x="1.063" y="0">container crash</tspan><tspan x=".258" y="17.609">or bean timeout</tspan>
+  </text>
+  <g transform="translate(91 275)">
+      <path id="h" d="M229 75l6 6.025L229 87m6-5.975L51 81.95l-5 .025" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <g>
+    <text style="text-decoration-line:none" transform="translate(153 341)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+      <tspan x="1.977" y="0">handle.getEJBObject()</tspan>
+    </text>
+  </g>
+  <g transform="translate(196 518)">
+      <path id="i" d="M-55-123l-6-6.025 6-5.975m-6 5.975l186-.925 5-.025" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
+  </g>
+  <text style="text-decoration-line:none" transform="translate(153 414)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan x="21.031" y="0">release reference</tspan>
+  </text>
+  <g>
+    <path d="M30.833 342h83.334C124.583 342 135 357 135 372s-10.417 30-20.833 30H30.833C20.417 402 10 387 10 372s10.417-30 20.833-30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+    <text style="text-decoration-line:none" transform="translate(19 360)" font-weight="400" font-size="16" font-family="serif">
+      <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
+    </text>
+  </g>
+
 </svg>
