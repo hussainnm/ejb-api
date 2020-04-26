@@ -1,115 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="735" width="702">
-  <text transform="translate(43 27)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(43 27)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">dependency injection, </tspan> <tspan y="17.609" x="0">business interface lookup, or</tspan> <tspan y="35.219" x="0">create&lt;METHOD&gt;(args)</tspan>
   </text>
   <path d="M137.99 74l-.075 42-.01 5m6.095-6l-6.094 6-5.906-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(18 150)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(18 150)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">1. AroundConstruct callbacks, if any</tspan> <tspan y="17.609" x="0">2. constructor</tspan> <tspan y="35.219" x="0">3. dependency injection, if any</tspan> <tspan y="52.828" x="0">4. PostConstruct callbacks, if any</tspan> <tspan y="70.438" x="0">5. Init method, or</tspan> <tspan y="88.047" x="0">ejbCreate&lt;METHOD&gt;, if any</tspan>
   </text>
   <path d="M242.5 73h102c12.75 0 25.5 12.75 25.5 25.5S357.25 124 344.5 124h-102c-12.75 0-25.5-12.75-25.5-25.5S229.75 73 242.5 73" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text transform="translate(225 104)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(225 104)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="24.32">does not exist</tspan>
   </text>
   <path d="M271 129v143m6-6l-6 6-6-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path d="M242.5 278h102c12.75 0 25.5 12.75 25.5 25.5S357.25 329 344.5 329h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text transform="translate(226 309)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(226 309)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="23.93">method ready</tspan>
   </text>
   <path d="M234.357 275.822C153 237 122 304 212 303.5m-6-5.5l6 5.5-6 5.5" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(57 303)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(57 303)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">non-tx method</tspan>
   </text>
   <path d="M136.57 379.163l93.55-45.807 8.98-4.397M137 523V379m.01 142.802l93.276 56.047 4.285 2.575m-2.145-8.164l2.145 8.164-7.802 1.735" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(91 357)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(91 357)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">tx method</tspan>
   </text>
   <path d="M123.098 366.72l-.133 29.76-.023 5m5.978-6l-5.978 6-6.022-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path fill="#fff" d="M93 406h86.8v24.84H93z"/>
-  <text transform="translate(102 424)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(102 424)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">afterBegin</tspan>
   </text>
   <path d="M242.5 583h102c12.75 0 25.5 12.75 25.5 25.5S357.25 634 344.5 634h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text transform="translate(226 614)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(226 614)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="3.367">method ready in TX</tspan>
   </text>
   <path d="M212 608.583C122 610 153 674 234.327 636.114M227 633l7.326 3.114L232 644" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(92 663)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(92 663)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">tx method</tspan>
   </text>
   <path d="M293.5 578V334m-5.5 6l5.5-6 5.5 6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path fill="#fff" d="M204 444h178.96v40.8H204z"/>
-  <text transform="translate(215 461)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(215 461)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">1. beforeCompletion()</tspan> <tspan y="17.609" x="0">2. afterCompletion(true)</tspan>
   </text>
   <path d="M324.92 398.48v40m6-6l-6 6-6-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(303 393)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(303 393)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">commit</tspan>
   </text>
   <path d="M375 608.501l135 .036 5 .002m-5.88-5.339l5.88 5.339-5.88 5.661" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(381 594)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(381 594)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">non-tx or different method</tspan>
   </text>
-  <text transform="translate(527 614)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(527 614)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">ERROR</tspan>
   </text>
   <path d="M464.807 523.27l-107.763 55.173-8.901 4.557" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path d="M464 524l.931-135 .069-10" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path d="M355.884 338.314l-3.156-7.32 7.399-2.58m-7.399 2.58l108.536 47.174 4.586 1.994" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path fill="#fff" d="M391 444h146.96v25.48H391z"/>
-  <text transform="translate(394 462)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(394 462)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">afterCompletion(true)</tspan>
   </text>
   <path d="M421.92 398.48v40m6-6l-6 6-6-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(393 393)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(393 393)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">rollback</tspan>
   </text>
   <path d="M366 284.027l170 .919 5 .027M535 279l6 5.973-6 6.027" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(371 273)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(371 273)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">PrePassivate callbacks, if any</tspan>
   </text>
   <path d="M503.066 199.88l-.118 42.6-.014 5m5.986-6l-5.986 6-6.014-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(432 193)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(432 193)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">chosen as LRU victim</tspan>
   </text>
   <path d="M563.5 276h102c12.75 0 25.5 12.75 25.5 25.5S678.25 327 665.5 327h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text transform="translate(547 307)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(547 307)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="44.492">passive</tspan>
   </text>
   <path d="M540 317.972l-166-.917-5-.027m6 5.972l-6-5.972 6-6.028" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(386 340)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(386 340)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">PostActivate callbacks, if any</tspan>
   </text>
   <path d="M506.92 351.48l6-6 6 6m-6-6v27" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(489 391)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(489 391)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">method</tspan>
   </text>
   <path d="M298 135l6-6 6 6m-6-6v143" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(317 214)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(317 214)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">Remove method</tspan> <tspan y="17.609" x="0">or CDI context destroyed</tspan> <tspan y="35.219" x="0">or timeout</tspan>
   </text>
   <path d="M349.92 170.48l6-6 6 6m-6-6v29" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(320 153)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(320 153)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">PreDestroy callbacks, if any</tspan>
   </text>
   <path d="M578 149l33.738 117.39L614.5 276m-35.416-126.91l-201.251-37.27-4.917-.91M377 118l-4.084-7.09L380 106m208.92 43.4l-14.958-11.056-8.042-5.944m1 8l-1-8 8-1" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(589 164)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(589 164)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">timeout</tspan>
   </text>
   <path d="M463 98.291l-83 .187-5 .01m6 5.792l-6-5.791 6-5.209" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
-  <text transform="translate(477 79)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(477 79)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">instance throws system</tspan> <tspan y="17.609" x="0">exception from any method</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round" d="M217 669h299v51H217z"/>
-  <text transform="translate(224 689)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(224 689)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">create()</tspan>
   </text>
-  <text transform="translate(222 712)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(222 712)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">constructor</tspan>
   </text>
-  <text transform="translate(323 689)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(323 689)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">action initiated by client</tspan>
   </text>
-  <text transform="translate(323 712)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(323 712)" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="0">action initiated by container</tspan>
   </text>
 </svg>
