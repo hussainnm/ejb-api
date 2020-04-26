@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="297" width="435">
+<svg xmlns="http://www.w3.org/2000/svg" height="297" width="435">
   <text transform="translate(286 26)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="-2.805">container</tspan>
   </text>
@@ -7,28 +7,20 @@
   <text transform="translate(18 146)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="-2.953">client</tspan>
   </text>
-  <g transform="translate(66 36)">
-      <path d="M-5.104 92.984l79.312-16.453 4.896-1.015M72 71l7.104 4.516L75 82" id="a" fill="none" stroke-linejoin="round"  stroke="#000" stroke-width="2"/>
-  </g>
+  <path d="M60.896 128.984l79.312-16.453 4.896-1.015M138 107l7.104 4.516L141 118" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path d="M166.667 92h66.666c8.334 0 16.667 9.25 16.667 18.5s-8.333 18.5-16.667 18.5h-66.666c-8.334 0-16.667-9.25-16.667-18.5S158.333 92 166.667 92" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
   <text transform="translate(158 116)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="28.047">Cart</tspan>
   </text>
-  <g transform="translate(240 60)">
-      <path d="M14.236 53.156l46.292 29.031 4.236 2.657M63 77l1.764 7.844L57 87" id="b" fill="none" stroke-linejoin="round"  stroke="#000" stroke-width="2"/>
-  </g>
+  <path d="M254.236 113.156l46.292 29.031 4.236 2.657M303 137l1.764 7.844L297 147" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path d="M325.667 129h66.666c8.334 0 16.667 9.25 16.667 18.5s-8.333 18.5-16.667 18.5h-66.666c-8.334 0-16.667-9.25-16.667-18.5s8.333-18.5 16.667-18.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
   <text transform="translate(317 153)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="11.383">CartBean</tspan>
-  </text>  
-  <g transform="translate(86 56)">
-      <path d="M-25.339 95.81l80.017 31.07 4.661 1.81M56 121l3.339 7.69L52 132" id="c" fill="none" stroke-linejoin="round"  stroke="#000" stroke-width="2"/>
-  </g>
+  </text>
+  <path d="M60.661 151.81l80.017 31.07 4.661 1.81M142 177l3.339 7.69L138 188" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   <path d="M166.667 168h66.666c8.334 0 16.667 9.25 16.667 18.5s-8.333 18.5-16.667 18.5h-66.666c-8.334 0-16.667-9.25-16.667-18.5s8.333-18.5 16.667-18.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
   <text transform="translate(158 192)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
     <tspan y="0" x="8.625">CartHome</tspan>
   </text>
-  <g transform="translate(302 75)">
-      <path d="M-47.185 110.153l58.84-16.46 4.816-1.346M9 88l7.47 4.347L13 99" id="d" fill="none" stroke-linejoin="round"  stroke="#000" stroke-width="2"/>
-  </g>
+  <path d="M254.815 185.153l58.84-16.46 4.816-1.346M311 163l7.47 4.347L315 174" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
 </svg>
