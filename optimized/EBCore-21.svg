@@ -1,61 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="336" width="723">
-  <defs>
-    <path d="M78.58 97.996l146.258-63.988 4.581-2.004M222 29l7.42 3.004L227 39" id="d" fill="none"/>
-    <path d="M104.591-32.02l146.226 63.06 4.592 1.98M252 26l3.409 7.02L248 36" id="c" fill="none"/>
-    <path d="M28.29 89.568l116.13-34.705 4.79-1.431M142 50l7.21 3.432L145 60" id="b" fill="none"/>
-    <path d="M-51.72-90.535L64.44-54.93l4.78 1.466M65-61l4.22 7.535L62-50" id="a" fill="none"/>
-  </defs>
-  <path fill="none" d="M0 0h723v336H0z"/>
-  <rect ry="26.375" rx="26.375" height="243" width="211" y="63" x="500" fill="#fff" stroke="#000" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" height="336" width="723">
   <ellipse ry="30" rx="76.5" cy="184" cx="85.5" fill="#fff" stroke="#000" stroke-width="2"/>
-  <ellipse ry="30" rx="76.5" cy="254" cx="292.5" fill="#fff" stroke="#000" stroke-width="2"/>
-  <ellipse ry="30" rx="76.5" cy="115" cx="292.5" fill="#fff" stroke="#000" stroke-width="2"/>
-  <ellipse ry="30" rx="76.5" cy="184" cx="605.5" fill="#fff" stroke="#000" stroke-width="2"/>
-  <use transform="translate(142 306)" height="100%" width="100%" xlink:href="#a" stroke="red" stroke-width="10" stroke-opacity="0"/>
-  <use transform="translate(142 306)" height="100%" width="100%" xlink:href="#a" stroke="#000" stroke-width="2"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#a" text-anchor="middle"> </textPath>
+  <text y="190" x="48">
+    <tspan y="190" x="49.891">Program A</tspan>
   </text>
-  <use transform="translate(62 63)" height="100%" width="100%" xlink:href="#b" stroke="red" stroke-width="10" stroke-opacity="0"/>
-  <use transform="translate(62 63)" height="100%" width="100%" xlink:href="#b" stroke="#000" stroke-width="2"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#b" text-anchor="middle"> </textPath>
-  </text>
-  <use transform="translate(269 149)" height="100%" width="100%" xlink:href="#c" stroke="red" stroke-width="10" stroke-opacity="0"/>
-  <use transform="translate(269 149)" height="100%" width="100%" xlink:href="#c" stroke="#000" stroke-width="2"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#c" text-anchor="middle"> </textPath>
-  </text>
-  <use transform="translate(295 154)" height="100%" width="100%" xlink:href="#d" stroke="red" stroke-width="10" stroke-opacity="0"/>
-  <use transform="translate(295 154)" height="100%" width="100%" xlink:href="#d" stroke="#000" stroke-width="2"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#d" text-anchor="middle"> </textPath>
-  </text>
+  <path d="M90.29 152.568l116.13-34.705 4.79-1.431M204 113l7.21 3.432L207 123" fill="none" stroke="#000" stroke-width="2"/>
   <text y="121" x="120">
     <tspan y="121" x="120.336">TX 1</tspan>
   </text>
+  <ellipse ry="30" rx="76.5" cy="115" cx="292.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text y="119" x="255">
+    <tspan y="119" x="257.109">Program B</tspan>
+  </text>
+  <path d="M90.28 215.465l116.16 35.605 4.78 1.466M207 245l4.22 7.535L204 256" fill="none" stroke="#000" stroke-width="2"/>
   <text y="260" x="120">
     <tspan y="260" x="120.336">TX 1</tspan>
   </text>
-  <text y="251" x="441">
-    <tspan y="251" x="441.336">TX 1</tspan>
-  </text>
-  <text y="121" x="441">
-    <tspan y="121" x="441.336">TX 1</tspan>
+  <ellipse ry="30" rx="76.5" cy="254" cx="292.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text y="258" x="255">
+    <tspan y="258" x="257.109">Program C</tspan>
   </text>
   <text y="49" x="508">
     <tspan y="49" x="514.602">Enterprise Bean Container</tspan>
   </text>
-  <text y="190" x="48">
-    <tspan y="190" x="49.891">Program A</tspan>
-  </text>
-  <text y="119" x="255">
-    <tspan y="119" x="257.109">Program B</tspan>
-  </text>
-  <text y="258" x="255">
-    <tspan y="258" x="257.109">Program C</tspan>
-  </text>
+  <rect ry="26.375" rx="26.375" height="243" width="211" y="63" x="500" fill="#fff" stroke="#000" stroke-width="2"/>
+  <ellipse ry="30" rx="76.5" cy="184" cx="605.5" fill="#fff" stroke="#000" stroke-width="2"/>
   <text y="190" x="563">
     <tspan y="190" x="563.719">Entity object</tspan>
+  </text>
+  <path d="M373.591 116.98l146.226 63.06 4.592 1.98M521 175l3.409 7.02L517 185" fill="none" stroke="#000" stroke-width="2"/>
+  <text y="121" x="441">
+    <tspan y="121" x="441.336">TX 1</tspan>
+  </text>
+  <path d="M373.58 251.996l146.258-63.988 4.581-2.004M517 183l7.42 3.004L522 193" fill="none" stroke="#000" stroke-width="2"/>
+  <text y="251" x="441">
+    <tspan y="251" x="441.336">TX 1</tspan>
   </text>
 </svg>
