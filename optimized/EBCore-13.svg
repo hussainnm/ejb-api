@@ -1,69 +1,25 @@
-<svg xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="371" width="694">
-  <path fill="none" d="M0 0h694v371H0z"/>
-  <rect ry="31.25" rx="31.25" height="350" width="250" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round" transform="translate(315 10)"/>
-  <rect ry="21.875" rx="21.875" height="250" width="175" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round" transform="translate(353 50)"/>
-  <g transform="translate(414 154)">
-    <ellipse ry="21.5" rx="48.5" cy="21.5" cx="48.5" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <foreignObject style="text-align:center" height="0" width="75.5" y="22" x="10.75" font-family="serif" font-size="16" font-weight="400" color="#000">
-      <xhtml:div/>
-    </foreignObject>
-  </g>
-  <g transform="translate(404 140)">
-    <ellipse ry="21.5" rx="48.5" cy="21.5" cx="48.5" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <foreignObject style="text-align:center" height="0" width="75.5" y="22" x="10.75" font-family="serif" font-size="16" font-weight="400" color="#000">
-      <xhtml:div/>
-    </foreignObject>
-  </g>
-  <g transform="translate(394 122)">
-    <ellipse ry="21.5" rx="48.5" cy="21.5" cx="48.5" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <foreignObject style="text-align:center" height="0" width="75.5" y="22" x="10.75" font-family="serif" font-size="16" font-weight="400" color="#000">
-      <xhtml:div/>
-    </foreignObject>
-  </g>
-  <g transform="translate(225 153)">
-    <ellipse ry="35" rx="87.5" cy="35" cx="87.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-    <foreignObject style="text-align:center" height="0" width="174" y="35" x=".5" font-family="serif" font-size="16" font-weight="400" color="#000">
-      <xhtml:div/>
-    </foreignObject>
-  </g>
-  <g transform="translate(10 85)">
-    <defs>
-      <path d="M120 103h90m-6-6l6 6-6 6" id="a" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#a" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#a" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#a" text-anchor="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(464 140)">
-    <defs>
-      <path d="M0 0l109.303-27.556L119-30" id="b" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#b" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#b" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#b" text-anchor="middle"> </textPath>
-    </text>
-  </g>
-  <path fill="#fff" d="M262 168h100v40H262z"/>
-  <text transform="translate(275 185)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">destination </tspan><tspan y="17.609" x="0">or endpoint</tspan>
-  </text>
-  <path fill="#fff" d="M583 80h100v60H583z"/>
-  <text transform="translate(593 98)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">Message-</tspan><tspan y="17.609" x="0">driven bean </tspan><tspan y="35.219" x="0">instances</tspan>
-  </text>
-  <path fill="#ccc" d="M363 241h128v40H363z"/>
-  <text transform="translate(376 258)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">Message-driven</tspan><tspan y="17.609" x="0">bean</tspan>
-  </text>
-  <path fill="#ccc" d="M363 20h75v20h-75z"/>
-  <text transform="translate(368 36)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+<svg xmlns="http://www.w3.org/2000/svg" height="371" width="694">
+  <rect ry="31.25" rx="31.25" height="350" width="250" fill="#ccc" stroke="#000" stroke-width="2" transform="translate(315 10)"/>
+  <rect ry="21.875" rx="21.875" height="250" width="175" fill="#ccc" stroke="#000" stroke-width="2" transform="translate(353 50)"/>
+  <text transform="translate(368 36)">
     <tspan y="0" x="0">Container</tspan>
   </text>
-  <path fill="#fff" d="M75 178h50v20H75z"/>
-  <text transform="translate(80 194)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(80 194)">
     <tspan y="0" x="0">Client</tspan>
+  </text>
+  <path d="M130 188h90m-6-6l6 6-6 6" fill="none" stroke="#000" stroke-width="2"/>
+  <ellipse ry="35" rx="87.5" cy="35" cx="87.5" fill="#fff" stroke="#000" stroke-width="2" transform="translate(225 153)"/>
+  <text transform="translate(275 185)">
+    <tspan y="0" x="0">destination</tspan> <tspan y="17.609" x="0">or endpoint</tspan>
+  </text>
+  <text transform="translate(376 258)">
+    <tspan y="0" x="0">Message-driven</tspan> <tspan y="17.609" x="0">bean</tspan>
+  </text>
+  <ellipse ry="21.5" rx="48.5" cy="21.5" cx="48.5" fill="#ccc" stroke="#000" stroke-width="2" transform="translate(414 154)"/>
+  <ellipse ry="21.5" rx="48.5" cy="21.5" cx="48.5" fill="#ccc" stroke="#000" stroke-width="2" transform="translate(404 140)"/>
+  <ellipse ry="21.5" rx="48.5" cy="21.5" cx="48.5" fill="#ccc" stroke="#000" stroke-width="2" transform="translate(394 122)"/>
+  <path d="M464 140l109.303-27.556L583 110" fill="none" stroke="#000" stroke-width="2"/>
+  <text transform="translate(593 98)">
+    <tspan y="0" x="0">Message-</tspan><tspan y="17.609" x="0">driven bean</tspan> <tspan y="35.219" x="0">instances</tspan>
   </text>
 </svg>
