@@ -6,12 +6,12 @@
   <text transform="translate(18 150)">
     <tspan y="0" x="0">1. AroundConstruct callbacks, if any</tspan> <tspan y="17.609" x="0">2. constructor</tspan> <tspan y="35.219" x="0">3. dependency injection, if any</tspan> <tspan y="52.828" x="0">4. PostConstruct callbacks, if any</tspan> <tspan y="70.438" x="0">5. Init method, or</tspan> <tspan y="88.047" x="0">ejbCreate&lt;METHOD&gt;, if any</tspan>
   </text>
-  <path d="M242.5 73h102c12.75 0 25.5 12.75 25.5 25.5S357.25 124 344.5 124h-102c-12.75 0-25.5-12.75-25.5-25.5S229.75 73 242.5 73" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M242.5 73h102c12.75 0 25.5 12.75 25.5 25.5S357.25 124 344.5 124h-102c-12.75 0-25.5-12.75-25.5-25.5S229.75 73 242.5 73" fill="#fff" stroke="#000" stroke-width="2"/>
   <text transform="translate(225 104)">
     <tspan y="0" x="24.32">does not exist</tspan>
   </text>
   <path d="M271 129v143m6-6l-6 6-6-6" fill="none" stroke="#000" stroke-width="2"/>
-  <path d="M242.5 278h102c12.75 0 25.5 12.75 25.5 25.5S357.25 329 344.5 329h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M242.5 278h102c12.75 0 25.5 12.75 25.5 25.5S357.25 329 344.5 329h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2"/>
   <text transform="translate(226 309)">
     <tspan y="0" x="23.93">method ready</tspan>
   </text>
@@ -28,7 +28,7 @@
   <text transform="translate(102 424)">
     <tspan y="0" x="0">afterBegin</tspan>
   </text>
-  <path d="M242.5 583h102c12.75 0 25.5 12.75 25.5 25.5S357.25 634 344.5 634h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M242.5 583h102c12.75 0 25.5 12.75 25.5 25.5S357.25 634 344.5 634h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2"/>
   <text transform="translate(226 614)">
     <tspan y="0" x="3.367">method ready in TX</tspan>
   </text>
@@ -71,7 +71,7 @@
   <text transform="translate(432 193)">
     <tspan y="0" x="0">chosen as LRU victim</tspan>
   </text>
-  <path d="M563.5 276h102c12.75 0 25.5 12.75 25.5 25.5S678.25 327 665.5 327h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M563.5 276h102c12.75 0 25.5 12.75 25.5 25.5S678.25 327 665.5 327h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2"/>
   <text transform="translate(547 307)">
     <tspan y="0" x="44.492">passive</tspan>
   </text>
