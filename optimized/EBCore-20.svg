@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="293" width="477">
+  <defs>
+    <path d="M376.536-31l.393 55 .035 5M383 23l-6.036 6L371 23" id="d" fill="none" stroke-linejoin="round"/>
+    <path d="M282.929-15l-.786 55-.072 5M288 39l-5.929 6L276 39" id="c" fill="none" stroke-linejoin="round"/>
+    <path d="M38-28.034l130-.897 5-.035M167-35l6 6.034L167-23" id="b" fill="none" stroke-linejoin="round"/>
+    <path d="M187 50h29m-6-6l6 6-6 6" id="a" fill="none" stroke-linejoin="round"/>
+  </defs>
+  <path fill="none" d="M0 0h477v293H0z"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round" d="M10 53h100v80H10z"/>
+  <text y="99" x="18" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="99" x="40.266">Client</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round" d="M166 42h300v100H166z"/>
+  <path d="M267.667 72h50.666C324.667 72 331 82 331 92s-6.333 20-12.667 20h-50.666C261.333 112 255 102 255 92s6.333-20 12.667-20" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <text y="98" x="264" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="98" x="287.594">X</tspan>
+  </text>
+  <path d="M382.167 72h48.666C436.917 72 443 82 443 92s-6.083 20-12.167 20h-48.666C376.083 112 370 102 370 92s6.083-20 12.167-20" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <text y="98" x="379" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="98" x="401.094">Y</tspan>
+  </text>
+  <use transform="translate(149 42)" height="100%" width="100%" xlink:href="#a" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(149 42)" height="100%" width="100%" xlink:href="#a" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#a" text-anchor="middle"> </textPath>
+  </text>
+  <use transform="translate(77 121)" height="100%" width="100%" xlink:href="#b" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(77 121)" height="100%" width="100%" xlink:href="#b" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#b" text-anchor="middle"> </textPath>
+  </text>
+  <path d="M242 198.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0-8.334-25-16.667-50-16.667s-50 8.333-50 16.667z" fill="#fff"/>
+  <path d="M242 198.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <text y="254" x="250" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="254" x="256.898">database A</tspan>
+  </text>
+  <path d="M357 198.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0-8.334-25-16.667-50-16.667s-50 8.333-50 16.667z" fill="#fff"/>
+  <path d="M357 198.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <text y="254" x="365" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="254" x="372.125">database B</tspan>
+  </text>
+  <use transform="translate(10 132)" height="100%" width="100%" xlink:href="#c" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(10 132)" height="100%" width="100%" xlink:href="#c" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#c" text-anchor="middle"> </textPath>
+  </text>
+  <use transform="translate(30 148)" height="100%" width="100%" xlink:href="#d" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(30 148)" height="100%" width="100%" xlink:href="#d" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#d" text-anchor="middle"> </textPath>
+  </text>
+  <path fill="#fff" d="M229 10h175v25H229z"/>
+  <text y="28" x="237" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="28" x="241.766">Enterprise Bean Server</tspan>
+  </text>
+  <path fill="#fff" d="M168 61h75v25h-75z"/>
+  <text y="79" x="176" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="79" x="187.727">begin</tspan>
+  </text>
+  <path fill="#fff" d="M168 99h75v25h-75z"/>
+  <text y="117" x="176" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+    <tspan y="117" x="181.367">commit</tspan>
+  </text>
+</svg>
