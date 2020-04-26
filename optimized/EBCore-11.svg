@@ -1,84 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="361" width="601.602">
-  <path fill="none" d="M0 0h580v361H0z"/>
-  <path fill="#fff" d="M106 235h71.44v29.96H106z"/>
-  <text transform="translate(117 256)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">method</tspan>
-  </text>
-  <path fill="#fff" d="M312 128h200.322v18.518H312z"/>
-  <text transform="translate(322 143)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">PreDestroy callbacks, if any</tspan>
-  </text>
-  <path fill="#fff" d="M10 96h262.794v83.109H10z"/>
-  <text transform="translate(22 117)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-    <tspan y="0" x="0">1. AroundConstruct callbacks, if any</tspan><tspan y="17.609" x="0">2. constructor</tspan><tspan y="35.219" x="0">3. dependency injection, if any</tspan><tspan y="52.828" x="0">4. PostConstruct callbacks, if any</tspan>
-  </text>
-  <path d="M246.5 10h102c12.75 0 25.5 12.75 25.5 25.5S361.25 61 348.5 61h-102C233.75 61 221 48.25 221 35.5S233.75 10 246.5 10" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text transform="translate(229 41)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+<svg xmlns="http://www.w3.org/2000/svg" height="361" width="601.602">
+  <path d="M246.5 10h102c12.75 0 25.5 12.75 25.5 25.5S361.25 61 348.5 61h-102C233.75 61 221 48.25 221 35.5S233.75 10 246.5 10" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text transform="translate(229 41)">
     <tspan y="0" x="24.32">does not exist</tspan>
   </text>
-  <path d="M246.5 215h102c12.75 0 25.5 12.75 25.5 25.5S361.25 266 348.5 266h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text transform="translate(230 246)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <path d="M275 66v143m6-6l-6 6-6-6" fill="none" stroke="#000" stroke-width="2"/>
+  <path fill="#fff" d="M10 96h262.794v83.109H10z"/>
+  <text transform="translate(22 117)">
+    <tspan y="0" x="0">1. AroundConstruct callbacks, if any</tspan> <tspan y="17.609" x="0">2. constructor</tspan> <tspan y="35.219" x="0">3. dependency injection, if any</tspan> <tspan y="52.828" x="0">4. PostConstruct callbacks, if any</tspan>
+  </text>
+  <path d="M246.5 215h102c12.75 0 25.5 12.75 25.5 25.5S361.25 266 348.5 266h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text transform="translate(230 246)">
     <tspan y="0" x="7.266">method-ready pool</tspan>
   </text>
-  <g transform="translate(281 49)">
-    <defs>
-      <path d="M21 23l6-6 6 6m-6-6v143" id="a" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#a" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#a" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#a" text-anchor="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="rotate(-180 277 126.5)">
-    <defs>
-      <path d="M197.357-15.178C116-54 85 13 175 12.5M169 7l6 5.5-6 5.5" id="b" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#b" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#b" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#b" text-anchor="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(169 147)">
-    <defs>
-      <path d="M69.357 65.822C-12 27-43 94 47 93.5M41 88l6 5.5-6 5.5" id="c" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#c" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#c" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#c" text-anchor="middle"> </textPath>
-    </text>
-  </g>
-  <g transform="translate(248 49)">
-    <defs>
-      <path d="M27 17v143m6-6l-6 6-6-6" id="d" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use height="100%" width="100%" xlink:href="#d" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use height="100%" width="100%" xlink:href="#d" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#d" text-anchor="middle"> </textPath>
-    </text>
-  </g>
-  <path fill="#fff" d="M393 215h176.44v22.96H393z"/>
-  <text transform="translate(401 232)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <path d="M238.357 212.822C157 174 126 241 216 240.5m-6-5.5l6 5.5-6 5.5" fill="none" stroke="#000" stroke-width="2"/>
+  <text transform="translate(117 256)" font-style="italic">
+    <tspan y="0" x="0">method</tspan>
+  </text>
+  <path d="M356.643 268.178C438 307 469 240 379 240.5m6 5.5l-6-5.5 6-5.5" fill="none" stroke="#000" stroke-width="2"/>
+  <text transform="translate(401 232)" font-style="italic">
     <tspan y="0" x="0">timeout callback method</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round" d="M221 293h299.24v50.72H221z"/>
-  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M223 297h66v20h-66z"/>
-  <text transform="translate(227 313)" style="text-decoration-line:none" font-style="italic" font-weight="400" font-size="16" font-family="serif">
+  <path d="M302 72l6-6 6 6m-6-6v143" fill="none" stroke="#000" stroke-width="2"/>
+  <text transform="translate(322 143)">
+    <tspan y="0" x="0">PreDestroy callbacks, if any</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M221 293h299.24v50.72H221z"/>
+  <text transform="translate(227 313)" font-style="italic">
     <tspan y="0" x="0">method()</tspan>
   </text>
-  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M223 320h80v20h-80z"/>
-  <text transform="translate(226 336)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(226 336)">
     <tspan y="0" x="0">constructor</tspan>
   </text>
-  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M317 297h175v20H317z"/>
-  <text transform="translate(327 313)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(327 313)">
     <tspan y="0" x="0">action initiated by client</tspan>
   </text>
-  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M317 320h200v20H317z"/>
-  <text transform="translate(327 336)" style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
+  <text transform="translate(327 336)">
     <tspan y="0" x="0">action initiated by container</tspan>
   </text>
 </svg>
