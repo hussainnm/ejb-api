@@ -1,117 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="525" width="619.969">
-  <path fill="none" d="M0 0h600v525H0z"/>
-  <path fill="#fff" d="M400 208h185v120H400z"/>
   <text style="text-decoration-line:none" transform="translate(409 230)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan x="32.375" y="0">object.remove(),</tspan><tspan x="32.594" y="17.609">home.remove(), </tspan><tspan x=".344" y="35.219">system exception in bean, </tspan><tspan x="40.953" y="52.828">bean timeout </tspan><tspan x="75.383" y="70.438">or </tspan><tspan x="34.063" y="88.047">container crash</tspan>
   </text>
   <g transform="translate(273 182)">
-    <defs>
-      <path id="e" d="M-127-13l-6-6 6-6m-6 6H49" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#e" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#e" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#e" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+    <path id="e" d="M-127-13l-6-6 6-6m-6 6H49" stroke="#000" stroke-width="2" fill="none" stroke-linejoin="round"/>
   </g>
   <g transform="translate(188 196)">
-    <defs>
-      <path id="f" d="M-66.673-.262l215.162 140.787 4.184 2.737M151 135l1.673 8.262L145 145" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#f" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#f" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="16" font-family="serif">
-      <textPath xlink:href="#f" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="f" d="M-66.673-.262l215.162 140.787 4.184 2.737M151 135l1.673 8.262L145 145" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <g transform="translate(60 280)">
-    <defs>
-      <path id="g" d="M7-76l5.5-6 5.5 6m-5.5-6V57" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#g" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#g" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#g" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="g" d="M7-76l5.5-6 5.5 6m-5.5-6V57" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <g transform="translate(91 275)">
-    <defs>
-      <path id="h" d="M229 75l6 6.025L229 87m6-5.975L51 81.95l-5 .025" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#h" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#h" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#h" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="h" d="M229 75l6 6.025L229 87m6-5.975L51 81.95l-5 .025" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <g transform="translate(196 518)">
-    <defs>
-      <path id="i" d="M-55-123l-6-6.025 6-5.975m-6 5.975l186-.925 5-.025" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#i" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#i" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#i" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="i" d="M-55-123l-6-6.025 6-5.975m-6 5.975l186-.925 5-.025" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <g transform="translate(527 260)">
-    <defs>
-      <path id="j" d="M-143-56l5.5-6 5.5 6m-5.5-6V77" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#j" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#j" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#j" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="j" d="M-143-56l5.5-6 5.5 6m-5.5-6V77" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <g transform="translate(267 468)">
-    <defs>
-      <path id="k" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#k" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#k" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#k" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="k" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
   <g transform="translate(575 81)">
-    <defs>
-      <path id="l" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6" fill="none" stroke-linejoin="round"/>
-    </defs>
-    <use xlink:href="#l" width="100%" height="100%" stroke="red" stroke-width="10" stroke-opacity="0"/>
-    <use xlink:href="#l" width="100%" height="100%" stroke="#000" stroke-width="2"/>
-    <text style="text-decoration-line:none" font-weight="400" font-size="13" font-family="'Liberation Sans',Arial,sans-serif">
-      <textPath xlink:href="#l" startOffset="50%" alignment-baseline="middle" text-anchor="middle"> </textPath>
-    </text>
+      <path id="l" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6" fill="none" stroke-linejoin="round" stroke="#000" stroke-width="2"/>
   </g>
-  <path fill="#fff" d="M81 256h119v40H81z"/>
   <text style="text-decoration-line:none" transform="translate(89 273)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan x="1.063" y="0">container crash</tspan><tspan x=".258" y="17.609">or bean timeout</tspan>
   </text>
-  <path fill="#fff" d="M287 468h205v27H287z"/>
   <text style="text-decoration-line:none" transform="translate(295 487)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan x="4.695" y="0">client&apos;s method on reference</tspan>
   </text>
-  <path fill="#fff" d="M249 10h280v60H249z"/>
   <text style="text-decoration-line:none" transform="translate(260 28)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan x="0" y="0">client&apos;s method on reference </tspan><tspan x="0" y="17.609">generates NoSuchObjectException</tspan><tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
   </text>
-  <path fill="#fff" d="M145 398h167v20H145z"/>
   <text style="text-decoration-line:none" transform="translate(153 414)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan x="21.031" y="0">release reference</tspan>
   </text>
-  <path fill="#fff" d="M148 133h167v20H148z"/>
   <text style="text-decoration-line:none" transform="translate(156 149)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
     <tspan x="21.031" y="0">release reference</tspan>
   </text>
   <g>
-    <path fill="#fff" d="M145 325h167v20H145z"/>
     <text style="text-decoration-line:none" transform="translate(153 341)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
       <tspan x="1.977" y="0">handle.getEJBObject()</tspan>
     </text>
   </g>
   <g>
-    <path fill="#fff" d="M187 215h192v20H187z"/>
     <text style="text-decoration-line:none" transform="translate(195 231)" font-style="italic" font-weight="400" font-size="16" font-family="serif">
       <tspan x="-6.477" y="0">home.create&lt;METHOD&gt;(...)</tspan>
     </text>
