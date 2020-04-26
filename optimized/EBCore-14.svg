@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="360" width="580">
+  <path d="M246.5 10h102c12.75 0 25.5 12.75 25.5 25.5S361.25 61 348.5 61h-102C233.75 61 221 48.25 221 35.5S233.75 10 246.5 10" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text y="41" x="229">
+    <tspan y="41" x="253.32">does not exist</tspan>
+  </text>
+  <path d="M275 66v143m6-6l-6 6-6-6" fill="none" stroke="#000" stroke-width="2"/>
+  <text y="117" x="22">
+    <tspan y="117" x="22">1. AroundConstruct callbacks, if any</tspan> <tspan y="134.609" x="22">2. constructor</tspan> <tspan y="152.219" x="22">3. dependency injection, if any</tspan> <tspan y="169.828" x="22">4. PostConstruct callbacks, if any</tspan>
+  </text>
+  <path d="M246.5 215h102c12.75 0 25.5 12.75 25.5 25.5S361.25 266 348.5 266h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text y="246" x="230">
+    <tspan y="246" x="237.266">method-ready pool</tspan>
+  </text>
+  <path d="M238.357 212.822C157 174 126 241 216 240.5m-6-5.5l6 5.5-6 5.5" fill="none" stroke="#000" stroke-width="2"/>
+  <text y="258" x="20" font-style="italic">
+    <tspan y="258" x="20">message listener method</tspan>
+  </text>
+  <path d="M356.643 268.178C438 307 469 240 379 240.5m6 5.5l-6-5.5 6-5.5" fill="none" stroke="#000" stroke-width="2"/>
+  <path fill="#fff" d="M393 215h176.44v22.96H393z"/>
+  <text y="232" x="401" font-style="italic">
+    <tspan y="232" x="401">timeout callback method</tspan>
+  </text>
+  <path d="M302 72l6-6 6 6m-6-6v143" fill="none" stroke="#000" stroke-width="2"/>
+  <text y="143" x="322">
+    <tspan y="143" x="322">PreDestroy callbacks, if any</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M130 290h439v67H130z"/>
+  <text y="310" x="141" font-style="italic">
+    <tspan x="141" y="310">message listener</tspan> <tspan x="141" y="327.609">method()</tspan>
+  </text>
+  <text y="348" x="140">
+    <tspan x="140" y="348">constructor</tspan>
+  </text>
+  <text y="309" x="275">
+    <tspan x="275" y="309">action resulting from client message arrival</tspan>
+  </text>
+  <text y="348" x="274">
+    <tspan x="274" y="348">action initiated by container</tspan>
+  </text>
+</svg>
