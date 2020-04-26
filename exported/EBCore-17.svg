@@ -1,0 +1,456 @@
+<svg xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:pencil="http://www.evolus.vn/Namespace/Pencil" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="505" height="245" id="exportedSVG" version="1.1" pencil:version="1.2.2" sodipodi:docname="ejb-spec-diagrams.tar" inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata id="metadata8157">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs8155"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1920" inkscape:window-height="1001" id="namedview8153" showgrid="false" inkscape:zoom="0.6950495" inkscape:cx="252.5" inkscape:cy="-452.99858" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:window-maximized="1" inkscape:current-layer="layer_ebcore27"/>
+  <svg:g inkscape:label="EBCore-17" inkscape:groupmode="layer" id="layer_ebcore17">
+    <svg:g id="g4091">
+      <svg:rect x="0" y="0" width="548" height="291" fill="none" id="rect3859"/>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:process" id="g3885" transform="matrix(1,0,0,1,10.000001102685928,51.00000078976154)">
+        <pencil:metadata>
+          <pencil:property name="box">100,80</pencil:property>
+          <pencil:property name="outputPin1Origin">50,0</pencil:property>
+          <pencil:property name="outputPin1">50,0</pencil:property>
+          <pencil:property name="outputPin2Origin">100,40</pencil:property>
+          <pencil:property name="outputPin2">100,40</pencil:property>
+          <pencil:property name="outputPin3Origin">50,80</pencil:property>
+          <pencil:property name="outputPin3">50,80</pencil:property>
+          <pencil:property name="outputPin4Origin">0,40</pencil:property>
+          <pencil:property name="outputPin4">0,40</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent">Client</pencil:property>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:rect style="stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="path" id="a7077a240d1a4b0e88a7a632f7990f37" transform="translate(0,0)" x="0" y="0" width="100" height="80"/>
+        <svg:text pencil:name="text1" id="3825b9b8293048979240e8f3eca473e2" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#f6972f94c4a149bb8f55bfc8e7fdd887" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3863"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="45751765662e4b2983bfa38a0617ef3d" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="af99928fe40340e8b0f1be1c394f131d" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#4209151f7360431cab018a49af545cc9" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3867"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="b79e3518f7784b27bf95247787019ddc" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="90e817b177f34022bc6fdb42290cbb8e" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#1db3a140d9884526aa10ea860192e12e" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3871"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="f6de4387f42f46f4abbec6e60c12c889" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="a65556da650a4c44a2c6b7eb3088035b" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#dd221632bcb04a25bd177f9ee30acefa" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath3875"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="d0f53e4a58c44bc3bd640cf275448e76" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="103b73b017c54b7397602ff684990f7f" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(8,46)"><svg:tspan x="22.265625" y="0" id="tspan3878">Client</svg:tspan></svg:text>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow1" id="f6972f94c4a149bb8f55bfc8e7fdd887" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow2" id="4209151f7360431cab018a49af545cc9" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow3" id="1db3a140d9884526aa10ea860192e12e" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow4" id="dd221632bcb04a25bd177f9ee30acefa" d=""/>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:process" id="g3909" transform="matrix(1,0,0,1,308.0000045895576,40.00000062584877)">
+        <pencil:metadata>
+          <pencil:property name="box">229.00000651180744,99</pencil:property>
+          <pencil:property name="outputPin1Origin">114.50000325590372,0</pencil:property>
+          <pencil:property name="outputPin1">114.50000325590372,0</pencil:property>
+          <pencil:property name="outputPin2Origin">229.00000651180744,49.5</pencil:property>
+          <pencil:property name="outputPin2">229.00000651180744,49.5</pencil:property>
+          <pencil:property name="outputPin3Origin">114.50000325590372,99</pencil:property>
+          <pencil:property name="outputPin3">114.50000325590372,99</pencil:property>
+          <pencil:property name="outputPin4Origin">0,49.5</pencil:property>
+          <pencil:property name="outputPin4">0,49.5</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent"/>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">0,2</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:rect style="stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="path" id="ee78c523ea9d4bb991893374faa73e2a" transform="translate(0,0)" x="0" y="0" width="229.00000651180744" height="99"/>
+        <svg:text pencil:name="text1" id="4c592b203d5b40f9bfc52c0b9adc63a6" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#118dac8083cf44369297238061469cad" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3889"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="2fc1300a37454fe3bbd84bcb9fe8f2a2" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="58787e577ff14a5aa38b963d1b33c145" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#40c69a1cd52742fbb9096ad21179de7b" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3893"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="4deab54168414a0e88b5eed69ec64234" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="3ac0f662f97c4c08a623488e5f1e3699" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#72209a6966574c11844ba89c9c8de00d" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3897"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="6d8de29854084f31bc4b5d5ac467b31a" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="ed477764c2e047e1a418b0db8cefe47e" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#7f102da19103432fa55b1c3d5411c145" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath3901"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="042625366e2f4982b9fb4482bfd1f55b" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="dc3d42a38c5b40679db5df783c6d60b5" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(115,50)"/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow1" id="118dac8083cf44369297238061469cad" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow2" id="40c69a1cd52742fbb9096ad21179de7b" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow3" id="72209a6966574c11844ba89c9c8de00d" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow4" id="7f102da19103432fa55b1c3d5411c145" d=""/>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:Terminator" id="g3935" transform="matrix(1,0,0,1,384.00000572204584,71.00000108778477)">
+        <pencil:metadata>
+          <pencil:property name="box">76,40.00000549852848</pencil:property>
+          <pencil:property name="outputPin1Origin">38,0</pencil:property>
+          <pencil:property name="outputPin1">38.00000000000001,0</pencil:property>
+          <pencil:property name="outputPin2Origin">76,20.00000274926424</pencil:property>
+          <pencil:property name="outputPin2">76.00000000000001,20.00000274926424</pencil:property>
+          <pencil:property name="outputPin3Origin">38,40.00000549852848</pencil:property>
+          <pencil:property name="outputPin3">38.00000000000001,40.00000549852848</pencil:property>
+          <pencil:property name="outputPin4Origin">0,20.00000274926424</pencil:property>
+          <pencil:property name="outputPin4">0,20.00000274926424</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent">X</pencil:property>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:path style="stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="path" id="782a58b44dee461186286b667fc9a477" transform="translate(0,0)" d="M 12.666666666666666 0 L 63.333333333333336 0 C 69.66666666666667 0 76 10.00000137463212 76 20.00000274926424 S 69.66666666666667 40.00000549852848 63.333333333333336 40.00000549852848 L 12.666666666666666 40.00000549852848 C 6.333333333333333 40.00000549852848 0 30.00000412389636 0 20.00000274926424 S 6.333333333333333 0 12.666666666666666 0"/>
+        <svg:text pencil:name="text1" id="3b093e23938c4aeb91cf456475655f2a" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#d9da0f28f7e74fc0bb3a0177e2d35399" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3913"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="2fa97c8a7901462784af29a3d63e49d4" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="dd318a9558214eb6873b48d411e41bca" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#33294b8ab5f3494f99cccc4afd839fb6" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3917"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="db73f713ef08498d9b46797cf2634ae9" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="67c6ec759777495481a2778a53ab39cc" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#209d2f31e3744e0b947b98ff8f1b28f6" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3921"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="e2ac10c8260e4285a9356d39edbafd94" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="de2f847bd0d441cf84f81dd0ae3c4e98" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#77abb04936c147b688674a548300208f" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath3925"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="204ec9ca8448443fa4ba402dbfe368d5" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="d23c2ebb6a42494ca793765f3fe75166" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(9,26)"><svg:tspan x="23.59375" y="0" id="tspan3928">X</svg:tspan></svg:text>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow1" id="d9da0f28f7e74fc0bb3a0177e2d35399" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow2" id="33294b8ab5f3494f99cccc4afd839fb6" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow3" id="209d2f31e3744e0b947b98ff8f1b28f6" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow4" id="77abb04936c147b688674a548300208f" d=""/>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Common:arrow" pencil:sc="Straight Connector" id="g3947" transform="matrix(1,0,0,1,77.00000114738941,119.0000018030405)">
+        <pencil:metadata>
+          <pencil:property name="startPin" pencil:viay="-28.00000101327896" pencil:viax="42.99999995529657" pencil:connectedOutletId="middle-right" pencil:connectedShapeId="60b370e8c7ca4d82b0c298eb08956c5a">32.99999995529657,-28.00000101327896</pencil:property>
+          <pencil:property name="endPin" pencil:connectedShapeId="eb3b9136272b4cd183cf687bd60baf98" pencil:connectedOutletId="middle-left" pencil:viax="73.00000123679638" pencil:viay="-28.00000101327896">83.00000123679638,-28.00000101327896</pencil:property>
+          <pencil:property name="withStartArrow">false</pencil:property>
+          <pencil:property name="withEndArrow">true</pencil:property>
+          <pencil:property name="mode">straight</pencil:property>
+          <pencil:property name="detached">true</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent"/>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+        </pencil:metadata>
+        <svg:defs id="defs3938">
+          <svg:path style="stroke-linejoin: round; fill: none;" pencil:name="path" id="6028daa30b6049549b5d2909814738a2" d="M 37.99999995529657 -28.00000101327896 L 73.00000123679638 -28.00000101327896 L 78.00000123679638 -28.00000101327896 M 72 -34 L 78.00000123679638 -28.00000101327896 L 72 -22"/>
+        </svg:defs>
+        <svg:use xlink:href="#6028daa30b6049549b5d2909814738a2" stroke-width="10" stroke-opacity="0" stroke="#FF0000" id="use3940"/>
+        <svg:use xlink:href="#6028daa30b6049549b5d2909814738a2" pencil:name="outArrow1" id="264e06f800084fb6adbaad14841c5362" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;"/>
+        <svg:text pencil:name="text" id="5ce8a19e531248faa32a8fe2672ba377" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;">
+          <svg:textPath xlink:href="#6028daa30b6049549b5d2909814738a2" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3944"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan" id="dab42ba0672649fd9e3e449be9f2bced" dx="-16"/>
+</svg:textPath>
+        </svg:text>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:MagneticDisk" id="g3974" transform="matrix(1,0,0,1,308.0000045895576,180.00000271201134)">
+        <pencil:metadata>
+          <pencil:property name="box">100,100</pencil:property>
+          <pencil:property name="outputPin1Origin">50,0</pencil:property>
+          <pencil:property name="outputPin1">50,0</pencil:property>
+          <pencil:property name="outputPin2Origin">100,50</pencil:property>
+          <pencil:property name="outputPin2">100,50</pencil:property>
+          <pencil:property name="outputPin3Origin">50,100</pencil:property>
+          <pencil:property name="outputPin3">50,100</pencil:property>
+          <pencil:property name="outputPin4Origin">0,50</pencil:property>
+          <pencil:property name="outputPin4">0,50</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent">database B</pencil:property>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:path stroke="none" style="stroke-linejoin: round; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="fill" id="4fe5960760974d8d948b4d2a3dcb2a4f" transform="translate(0,0)" d="M 0 16.666666666666668 L 0 83.33333333333333 C 0 91.66666666666667 25 100 50 100 S 100 91.66666666666667 100 83.33333333333333 L 100 16.666666666666668 C 100 8.333333333333334 75 0 50 0 S 0 8.333333333333334 0 16.666666666666668 z"/>
+        <svg:path fill="none" style="stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="path" id="e43b606871ce4cc382cc931e481ae5bf" transform="translate(0,0)" d="M 0 16.666666666666668 L 0 83.33333333333333 C 0 91.66666666666667 25 100 50 100 S 100 91.66666666666667 100 83.33333333333333 L 100 16.666666666666668 C 100 25 75 33.333333333333336 50 33.333333333333336 S 0 25 0 16.666666666666668 C 0 8.333333333333334 25 0 50 0 S 100 8.333333333333334 100 16.666666666666668"/>
+        <svg:text pencil:name="text1" id="25a53e529a324d8698121a076cf38d32" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#82310b3dee7a4f04bb3b451e633f7726" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3952"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="1d4b903d5f2a46c5bae21e7123e3baa6" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="4261c125813e4b53ba406a713bc4641a" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#ddb20d3f6fc44afa8a826754a15a6489" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3956"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="2f80b1b7b0ba4e1c8b4ec2171c7a66ab" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="cdc6d027c82c4dc6a7e3d9daa9a41773" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#6df965ed7ea04ca9b4df2d8f3bc383ab" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3960"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="c4e45c9cd46f4a928f8d7eee10215b8b" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="91ae7c22d2794819ada236f62ce600ac" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#139dbb563161438fa70b8e578e6c1225" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath3964"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="1f71bffe4f49442ebef91f47471a1df5" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="5764e36c904f4f46b72bd6e755366ada" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(8,72)"><svg:tspan x="7.125" y="0" id="tspan3967">database B</svg:tspan></svg:text>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow1" id="82310b3dee7a4f04bb3b451e633f7726" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow2" id="ddb20d3f6fc44afa8a826754a15a6489" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow3" id="6df965ed7ea04ca9b4df2d8f3bc383ab" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow4" id="139dbb563161438fa70b8e578e6c1225" d=""/>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:MagneticDisk" id="g4001" transform="matrix(1,0,0,1,437.0000065118074,180.00000271201134)">
+        <pencil:metadata>
+          <pencil:property name="box">100,100</pencil:property>
+          <pencil:property name="outputPin1Origin">50,0</pencil:property>
+          <pencil:property name="outputPin1">50,0</pencil:property>
+          <pencil:property name="outputPin2Origin">100,50</pencil:property>
+          <pencil:property name="outputPin2">100,50</pencil:property>
+          <pencil:property name="outputPin3Origin">50,100</pencil:property>
+          <pencil:property name="outputPin3">50,100</pencil:property>
+          <pencil:property name="outputPin4Origin">0,50</pencil:property>
+          <pencil:property name="outputPin4">0,50</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent">database C</pencil:property>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:path stroke="none" style="stroke-linejoin: round; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="fill" id="38b695c26c724eaebae517190960aa38" transform="translate(0,0)" d="M 0 16.666666666666668 L 0 83.33333333333333 C 0 91.66666666666667 25 100 50 100 S 100 91.66666666666667 100 83.33333333333333 L 100 16.666666666666668 C 100 8.333333333333334 75 0 50 0 S 0 8.333333333333334 0 16.666666666666668 z"/>
+        <svg:path fill="none" style="stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="path" id="29a2b6d402e240bc9f51cf415e62adf1" transform="translate(0,0)" d="M 0 16.666666666666668 L 0 83.33333333333333 C 0 91.66666666666667 25 100 50 100 S 100 91.66666666666667 100 83.33333333333333 L 100 16.666666666666668 C 100 25 75 33.333333333333336 50 33.333333333333336 S 0 25 0 16.666666666666668 C 0 8.333333333333334 25 0 50 0 S 100 8.333333333333334 100 16.666666666666668"/>
+        <svg:text pencil:name="text1" id="27f8a69ca5d54c3bb96ffca38855f738" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#3270e5a6b70e4a7ebcd190ad6ca5a844" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3979"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="67b0c5c949d441b8ba930e7525ecd569" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="ee9641440e3544db8052af2e2c2cfdae" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#c4fbeb31e53d4865ace1ece7105378cd" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3983"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="5203eeb05b4b4789913b8bfa3a4cb4f6" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="d8d0b0f72ebb43e2b8b1933a3c2f85ae" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#69cdfdc8a07f4fc9a3723240c8e27c48" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath3987"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="6ddd995a27304b63877742a38d24148c" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="d6668831e1734db28913a8323ae41ed6" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#312fc74b2ed343469ba3ba57f01b2293" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath3991"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="479d0255f3054d5f8780f982054a6799" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="0db973d667524364ad065f38e791a670" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(8,72)"><svg:tspan x="7.125" y="0" id="tspan3994">database C</svg:tspan></svg:text>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow1" id="3270e5a6b70e4a7ebcd190ad6ca5a844" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow2" id="c4fbeb31e53d4865ace1ece7105378cd" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow3" id="69cdfdc8a07f4fc9a3723240c8e27c48" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow4" id="312fc74b2ed343469ba3ba57f01b2293" d=""/>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Common:arrow" pencil:sc="Straight Connector" id="g4013" transform="matrix(1,0,0,1,10.000001102685928,130.00000196695328)">
+        <pencil:metadata>
+          <pencil:property name="startPin" pencil:connectedShapeId="eb3b9136272b4cd183cf687bd60baf98" pencil:connectedOutletId="middle-right" pencil:viax="260.0000012814998" pencil:viay="-39.000001177191734">250.0000012814998,-39.000001177191734</pencil:property>
+          <pencil:property name="endPin" pencil:connectedShapeId="2ad536057ae14728a7d203e50a5a4f5a" pencil:connectedOutletId="middle-left" pencil:viax="364.0000046193599" pencil:viay="-38.99999812990427">374.0000046193599,-38.99999812990427</pencil:property>
+          <pencil:property name="withStartArrow">false</pencil:property>
+          <pencil:property name="withEndArrow">true</pencil:property>
+          <pencil:property name="mode">straight</pencil:property>
+          <pencil:property name="detached">true</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent"/>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+        </pencil:metadata>
+        <svg:defs id="defs4004">
+          <svg:path style="stroke-linejoin: round; fill: none;" pencil:name="path" id="1100dcbe959443d1b1bd40bcb22e59b0" d="M 255.0000012814998 -39.000001054317245 L 364.0000046193599 -38.999998375653256 L 369.0000046193599 -38.99999825277876 M 363 -45 L 369.0000046193599 -38.99999825277876 L 363 -33"/>
+        </svg:defs>
+        <svg:use xlink:href="#1100dcbe959443d1b1bd40bcb22e59b0" stroke-width="10" stroke-opacity="0" stroke="#FF0000" id="use4006"/>
+        <svg:use xlink:href="#1100dcbe959443d1b1bd40bcb22e59b0" pencil:name="outArrow1" id="15d2b91edf06462fa5fd82b7ab6f3fac" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;"/>
+        <svg:text pencil:name="text" id="36267b2d66eb472cbddc477bd9746db7" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;">
+          <svg:textPath xlink:href="#1100dcbe959443d1b1bd40bcb22e59b0" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4010"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan" id="8731b0b3c96049ba8429c3e0ddd65003" dx="-16"/>
+</svg:textPath>
+        </svg:text>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Common:arrow" pencil:sc="Straight Connector" id="g4025" transform="matrix(1,0,0,1,30.000002354383525,145.0000021904707)">
+        <pencil:metadata>
+          <pencil:property name="startPin" pencil:viay="-23.999995604157448" pencil:viax="392.0000033676623" pencil:connectedOutletId="bottom-center" pencil:connectedShapeId="2ad536057ae14728a7d203e50a5a4f5a">392.0000033676623,-33.99999560415745</pencil:property>
+          <pencil:property name="endPin" pencil:connectedShapeId="f4b3690305e64b7b9fcd2e579d089802" pencil:connectedOutletId="top-center" pencil:viax="328.00000223517407" pencil:viay="25.000000521540642">328.00000223517407,35.00000052154064</pencil:property>
+          <pencil:property name="withStartArrow">false</pencil:property>
+          <pencil:property name="withEndArrow">true</pencil:property>
+          <pencil:property name="mode">straight</pencil:property>
+          <pencil:property name="detached">true</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent"/>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+        </pencil:metadata>
+        <svg:defs id="defs4016">
+          <svg:path style="stroke-linejoin: round; fill: none;" pencil:name="path" id="feb12fa22f6a48a9b401a60118b3fd08" d="M 388.59978606345 -30.334136593756853 L 334.8004368435987 27.66828250073945 L 331.40021953938634 31.334141511140047 M 339 31 L 331.40021953938634 31.334141511140047 L 331 23"/>
+        </svg:defs>
+        <svg:use xlink:href="#feb12fa22f6a48a9b401a60118b3fd08" stroke-width="10" stroke-opacity="0" stroke="#FF0000" id="use4018"/>
+        <svg:use xlink:href="#feb12fa22f6a48a9b401a60118b3fd08" pencil:name="outArrow1" id="0dbd9791c6434b2db3c0a3adcf8da539" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;"/>
+        <svg:text pencil:name="text" id="7c91a33e6e044ca8a50a5cc50ad392b9" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;">
+          <svg:textPath xlink:href="#feb12fa22f6a48a9b401a60118b3fd08" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4022"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan" id="b42559a6f6dd4f51b17f028cde79914c" dx="-16"/>
+</svg:textPath>
+        </svg:text>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Common:arrow" pencil:sc="Straight Connector" id="g4037" transform="matrix(1,0,0,1,330.00000491738314,84.00000128149986)">
+        <pencil:metadata>
+          <pencil:property name="startPin" pencil:connectedShapeId="2ad536057ae14728a7d203e50a5a4f5a" pencil:connectedOutletId="bottom-center" pencil:viax="92.0000008046627" pencil:viay="37.000005304813385">92.0000008046627,27.000005304813385</pencil:property>
+          <pencil:property name="endPin" pencil:viay="86.00000143051147" pencil:viax="157.00000159442425" pencil:connectedOutletId="top-center" pencil:connectedShapeId="3fed082a2ebb4f7284381c080379df01">157.00000159442425,96.00000143051147</pencil:property>
+          <pencil:property name="withStartArrow">false</pencil:property>
+          <pencil:property name="withEndArrow">true</pencil:property>
+          <pencil:property name="mode">straight</pencil:property>
+          <pencil:property name="detached">true</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent"/>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+        </pencil:metadata>
+        <svg:defs id="defs4028">
+          <svg:path style="stroke-linejoin: round; fill: none;" pencil:name="path" id="d10c12aa47f94011ba3af8036250eeda" d="M 95.42846935160782 30.639456282997884 L 150.14306450053402 88.72109947414249 L 153.57153304747914 92.36055045232698 M 154 84 L 153.57153304747914 92.36055045232698 L 146 92"/>
+        </svg:defs>
+        <svg:use xlink:href="#d10c12aa47f94011ba3af8036250eeda" stroke-width="10" stroke-opacity="0" stroke="#FF0000" id="use4030"/>
+        <svg:use xlink:href="#d10c12aa47f94011ba3af8036250eeda" pencil:name="outArrow1" id="5428b3648c7d493abeecd86d88306c8e" style="stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;"/>
+        <svg:text pencil:name="text" id="1ba7deef00da4cad9a5fa944e0b69d52" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none;">
+          <svg:textPath xlink:href="#d10c12aa47f94011ba3af8036250eeda" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4034"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan" id="bfbcbdaa5814442ebb565e0ecebbcd32" dx="-16"/>
+</svg:textPath>
+        </svg:text>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:process" id="g4063" transform="matrix(1,0,0,1,335.00000499188894,10.00000113248825)">
+        <pencil:metadata>
+          <pencil:property name="box">175,25</pencil:property>
+          <pencil:property name="outputPin1Origin">87.5,0</pencil:property>
+          <pencil:property name="outputPin1">87.80918727915191,0</pencil:property>
+          <pencil:property name="outputPin2Origin">175,12.5</pencil:property>
+          <pencil:property name="outputPin2">175,12.5</pencil:property>
+          <pencil:property name="outputPin3Origin">87.5,25</pencil:property>
+          <pencil:property name="outputPin3">87.5,25</pencil:property>
+          <pencil:property name="outputPin4Origin">0,12.5</pencil:property>
+          <pencil:property name="outputPin4">0,12.5</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeStyle">0|</pencil:property>
+          <pencil:property name="textContent">Enterprise Bean Server</pencil:property>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:rect style="stroke-linejoin: round; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-width: 0; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="path" id="70753b69e4874584b7a2addcdb6fca6b" transform="translate(0,0)" x="0" y="0" width="175" height="25"/>
+        <svg:text pencil:name="text1" id="7493f71881a14936a882707117c7a326" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#757bb1dfeb214f9cbed54074c4f45ed9" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4041"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="8d220a2408574dfaa2c4209821c017aa" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="ea9eba87661f4764b1266fbeb2690970" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#5ee9d731f3a6472886eba047432f3975" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4045"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="384b178d67b943a7aefe81252033e884" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="b60845e2a003454281cbcc6199e3f2f7" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#b6eff1a5224a4f2ba1d293dfaebf15e0" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4049"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="0b843b30a29d4288bfa3e8f52cb0f157" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="7278846ecbd24ce382e8f40a02c459f5" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#5c5291f7fba84394a07bc1c975460abf" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath4053"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="8bfaaca50328456bb50c55b0f2be0f04" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="e320eb52988d4f0d84de680e2abb60ef" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(8,18)"><svg:tspan x="4.765625" y="0" id="tspan4056">Enterprise Bean Server</svg:tspan></svg:text>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-width: 0;" pencil:name="outputArrrow1" id="757bb1dfeb214f9cbed54074c4f45ed9" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-width: 0;" pencil:name="outputArrrow2" id="5ee9d731f3a6472886eba047432f3975" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-width: 0;" pencil:name="outputArrrow3" id="b6eff1a5224a4f2ba1d293dfaebf15e0" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-width: 0;" pencil:name="outputArrrow4" id="5c5291f7fba84394a07bc1c975460abf" d=""/>
+      </svg:g>
+      <svg:g pencil:type="Shape" pencil:def="Evolus.Flowchart:MultiDocument" id="g4089" transform="matrix(1,0,0,1,160.00000238418573,51.00000078976154)">
+        <pencil:metadata>
+          <pencil:property name="box">100,80</pencil:property>
+          <pencil:property name="outputPin1Origin">50,0</pencil:property>
+          <pencil:property name="outputPin1">50,0</pencil:property>
+          <pencil:property name="outputPin2Origin">100,40</pencil:property>
+          <pencil:property name="outputPin2">100,40</pencil:property>
+          <pencil:property name="outputPin3Origin">50,80</pencil:property>
+          <pencil:property name="outputPin3">50,80</pencil:property>
+          <pencil:property name="outputPin4Origin">0,40</pencil:property>
+          <pencil:property name="outputPin4">0,40</pencil:property>
+          <pencil:property name="fillColor">#FFFFFFFF</pencil:property>
+          <pencil:property name="strokeColor">#000000FF</pencil:property>
+          <pencil:property name="strokeStyle">2|</pencil:property>
+          <pencil:property name="textContent">queue A</pencil:property>
+          <pencil:property name="textFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="textColor">#000000FF</pencil:property>
+          <pencil:property name="textAlign">1,1</pencil:property>
+          <pencil:property name="optionText1"/>
+          <pencil:property name="optionText2"/>
+          <pencil:property name="optionText3"/>
+          <pencil:property name="optionText4"/>
+          <pencil:property name="optionTextFont">Serif|normal|normal|16px|none|0</pencil:property>
+          <pencil:property name="optionTextColor">#000000FF</pencil:property>
+        </pencil:metadata>
+        <svg:path style="stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2; fill: rgb(255, 255, 255); fill-opacity: 1;" pencil:name="path" id="5b3b08f84ee54d0397da832da189ec73" transform="translate(0,0)" d="M 0 16 L 80 16 L 80 64 C 75 64 75 64 50 72 S 25 80 0 72 L 0 16 M 10 16 L 10 8 L 90 8 L 90 56 L 80 56 M 20 8 L 20 0 L 100 0 L 100 48 L 90 48"/>
+        <svg:text pencil:name="text1" id="660b03a53926484fb9107c9f699798c6" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#12e2d85dab2e4cddaeff87420f1ef54f" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4067"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan1" id="cd9a11a3c3a746f4972900b5d1a443a0" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text2" id="e5fab684f84d4047a493e6c3b365dd02" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#f1e1a8d0858344bca97960cfd9e0072b" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4071"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan2" id="3a2bf99212f4463994fbfc9a974faf8e" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text3" id="4605b33aa4cc4d0ab628bc91a9d57254" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#2eb49a663c984244837adb7e150cc016" startOffset="50%" text-anchor="middle" alignment-baseline="middle" id="textPath4075"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan3" id="5c727a645328429fab98f8052406334b" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text pencil:name="text4" id="c9f5f743658b403b87df7e9cd12dbe07" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1; visibility: hidden; display: none;">
+          <svg:textPath xlink:href="#2cc76d2e052a4467a27e4b00d48ccfb3" startOffset="50%" text-anchor="middle" alignment-baseline="middle-left" id="textPath4079"><svg:tspan dy="-5.333333333333333" pencil:name="textSpan4" id="fe828fa97d1945bfad2c1e8c7645f5c5" dx="0"/>
+</svg:textPath>
+        </svg:text>
+        <svg:text text-anchor="start" xml:space="preserve" pencil:name="text" id="3a26f161dfb841f281ce5fde38b79fcb" style="font-family: serif; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; fill: rgb(0, 0, 0); fill-opacity: 1;" transform="translate(8,46)"><svg:tspan x="5.3359375" y="0" id="tspan4082">queue A</svg:tspan></svg:text>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow1" id="12e2d85dab2e4cddaeff87420f1ef54f" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow2" id="f1e1a8d0858344bca97960cfd9e0072b" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow3" id="2eb49a663c984244837adb7e150cc016" d=""/>
+        <svg:path style="stroke-linejoin: round; fill: none; stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 2;" pencil:name="outputArrrow4" id="2cc76d2e052a4467a27e4b00d48ccfb3" d=""/>
+      </svg:g>
+    </svg:g>
+  </svg:g>
+  </svg>
