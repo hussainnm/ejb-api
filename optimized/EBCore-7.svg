@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="348" width="695.391">
-  <rect ry="31.125" rx="31.125" height="327" width="249" y="10" x="319" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <rect ry="21.75" rx="21.75" height="250" width="174" y="50" x="351" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text y="172" x="48" font-weight="400" font-size="16" font-family="serif">
+  <rect ry="31.125" rx="31.125" height="327" width="249" y="10" x="319" fill="#ccc" stroke="#000" stroke-width="2"/>
+  <rect ry="21.75" rx="21.75" height="250" width="174" y="50" x="351" fill="#ccc" stroke="#000" stroke-width="2"/>
+  <text y="172" x="48">
     <tspan y="172" x="45.266">Client</tspan>
   </text>
-  <path stroke="#000" stroke-width="2" d="M93.727 163.167l59.82-53.5 3.726-3.334M149 106l8.273.333L157 114" fill="none" stroke-linejoin="round"/>
-  <ellipse ry="36" rx="87.5" cy="103" cx="248.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text y="109" x="206" font-weight="400" font-size="16" font-family="serif">
+  <path stroke="#000" stroke-width="2" d="M93.727 163.167l59.82-53.5 3.726-3.334M149 106l8.273.333L157 114" fill="none"/>
+  <ellipse ry="36" rx="87.5" cy="103" cx="248.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text y="109" x="206">
     <tspan y="109" x="206">Service class</tspan>
   </text>
-  <path stroke="#000" stroke-width="2" d="M94.922 179.882l130.235 23.353 4.921.883M226 198l4.078 6.118L224 209" fill="none" stroke-linejoin="round"/>
-  <ellipse ry="36" rx="87.5" cy="205" cx="322.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <text y="211" x="253" font-weight="400" font-size="16" font-family="serif">
+  <path stroke="#000" stroke-width="2" d="M94.922 179.882l130.235 23.353 4.921.883M226 198l4.078 6.118L224 209" fill="none"/>
+  <ellipse ry="36" rx="87.5" cy="205" cx="322.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text y="211" x="253">
     <tspan y="211" x="253">Web service endpoint</tspan>
   </text>
-  <text y="37" x="356" font-weight="400" font-size="16" font-family="serif">
+  <text y="37" x="356">
     <tspan y="37" x="356">Container</tspan>
   </text>
-  <text y="262" x="397" font-weight="400" font-size="16" font-family="serif">
+  <text y="262" x="397">
     <tspan y="262" x="397">Stateless </tspan><tspan y="279.609" x="397">session bean</tspan>
   </text>
-  <ellipse ry="21.5" rx="48.5" cy="172.5" cx="466.5" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <ellipse ry="21.5" rx="48.5" cy="158.5" cx="456.5" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <ellipse ry="21.5" rx="48.5" cy="140.5" cx="446.5" fill="#ccc" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-  <path stroke="#000" stroke-width="2" d="M461 137l112.398-32.706L583 101.5" fill="none" stroke-linejoin="round"/>
-  <text y="89" x="592" font-weight="400" font-size="16" font-family="serif">
+  <ellipse ry="21.5" rx="48.5" cy="172.5" cx="466.5" fill="#ccc" stroke="#000" stroke-width="2"/>
+  <ellipse ry="21.5" rx="48.5" cy="158.5" cx="456.5" fill="#ccc" stroke="#000" stroke-width="2"/>
+  <ellipse ry="21.5" rx="48.5" cy="140.5" cx="446.5" fill="#ccc" stroke="#000" stroke-width="2"/>
+  <path stroke="#000" stroke-width="2" d="M461 137l112.398-32.706L583 101.5" fill="none"/>
+  <text y="89" x="592">
     <tspan y="89" x="592">Stateless </tspan><tspan y="106.609" x="592">session bean </tspan><tspan y="124.219" x="592">instance</tspan>
   </text>
 </svg>
