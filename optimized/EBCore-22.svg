@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="336" width="723">
+  <defs>
+    <path d="M120.976 93.51l168.072-16.53 4.976-.49M288 71l6.024 5.49L289 83" id="d" fill="none" stroke-linejoin="round"/>
+    <path d="M146.967-39.43l168.098 19.29 4.968.57M315-26l5.033 6.43L314-15" id="c" fill="none" stroke-linejoin="round"/>
+    <path d="M28.338 89.738l157.986-41.214 4.838-1.262M184 43l7.162 4.262L187 54" id="b" fill="none" stroke-linejoin="round"/>
+    <path d="M-51.594-91.033l157.783 31.1 4.905.966M107-66l4.094 7.033L104-55" id="a" fill="none" stroke-linejoin="round"/>
+  </defs>
+  <path fill="none" d="M0 0h723v336H0z"/>
+  <rect x="229" y="57" width="211" height="243" rx="26.375" ry="26.375" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <ellipse cx="334.5" cy="248" rx="76.5" ry="30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <ellipse cx="334.5" cy="109" rx="76.5" ry="30" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M229 23h200v25H229z"/>
+  <text y="41" x="237" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan x="243.602" y="41">Enterprise Bean Container</tspan>
+  </text>
+  <ellipse ry="30" rx="76.5" cy="184" cx="85.5" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <use transform="translate(142 306)" height="100%" width="100%" xlink:href="#a" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(142 306)" height="100%" width="100%" xlink:href="#a" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#a" text-anchor="middle"> </textPath>
+  </text>
+  <use transform="translate(62 63)" height="100%" width="100%" xlink:href="#b" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(62 63)" height="100%" width="100%" xlink:href="#b" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#b" text-anchor="middle"> </textPath>
+  </text>
+  <use transform="translate(269 149)" height="100%" width="100%" xlink:href="#c" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(269 149)" height="100%" width="100%" xlink:href="#c" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#c" text-anchor="middle"> </textPath>
+  </text>
+  <use transform="translate(295 154)" height="100%" width="100%" xlink:href="#d" stroke="red" stroke-width="10" stroke-opacity="0"/>
+  <use transform="translate(295 154)" height="100%" width="100%" xlink:href="#d" stroke="#000" stroke-width="2"/>
+  <text style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <textPath alignment-baseline="middle" startOffset="50%" xlink:href="#d" text-anchor="middle"> </textPath>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M161 91h50v25h-50z"/>
+  <text y="109" x="169" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="109" x="169.336">TX 1</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M161 243h50v25h-50z"/>
+  <text y="261" x="169" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="261" x="169.336">TX 1</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M474 245h117v42H474z"/>
+  <text y="263" x="485" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="263" x="485">read and cache</tspan><tspan y="280.609" x="485">Account 100</tspan>
+  </text>
+  <path d="M594 146.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0-8.334-25-16.667-50-16.667s-50 8.333-50 16.667z" fill="#fff"/>
+  <path d="M594 146.667v66.666c0 8.334 25 16.667 50 16.667s50-8.333 50-16.667v-66.666c0 8.333-25 16.666-50 16.666s-50-8.333-50-16.666c0-8.334 25-16.667 50-16.667s50 8.333 50 16.667" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M474 68h117v42H474z"/>
+  <text y="86" x="485" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="86" x="485">read and cache</tspan><tspan y="103.609" x="485">Account 100</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M40 174h90v20H40z"/>
+  <text y="190" x="48" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="190" x="49.891">Program A</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M267 98h135v20H267z"/>
+  <text y="114" x="275" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="114" x="275.398">Session Instance 1</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round" d="M267 237h135v20H267z"/>
+  <text y="253" x="275" style="text-decoration-line:none" font-weight="100" font-size="16" font-family="serif">
+    <tspan y="253" x="275.398">Session Instance 2</tspan>
+  </text>
+</svg>
