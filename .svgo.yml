@@ -1,0 +1,9 @@
+multipass: true
+plugins:
+  - removeEditorsNSData:
+        additionalNamespaces: ['http://www.evolus.vn/Namespace/Pencil']
+  - sortAttrs: true
+  - reusePaths: false
+js2svg:
+  pretty: true
+  indent: '  '
