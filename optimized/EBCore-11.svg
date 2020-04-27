@@ -1,40 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="360" width="600">
-  <path d="M246.5 10h102c12.75 0 25.5 12.75 25.5 25.5S361.25 61 348.5 61h-102C233.75 61 221 48.25 221 35.5S233.75 10 246.5 10" fill="#fff" stroke="#000" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M246.5 10h102c12.75 0 25.5 12.75 25.5 25.5S361.25 61 348.5 61h-102C233.75 61 221 48.25 221 35.5S233.75 10 246.5 10"/>
   <text transform="translate(229 41)">
-    <tspan y="0" x="24.32">does not exist</tspan>
+    <tspan x="24.32" y="0">does not exist</tspan>
   </text>
-  <path d="M275 66v143m6-6l-6 6-6-6" fill="none" stroke="#000" stroke-width="2"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M275 66v143m6-6l-6 6-6-6"/>
   <path fill="#fff" d="M10 96h262.794v83.109H10z"/>
   <text transform="translate(22 117)">
-    <tspan y="0" x="0">1. AroundConstruct callbacks, if any</tspan> <tspan y="17.609" x="0">2. constructor</tspan> <tspan y="35.219" x="0">3. dependency injection, if any</tspan> <tspan y="52.828" x="0">4. PostConstruct callbacks, if any</tspan>
+    <tspan x="0" y="0">1. AroundConstruct callbacks, if any</tspan> <tspan x="0" y="17.609">2. constructor</tspan> <tspan x="0" y="35.219">3. dependency injection, if any</tspan> <tspan x="0" y="52.828">4. PostConstruct callbacks, if any</tspan>
   </text>
-  <path d="M246.5 215h102c12.75 0 25.5 12.75 25.5 25.5S361.25 266 348.5 266h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M246.5 215h102c12.75 0 25.5 12.75 25.5 25.5S361.25 266 348.5 266h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5"/>
   <text transform="translate(230 246)">
-    <tspan y="0" x="7.266">method-ready pool</tspan>
+    <tspan x="7.266" y="0">method-ready pool</tspan>
   </text>
-  <path d="M238.357 212.822C157 174 126 241 216 240.5m-6-5.5l6 5.5-6 5.5" fill="none" stroke="#000" stroke-width="2"/>
-  <text transform="translate(117 256)" font-style="italic">
-    <tspan y="0" x="0">method</tspan>
+  <path fill="none" stroke="#000" stroke-width="2" d="M238.357 212.822C157 174 126 241 216 240.5m-6-5.5l6 5.5-6 5.5"/>
+  <text font-style="italic" transform="translate(117 256)">
+    <tspan x="0" y="0">method</tspan>
   </text>
-  <path d="M356.643 268.178C438 307 469 240 379 240.5m6 5.5l-6-5.5 6-5.5" fill="none" stroke="#000" stroke-width="2"/>
-  <text transform="translate(401 232)" font-style="italic">
-    <tspan y="0" x="0">timeout callback method</tspan>
+  <path fill="none" stroke="#000" stroke-width="2" d="M356.643 268.178C438 307 469 240 379 240.5m6 5.5l-6-5.5 6-5.5"/>
+  <text font-style="italic" transform="translate(401 232)">
+    <tspan x="0" y="0">timeout callback method</tspan>
   </text>
-  <path d="M302 72l6-6 6 6m-6-6v143" fill="none" stroke="#000" stroke-width="2"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M302 72l6-6 6 6m-6-6v143"/>
   <text transform="translate(322 143)">
-    <tspan y="0" x="0">PreDestroy callbacks, if any</tspan>
+    <tspan x="0" y="0">PreDestroy callbacks, if any</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M221 293h299.24v50.72H221z"/>
-  <text transform="translate(227 313)" font-style="italic">
-    <tspan y="0" x="0">method()</tspan>
+  <text font-style="italic" transform="translate(227 313)">
+    <tspan x="0" y="0">method()</tspan>
   </text>
   <text transform="translate(226 336)">
-    <tspan y="0" x="0">constructor</tspan>
+    <tspan x="0" y="0">constructor</tspan>
   </text>
   <text transform="translate(327 313)">
-    <tspan y="0" x="0">action initiated by client</tspan>
+    <tspan x="0" y="0">action initiated by client</tspan>
   </text>
   <text transform="translate(327 336)">
-    <tspan y="0" x="0">action initiated by container</tspan>
+    <tspan x="0" y="0">action initiated by container</tspan>
   </text>
 </svg>
