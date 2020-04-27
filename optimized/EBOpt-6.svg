@@ -1,44 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="546">
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(28 251)">
+  <text transform="translate(28 251)">
     <tspan x="-.953" y="0">client</tspan>
   </text>
-  <rect width="225" height="525" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="28.125" ry="28.125" transform="translate(364 10)"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(404 38)">
+  <rect width="225" height="525" fill="#fff" stroke="#000" stroke-width="2" rx="28.125" ry="28.125" transform="translate(364 10)"/>
+  <text transform="translate(404 38)">
     <tspan x="36.695" y="0">container</tspan>
   </text>
-  <rect width="175" height="188" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="21.875" ry="21.875" transform="translate(378 49)"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M367.833 69h83.334C461.583 69 472 77.75 472 86.5S461.583 104 451.167 104h-83.334C357.417 104 347 95.25 347 86.5S357.417 69 367.833 69"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M357.833 79h83.334C451.583 79 462 87.75 462 96.5S451.583 114 441.167 114h-83.334C347.417 114 337 105.25 337 96.5S347.417 79 357.833 79"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M347.833 89h83.334C441.583 89 452 97.75 452 106.5S441.583 124 431.167 124h-83.334C337.417 124 327 115.25 327 106.5S337.417 89 347.833 89"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(335 112)">
+  <rect width="175" height="188" fill="#fff" stroke="#000" stroke-width="2" rx="21.875" ry="21.875" transform="translate(378 49)"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M367.833 69h83.334C461.583 69 472 77.75 472 86.5S461.583 104 451.167 104h-83.334C357.417 104 347 95.25 347 86.5S357.417 69 367.833 69"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M357.833 79h83.334C451.583 79 462 87.75 462 96.5S451.583 114 441.167 114h-83.334C347.417 114 337 105.25 337 96.5S347.417 79 357.833 79"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M347.833 89h83.334C441.583 89 452 97.75 452 106.5S441.583 124 431.167 124h-83.334C337.417 124 327 115.25 327 106.5S337.417 89 347.833 89"/>
+  <text transform="translate(335 112)">
     <tspan x="16.633" y="0">EJBObjects</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M74.472 232.764l243.584-121.792 4.472-2.236M315 106l7.528 2.736L320 116"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M347.833 153h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 188 431.167 188h-83.334C337.417 188 327 179.25 327 170.5s10.417-17.5 20.833-17.5"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(335 176)">
+  <path fill="none" stroke="#000" stroke-width="2" d="M74.472 232.764l243.584-121.792 4.472-2.236M315 106l7.528 2.736L320 116"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M347.833 153h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 188 431.167 188h-83.334C337.417 188 327 179.25 327 170.5s10.417-17.5 20.833-17.5"/>
+  <text transform="translate(335 176)">
     <tspan x="21.563" y="0">EJBHome</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M74.802 243.608l242.593-70.324 4.803-1.392M315 168l7.198 3.892L318 179"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(404 217)">
+  <path fill="none" stroke="#000" stroke-width="2" d="M74.802 243.608l242.593-70.324 4.803-1.392M315 168l7.198 3.892L318 179"/>
+  <text transform="translate(404 217)">
     <tspan x=".68" y="0">entity bean 1</tspan>
   </text>
-  <rect width="175" height="188" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="21.875" ry="21.875" transform="translate(378 263)"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M367.833 283h83.334c10.416 0 20.833 8.75 20.833 17.5S461.583 318 451.167 318h-83.334C357.417 318 347 309.25 347 300.5s10.417-17.5 20.833-17.5"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M357.833 292h83.334c10.416 0 20.833 8.75 20.833 17.5S451.583 327 441.167 327h-83.334C347.417 327 337 318.25 337 309.5s10.417-17.5 20.833-17.5"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M347.833 302h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 337 431.167 337h-83.334C337.417 337 327 328.25 327 319.5s10.417-17.5 20.833-17.5"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(335 325)">
+  <rect width="175" height="188" fill="#fff" stroke="#000" stroke-width="2" rx="21.875" ry="21.875" transform="translate(378 263)"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M367.833 283h83.334c10.416 0 20.833 8.75 20.833 17.5S461.583 318 451.167 318h-83.334C357.417 318 347 309.25 347 300.5s10.417-17.5 20.833-17.5"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M357.833 292h83.334c10.416 0 20.833 8.75 20.833 17.5S451.583 327 441.167 327h-83.334C347.417 327 337 318.25 337 309.5s10.417-17.5 20.833-17.5"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M347.833 302h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 337 431.167 337h-83.334C337.417 337 327 328.25 327 319.5s10.417-17.5 20.833-17.5"/>
+  <text transform="translate(335 325)">
     <tspan x="-1.578" y="0">EJBLocalObjects</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M74.802 246.392l242.593 70.324 4.803 1.392M318 311l4.198 7.108L315 322"/>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M347.833 367h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 402 431.167 402h-83.334C337.417 402 327 393.25 327 384.5s10.417-17.5 20.833-17.5"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(335 390)">
+  <path fill="none" stroke="#000" stroke-width="2" d="M74.802 246.392l242.593 70.324 4.803 1.392M318 311l4.198 7.108L315 322"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M347.833 367h83.334c10.416 0 20.833 8.75 20.833 17.5S441.583 402 431.167 402h-83.334C337.417 402 327 393.25 327 384.5s10.417-17.5 20.833-17.5"/>
+  <text transform="translate(335 390)">
     <tspan x="3.352" y="0">EJBLocalHome</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M74.465 257.25L318.07 380l4.465 2.25M320 375l2.535 7.25L315 385"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(404 430)">
+  <path fill="none" stroke="#000" stroke-width="2" d="M74.465 257.25L318.07 380l4.465 2.25M320 375l2.535 7.25L315 385"/>
+  <text transform="translate(404 430)">
     <tspan x=".68" y="0">entity bean 2</tspan>
   </text>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(399 493)">
+  <text transform="translate(399 493)">
     <tspan x="1.719" y="0">other enterprise beans</tspan>
   </text>
 </svg>

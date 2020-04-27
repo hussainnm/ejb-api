@@ -1,97 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="556" height="209">
   <path fill="none" d="M0 0h556v209H0z"/>
   <g transform="translate(102 10)">
-    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="75" ry="25"/>
-    <text font-family="serif" font-size="16" font-weight="400" transform="translate(8 31)">
+    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-width="2" rx="75" ry="25"/>
+    <text transform="translate(8 31)">
       <tspan x="47.805" y="0">Order</tspan>
     </text>
   </g>
   <g transform="translate(10 148)">
-    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="75" ry="25"/>
-    <text font-family="serif" font-size="16" font-weight="400" transform="translate(8 31)">
+    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-width="2" rx="75" ry="25"/>
+    <text transform="translate(8 31)">
       <tspan x="11.797" y="0">ShippingAddress</tspan>
     </text>
   </g>
   <g transform="translate(180 148)">
-    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="75" ry="25"/>
-    <text font-family="serif" font-size="16" font-weight="400" transform="translate(8 31)">
+    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-width="2" rx="75" ry="25"/>
+    <text transform="translate(8 31)">
       <tspan x="18.461" y="0">BillingAddress</tspan>
     </text>
   </g>
   <g transform="translate(262 66)">
-    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="75" ry="25"/>
-    <text font-family="serif" font-size="16" font-weight="400" transform="translate(8 31)">
+    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-width="2" rx="75" ry="25"/>
+    <text transform="translate(8 31)">
       <tspan x="37.5" y="0">LineItem</tspan>
     </text>
   </g>
   <g transform="translate(395 130)">
-    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="75" ry="25"/>
-    <text font-family="serif" font-size="16" font-weight="400" transform="translate(8 31)">
+    <ellipse cx="75" cy="25" fill="#fff" stroke="#000" stroke-width="2" rx="75" ry="25"/>
+    <text transform="translate(8 31)">
       <tspan x="41.93" y="0">Product</tspan>
     </text>
   </g>
   <g transform="translate(10 57)">
     <defs>
-      <path id="a" fill="none" stroke-linejoin="round" d="M113.967-4.322L78.784 81.744 75 91"/>
+      <path id="a" fill="none" d="M113.967-4.322L78.784 81.744 75 91"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#a"/>
     <use stroke="#000" stroke-width="2" xlink:href="#a"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
     </text>
   </g>
   <g transform="translate(10 57)">
     <defs>
-      <path id="b" fill="none" stroke-linejoin="round" d="M167 3l71.367 80.517L245 91"/>
+      <path id="b" fill="none" d="M167 3l71.367 80.517L245 91"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#b"/>
     <use stroke="#000" stroke-width="2" xlink:href="#b"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
     </text>
   </g>
   <g transform="translate(40 62)">
     <defs>
-      <path id="c" fill="none" stroke-linejoin="round" d="M190.033-9.322l44.595 17.07 9.339 3.574"/>
+      <path id="c" fill="none" d="M190.033-9.322l44.595 17.07 9.339 3.574"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#c"/>
     <use stroke="#000" stroke-width="2" xlink:href="#c"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
     </text>
   </g>
   <g transform="translate(85 107)">
     <defs>
-      <path id="d" fill="none" stroke-linejoin="round" d="M305.033 1.678l70.305 18.746L385 23"/>
+      <path id="d" fill="none" d="M305.033 1.678l70.305 18.746L385 23"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#d"/>
     <use stroke="#000" stroke-width="2" xlink:href="#d"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
     </text>
   </g>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(74 127)">
+  <text dominant-baseline="hanging" transform="translate(74 127)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(223 129)">
+  <text dominant-baseline="hanging" transform="translate(223 129)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(251 43)">
+  <text dominant-baseline="hanging" transform="translate(251 43)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(464 112)">
+  <text dominant-baseline="hanging" transform="translate(464 112)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(280 55)">
+  <text dominant-baseline="hanging" transform="translate(280 55)">
     <tspan x="0" y="0">m</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(411 98)">
+  <text dominant-baseline="hanging" transform="translate(411 98)">
     <tspan x="0" y="0">m</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(164 61)">
+  <text dominant-baseline="hanging" transform="translate(164 61)">
     <tspan x="0" y="0">m</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(99 55)">
+  <text dominant-baseline="hanging" transform="translate(99 55)">
     <tspan x="0" y="0">m</tspan>
   </text>
 </svg>

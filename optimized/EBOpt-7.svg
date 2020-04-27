@@ -1,71 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="650" height="580">
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M105.833 133h83.334C199.583 133 210 148 210 163s-10.417 30-20.833 30h-83.334C95.417 193 85 178 85 163s10.417-30 20.833-30"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(94 151)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M105.833 133h83.334C199.583 133 210 148 210 163s-10.417 30-20.833 30h-83.334C95.417 193 85 178 85 163s10.417-30 20.833-30"/>
+  <text transform="translate(94 151)">
     <tspan x="10.32" y="0">does not exist </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M453.833 133h83.334C547.583 133 558 148 558 163s-10.417 30-20.833 30h-83.334C443.417 193 433 178 433 163s10.417-30 20.833-30"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(441 151)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M453.833 133h83.334C547.583 133 558 148 558 163s-10.417 30-20.833 30h-83.334C443.417 193 433 178 433 163s10.417-30 20.833-30"/>
+  <text transform="translate(441 151)">
     <tspan x="8.5" y="0">does not exist </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="19.945" y="35.219">referenced</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M453.833 342h83.334C547.583 342 558 357 558 372s-10.417 30-20.833 30h-83.334C443.417 402 433 387 433 372s10.417-30 20.833-30"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(442 360)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M453.833 342h83.334C547.583 342 558 357 558 372s-10.417 30-20.833 30h-83.334C443.417 402 433 387 433 372s10.417-30 20.833-30"/>
+  <text transform="translate(442 360)">
     <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="19.945" y="35.219">referenced</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M105.833 342h83.334C199.583 342 210 357 210 372s-10.417 30-20.833 30h-83.334C95.417 402 85 387 85 372s10.417-30 20.833-30"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(94 360)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M105.833 342h83.334C199.583 342 210 357 210 372s-10.417 30-20.833 30h-83.334C95.417 402 85 387 85 372s10.417-30 20.833-30"/>
+  <text transform="translate(94 360)">
     <tspan x="34.273" y="0">exists </tspan><tspan x="40.945" y="17.609">and </tspan><tspan x="7.719" y="35.219">not referenced</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M123 199v137m6-6l-6 6-6-6"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M123 199v137m6-6l-6 6-6-6"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(40 264)">
     <tspan x="10.797" y="0">direct </tspan><tspan x="10.938" y="17.297">insert</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M196.476 195.495L442.192 337.01l4.332 2.496M444 332l2.524 7.505L439 342"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M196.476 195.495L442.192 337.01l4.332 2.496M444 332l2.524 7.505L439 342"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(301 231)">
     <tspan x="-6.477" y="0">home.create&lt;METHOD&gt;(...)</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M426 350l6 6-6 6m6-6H211"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M426 350l6 6-6 6m6-6H211"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(259 340)">
     <tspan x="11.398" y="0">home.find(...)</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M102.857 402C27.6 451.8 147.6 491.8 147.5 402m-5.9 5.8l5.9-5.8 6.1 5.8"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M102.857 402C27.6 451.8 147.6 491.8 147.5 402m-5.9 5.8l5.9-5.8 6.1 5.8"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(22 487)">
     <tspan x="12.289" y="0">home.businessMethod(...)</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M446.73 404.823C372 456 496 497 495.5 407m-5.5 6l5.5-6 5.5 6"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M446.73 404.823C372 456 496 497 495.5 407m-5.5 6l5.5-6 5.5 6"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(401 487)">
     <tspan x="10.07" y="0">object.businessMethod(...)</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M218 394l-6-6 6-6m-6 6h220"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M218 394l-6-6 6-6m-6 6h220"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(259 414)">
     <tspan x="21.031" y="0">release reference</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M142 204l5.5-6 5.5 6m-5.5-6v139"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M142 204l5.5-6 5.5 6m-5.5-6v139"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(165 266)">
     <tspan x="12.039" y="0">direct delete </tspan><tspan x="44.141" y="17.844">or </tspan><tspan x="-2.406" y="35.688">home.remove(...)</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M490 204l5.5-6 5.5 6m-5.5-6v139"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M490 204l5.5-6 5.5 6m-5.5-6v139"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(523 235)">
     <tspan x="1.875" y="0">object.remove() </tspan><tspan x="44.398" y="17.609">or </tspan><tspan x="-1.906" y="35.219">home.remove(...) </tspan><tspan x="42.883" y="52.828">or </tspan><tspan x="12.484" y="70.438">direct delete</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M544.27 130.177C619 79 495 38 495.5 128m5.5-6l-5.5 6-5.5-6"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M544.27 130.177C619 79 495 38 495.5 128m5.5-6l-5.5 6-5.5-6"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(375 28)">
     <tspan x="0" y="0">object.businessMethod(...) </tspan><tspan x="0" y="17.609">throws NoSuchObjectException </tspan><tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
   </text>
-  <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M221 169l-6-6 6-6m-6 6h213"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M221 169l-6-6 6-6m-6 6h213"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(262 149)">
     <tspan x="21.031" y="0">release reference</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M107 514h429v55H107z"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M107 514h429v55H107z"/>
   <text font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(117 535)">
     <tspan x="0" y="0">create() </tspan>
   </text>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(213 535)">
+  <text transform="translate(213 535)">
     <tspan x="0" y="0">action initiated by client</tspan>
   </text>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(117 560)">
+  <text transform="translate(117 560)">
     <tspan x="0" y="0">direct delete </tspan>
   </text>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(212 560)">
+  <text transform="translate(212 560)">
     <tspan x="0" y="0">action on database from outsite Enterprise Beans</tspan>
   </text>
 </svg>

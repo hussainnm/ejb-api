@@ -1,82 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="489" height="339">
   <path fill="none" d="M0 0h489v339H0z"/>
-  <path stroke="#000" stroke-linejoin="round" stroke-width="2" d="M170.071 246.536l3.536 10.606L163 253.607 159.464 243z"/>
+  <path stroke="#000" stroke-width="2" d="M170.071 246.536l3.536 10.606L163 253.607 159.464 243z"/>
   <path fill="none" d="M178.556 243.707l5.657 5.657-5.657 5.657-5.657-5.657zm3.536 10.607l5.657 5.657-5.657 5.656-5.657-5.656zm-16.264 2.121l5.657 5.657-5.657 5.657-5.656-5.657zm-6.364-24.749l5.657 5.657-5.657 5.657-5.656-5.657z"/>
   <g transform="translate(226.757 236.23)">
     <defs>
-      <path id="a" fill="none" stroke-linejoin="round" d="M-47 31l-1.91-7.438L-41 22m-7.91 1.562l68.673 42.91 4.24 2.649M22 61l2.003 8.121L16 71"/>
+      <path id="a" fill="none" d="M-47 31l-1.91-7.438L-41 22m-7.91 1.562l68.673 42.91 4.24 2.649M22 61l2.003 8.121L16 71"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#a"/>
     <use stroke="#000" stroke-width="2" xlink:href="#a"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
     </text>
   </g>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M10 72h150v171H10z"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(23 93)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M10 72h150v171H10z"/>
+  <text transform="translate(23 93)">
     <tspan x="0" y="0">getOrderStatus</tspan><tspan x="0" y="17.609">setOrderStatus</tspan><tspan x="0" y="35.219">getLineStatus</tspan><tspan x="0" y="52.828">setLineStatus</tspan><tspan x="0" y="70.438">getCreditApproved</tspan><tspan x="0" y="88.047">setCreditApproved</tspan><tspan x="0" y="105.656">getCustomer</tspan><tspan x="0" y="123.266">setCustomer</tspan><tspan x="0" y="140.875">...</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M10 32h150v40H10z"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(18 49)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M10 32h150v40H10z"/>
+  <text transform="translate(18 49)">
     <tspan x="32.813" y="0">&lt;abstract&gt;</tspan><tspan x="31.5" y="17.609">OrderBean</tspan>
   </text>
   <g transform="translate(233.4 72.4)">
     <defs>
-      <path id="b" fill="none" stroke-linejoin="round" d="M119-46l6.703 4.608L121-35m4.703-6.392L-63.605-2.417l-4.898 1.009M-62 3l-6.503-4.408L-64-8"/>
+      <path id="b" fill="none" d="M119-46l6.703 4.608L121-35m4.703-6.392L-63.605-2.417l-4.898 1.009M-62 3l-6.503-4.408L-64-8"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#b"/>
     <use stroke="#000" stroke-width="2" xlink:href="#b"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
     </text>
   </g>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M364 10h100v40H364z"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(372 36)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M364 10h100v40H364z"/>
+  <text transform="translate(372 36)">
     <tspan x="10.352" y="0">Customer</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M364 137h100v40H364z"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(372 163)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M364 137h100v40H364z"/>
+  <text transform="translate(372 163)">
     <tspan x="16.93" y="0">Product</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M255 288h100v40H255z"/>
-  <text font-family="serif" font-size="16" font-weight="400" transform="translate(263 314)">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M255 288h100v40H255z"/>
+  <text transform="translate(263 314)">
     <tspan x="12.5" y="0">LineItem</tspan>
   </text>
   <g transform="translate(287.6 207.664)">
     <defs>
-      <path id="c" fill="none" stroke-linejoin="round" d="M20.903 76.768l98.49-100.297 3.504-3.568M115-27l7.897-.097L123-19"/>
+      <path id="c" fill="none" d="M20.903 76.768l98.49-100.297 3.504-3.568M115-27l7.897-.097L123-19"/>
     </defs>
     <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#c"/>
     <use stroke="#000" stroke-width="2" xlink:href="#c"/>
-    <text font-family="serif" font-size="16" font-weight="400">
+    <text>
       <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
     </text>
   </g>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(214 25)">
+  <text dominant-baseline="hanging" transform="translate(214 25)">
     <tspan x="0" y="0">Order-Customer</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(189 243.929)">
+  <text dominant-baseline="hanging" transform="translate(189 243.929)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(229 307.929)">
+  <text dominant-baseline="hanging" transform="translate(229 307.929)">
     <tspan x="0" y="0">*</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(169 51.929)">
+  <text dominant-baseline="hanging" transform="translate(169 51.929)">
     <tspan x="0" y="0">*</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(378 185.929)">
+  <text dominant-baseline="hanging" transform="translate(378 185.929)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(327 272.929)">
+  <text dominant-baseline="hanging" transform="translate(327 272.929)">
     <tspan x="0" y="0">*</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(344 42.929)">
+  <text dominant-baseline="hanging" transform="translate(344 42.929)">
     <tspan x="0" y="0">1</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(120.071 291)">
+  <text dominant-baseline="hanging" transform="translate(120.071 291)">
     <tspan x="0" y="0">Order-LineItem</tspan>
   </text>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" transform="translate(364.071 238)">
+  <text dominant-baseline="hanging" transform="translate(364.071 238)">
     <tspan x="0" y="0">Product-LineItem</tspan>
   </text>
 </svg>
