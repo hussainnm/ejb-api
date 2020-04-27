@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="498" height="395">
+  <defs>
+    <path id="d" fill="none" stroke-linejoin="round" d="M-73-128h68m-6-6l6 6-6 6"/>
+    <path id="c" fill="none" stroke-linejoin="round" d="M8.408 45.64L94.184-.28l4.408-2.36M91-5l7.592 2.36L96 5"/>
+    <path id="b" fill="none" stroke-linejoin="round" d="M18.699 11.709l84.903 30.874 4.699 1.708M105 37l3.301 7.291L101 48"/>
+    <path id="a" fill="none" stroke-linejoin="round" d="M-2.056 33.542l89.732 114.205 3.09 3.932M92 144l-1.235 7.679L83 151"/>
+  </defs>
+  <path fill="none" d="M0 0h498v395H0z"/>
+  <path fill="#fff" d="M133 65h50v25h-50z"/>
+  <text x="141" y="83" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="142.445" y="83">IIOP</tspan>
+  </text>
+  <path fill="#fff" d="M133 168h50v25h-50z"/>
+  <text x="141" y="186" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="142.445" y="186">IIOP</tspan>
+  </text>
+  <path fill="#fff" d="M133 254h50v25h-50z"/>
+  <text x="141" y="272" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="142.445" y="272">IIOP</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M10 10h100v80H10z"/>
+  <text x="18" y="29" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="36.898" y="29">Jakarta</tspan><tspan x="38.578" y="46.609">Server</tspan><tspan x="16.273" y="64.219">Pages/Servlet</tspan><tspan x="42.047" y="81.828">client</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M10 140h100v80H10z"/>
+  <text x="19" y="177" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="22.422" y="177">Application</tspan><tspan x="43.047" y="194.609">client</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M10 269h100v80H10z"/>
+  <text x="18" y="306" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="32.211" y="306">CORBA</tspan><tspan x="42.047" y="323.609">client</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M209 176h100v80H209z"/>
+  <text x="217" y="204" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="226.07" y="204">Enterprise</tspan><tspan x="239.359" y="221.609">Beans</tspan><tspan x="237.578" y="239.219">Server</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M387 176h100v80H387z"/>
+  <text x="395" y="204" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="404.07" y="204">Enterprise</tspan><tspan x="417.359" y="221.609">Beans</tspan><tspan x="415.578" y="239.219">Server</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M209 97h100v80H209z"/>
+  <text x="217" y="134" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="226.07" y="134">Enterprise</tspan><tspan x="239.359" y="151.609">Beans</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M387 97h100v80H387z"/>
+  <text x="395" y="134" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="404.07" y="134">Enterprise</tspan><tspan x="417.359" y="151.609">Beans</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(115.146 20.39)" xlink:href="#a"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(115.146 20.39)" xlink:href="#a"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(96 170)" xlink:href="#b"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(96 170)" xlink:href="#b"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(106 261)" xlink:href="#c"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(106 261)" xlink:href="#c"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(387 344)" xlink:href="#d"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(387 344)" xlink:href="#d"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-linejoin="round" d="M23.5 97.5h75v25h-75z"/>
+  <text x="31" y="115" style="text-decoration-line:none" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+    <tspan x="32.281" y="115">vendor 1</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-linejoin="round" d="M23.5 228.5h75v25h-75z"/>
+  <text x="31" y="246" style="text-decoration-line:none" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+    <tspan x="32.281" y="246">vendor 2</tspan>
+  </text>
+  <path fill="#fff" stroke="#fff" stroke-linejoin="round" d="M23.5 359.5h75v25h-75z"/>
+  <text x="31" y="377" style="text-decoration-line:none" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+    <tspan x="32.281" y="377">vendor 3</tspan>
+  </text>
+  <path fill="#fff" d="M222 264h75v25h-75z"/>
+  <text x="230" y="282" style="text-decoration-line:none" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+    <tspan x="231.281" y="282">vendor 4</tspan>
+  </text>
+  <path fill="#fff" d="M400 264h75v25h-75z"/>
+  <text x="408" y="282" style="text-decoration-line:none" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+    <tspan x="409.281" y="282">vendor 5</tspan>
+  </text>
+  <path fill="#fff" d="M323 180h50v25h-50z"/>
+  <text x="331" y="198" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="332.445" y="198">IIOP</tspan>
+  </text>
+</svg>
