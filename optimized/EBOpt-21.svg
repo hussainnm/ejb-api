@@ -1,144 +1,144 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="430" height="378">
   <path fill="none" d="M0 0h430v378H0z"/>
-  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400" font-style="italic" transform="translate(10.6 10)">
+  <text dominant-baseline="hanging" font-family="serif" font-size="16" font-style="italic" font-weight="400" transform="translate(10.6 10)">
     <tspan x="0" y="0">After Change:</tspan>
   </text>
-  <path d="M74.667 126h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H74.667C68.833 161 63 152.25 63 143.5S68.833 126 74.667 126" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(71 149)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M74.667 126h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H74.667C68.833 161 63 152.25 63 143.5S68.833 126 74.667 126"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(71 149)">
     <tspan x="19.445" y="0">a1</tspan>
   </text>
-  <path d="M174.667 36h46.666C227.167 36 233 44.75 233 53.5S227.167 71 221.333 71h-46.666C168.833 71 163 62.25 163 53.5S168.833 36 174.667 36" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(172 59)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M174.667 36h46.666C227.167 36 233 44.75 233 53.5S227.167 71 221.333 71h-46.666C168.833 71 163 62.25 163 53.5S168.833 36 174.667 36"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(172 59)">
     <tspan x="14.891" y="0">b11</tspan>
   </text>
   <g transform="translate(83 37)">
     <defs>
-      <path id="a" d="M51.581 101.757l25.257-75.77 1.58-4.744M71 25l7.419-3.757L82 28" stroke-linejoin="round" fill="none"/>
+      <path id="a" fill="none" stroke-linejoin="round" d="M51.581 101.757l25.257-75.77 1.58-4.744M71 25l7.419-3.757L82 28"/>
     </defs>
-    <use xlink:href="#a" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#a" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#a"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#a"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#a" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
     </text>
   </g>
-  <path d="M200.667 66h46.666C253.167 66 259 74.75 259 83.5s-5.833 17.5-11.667 17.5h-46.666C194.833 101 189 92.25 189 83.5S194.833 66 200.667 66" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(198 89)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M200.667 66h46.666C253.167 66 259 74.75 259 83.5s-5.833 17.5-11.667 17.5h-46.666C194.833 101 189 92.25 189 83.5S194.833 66 200.667 66"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(198 89)">
     <tspan x="14.594" y="0">b12</tspan>
   </text>
-  <path d="M226.667 96h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5S220.833 96 226.667 96" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(224 119)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M226.667 96h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5S220.833 96 226.667 96"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(224 119)">
     <tspan x="14.594" y="0">b13</tspan>
   </text>
-  <path d="M250.667 126h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(248 149)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M250.667 126h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(248 149)">
     <tspan x="7.93" y="0">b1n-1</tspan>
   </text>
-  <path d="M360.667 162h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(358 185)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M360.667 162h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(358 185)">
     <tspan x="14.188" y="0">b1n</tspan>
   </text>
   <g transform="translate(88 67)">
     <defs>
-      <path id="b" d="M48.412 72.845L94.177 23.81l3.411-3.656M90 20l7.588.155L98 28" stroke-linejoin="round" fill="none"/>
+      <path id="b" fill="none" stroke-linejoin="round" d="M48.412 72.845L94.177 23.81l3.411-3.656M90 20l7.588.155L98 28"/>
     </defs>
-    <use xlink:href="#b" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#b" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#b"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#b"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#b" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
     </text>
   </g>
   <g transform="translate(133 67)">
     <defs>
-      <path id="c" d="M4.696 74.782l67.913-24.846 4.695-1.718M70 45l7.304 3.218L74 55" stroke-linejoin="round" fill="none"/>
+      <path id="c" fill="none" stroke-linejoin="round" d="M4.696 74.782l67.913-24.846 4.695-1.718M70 45l7.304 3.218L74 55"/>
     </defs>
-    <use xlink:href="#c" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#c" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#c"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#c"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#c" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
     </text>
   </g>
   <g transform="translate(173 72)">
     <defs>
-      <path id="d" d="M-35 71.5h96M55 66l6 5.5-6 5.5" stroke-linejoin="round" fill="none"/>
+      <path id="d" fill="none" stroke-linejoin="round" d="M-35 71.5h96M55 66l6 5.5-6 5.5"/>
     </defs>
-    <use xlink:href="#d" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#d" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#d"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#d"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#d" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
     </text>
   </g>
   <g transform="translate(208 91)">
     <defs>
-      <path id="e" d="M-70.126 167.384l116.378-26.652 4.874-1.116M44 135l7.126 4.616L47 146" stroke-linejoin="round" fill="none"/>
+      <path id="e" fill="none" stroke-linejoin="round" d="M-70.126 167.384l116.378-26.652 4.874-1.116M44 135l7.126 4.616L47 146"/>
     </defs>
-    <use xlink:href="#e" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#e" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#e"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#e"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#e" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#e"> </textPath>
     </text>
   </g>
-  <path d="M74.667 242h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H74.667C68.833 277 63 268.25 63 259.5S68.833 242 74.667 242" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(71 265)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M74.667 242h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H74.667C68.833 277 63 268.25 63 259.5S68.833 242 74.667 242"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(71 265)">
     <tspan x="19.445" y="0">a2</tspan>
   </text>
-  <path d="M275.667 212h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(273 235)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M275.667 212h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(273 235)">
     <tspan x="14.594" y="0">b21</tspan>
   </text>
-  <path d="M250.667 243h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(248 266)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M250.667 243h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(248 266)">
     <tspan x="14.594" y="0">b22</tspan>
   </text>
-  <path d="M226.667 273h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(224 296)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M226.667 273h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(224 296)">
     <tspan x="14.594" y="0">b23</tspan>
   </text>
-  <path d="M200.667 303h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(198 326)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M200.667 303h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(198 326)">
     <tspan x="5.703" y="0">b2m-1</tspan>
   </text>
-  <path d="M174.667 332h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5" stroke-linejoin="round" stroke="#000" stroke-width="2" fill="#fff"/>
-  <text transform="translate(172 355)" font-family="serif" font-size="16" font-weight="400">
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M174.667 332h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text font-family="serif" font-size="16" font-weight="400" transform="translate(172 355)">
     <tspan x="12.188" y="0">b2m</tspan>
   </text>
   <g transform="translate(253 121)">
     <defs>
-      <path id="f" d="M-115 138.547l91 .859 5 .047M-25 134l6 5.453-6 5.547" stroke-linejoin="round" fill="none"/>
+      <path id="f" fill="none" stroke-linejoin="round" d="M-115 138.547l91 .859 5 .047M-25 134l6 5.453-6 5.547"/>
     </defs>
-    <use xlink:href="#f" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#f" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#f"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#f"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#f" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#f"> </textPath>
     </text>
   </g>
   <g transform="translate(263 146)">
     <defs>
-      <path id="g" d="M-125.323 115.268l67.97 25.696 4.676 1.768M-56 135l3.323 7.732L-60 146" stroke-linejoin="round" fill="none"/>
+      <path id="g" fill="none" stroke-linejoin="round" d="M-125.323 115.268l67.97 25.696 4.676 1.768M-56 135l3.323 7.732L-60 146"/>
     </defs>
-    <use xlink:href="#g" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#g" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#g"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#g"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#g" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#g"> </textPath>
     </text>
   </g>
   <g transform="translate(273 151)">
     <defs>
-      <path id="h" d="M-136.619 112.183l45.856 49.95 3.382 3.684M-87 158l-.381 7.817L-95 165" stroke-linejoin="round" fill="none"/>
+      <path id="h" fill="none" stroke-linejoin="round" d="M-136.619 112.183l45.856 49.95 3.382 3.684M-87 158l-.381 7.817L-95 165"/>
     </defs>
-    <use xlink:href="#h" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#h" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#h"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#h"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#h" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#h"> </textPath>
     </text>
   </g>
   <g transform="translate(293 191)">
     <defs>
-      <path id="i" d="M-158.419 73.243l25.257 75.77 1.58 4.744M-128 147l-3.581 6.757L-139 150" stroke-linejoin="round" fill="none"/>
+      <path id="i" fill="none" stroke-linejoin="round" d="M-158.419 73.243l25.257 75.77 1.58 4.744M-128 147l-3.581 6.757L-139 150"/>
     </defs>
-    <use xlink:href="#i" stroke-width="10" stroke-opacity="0" stroke="red"/>
-    <use xlink:href="#i" stroke="#000" stroke-width="2"/>
+    <use stroke="red" stroke-opacity="0" stroke-width="10" xlink:href="#i"/>
+    <use stroke="#000" stroke-width="2" xlink:href="#i"/>
     <text font-family="serif" font-size="16" font-weight="400">
-      <textPath xlink:href="#i" startOffset="50%" text-anchor="middle" alignment-baseline="middle"> </textPath>
+      <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#i"> </textPath>
     </text>
   </g>
 </svg>
