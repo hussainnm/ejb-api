@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="777" height="358">
+  <defs>
+    <path id="j" fill="none" stroke-linejoin="round" d="M16-41l54-.422 10-.078"/>
+    <path id="i" fill="none" stroke-linejoin="round" d="M85-47L67.718-22.204 62-14"/>
+    <path id="h" fill="none" stroke-linejoin="round" d="M48-38l15.135 20.9L69-9"/>
+    <path id="g" fill="none" stroke-linejoin="round" d="M17-38l53 .42 10 .08"/>
+    <path id="f" fill="none" stroke-linejoin="round" d="M-2 76.5h26M18 71l6 5.5-6 5.5"/>
+    <path id="e" fill="none" stroke-linejoin="round" d="M16.103-8.58l45.691 57.738 3.103 3.921M66 45l-1.103 8.08L57 52"/>
+    <path id="d" fill="none" stroke-linejoin="round" d="M-13-10.5l76 .442L73-10"/>
+    <path id="c" fill="none" stroke-linejoin="round" d="M-6-9.5l81 .445L85-9"/>
+    <path id="b" fill="none" stroke-linejoin="round" d="M93.383-6.318l40.85 44.455 3.384 3.681M138 34l-.383 7.818L130 41"/>
+    <path id="a" fill="none" stroke-linejoin="round" d="M57.072 70.055L98.856 16.39l3.072-3.945M94 13l7.928-.555L103 20"/>
+  </defs>
+  <path fill="none" d="M0 0h777v358H0z"/>
+  <rect width="314" height="304" x="10" y="43" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="38" ry="38"/>
+  <rect width="299" height="304" x="467" y="43" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="37.375" ry="37.375"/>
+  <rect width="235" height="227" x="499" y="82" fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" rx="28.375" ry="28.375"/>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M437.667 214h90.666C539.667 214 551 226.25 551 238.5S539.667 263 528.333 263h-90.666C426.333 263 415 250.75 415 238.5s11.333-24.5 22.667-24.5"/>
+  <text x="423" y="244" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="447.938" y="244">EJB object</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M609.667 214h90.666C711.667 214 723 226.25 723 238.5S711.667 263 700.333 263h-90.666C598.333 263 587 250.75 587 238.5s11.333-24.5 22.667-24.5"/>
+  <text x="595" y="244" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="605.953" y="244">enterprise bean</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M437.667 120h90.666C539.667 120 551 132.25 551 144.5S539.667 169 528.333 169h-90.666C426.333 169 415 156.75 415 144.5s11.333-24.5 22.667-24.5"/>
+  <text x="423" y="150" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="428.164" y="150">EJB home object</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M173.667 86h90.666C275.667 86 287 98.25 287 110.5S275.667 135 264.333 135h-90.666C162.333 135 151 122.75 151 110.5S162.333 86 173.667 86"/>
+  <text x="159" y="116" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="170.555" y="116">EJB home stub</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M173.667 241h90.666C275.667 241 287 253.25 287 265.5S275.667 290 264.333 290h-90.666C162.333 290 151 277.75 151 265.5s11.333-24.5 22.667-24.5"/>
+  <text x="159" y="271" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="168.781" y="271">EJB object stub</tspan>
+  </text>
+  <path fill="#fff" d="M30 176h70v34H30z"/>
+  <text x="39" y="190" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="43.328" y="190">remote</tspan><tspan x="48.047" y="207.609">client</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(46 102)" xlink:href="#a"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(46 102)" xlink:href="#a"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(10 220)" xlink:href="#b"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(10 220)" xlink:href="#b"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(293 120)" xlink:href="#c"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="4" transform="translate(293 120)" xlink:href="#c"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(300 276)" xlink:href="#d"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="4" transform="translate(300 276)" xlink:href="#d"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(538 157)" xlink:href="#e"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(538 157)" xlink:href="#e"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#e"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(558 162)" xlink:href="#f"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(558 162)" xlink:href="#f"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#f"> </textPath>
+  </text>
+  <path fill="#fff" d="M653 98h70v34h-70z"/>
+  <text x="661" y="121" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="657.695" y="121">container</tspan>
+  </text>
+  <path fill="#fff" d="M477 10h279v25H477z"/>
+  <text x="485" y="28" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="505.734" y="28">container address space (i.e. JVM)</tspan>
+  </text>
+  <path fill="#fff" d="M28 10h279v25H28z"/>
+  <text x="36" y="28" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="68.727" y="28">client address space (i.e. JVM)</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(335 276)" xlink:href="#g"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="4" transform="translate(335 276)" xlink:href="#g"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#g"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(305 276)" xlink:href="#h"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="4" transform="translate(305 276)" xlink:href="#h"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#h"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(291 158)" xlink:href="#i"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="4" transform="translate(291 158)" xlink:href="#i"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#i"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(335 186)" xlink:href="#j"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="4" transform="translate(335 186)" xlink:href="#j"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#j"> </textPath>
+  </text>
+</svg>
