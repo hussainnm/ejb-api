@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="1120">
   <defs>
-    <path id="A" fill="none" stroke-linejoin="round" d="M159 288v997"/>
-    <path id="z" fill="none" stroke-linejoin="round" d="M159 275v997"/>
-    <path id="y" fill="none" stroke-linejoin="round" d="M159 276v997"/>
-    <path id="x" fill="none" stroke-linejoin="round" d="M159 303v997"/>
-    <path id="w" fill="none" stroke-linejoin="round" d="M50 266v998"/>
-    <path id="v" fill="none" stroke-linejoin="round" d="M50-39l-.99 992-.01 10"/>
     <path id="u" fill="none" stroke-linejoin="round" d="M-165 8l429-1.954L274 6m-6-6l6 6-6 6"/>
     <path id="t" fill="none" stroke-linejoin="round" d="M3 6l132 .93L145 7m-6-6l6 6-6 6"/>
     <path id="s" fill="none" stroke-linejoin="round" d="M3 6l132 .93L145 7m-6-6l6 6-6 6"/>
@@ -28,7 +22,30 @@
     <path id="b" fill="none" stroke-linejoin="round" d="M3 6h443m-6-6l6 6-6 6"/>
     <path id="a" fill="none" stroke-linejoin="round" d="M4 6h142m-6-6l6 6-6 6"/>
   </defs>
-  <path fill="none" d="M0 0h900v1120H0z"/>
+  <text x="28" y="63" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="52.047" y="63">client</tspan><tspan x="39.695" y="80.609">container</tspan>
+  </text>
+  <path id="v" fill="none" stroke-linejoin="round" d="M50-39l-.99 992-.01 10" stroke="#000" stroke-dasharray="10,5" transform="translate(20 145)"/>
+  <text x="179" y="54" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="198.586" y="54">client&apos;s</tspan><tspan x="185.094" y="71.609">transaction</tspan><tspan x="192.516" y="89.219">manager</tspan>
+  </text>
+  <path id="w" fill="none" stroke-linejoin="round" d="M50 266v998" stroke="#000" stroke-dasharray="10,5" transform="translate(170 -160)"/>
+  <text x="329" y="55" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="346.813" y="55">server&apos;s</tspan><tspan x="335.094" y="72.609">transaction</tspan><tspan x="342.516" y="90.219">manager</tspan>
+  </text>
+  <path id="x" fill="none" stroke-linejoin="round" d="M159 303v997" stroke="#000" stroke-dasharray="10,5" transform="translate(211 -194)"/>
+  <text x="478" y="54" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="487.07" y="54">Enterprise</tspan><tspan x="500.359" y="71.609">Beans</tspan><tspan x="489.695" y="89.219">container</tspan>
+  </text>
+  <path id="A" fill="none" stroke-linejoin="round" d="M159 288v997" stroke="#000" stroke-dasharray="10,5" transform="translate(361 -182)"/>
+  <text x="628" y="54" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="638.406" y="54">enterprise</tspan><tspan x="654.086" y="71.609">bean</tspan><tspan x="643.734" y="89.219">instance</tspan>
+  </text>
+  <path id="y" fill="none" stroke-linejoin="round" d="M159 276v997" stroke="#000" stroke-dasharray="10,5" transform="translate(511 -170)"/>
+  <text x="778" y="63" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="790.18" y="63">Resource</tspan><tspan x="791.031" y="80.609">Manager</tspan>
+  </text>
+  <path id="z" fill="none" stroke-linejoin="round" d="M159 275v997" stroke="#000" stroke-dasharray="10,5" transform="translate(661 -169)"/>
   <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(69.683 144.544)" xlink:href="#a"/>
   <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(69.683 144.544)" xlink:href="#a"/>
   <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
@@ -206,63 +223,9 @@
   <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
     <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#u"> </textPath>
   </text>
-  <path fill="#fff" d="M20 26h100v80H20z"/>
-  <text x="28" y="63" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="52.047" y="63">client</tspan><tspan x="39.695" y="80.609">container</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(20 145)" xlink:href="#v"/>
-  <use width="100%" height="100%" stroke="#000" stroke-dasharray="5,5" transform="translate(20 145)" xlink:href="#v"/>
-  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#v"> </textPath>
-  </text>
-  <path fill="#fff" d="M170 26h100v80H170z"/>
-  <text x="179" y="54" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="198.586" y="54">client&apos;s</tspan><tspan x="185.094" y="71.609">transaction</tspan><tspan x="192.516" y="89.219">manager</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(170 -160)" xlink:href="#w"/>
-  <use width="100%" height="100%" stroke="#000" stroke-dasharray="5,5" transform="translate(170 -160)" xlink:href="#w"/>
-  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#w"> </textPath>
-  </text>
-  <path fill="#fff" d="M320 26h100v83H320z"/>
-  <text x="329" y="55" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="346.813" y="55">server&apos;s</tspan><tspan x="335.094" y="72.609">transaction</tspan><tspan x="342.516" y="90.219">manager</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(211 -194)" xlink:href="#x"/>
-  <use width="100%" height="100%" stroke="#000" stroke-dasharray="5,5" transform="translate(211 -194)" xlink:href="#x"/>
-  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#x"> </textPath>
-  </text>
-  <path fill="#fff" d="M470 26h100v80H470z"/>
-  <text x="478" y="54" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="487.07" y="54">Enterprise</tspan><tspan x="500.359" y="71.609">Beans</tspan><tspan x="489.695" y="89.219">container</tspan>
-  </text>
-  <path fill="#fff" d="M620 26h100v80H620z"/>
-  <text x="628" y="54" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="638.406" y="54">enterprise</tspan><tspan x="654.086" y="71.609">bean</tspan><tspan x="643.734" y="89.219">instance</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(511 -170)" xlink:href="#y"/>
-  <use width="100%" height="100%" stroke="#000" stroke-dasharray="5,5" transform="translate(511 -170)" xlink:href="#y"/>
-  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#y"> </textPath>
-  </text>
-  <path fill="#fff" d="M770 26h100v80H770z"/>
-  <text x="778" y="63" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <tspan x="790.18" y="63">Resource</tspan><tspan x="791.031" y="80.609">Manager</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(661 -169)" xlink:href="#z"/>
-  <use width="100%" height="100%" stroke="#000" stroke-dasharray="5,5" transform="translate(661 -169)" xlink:href="#z"/>
-  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#z"> </textPath>
-  </text>
   <path fill="#fff" d="M116 163h359.291v25H116z"/>
   <text x="124" y="181" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
     <tspan x="147.138" y="181">IIOP request message with transaction context</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(361 -182)" xlink:href="#A"/>
-  <use width="100%" height="100%" stroke="#000" stroke-dasharray="5,5" transform="translate(361 -182)" xlink:href="#A"/>
-  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#A"> </textPath>
   </text>
   <path fill="#fff" d="M378 245h175v25H378z"/>
   <text x="387" y="263" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
