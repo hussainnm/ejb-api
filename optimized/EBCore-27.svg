@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="695" height="131">
+  <defs>
+    <path id="b" fill="none" stroke-linejoin="round" d="M352-56h90m-6-6l6 6-6 6"/>
+    <path id="a" fill="none" stroke-linejoin="round" d="M179-51h90m-6-6l6 6-6 6"/>
+  </defs>
+  <path fill="none" d="M0 0h695v131H0z"/>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M59 20h100c12.5 0 25 10 25 20s-12.5 20-25 20H59c-12.5 0-25-10-25-20s12.5-20 25-20"/>
+  <text x="42" y="46" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="103.664" y="46">C</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M284 20h150v40H284z"/>
+  <text x="292" y="46" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="350.547" y="46">S1</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M534 20h150v40H534z"/>
+  <text x="542" y="46" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="600.547" y="46">S2</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(10 91)" xlink:href="#a"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(10 91)" xlink:href="#a"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(87 96)" xlink:href="#b"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(87 96)" xlink:href="#b"/>
+  <text style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
+  </text>
+  <path fill="#fff" d="M34 70h150v50H34z"/>
+  <text x="42" y="92" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="44.484" y="92">application client or</tspan><tspan x="75.313" y="109.609">web client</tspan>
+  </text>
+  <path fill="#fff" d="M284 70h150v50H284z"/>
+  <text x="292" y="92" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="295.367" y="92">Enterprise Beans or</tspan><tspan x="312.961" y="109.609">web container</tspan>
+  </text>
+  <path fill="#fff" d="M534 70h150v50H534z"/>
+  <text x="542" y="92" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="554.484" y="92">Enterprise Beans</tspan><tspan x="578.695" y="109.609">container</tspan>
+  </text>
+  <path fill="#fff" d="M193 10h75v25h-75z"/>
+  <text x="201" y="28" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="200.586" y="28">HTTP(S)</tspan>
+  </text>
+  <path fill="#fff" d="M193 49h75v25h-75z"/>
+  <text x="201" y="67" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="198.617" y="67">IIOP/SSL</tspan>
+  </text>
+  <path fill="#fff" d="M447 10h75v25h-75z"/>
+  <text x="455" y="28" style="text-decoration-line:none" font-family="serif" font-size="16" font-weight="400">
+    <tspan x="452.617" y="28">IIOP/SSL</tspan>
+  </text>
+</svg>
