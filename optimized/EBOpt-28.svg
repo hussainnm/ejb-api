@@ -33,13 +33,13 @@
   <text style="text-decoration-line:none" x="267" y="118" font-family="serif" font-size="16" font-weight="400">
     <tspan x="303.664" y="118">B</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="151.6" y="86" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="151.6" y="86" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="151.6" y="86">0..*</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="225.6" y="86" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="225.6" y="86" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="225.6" y="86">0..*</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="20.6" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+  <text style="text-decoration-line:none" x="20.6" y="185" dominant-baseline="hanging" font-family="serif" font-size="16" font-style="italic" font-weight="400">
     <tspan x="20.6" y="185">Before Change:</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M101.667 214h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666C95.833 249 90 240.25 90 231.5s5.833-17.5 11.667-17.5"/>

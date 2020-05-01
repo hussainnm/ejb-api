@@ -16,7 +16,7 @@
     <path id="a" fill="none" stroke-linejoin="round" d="M43.003 59.998l82.992 110.506 3.002 3.998M130 167l-1.003 7.502L121 173"/>
   </defs>
   <path fill="none" d="M0 0h300v430H0z"/>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="10.6" y="10" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+  <text style="text-decoration-line:none" x="10.6" y="10" dominant-baseline="hanging" font-family="serif" font-size="16" font-style="italic" font-weight="400">
     <tspan x="10.6" y="10">After Change:</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M58.667 52h46.666C111.167 52 117 60.75 117 69.5S111.167 87 105.333 87H58.667C52.833 87 47 78.25 47 69.5S52.833 52 58.667 52"/>
