@@ -4,6 +4,7 @@ plugins:
         additionalNamespaces: ['http://www.evolus.vn/Namespace/Pencil']
   - sortAttrs: true
   - reusePaths: false
+  - mergePaths: false
 js2svg:
   pretty: true
   indent: '  '
