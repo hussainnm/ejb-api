@@ -52,13 +52,13 @@
   <text style="text-decoration-line:none" x="262" y="60" font-family="serif" font-size="16" font-weight="400">
     <tspan x="268.945" y="60">enterprise bean instances</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="166" y="70" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="166" y="70" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="166" y="70">TX 1</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="166" y="185" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="166" y="185" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="166" y="185">TX 2</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="332" y="8" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="332" y="8" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="332" y="8">Container</tspan>
   </text>
   <path fill="#fff" d="M254 170h190v40H254z"/>

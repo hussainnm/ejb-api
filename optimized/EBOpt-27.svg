@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="345" height="378">
   <defs>
-    <path id="l" fill="none" stroke-linejoin="round" d="M21 39l-6-5.5 6-5.5m-6 5.5h72M81 28l6 5.5-6 5.5"/>
     <path id="k" fill="none" stroke-linejoin="round" d="M154-69l3.27 7.377L150-58m7.27-3.623L69.46-91.754l-4.73-1.623M68-86l-3.27-7.377L72-97"/>
+    <path id="f" fill="none" stroke-linejoin="round" d="M62-19l-6-5.97L62-31m-6 6.03l67 .409 5 .03M122-30l6 5.47-6 5.53"/>
     <path id="j" fill="none" stroke-linejoin="round" d="M-6-9l-7.27-3.623L-10-20m-3.27 7.377l87.81-30.131 4.73-1.623M72-48l7.27 3.623L76-37"/>
     <path id="i" fill="none" stroke-linejoin="round" d="M62-25l-6-6 6-6m-6 6h72m-6-6l6 6-6 6"/>
     <path id="h" fill="none" stroke-linejoin="round" d="M154-63l3.27 7.377L150-52m7.27-3.623L69.46-85.754l-4.73-1.623M68-80l-3.27-7.377L72-91"/>
     <path id="g" fill="none" stroke-linejoin="round" d="M-6-3l-7.27-3.623L-10-14m-3.27 7.377l87.81-30.131 4.73-1.623M72-42l7.27 3.623L76-31"/>
-    <path id="f" fill="none" stroke-linejoin="round" d="M62-19l-6-5.97L62-31m-6 6.03l67 .409 5 .03M122-30l6 5.47-6 5.53"/>
+    <path id="l" fill="none" stroke-linejoin="round" d="M21 39l-6-5.5 6-5.5m-6 5.5h72M81 28l6 5.5-6 5.5"/>
     <path id="e" fill="none" stroke-linejoin="round" d="M154-60l3.27 7.377L150-49m7.27-3.623L69.46-82.754l-4.73-1.623M68-77l-3.27-7.377L72-88"/>
     <path id="d" fill="none" stroke-linejoin="round" d="M-6 0l-7.27-3.623L-10-11m-3.27 7.377l87.81-30.131 4.73-1.623M72-39l7.27 3.623L76-28"/>
     <path id="c" fill="none" stroke-linejoin="round" d="M62-16l-6-5.53L62-27m-6 5.47l67-.409 5-.03M122-28l6 6.03-6 5.97"/>
@@ -14,7 +14,7 @@
     <path id="a" fill="none" stroke-linejoin="round" d="M-6 2l-7.27-3.623L-10-9m-3.27 7.377l87.81-30.131 4.73-1.623M72-37l7.27 3.623L76-26"/>
   </defs>
   <path fill="none" d="M0 0h345v378H0z"/>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="10.6" y="10" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+  <text style="text-decoration-line:none" x="10.6" y="10" dominant-baseline="hanging" font-family="serif" font-size="16" font-style="italic" font-weight="400">
     <tspan x="10.6" y="10">After Change:</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M81.667 41h46.666C134.167 41 140 49.75 140 58.5S134.167 76 128.333 76H81.667C75.833 76 70 67.25 70 58.5S75.833 41 81.667 41"/>

@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="430">
   <defs>
-    <path id="n" fill="none" stroke-linejoin="round" d="M25 29h72m-6-6l6 6-6 6"/>
     <path id="m" fill="none" stroke-linejoin="round" d="M154-69l3.27 7.377L150-58m7.27-3.623L69.46-91.754l-4.73-1.623"/>
+    <path id="g" fill="none" stroke-linejoin="round" d="M154-60l3.27 7.377L150-49m7.27-3.623L69.46-82.754l-4.73-1.623"/>
     <path id="l" fill="none" stroke-linejoin="round" d="M-13.27-12.623l87.81-30.131 4.73-1.623M72-48l7.27 3.623L76-37"/>
     <path id="k" fill="none" stroke-linejoin="round" d="M56-30.5h72m-6-5.5l6 5.5-6 5.5"/>
     <path id="j" fill="none" stroke-linejoin="round" d="M154-63l3.27 7.377L150-52m7.27-3.623L69.46-85.754l-4.73-1.623"/>
     <path id="i" fill="none" stroke-linejoin="round" d="M-13.27-6.623l87.81-30.131 4.73-1.623M72-42l7.27 3.623L76-31"/>
     <path id="h" fill="none" stroke-linejoin="round" d="M56-24.5h72m-6-5.5l6 5.5-6 5.5"/>
-    <path id="g" fill="none" stroke-linejoin="round" d="M154-60l3.27 7.377L150-49m7.27-3.623L69.46-82.754l-4.73-1.623"/>
+    <path id="n" fill="none" stroke-linejoin="round" d="M25 29h72m-6-6l6 6-6 6"/>
     <path id="f" fill="none" stroke-linejoin="round" d="M-13.27-3.623l87.81-30.131 4.73-1.623M72-39l7.27 3.623L76-28"/>
     <path id="e" fill="none" stroke-linejoin="round" d="M56-21.5h72m-6-5.5l6 5.5-6 5.5"/>
     <path id="d" fill="none" stroke-linejoin="round" d="M154-56l3.27 7.377L150-45m7.27-3.623L69.46-78.754l-4.73-1.623"/>
@@ -16,7 +16,7 @@
     <path id="a" fill="none" stroke-linejoin="round" d="M43.003 59.998l82.992 110.506 3.002 3.998M130 167l-1.003 7.502L121 173"/>
   </defs>
   <path fill="none" d="M0 0h300v430H0z"/>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="10.6" y="10" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+  <text style="text-decoration-line:none" x="10.6" y="10" dominant-baseline="hanging" font-family="serif" font-size="16" font-style="italic" font-weight="400">
     <tspan x="10.6" y="10">After Change:</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M58.667 52h46.666C111.167 52 117 60.75 117 69.5S111.167 87 105.333 87H58.667C52.833 87 47 78.25 47 69.5S52.833 52 58.667 52"/>

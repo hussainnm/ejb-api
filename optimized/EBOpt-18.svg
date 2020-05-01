@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="396" height="555">
   <defs>
-    <path id="k" fill="none" stroke-linejoin="round" d="M-73.419-8.757l25.257 75.77 1.58 4.744M-43 65l-3.581 6.757L-54 68"/>
     <path id="j" fill="none" stroke-linejoin="round" d="M-36.619 15.183l45.856 49.95 3.382 3.684M13 61l-.381 7.817L5 68"/>
+    <path id="f" fill="none" stroke-linejoin="round" d="M-70.134 47.651L46.269 75.197l4.865 1.152M47 70l4.134 6.349L44 81"/>
     <path id="i" fill="none" stroke-linejoin="round" d="M4.677 18.268l67.97 25.696 4.676 1.768M74 38l3.323 7.732L70 49"/>
     <path id="h" fill="none" stroke-linejoin="round" d="M50 16.547l91 .859 5 .047M140 12l6 5.453L140 23"/>
     <path id="g" fill="none" stroke-linejoin="round" d="M54.874 45.384l116.378-26.652 4.874-1.116M169 13l7.126 4.616L172 24"/>
-    <path id="f" fill="none" stroke-linejoin="round" d="M-70.134 47.651L46.269 75.197l4.865 1.152M47 70l4.134 6.349L44 81"/>
+    <path id="k" fill="none" stroke-linejoin="round" d="M-73.419-8.757l25.257 75.77 1.58 4.744M-43 65l-3.581 6.757L-54 68"/>
     <path id="e" fill="none" stroke-linejoin="round" d="M-35 71.5h96M55 66l6 5.5-6 5.5"/>
     <path id="d" fill="none" stroke-linejoin="round" d="M4.696 74.782l67.913-24.846 4.695-1.718M70 45l7.304 3.218L74 55"/>
     <path id="c" fill="none" stroke-linejoin="round" d="M48.412 72.845L94.177 23.81l3.411-3.656M90 20l7.588.155L98 28"/>
@@ -30,13 +30,13 @@
   <text style="text-decoration-line:none" x="267" y="118" font-family="serif" font-size="16" font-weight="400">
     <tspan x="303.664" y="118">B</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="151.6" y="86" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="151.6" y="86" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="151.6" y="86">0..1</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="225.6" y="86" font-family="serif" font-size="16" font-weight="400">
+  <text style="text-decoration-line:none" x="225.6" y="86" dominant-baseline="hanging" font-family="serif" font-size="16" font-weight="400">
     <tspan x="225.6" y="86">0..*</tspan>
   </text>
-  <text dominant-baseline="hanging" style="text-decoration-line:none" x="20.6" y="185" font-family="serif" font-size="16" font-style="italic" font-weight="400">
+  <text style="text-decoration-line:none" x="20.6" y="185" dominant-baseline="hanging" font-family="serif" font-size="16" font-style="italic" font-weight="400">
     <tspan x="20.6" y="185">Before Change:</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M84.667 301h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H84.667C78.833 336 73 327.25 73 318.5S78.833 301 84.667 301"/>
