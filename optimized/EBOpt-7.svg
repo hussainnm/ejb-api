@@ -1,138 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650" height="580">
-  <defs>
-    <path id="j" fill="none" d="M83.257 29.2C8 79 128 119 127.9 29.2M122 35l5.9-5.8L134 35"/>
-    <path id="i" fill="none" d="M113-16v137m6-6l-6 6-6-6"/>
-    <path id="h" fill="none" d="M-136.73 49.177C-62-2-186-43-185.5 47m5.5-6l-5.5 6-5.5-6"/>
-    <path id="g" fill="none" d="M73.73-63.177C-1-12 123 29 122.5-61m-5.5 6l5.5-6 5.5 6"/>
-    <path id="f" fill="none" d="M-143-56l5.5-6 5.5 6m-5.5-6V77"/>
-    <path id="e" fill="none" d="M-84-124l-6-6 6-6m-6 6h220"/>
-    <path id="d" fill="none" d="M229 75l6 6-6 6m6-6H14"/>
-    <path id="c" fill="none" d="M-24-76l5.5-6 5.5 6m-5.5-6V57"/>
-    <path id="b" fill="none" d="M-97.524-.505L148.192 141.01l4.332 2.496M150 136l2.524 7.505L145 146"/>
-    <path id="a" fill="none" d="M-158-13l-6-6 6-6m-6 6H49"/>
-  </defs>
-  <path fill="none" d="M0 0h650v580H0z"/>
-  <path fill="#fff" d="M515 215h120v100H515z"/>
-  <text x="523" y="235" font-style="italic">
-    <tspan x="524.875" y="235">object.remove()</tspan><tspan x="567.398" y="252.609">or</tspan><tspan x="521.094" y="270.219">home.remove(...)</tspan><tspan x="565.883" y="287.828">or </tspan><tspan x="535.484" y="305.438">direct delete</tspan>
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="580">
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M105.833 133h83.334C199.583 133 210 148 210 163s-10.417 30-20.833 30h-83.334C95.417 193 85 178 85 163s10.417-30 20.833-30"/>
+  <text x="94" y="151">
+    <tspan x="104.32" y="151">does not exist</tspan> <tspan x="134.945" y="168.609">and</tspan> <tspan x="101.719" y="186.219">not referenced</tspan>
   </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(379 182)" xlink:href="#a"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(379 182)" xlink:href="#a"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(294 196)" xlink:href="#b"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(294 196)" xlink:href="#b"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(166 280)" xlink:href="#c"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(166 280)" xlink:href="#c"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(197 275)" xlink:href="#d"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(197 275)" xlink:href="#d"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(302 518)" xlink:href="#e"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(302 518)" xlink:href="#e"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#e"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(633 260)" xlink:href="#f"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(633 260)" xlink:href="#f"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#f"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(373 468)" xlink:href="#g"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(373 468)" xlink:href="#g"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#g"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(681 81)" xlink:href="#h"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(681 81)" xlink:href="#h"/>
-  <text font-family="'Liberation Sans',Arial,sans-serif" font-size="13">
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#h"> </textPath>
-  </text>
-  <path fill="#fff" d="M157 248h119v60H157z"/>
-  <text x="165" y="266" font-style="italic">
-    <tspan x="177.039" y="266">direct delete</tspan><tspan x="209.141" y="283.844">or</tspan><tspan x="162.594" y="301.688">home.remove(...)</tspan>
-  </text>
-  <path fill="#fff" d="M393 468h205v27H393z"/>
-  <text x="401" y="487" font-style="italic">
-    <tspan x="411.07" y="487">object.businessMethod(...)</tspan>
-  </text>
-  <path fill="#fff" d="M355 10h280v60H355z"/>
-  <text x="375" y="28" font-style="italic">
-    <tspan x="375" y="28">object.businessMethod(...)</tspan><tspan x="375" y="45.609">throws NoSuchObjectException</tspan><tspan x="375" y="63.219">or NoSuchLocalObjectException</tspan>
-  </text>
-  <path fill="#fff" d="M251 398h167v20H251z"/>
-  <text x="259" y="414" font-style="italic">
-    <tspan x="280.031" y="414">release reference</tspan>
-  </text>
-  <path fill="#fff" d="M254 133h167v20H254z"/>
-  <text x="262" y="149" font-style="italic">
-    <tspan x="283.031" y="149">release reference</tspan>
-  </text>
-  <path fill="#fff" d="M251 325h125v20H251z"/>
-  <text x="259" y="340" font-style="italic">
-    <tspan x="270.398" y="340">home.find(...)</tspan>
-  </text>
-  <path fill="#fff" d="M293 215h192v20H293z"/>
-  <text x="301" y="231" font-style="italic">
-    <tspan x="294.523" y="231">home.create&lt;METHOD&gt;(...)</tspan>
+  <path fill="none" stroke="#000" stroke-width="2" d="M123 199v137m6-6l-6 6-6-6"/>
+  <text x="40" y="264" font-style="italic">
+    <tspan x="50.797" y="264">direct</tspan> <tspan x="50.938" y="281.297">insert</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M105.833 342h83.334C199.583 342 210 357 210 372s-10.417 30-20.833 30h-83.334C95.417 402 85 387 85 372s10.417-30 20.833-30"/>
   <text x="94" y="360">
-    <tspan x="128.273" y="360">exists </tspan><tspan x="134.945" y="377.609">and </tspan><tspan x="101.719" y="395.219">not referenced</tspan>
+    <tspan x="128.273" y="360">exists</tspan> <tspan x="134.945" y="377.609">and</tspan> <tspan x="101.719" y="395.219">not referenced</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M105.833 133h83.334C199.583 133 210 148 210 163s-10.417 30-20.833 30h-83.334C95.417 193 85 178 85 163s10.417-30 20.833-30"/>
-  <text x="94" y="151">
-    <tspan x="104.32" y="151">does not exist</tspan><tspan x="134.945" y="168.609">and </tspan><tspan x="101.719" y="186.219">not referenced</tspan>
-  </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M453.833 133h83.334C547.583 133 558 148 558 163s-10.417 30-20.833 30h-83.334C443.417 193 433 178 433 163s10.417-30 20.833-30"/>
-  <text x="441" y="151">
-    <tspan x="449.5" y="151">does not exist </tspan><tspan x="481.945" y="168.609">and </tspan><tspan x="460.945" y="186.219">referenced</tspan>
-  </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M453.833 342h83.334C547.583 342 558 357 558 372s-10.417 30-20.833 30h-83.334C443.417 402 433 387 433 372s10.417-30 20.833-30"/>
-  <text x="442" y="360">
-    <tspan x="476.273" y="360">exists </tspan><tspan x="482.945" y="377.609">and </tspan><tspan x="461.945" y="395.219">referenced</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(10 215)" xlink:href="#i"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(10 215)" xlink:href="#i"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#i"> </textPath>
-  </text>
-  <path fill="#fff" d="M32 247h75v40H32z"/>
-  <text x="40" y="264" font-style="italic">
-    <tspan x="50.797" y="264">direct</tspan><tspan x="50.938" y="281.297">insert</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(19.6 372.8)" xlink:href="#j"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(19.6 372.8)" xlink:href="#j"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#j"> </textPath>
-  </text>
-  <path fill="#fff" d="M14 468h205v27H14z"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M102.857 402C27.6 451.8 147.6 491.8 147.5 402m-5.9 5.8l5.9-5.8 6.1 5.8"/>
   <text x="22" y="487" font-style="italic">
     <tspan x="34.289" y="487">home.businessMethod(...)</tspan>
   </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M142 204l5.5-6 5.5 6m-5.5-6v139"/>
+  <text x="165" y="266" font-style="italic">
+    <tspan x="177.039" y="266">direct delete</tspan> <tspan x="209.141" y="283.844">or</tspan> <tspan x="162.594" y="301.688">home.remove(...)</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M196.476 195.495L442.192 337.01l4.332 2.496M444 332l2.524 7.505L439 342"/>
+  <text x="301" y="231" font-style="italic">
+    <tspan x="294.523" y="231">home.create&lt;METHOD&gt;(...)</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M453.833 342h83.334C547.583 342 558 357 558 372s-10.417 30-20.833 30h-83.334C443.417 402 433 387 433 372s10.417-30 20.833-30"/>
+  <text x="442" y="360">
+    <tspan x="476.273" y="360">exists</tspan> <tspan x="482.945" y="377.609">and</tspan> <tspan x="461.945" y="395.219">referenced</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M446.73 404.823C372 456 496 497 495.5 407m-5.5 6l5.5-6 5.5 6"/>
+  <text x="401" y="487" font-style="italic">
+    <tspan x="411.07" y="487">object.businessMethod(...)</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M218 394l-6-6 6-6m-6 6h220"/>
+  <text x="259" y="414" font-style="italic">
+    <tspan x="280.031" y="414">release reference</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M426 350l6 6-6 6m6-6H211"/>
+  <text x="259" y="340" font-style="italic">
+    <tspan x="270.398" y="340">home.find(...)</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M490 204l5.5-6 5.5 6m-5.5-6v139"/>
+  <text x="523" y="235" font-style="italic">
+    <tspan x="524.875" y="235">object.remove()</tspan> <tspan x="567.398" y="252.609">or</tspan> <tspan x="521.094" y="270.219">home.remove(...)</tspan> <tspan x="565.883" y="287.828">or</tspan> <tspan x="535.484" y="305.438">direct delete</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M453.833 133h83.334C547.583 133 558 148 558 163s-10.417 30-20.833 30h-83.334C443.417 193 433 178 433 163s10.417-30 20.833-30"/>
+  <text x="441" y="151">
+    <tspan x="449.5" y="151">does not exist</tspan> <tspan x="481.945" y="168.609">and</tspan> <tspan x="460.945" y="186.219">referenced</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M544.27 130.177C619 79 495 38 495.5 128m5.5-6l-5.5 6-5.5-6"/>
+  <text x="375" y="28" font-style="italic">
+    <tspan x="375" y="28">object.businessMethod(...)</tspan> <tspan x="375" y="45.609">throws NoSuchObjectException</tspan> <tspan x="375" y="63.219">or NoSuchLocalObjectException</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-width="2" d="M221 169l-6-6 6-6m-6 6h213"/>
+  <text x="262" y="149" font-style="italic">
+    <tspan x="283.031" y="149">release reference</tspan>
+  </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M107 514h429v55H107z"/>
-  <path fill="#fff" stroke="#fff" stroke-width="2" d="M109 518h66v22h-66z"/>
-  <text x="117" y="535" font-style="italic">
-    <tspan x="117" y="535">create()</tspan>
+  <text x="117" y="535">
+    <tspan x="117" y="535" font-style="italic">create()</tspan> <tspan x="213" y="535">action initiated by client</tspan>
   </text>
-  <path fill="#fff" stroke="#fff" stroke-width="2" d="M109 543h95v22h-95z"/>
   <text x="117" y="560">
-    <tspan x="117" y="560">direct delete</tspan>
-  </text>
-  <path fill="#fff" stroke="#fff" stroke-width="2" d="M203 518h175v22H203z"/>
-  <text x="213" y="535">
-    <tspan x="213" y="535">action initiated by client</tspan>
-  </text>
-  <path fill="#fff" stroke="#fff" stroke-width="2" d="M203 543h330v22H203z"/>
-  <text x="212" y="560">
-    <tspan x="212" y="560">action on database from outsite Enterprise Beans</tspan>
+    <tspan x="117" y="560">direct delete</tspan> <tspan x="212" y="560">action on database from outside Enterprise Beans</tspan>
   </text>
 </svg>
