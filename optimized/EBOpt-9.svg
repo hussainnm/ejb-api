@@ -1,60 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386" height="361">
-  <defs>
-    <path id="c" fill="none" d="M58 87l-6-5.5 6-5.5m-6 5.5h94m-6-5.5l6 5.5-6 5.5"/>
-    <path id="b" fill="none" d="M63 54l-6-5.5 6-5.5m-6 5.5h94m-6-5.5l6 5.5-6 5.5"/>
-    <path id="a" fill="none" d="M22 46l-6-6 6-6m-6 6h106m-6-6l6 6-6 6"/>
-  </defs>
-  <path fill="none" d="M0 0h386v361H0z"/>
-  <path fill="#fff" d="M10 10h365v20H10z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="386" height="361">
   <text x="19" y="26">
-    <tspan x="20.258" y="26">A and B are in a one-to-one bidirectional relationship:</tspan>
+    <tspan>A and B are in a one-to-one bidirectional relationship:</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M34 72h100v80H34z"/>
-  <text x="43" y="118">
-    <tspan x="78.594" y="118">A</tspan>
+  <text x="34" y="118">
+    <tspan dx="45">A</tspan>
   </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(123 72)" xlink:href="#a"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(123 72)" xlink:href="#a"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
+  <path fill="none" stroke="#000" stroke-width="2" d="M145 118l-6-6 6-6m-6 6h106m-6-6l6 6-6 6"/>
+  <text x="142" y="96">
+    <tspan>0..1</tspan>
+  </text>
+  <text x="216" y="96">
+    <tspan>0..1</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M250 72h100v80H250z"/>
-  <text x="258" y="118">
-    <tspan x="294.664" y="118">B</tspan>
+  <text x="250" y="118">
+    <tspan dx="45">B</tspan>
   </text>
-  <text x="142.6" y="86" dominant-baseline="hanging">
-    <tspan x="142.6" y="86">0..1</tspan>
+  <text x="11" y="195" font-style="italic">
+    <tspan>Before Change:</tspan>
   </text>
-  <text x="216.6" y="86" dominant-baseline="hanging">
-    <tspan x="216.6" y="86">0..1</tspan>
-  </text>
-  <text x="11.6" y="185" dominant-baseline="hanging" font-style="italic">
-    <tspan x="11.6" y="185">Before Change:</tspan>
-  </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M77.667 232h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H77.667C71.833 267 66 258.25 66 249.5S71.833 232 77.667 232"/>
+  <rect width="70" height="36" x="65" y="232" fill="#fff" stroke="#000" stroke-width="2" rx="18" ry="15"/>
   <text x="74" y="255">
-    <tspan x="93.445" y="255">a1</tspan>
+    <tspan dx="20">a1</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M251.667 232h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M147 255l-6-5.5 6-5.5m-6 5.5h94m-6-5.5l6 5.5-6 5.5"/>
+  <rect width="70" height="36" x="242" y="232" fill="#fff" stroke="#000" stroke-width="2" rx="18" ry="15"/>
   <text x="249" y="255">
-    <tspan x="267.594" y="255">b1</tspan>
+    <tspan dx="20">b1</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M77.667 305h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H77.667C71.833 340 66 331.25 66 322.5S71.833 305 77.667 305"/>
+  <rect width="70" height="36" x="65" y="305" fill="#fff" stroke="#000" stroke-width="2" rx="18" ry="15"/>
   <text x="74" y="328">
-    <tspan x="93.445" y="328">a2</tspan>
+    <tspan dx="20">a2</tspan>
   </text>
-  <path fill="#fff" stroke="#000" stroke-width="2" d="M251.667 305h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M147 328l-6-5.5 6-5.5m-6 5.5h94m-6-5.5l6 5.5-6 5.5"/>
+  <rect width="70" height="36" x="242" y="305" fill="#fff" stroke="#000" stroke-width="2" rx="18" ry="15"/>
   <text x="249" y="328">
-    <tspan x="267.594" y="328">b2</tspan>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(84 201)" xlink:href="#b"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(84 201)" xlink:href="#b"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
-  </text>
-  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(89 241)" xlink:href="#c"/>
-  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(89 241)" xlink:href="#c"/>
-  <text>
-    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
+    <tspan dx="20">b2</tspan>
   </text>
 </svg>
