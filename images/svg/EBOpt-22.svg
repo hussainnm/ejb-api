@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="396" height="555">
+  <defs>
+    <path id="k" fill="none" d="M-77-2l3.581-6.757L-66-5m-7.419-3.757l25.257 75.77 1.58 4.744"/>
+    <path id="j" fill="none" d="M-37 23l.381-7.817L-29 16m-7.619-.817l45.856 49.95 3.382 3.684"/>
+    <path id="i" fill="none" d="M8 26l-3.323-7.732L12 15m-7.323 3.268l67.97 25.696 4.676 1.768"/>
+    <path id="h" fill="none" d="M56 22l-6-5.453L56 11m-6 5.547l91 .859 5 .047"/>
+    <path id="g" fill="none" d="M62 50l-7.126-4.616L59 39m-4.126 6.384l116.378-26.652 4.874-1.116"/>
+    <path id="f" fill="none" d="M-66 54l-4.134-6.349L-63 43m-7.134 4.651L46.269 75.197l4.865 1.152"/>
+    <path id="e" fill="none" d="M-29 77l-6-5.5 6-5.5m-6 5.5h96"/>
+    <path id="d" fill="none" d="M12 78l-7.304-3.218L8 68m-3.304 6.782l67.913-24.846 4.695-1.718"/>
+    <path id="c" fill="none" d="M56 73l-7.588-.155L48 65m.412 7.845L94.177 23.81l3.411-3.656"/>
+    <path id="b" fill="none" d="M59 98l-7.419 3.757L48 95m3.581 6.757l25.257-75.77 1.58-4.744"/>
+    <path id="a" fill="none" d="M22 46l-6-6 6-6m-6 6h106"/>
+  </defs>
+  <path fill="none" d="M0 0h396v555H0z"/>
+  <path fill="#fff" d="M9 10h385v20H9z"/>
+  <text x="18" y="26">
+    <tspan x="19.031" y="26">A and B are in a many-to-one unidirectional relationship:</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M43 72h100v80H43z"/>
+  <text x="52" y="118">
+    <tspan x="87.594" y="118">A</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(132 72)" xlink:href="#a"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(132 72)" xlink:href="#a"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M259 72h100v80H259z"/>
+  <text x="267" y="118">
+    <tspan x="303.664" y="118">B</tspan>
+  </text>
+  <text x="151.6" y="86" dominant-baseline="hanging">
+    <tspan x="151.6" y="86">0..1</tspan>
+  </text>
+  <text x="225.6" y="86" dominant-baseline="hanging">
+    <tspan x="225.6" y="86">0..*</tspan>
+  </text>
+  <text x="20.6" y="185" dominant-baseline="hanging" font-style="italic">
+    <tspan x="20.6" y="185">Before Change:</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M84.667 301h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H84.667C78.833 336 73 327.25 73 318.5S78.833 301 84.667 301"/>
+  <text x="81" y="324">
+    <tspan x="100.445" y="324">a1</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M184.667 211h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="182" y="234">
+    <tspan x="196.891" y="234">b11</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(93 212)" xlink:href="#b"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(93 212)" xlink:href="#b"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M210.667 241h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="208" y="264">
+    <tspan x="222.594" y="264">b12</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M236.667 271h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="234" y="294">
+    <tspan x="250.367" y="294">b1j</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M260.667 301h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="258" y="324">
+    <tspan x="265.93" y="324">b1n-1</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M285.667 332h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="283" y="355">
+    <tspan x="297.188" y="355">b1n</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(98 242)" xlink:href="#c"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(98 242)" xlink:href="#c"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(143 242)" xlink:href="#d"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(143 242)" xlink:href="#d"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(183 247)" xlink:href="#e"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(183 247)" xlink:href="#e"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#e"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(218 272)" xlink:href="#f"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(218 272)" xlink:href="#f"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#f"> </textPath>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M84.667 417h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5H84.667C78.833 452 73 443.25 73 434.5S78.833 417 84.667 417"/>
+  <text x="81" y="440">
+    <tspan x="100.445" y="440">a2</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M285.667 387h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="283" y="410">
+    <tspan x="297.594" y="410">b21</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(93 388)" xlink:href="#g"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(93 388)" xlink:href="#g"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#g"> </textPath>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M260.667 418h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="258" y="441">
+    <tspan x="272.594" y="441">b22</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M236.667 448h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="234" y="471">
+    <tspan x="248.188" y="471">b2k</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M210.667 478h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="208" y="501">
+    <tspan x="213.703" y="501">b2m-1</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M184.667 507h46.666c5.834 0 11.667 8.75 11.667 17.5s-5.833 17.5-11.667 17.5h-46.666c-5.834 0-11.667-8.75-11.667-17.5s5.833-17.5 11.667-17.5"/>
+  <text x="182" y="530">
+    <tspan x="194.188" y="530">b2m</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(98 418)" xlink:href="#h"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(98 418)" xlink:href="#h"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#h"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(143 418)" xlink:href="#i"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(143 418)" xlink:href="#i"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#i"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(183 423)" xlink:href="#j"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(183 423)" xlink:href="#j"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#j"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(218 448)" xlink:href="#k"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(218 448)" xlink:href="#k"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#k"> </textPath>
+  </text>
+</svg>

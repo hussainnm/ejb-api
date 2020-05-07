@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="679" height="484">
+  <defs>
+    <path id="m" fill="none" d="M341 9c-3 90 126 37 44 0m3 7l-3-7 7-3"/>
+    <path id="l" fill="none" d="M158.331-57.186C241-93 267-37 177-35.104M183-30l-6.001-5.104L183-41"/>
+    <path id="k" fill="none" d="M91.6 14.834C2 15 28 74 109.894 36.844M102 34l7.894 2.844L107 44"/>
+    <path id="j" fill="none" d="M154.863 12.826C72-23 47 35 136.6 34.8M131 29l5.6 5.8L131 40"/>
+    <path id="i" fill="none" d="M-76.681-15.015C6-51 32 7-58.4 7m5.4 6l-5.4-6 5.4-6"/>
+    <path id="h" fill="none" d="M280-27l-2.716-6.89L285-37m-7.716 3.11C333-12 332 67 277.206 91.206"/>
+    <path id="g" fill="none" d="M208.716-13.89C153 8 154 87 208.794 111.206M206 104l2.794 7.206L201 114"/>
+    <path id="f" fill="none" d="M227.404-1.97C145-37 119 20 208.75 20M203 14l5.75 6-5.75 6"/>
+    <path id="e" fill="none" d="M102.25-74.75h-113M-5-69l-5.75-5.75L-5-80"/>
+    <path id="d" fill="none" d="M121-9v119m6-6l-6 6-6-6"/>
+    <path id="c" fill="none" d="M115-3l6-6 6 6m-6-6v119"/>
+    <path id="b" fill="none" d="M115-3l6-6 6 6m-6-6v119"/>
+    <path id="a" fill="none" d="M121-9v119m6-6l-6 6-6-6"/>
+  </defs>
+  <path fill="none" d="M0 0h679v484H0z"/>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M309.833 20h83.334C403.583 20 414 30 414 40s-10.417 20-20.833 20h-83.334C299.417 60 289 50 289 40s10.417-20 20.833-20"/>
+  <text x="297" y="37">
+    <tspan x="322.609" y="37">does not </tspan><tspan x="336.211" y="54.609">exist</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M309.833 189h83.334C403.583 189 414 199 414 209s-10.417 20-20.833 20h-83.334C299.417 229 289 219 289 209s10.417-20 20.833-20"/>
+  <text x="298" y="215">
+    <tspan x="329.914" y="215">pooled</tspan>
+  </text>
+  <path fill="#fff" stroke="#000" stroke-width="2" d="M309.833 358h83.334C403.583 358 414 368 414 378s-10.417 20-20.833 20h-83.334C299.417 398 289 388 289 378s10.417-20 20.833-20"/>
+  <text x="298" y="383">
+    <tspan x="334.25" y="383">ready</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(219 74)" xlink:href="#a"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(219 74)" xlink:href="#a"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#a"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(238 74)" xlink:href="#b"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(238 74)" xlink:href="#b"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#b"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(238 243)" xlink:href="#c"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(238 243)" xlink:href="#c"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#c"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(219 243)" xlink:href="#d"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(219 243)" xlink:href="#d"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#d"> </textPath>
+  </text>
+  <path fill="#fff" d="M537 10h130v60H537z"/>
+  <text x="546" y="29">
+    <tspan x="546" y="29">instance throws</tspan><tspan x="546" y="46">system exception</tspan><tspan x="546" y="63">from any method</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(429.75 114.75)" xlink:href="#e"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(429.75 114.75)" xlink:href="#e"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#e"> </textPath>
+  </text>
+  <path fill="#fff" d="M367 94h170v20H367z"/>
+  <text x="377" y="110">
+    <tspan x="377" y="110">1. unsetEntityContext()</tspan>
+  </text>
+  <path fill="#fff" d="M159 94h170v40H159z"/>
+  <text x="170" y="111">
+    <tspan x="170" y="111">1. newInstance()</tspan><tspan x="170" y="128">2. setEntityContext(ec)</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(75.25 189)" xlink:href="#f"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(75.25 189)" xlink:href="#f"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#f"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(93.5 244.75)" xlink:href="#g"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(93.5 244.75)" xlink:href="#g"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#g"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(123.5 264.75)" xlink:href="#h"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(123.5 264.75)" xlink:href="#h"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#h"> </textPath>
+  </text>
+  <path fill="#fff" d="M344 263h90v20h-90z"/>
+  <text x="344" y="278">
+    <tspan x="344" y="278">ejbPassivate()</tspan>
+  </text>
+  <path fill="#fff" d="M269 303h85v20h-85z"/>
+  <text x="269" y="318">
+    <tspan x="269" y="318">ejbActivate()</tspan>
+  </text>
+  <path fill="#fff" d="M40 199h190v20H40z"/>
+  <text x="44" y="214">
+    <tspan x="44" y="214">ejbHome&lt;METHOD&gt;(args)</tspan>
+  </text>
+  <path fill="#fff" d="M36 263h220v40H36z"/>
+  <text x="48" y="280">
+    <tspan x="67.188" y="280">ejbCreate&lt;METHOD&gt;(args)</tspan><tspan x="39.625" y="297.297">ejbPostCreate&lt;METHOD&gt;(args)</tspan>
+  </text>
+  <path fill="#fff" d="M477 175h190v20H477z"/>
+  <text x="486" y="191">
+    <tspan x="486" y="191">ejbFind&lt;METHOD&gt;(args)</tspan>
+  </text>
+  <path fill="#fff" d="M447 283h90v20h-90z"/>
+  <text x="450" y="298">
+    <tspan x="450" y="298">ejbRemove()</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(477.4 202)" xlink:href="#i"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(477.4 202)" xlink:href="#i"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#i"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(147.4 343.2)" xlink:href="#j"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(147.4 343.2)" xlink:href="#j"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#j"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(192.4 363.2)" xlink:href="#k"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(192.4 363.2)" xlink:href="#k"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#k"> </textPath>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(242.4 413.2)" xlink:href="#l"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(242.4 413.2)" xlink:href="#l"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#l"> </textPath>
+  </text>
+  <path fill="#fff" d="M447 378h90v20h-90z"/>
+  <text x="460" y="393">
+    <tspan x="460" y="393">ejbStore()</tspan>
+  </text>
+  <path fill="#fff" d="M151 348h70v20h-70z"/>
+  <text x="154" y="364">
+    <tspan x="154" y="364">ejbLoad()</tspan>
+  </text>
+  <use width="100%" height="100%" stroke="red" stroke-opacity="0" stroke-width="10" transform="translate(10.75 388.75)" xlink:href="#m"/>
+  <use width="100%" height="100%" stroke="#000" stroke-width="2" transform="translate(10.75 388.75)" xlink:href="#m"/>
+  <text>
+    <textPath alignment-baseline="middle" startOffset="50%" text-anchor="middle" xlink:href="#m"> </textPath>
+  </text>
+  <path fill="#fff" d="M199 427h130v20H199z"/>
+  <text x="208" y="443">
+    <tspan x="208" y="443">business methods</tspan>
+  </text>
+  <path fill="#fff" d="M435 427h115v20H435z"/>
+  <text x="441" y="443">
+    <tspan x="441" y="443">ejbTimeout(arg)</tspan>
+  </text>
+</svg>

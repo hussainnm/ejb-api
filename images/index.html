@@ -1,0 +1,39 @@
+<title>Specification Diagrams</title>
+<style>
+div {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+img {
+ border: 1px solid #ccc;
+}
+</style>
+<script>
+function create(prefix, start, end) {
+  for (let counter = start; counter <= end; counter++) {
+    let holder = document.createElement("div")
+    let name = document.createElement("h1")
+    name.textContent = prefix + counter;
+    let png = document.createElement("img")
+    png.src = "png/" + prefix + counter + ".png"
+    let svg = document.createElement("img")
+    svg.src = "svg/" + prefix + counter + ".svg"
+    holder.append(name);
+    holder.append(png);
+    holder.append(svg)
+    document.body.append(holder);
+  }
+}
+window.onload = function () {
+  create("EBCore-", 6, 27);
+  create("EBOpt-", 6, 42);
+}
+</script>
+<div>
+<h1>Name
+<h1>Original PNG
+<h1>Modified SVG
+</div>
