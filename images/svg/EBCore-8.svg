@@ -17,7 +17,7 @@
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M384 204l5.5-6 5.5 6m-5.5-6v139"/>
   <text font-style="italic" transform="translate(409 230)">
-    <tspan x="32.375" y="0">object.remove(),</tspan> <tspan x="32.594" y="17.609">home.remove(),</tspan> <tspan x=".344" y="35.219">system exception in bean,</tspan> <tspan x="40.953" y="52.828">bean timeout</tspan> <tspan x="75.383" y="70.438">or</tspan> <tspan x="34.063" y="88.047">container crash</tspan>
+    <tspan x="32.375" y="0">object.remove(),</tspan> <tspan x="32.594" y="17.609">home.remove(...),</tspan> <tspan x=".344" y="35.219">system exception in bean,</tspan> <tspan x="40.953" y="52.828">bean timeout</tspan> <tspan x="75.383" y="70.438">or</tspan> <tspan x="34.063" y="88.047">container crash</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M347.833 133h83.334C441.583 133 452 148 452 163s-10.417 30-20.833 30h-83.334C337.417 193 327 178 327 163s10.417-30 20.833-30"/>
   <text transform="translate(335 151)">
@@ -25,7 +25,7 @@
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M438.27 130.177C513 79 389 38 389.5 128m5.5-6l-5.5 6-5.5-6"/>
   <text font-style="italic" transform="translate(260 28)">
-    <tspan x="0" y="0">client&apos;s method on reference</tspan> <tspan x="0" y="17.609">generates NoSuchObjectException</tspan> <tspan x="0" y="35.219">or NoSuchLocalObjectException</tspan>
+    <tspan x="0" y="0">client&apos;s method on reference</tspan> <tspan x="0" y="17.609">generates NoSuchObjectException or</tspan> <tspan x="65" y="35.219">NoSuchLocalObjectException</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M146 169l-6-6 6-6m-6 6h182"/>
   <text font-style="italic" transform="translate(156 149)">
