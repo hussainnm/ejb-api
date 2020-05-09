@@ -13,7 +13,7 @@
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M302.654 187.03C220.25 152 194.25 209 284 209m-5.75-6l5.75 6-5.75 6"/>
   <text x="44" y="215">
-    <tspan x="44" y="215">ejbHome&lt;METHOD&gt;(args)</tspan>
+    <tspan x="44" y="215">ejbHome&lt;METHOD&gt;(...)</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M302.216 230.86c-55.716 21.89-54.716 100.89.078 125.096m-2.794-7.206l2.794 7.206-7.794 2.794"/>
   <text x="48" y="280">
@@ -55,7 +55,7 @@
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M400.719 186.985C483.4 151 509.4 209 419 209m5.4 6l-5.4-6 5.4-6"/>
   <text x="482" y="175">
-    <tspan x="482" y="175">ejbFind&lt;METHOD&gt;(args)</tspan>
+    <tspan x="482" y="175">ejbFind&lt;METHOD&gt;(...)</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M353 71l6-6 6 6m-6-6v119"/>
   <text x="377" y="110">
