@@ -26,7 +26,7 @@
   <path fill="none" stroke="#000" stroke-width="2" d="M123.098 366.72l-.133 29.76-.023 5m5.978-6l-5.978 6-6.022-6"/>
   <path fill="#fff" d="M93 406h86.8v24.84H93z"/>
   <text transform="translate(102 424)">
-    <tspan x="0" y="0">afterBegin</tspan>
+    <tspan x="0" y="0">afterBegin()</tspan>
   </text>
   <path fill="#fff" stroke="#000" stroke-width="2" d="M242.5 583h102c12.75 0 25.5 12.75 25.5 25.5S357.25 634 344.5 634h-102c-12.75 0-25.5-12.75-25.5-25.5s12.75-25.5 25.5-25.5"/>
   <text transform="translate(226 614)">
@@ -47,7 +47,7 @@
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M375 608.501l135 .036 5 .002m-5.88-5.339l5.88 5.339-5.88 5.661"/>
   <text font-style="italic" transform="translate(381 594)">
-    <tspan x="0" y="0">non-tx or different method</tspan>
+    <tspan x="0" y="0">non-tx or different tx method</tspan>
   </text>
   <text transform="translate(527 614)">
     <tspan x="0" y="0">ERROR</tspan>
@@ -57,7 +57,7 @@
   <path fill="none" stroke="#000" stroke-width="2" d="M355.884 338.314l-3.156-7.32 7.399-2.58m-7.399 2.58l108.536 47.174 4.586 1.994"/>
   <path fill="#fff" d="M391 444h146.96v25.48H391z"/>
   <text transform="translate(394 462)">
-    <tspan x="0" y="0">afterCompletion(true)</tspan>
+    <tspan x="0" y="0">afterCompletion(false)</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-width="2" d="M421.92 398.48v40m6-6l-6 6-6-6"/>
   <text font-style="italic" transform="translate(393 393)">
